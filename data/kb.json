@@ -1,0 +1,94 @@
+{
+  "_note": "SYNTHETIC demo data. Prices, scheme names and rules are invented for this demo and are not official figures. Advisory text is generic and always refers farmers to their local agriculture officer.",
+  "as_of": "synthetic sample week",
+  "default_market": "guntur",
+  "crops": {
+    "chilli": {
+      "te": "మిర్చి", "en": "chilli",
+      "aliases": ["మిర్చి", "మిరప", "చిల్లీ", "chilli", "chili", "mirchi", "mirapa"],
+      "sowing_te": "నారు ఆగస్టు, సెప్టెంబరు నెలల్లో నాటుకోవచ్చు",
+      "sowing_en": "seedlings can be transplanted in August and September"
+    },
+    "cotton": {
+      "te": "పత్తి", "en": "cotton",
+      "aliases": ["పత్తి", "కాటన్", "cotton", "patti", "pathi"],
+      "sowing_te": "జూన్, జూలై నెలల్లో, మొదటి మంచి వర్షం తర్వాత",
+      "sowing_en": "June and July, after the first good rain"
+    },
+    "paddy": {
+      "te": "వరి", "en": "paddy",
+      "aliases": ["వరి", "వడ్లు", "ధాన్యం", "పాడీ", "paddy", "rice", "vari", "vadlu"],
+      "sowing_te": "ఖరీఫ్‌లో జూన్ నుండి జూలై వరకు, రబీలో నవంబరు నుండి డిసెంబరు వరకు",
+      "sowing_en": "June to July in kharif, November to December in rabi"
+    },
+    "maize": {
+      "te": "మొక్కజొన్న", "en": "maize",
+      "aliases": ["మొక్కజొన్న", "మక్క", "మెయిజ్", "maize", "corn", "mokkajonna"],
+      "sowing_te": "ఖరీఫ్‌లో జూన్, జూలై, రబీలో అక్టోబరు, నవంబరు",
+      "sowing_en": "June-July in kharif, October-November in rabi"
+    },
+    "redgram": {
+      "te": "కంది", "en": "red gram",
+      "aliases": ["కంది", "కందులు", "redgram", "tur", "toor", "kandi", "kandulu"],
+      "sowing_te": "జూన్, జూలై నెలల్లో",
+      "sowing_en": "June and July"
+    }
+  },
+  "markets": {
+    "guntur": {"te": "గుంటూరు", "en": "Guntur", "aliases": ["గుంటూరు", "గుంటూర్", "guntur"]},
+    "tenali": {"te": "తెనాలి", "en": "Tenali", "aliases": ["తెనాలి", "tenali"]},
+    "narasaraopet": {"te": "నరసరావుపేట", "en": "Narasaraopet", "aliases": ["నరసరావుపేట", "narasaraopet", "narasaraopeta"]}
+  },
+  "prices": {
+    "guntur":       {"chilli": [14200, 13800], "cotton": [7150, 7200], "paddy": [2250, 2240], "maize": [2100, 2050], "redgram": [7400, 7600]},
+    "tenali":       {"chilli": [13900, 13900], "cotton": [7050, 7000], "paddy": [2270, 2230], "maize": [2080, 2100], "redgram": [7350, 7300]},
+    "narasaraopet": {"chilli": [14050, 13700], "cotton": [7100, 7150], "paddy": [2230, 2230], "maize": [2120, 2060], "redgram": [7450, 7500]}
+  },
+  "advice": {
+    "pest": {
+      "te": "{crop} పంటలో పురుగు కనిపిస్తే, ముందుగా పసుపు జిగురు అట్టలు పెట్టండి. వేప నూనె పిచికారీ కూడా చేయవచ్చు. సరైన మందు, మోతాదు కోసం మీ రైతు భరోసా కేంద్రంలో వ్యవసాయ అధికారిని సంప్రదించండి.",
+      "en": "If you see pests in your {crop}, start with yellow sticky traps; a neem oil spray can also help. For the right pesticide and dose, consult the agriculture officer at your Rythu Bharosa Kendram."
+    },
+    "disease": {
+      "te": "{crop} పంటలో తెగులు లక్షణాలు కనిపిస్తే, బాగా దెబ్బతిన్న మొక్కలను తీసివేయండి, పొలంలో నీరు నిలవకుండా చూడండి. ఆకుల ఫోటో తీసుకుని దగ్గరలోని వ్యవసాయ అధికారిని కలవండి.",
+      "en": "If your {crop} shows disease symptoms, remove badly affected plants and avoid standing water. Take a photo of the leaves to your nearest agriculture officer."
+    },
+    "fertilizer": {
+      "te": "{crop} పంటకు ఎరువు వేసే ముందు భూసార పరీక్ష చేయించండి. పరీక్ష ఫలితం ప్రకారం ఎరువు వేస్తే ఖర్చు తగ్గుతుంది, దిగుబడి పెరుగుతుంది.",
+      "en": "Get a soil test before applying fertilizer to your {crop}. Following the soil test saves money and improves yield."
+    },
+    "sowing": {
+      "te": "{crop} విత్తడానికి అనువైన సమయం: {sowing}. ధృవీకరించిన విత్తనాలనే కొనండి, బిల్లు తప్పకుండా తీసుకోండి.",
+      "en": "Best time to sow {crop}: {sowing}. Buy only certified seed and always keep the bill."
+    }
+  },
+  "schemes": {
+    "crop_insurance": {
+      "te": "పంట బీమా పథకం", "en": "Crop Insurance Scheme (demo)",
+      "aliases": ["బీమా", "భీమా", "ఇన్సూరెన్స్", "insurance", "bima", "beema"],
+      "max_acres": null, "tenant_ok": true,
+      "benefit_te": "వర్షాలు, తుఫాను వంటి కారణాల వల్ల పంట నష్టపోతే పరిహారం అందుతుంది",
+      "benefit_en": "compensation if the crop is lost to floods, cyclones or drought",
+      "docs_te": "భూమి పత్రాలు లేదా కౌలు కార్డు, బ్యాంకు పాస్‌బుక్",
+      "docs_en": "land records or tenant card, and bank passbook"
+    },
+    "seed_subsidy": {
+      "te": "విత్తన సబ్సిడీ పథకం", "en": "Seed Subsidy Scheme (demo)",
+      "aliases": ["సబ్సిడీ", "రాయితీ", "subsidy"],
+      "max_acres": 5, "tenant_ok": true,
+      "benefit_te": "ధృవీకరించిన విత్తనాల ధరలో సగం సబ్సిడీ",
+      "benefit_en": "half the price of certified seed is subsidised",
+      "docs_te": "భూమి పత్రాలు లేదా కౌలు కార్డు",
+      "docs_en": "land records or tenant card"
+    },
+    "crop_loan": {
+      "te": "పంట రుణ పథకం", "en": "Crop Loan Scheme (demo)",
+      "aliases": ["రుణ", "లోన్", "loan", "runam"],
+      "max_acres": 10, "tenant_ok": false,
+      "benefit_te": "తక్కువ వడ్డీకి పంట రుణం",
+      "benefit_en": "a low-interest crop loan",
+      "docs_te": "భూమి పత్రాలు, బ్యాంకు పాస్‌బుక్",
+      "docs_en": "land records and bank passbook"
+    }
+  }
+}

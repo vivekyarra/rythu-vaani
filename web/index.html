@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rythu Vaani</title>
+<style>
+  :root { --bg:#f7f5ef; --card:#fff; --ink:#1d2a1f; --muted:#5c6b5e; --accent:#2f7d32; --warn:#b3261e; --line:#dcd8cc; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, "Noto Sans Telugu", sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:16px; }
+  h1 { margin:8px 0 0; font-size:1.6rem; } .sub { color:var(--muted); margin:0 0 12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin:12px 0; }
+  .mock { background:#fdecea; border-color:var(--warn); color:var(--warn); font-weight:600; }
+  .real { background:#e8f5e9; border-color:var(--accent); color:var(--accent); font-weight:600; }
+  button { background:var(--accent); color:#fff; border:0; border-radius:8px; padding:10px 16px; font-size:1rem; cursor:pointer; }
+  button.rec { background:var(--warn); } button:disabled { opacity:.5; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:8px 0; }
+  input[type=text] { flex:1; min-width:200px; padding:10px; border:1px solid var(--line); border-radius:8px; font-size:1rem; }
+  .chip { background:#eef3ea; color:var(--ink); border:1px solid var(--line); padding:6px 10px; font-size:.9rem; }
+  dt { color:var(--muted); font-size:.85rem; margin-top:8px; } dd { margin:0; }
+  .te { font-size:1.15rem; } audio { width:100%; margin-top:8px; }
+  small { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>రైతు వాణి · Rythu Vaani</h1>
+  <p class="sub">Telugu voice helpline for farmers: mandi prices, crop advice, scheme eligibility. Synthetic demo data.</p>
+  <div id="status" class="card">Checking mode…</div>
+
+  <div class="card">
+    <div class="row">
+      <button id="rec">🎙 Record (max 30 s)</button>
+      <label>or upload <input id="file" type="file" accept="audio/*"></label>
+    </div>
+    <div class="row">
+      <label><input id="phone" type="checkbox"> Simulate noisy 8 kHz phone line</label>
+      <select id="snr" aria-label="SNR">
+        <option value="">no added noise</option><option>20</option><option selected>10</option><option>5</option><option>0</option>
+      </select><small>dB SNR</small>
+    </div>
+    <div class="row" id="mockrow" hidden>
+      <input id="mockText" type="text" placeholder="MOCK mode: type what you said (used instead of STT)">
+    </div>
+    <hr>
+    <div class="row">
+      <input id="text" type="text" placeholder="Or type a question, e.g. గుంటూరులో మిర్చి ధర ఎంత?">
+      <button id="ask">Ask</button>
+    </div>
+    <div class="row" id="examples"></div>
+  </div>
+
+  <div id="out" class="card" hidden>
+    <dl>
+      <dt>Heard (Prisma STT)</dt><dd id="o-tr" class="te"></dd>
+      <dt>Intent / slots</dt><dd id="o-in"></dd>
+      <dt>Reply (Timbre TTS, Telugu)</dt><dd id="o-te" class="te"></dd>
+      <dt>English gloss</dt><dd id="o-en"></dd>
+      <dt>Timings (ms)</dt><dd id="o-tm"></dd>
+    </dl>
+    <audio id="player" controls></audio>
+  </div>
+  <small>All prices, schemes and rules are synthetic. Advice is generic: always confirm with your local agriculture officer.</small>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const EXAMPLES = ["గుంటూరులో మిర్చి ధర ఎంత?", "Tenali lo cotton rate entha", "పత్తికి పురుగు పట్టింది ఏం చేయాలి",
+                  "నాకు 3 ఎకరాలు ఉన్నాయి, విత్తన సబ్సిడీకి అర్హుడినా?", "కౌలు రైతుకి లోన్ వస్తుందా, 2 ఎకరాలు"];
+let mock = true;
+
+fetch("/api/status").then(r => r.json()).then(s => {
+  mock = s.mode === "MOCK";
+  $("status").className = "card " + (mock ? "mock" : "real");
+  $("status").textContent = mock
+    ? "MOCK MODE: no GNANI_API_KEY configured. Speech is NOT recognised and replies are beeps. Results below are not real Gnani output."
+    : `LIVE: ${s.stt_model} STT → ${s.tts_model} TTS (voice ${s.tts_voice}, ${s.language})`;
+  $("mockrow").hidden = !mock;
+});
+
+EXAMPLES.forEach(t => { const b = document.createElement("button"); b.className = "chip"; b.textContent = t;
+  b.onclick = () => { $("text").value = t; $("mockText").value = t; }; $("examples").append(b); });
+
+function show(d) {
+  if (d.detail) { alert(d.detail); return; }
+  $("out").hidden = false;
+  $("o-tr").textContent = (d.mode === "MOCK" ? "[MOCK] " : "") + (d.transcript || "(no speech)");
+  $("o-in").textContent = `${d.intent} ${JSON.stringify(d.slots)}`;
+  $("o-te").textContent = d.reply_te;
+  $("o-en").textContent = d.reply_en;
+  $("o-tm").textContent = JSON.stringify(d.timings_ms);
+  $("player").src = "data:audio/wav;base64," + d.reply_audio_wav_b64;
+  $("player").play().catch(() => {});
+}
+
+$("ask").onclick = () => fetch("/api/text", { method: "POST", headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ text: $("text").value }) }).then(r => r.json()).then(show);
+
+async function sendAudio(blob, name) {
+  const fd = new FormData();
+  fd.append("audio", blob, name);
+  fd.append("phone_line", $("phone").checked);
+  if ($("snr").value) fd.append("snr_db", $("snr").value);
+  if (mock && $("mockText").value) fd.append("mock_transcript", $("mockText").value);
+  show(await (await fetch("/api/call", { method: "POST", body: fd })).json());
+}
+
+// Browsers record webm/ogg; convert to 16 kHz mono 16-bit WAV, a format Prisma documents.
+async function toWav(blob) {
+  const buf = await new AudioContext().decodeAudioData(await blob.arrayBuffer());
+  const ctx = new OfflineAudioContext(1, Math.ceil(buf.duration * 16000), 16000);
+  const src = ctx.createBufferSource(); src.buffer = buf; src.connect(ctx.destination); src.start();
+  const pcm = (await ctx.startRendering()).getChannelData(0);
+  const view = new DataView(new ArrayBuffer(44 + pcm.length * 2));
+  const str = (o, s) => [...s].forEach((c, i) => view.setUint8(o + i, c.charCodeAt(0)));
+  str(0, "RIFF"); view.setUint32(4, 36 + pcm.length * 2, true); str(8, "WAVEfmt ");
+  view.setUint32(16, 16, true); view.setUint16(20, 1, true); view.setUint16(22, 1, true);
+  view.setUint32(24, 16000, true); view.setUint32(28, 32000, true); view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true); str(36, "data"); view.setUint32(40, pcm.length * 2, true);
+  pcm.forEach((v, i) => view.setInt16(44 + i * 2, Math.max(-1, Math.min(1, v)) * 32767, true));
+  return new Blob([view], { type: "audio/wav" });
+}
+
+let recorder = null;
+$("rec").onclick = async () => {
+  if (recorder) { recorder.stop(); return; }
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  const chunks = [];
+  recorder = new MediaRecorder(stream);
+  recorder.ondataavailable = e => chunks.push(e.data);
+  recorder.onstop = async () => {
+    stream.getTracks().forEach(t => t.stop());
+    $("rec").textContent = "🎙 Record (max 30 s)"; $("rec").classList.remove("rec"); recorder = null;
+    await sendAudio(await toWav(new Blob(chunks)), "recording.wav");
+  };
+  recorder.start();
+  $("rec").textContent = "■ Stop"; $("rec").classList.add("rec");
+  setTimeout(() => recorder && recorder.stop(), 29000);
+};
+
+$("file").onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  const wav = f.name.toLowerCase().endsWith(".wav") ? f : await toWav(f);
+  await sendAudio(wav, f.name.replace(/\.[^.]+$/, "") + ".wav");
+};
+</script>
+</body>
+</html>
