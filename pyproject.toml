@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rythu-vaani"
+version = "0.1.0"
+description = "Rythu Vaani Telugu voice helpline, plus vaani-bench: test speech-to-text on noisy Indian phone lines"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+app = ["fastapi>=0.110", "uvicorn>=0.27", "python-multipart>=0.0.9"]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+vaani-bench = "vaani_bench.cli:main"
+
+[tool.setuptools]
+packages = ["rythu_vaani", "vaani_bench"]

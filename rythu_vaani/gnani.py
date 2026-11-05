@@ -208,9 +208,9 @@ class GnaniClient:
         )
 
     def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000,
-                   container: str = "wav") -> bytes:
-        resp = self._post(**build_tts_request(self._key, text, language, sample_rate=sample_rate,
-                                              container=container))
+                   container: str = "wav", voice: str = TTS_VOICE) -> bytes:
+        resp = self._post(**build_tts_request(self._key, text, language, voice=voice,
+                                              sample_rate=sample_rate, container=container))
         if "json" in resp.headers.get("content-type", ""):
             msg, body = _error_message(resp)
             raise GnaniError(f"TTS returned JSON instead of audio: {msg}", resp.status_code, body)
@@ -243,7 +243,7 @@ class MockGnaniClient:
         )
 
     def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000,
-                   container: str = "wav") -> bytes:
+                   container: str = "wav", voice: str = TTS_VOICE) -> bytes:
         """Beeps as WAV, whatever ``container`` asks for: mock audio is never sent anywhere as speech."""
         from .audio import write_wav
 

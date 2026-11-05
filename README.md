@@ -64,7 +64,8 @@ Pradesh, plus the field staff at village agriculture centres who answer their ca
 | `rythu_vaani/api.py`, `web/index.html` | FastAPI backend and a single-page web UI (record/upload/type, playback) |
 | `rythu_vaani/whatsapp.py` | WhatsApp channel: Telugu voice note in, Telugu voice note back (setup: `WHATSAPP.md`) |
 | `rythu_vaani/cli.py` | CLI demo |
-| `scripts/noise_benchmark.py` | Noise-robustness benchmark (WER/CER/intent accuracy per SNR) |
+| `vaani_bench/` | `vaani-bench`: standalone noisy-phone-line STT benchmark for your own audio or sentences |
+| `scripts/noise_benchmark.py` | Rythu Vaani benchmark (WER/CER/intent accuracy per SNR), built on `vaani_bench` |
 | `tests/` | pytest suite (runs fully offline in MOCK mode) |
 
 ### Why a deterministic NLU?
@@ -210,6 +211,49 @@ Honest caveats:
 - 10 questions per set is small. One question is 10 percentage points.
 - Some NLU fixes (fused words like "రెండెకరాలు", "లోనొస్తుందా") came from reading Prisma's
   transcripts on the original set, which is why the held-out set exists.
+
+## vaani-bench: test your voice agent on noisy Indian phone lines
+
+The benchmark above is not specific to farmers. `vaani-bench` packages it as a standalone tool for
+anyone building an Indian-language voice agent: give it your own recordings (with reference
+transcripts) or plain text sentences, and it measures how Gnani Prisma STT holds up on a simulated
+narrowband call: 8 kHz, noise at the SNRs you choose (pink, 50 Hz mains hum, or white),
+300-3400 Hz band-pass, and G.711 mu-law. It reports WER and CER per condition, plus the SNR
+measured after the channel, as a Markdown and a JSON report (every transcript included).
+
+```bash
+pip install -e .            # adds the `vaani-bench` command (or run `python -m vaani_bench` from the repo)
+```
+
+```bash
+# 1. Phone-line simulator only, no API key needed: hear what your callers' audio sounds like
+vaani-bench degrade my_question.wav my_question_phone.wav --snr 5 --noise hum
+
+# 2. Your own recordings: refs.json maps file name to reference transcript, {"q1.wav": "...", ...}
+vaani-bench run --audio-dir recordings/ --transcripts refs.json --lang hi-IN --model v3 \
+    --snrs clean,phone,20,10,5,0
+
+# 3. Text sentences spoken by Timbre TTS, with Prisma v3.0 context hints for your domain
+vaani-bench run --sentences my_sentences.json --lang te-IN --model v3 \
+    --keyterms terms.txt --topic "Customers calling a bank about card and loan questions" --snrs phone,10,5,0
+```
+
+* `--sentences` takes a JSON list of strings (or `{"sentences": [...]}`); `--keyterms` is a text
+  file with one term per line (Prisma v3.0 only, at most 200). Recordings must be WAV, at most 30 s.
+* Reports go to `vaani-bench-results/` (`--out` to change). Intent accuracy is not part of the
+  generic tool; `--helpline-intent` adds Rythu Vaani's farmer-helpline intent+slots check for
+  Telugu farm questions.
+* The measured channel SNR can differ from the nominal `--snr`: noise is added before the
+  300-3400 Hz band-pass, which removes the out-of-band part (most of the 50 Hz hum, for example).
+* No `GNANI_API_KEY` means MOCK mode: `degrade` works fully, and `run` still simulates and measures
+  the channel, but calls no STT or TTS, reports WER/CER as `n/a (MOCK)`, and labels the report
+  MOCK in the file name and text.
+
+Why it is worth running: in the held-out Rythu Vaani test above, at 0 dB (1.1 dB measured on the
+line), Prisma v2.5 kept the caller's intent in 6/10 questions; Prisma v3.0 with keyterms and a
+topic kept it in 10/10, and CER fell from 0.170 to 0.035. Plain v3.0 without context got 7/10. The
+right model and context for your domain only show up when you test on audio that sounds like
+your callers' phones.
 
 ## Privacy and synthetic-data statement
 

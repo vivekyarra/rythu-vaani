@@ -17,3 +17,7 @@ results/*
 !results/benchmark_*.md
 !results/benchmark_*.json
 *.wav
+
+# vaani-bench default output
+vaani-bench-results/
+.vaani-bench-cache/

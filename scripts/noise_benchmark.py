@@ -6,6 +6,9 @@ For each synthetic caller sentence:
   3. transcribe with Prisma v2.5 (te-IN, format=verbatim),
   4. score WER, CER and whether the helpline still gets the same intent + slots.
 
+This is the Rythu Vaani-specific front end (farmer-helpline sentence sets, intent scoring,
+KB keyterms) over the generic engine in ``vaani_bench`` (see ``python -m vaani_bench --help``).
+
 Real mode (GNANI_API_KEY set) writes results/benchmark_<timestamp>.{json,md}.
 MOCK mode runs the same degradation on placeholder (non-speech) fixtures, prints the
 measured channel SNR only, and writes nothing: there is no WER without a real STT.
@@ -18,11 +21,8 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-import time
 from datetime import datetime
 from pathlib import Path
-
-import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -32,22 +32,15 @@ from rythu_vaani import gnani  # noqa: E402
 from rythu_vaani.config import get_client  # noqa: E402
 from rythu_vaani.kb import default_kb  # noqa: E402
 from rythu_vaani.nlu import parse  # noqa: E402
+from vaani_bench import core  # noqa: E402  (generic engine; this script adds the helpline specifics)
 
-CLEAN_SR = 16000
+CLEAN_SR = core.CLEAN_SR
+channel_snr_db = core.channel_snr_db
 
 
 def conditions(snrs: list[float]) -> list[tuple[str, bool, float | None]]:
     """(label, through_phone_channel, snr_db)"""
-    return [("clean 16k", False, None), ("phone, no noise", True, None)] + [
-        (f"phone, {s:g} dB", True, s) for s in snrs
-    ]
-
-
-def channel_snr_db(clean_phone: np.ndarray, noisy_phone: np.ndarray) -> float:
-    """SNR actually present after the channel (band-pass + mu-law), measured, not nominal."""
-    noise = noisy_phone - clean_phone
-    pn = A.power(noise)
-    return float("inf") if pn == 0 else 10 * np.log10(A.power(clean_phone) / pn)
+    return core.parse_conditions(["clean", "phone"] + [f"{s:g}" for s in snrs], clean_label="clean 16k")
 
 
 def run(args) -> int:
@@ -70,46 +63,20 @@ def run(args) -> int:
         print("=" * 70 + "\n MOCK MODE: no GNANI_API_KEY. Placeholder (non-speech) fixtures, no STT.\n"
               " Only the measured channel SNR is shown. No WER is reported or saved.\n" + "=" * 70)
 
-    cache = ROOT / "bench_cache"
-    if not client.mock:
-        cache.mkdir(exist_ok=True)
-    rows = []
-    for i, ref in enumerate(sentences):
-        if client.mock:
-            clean = A.placeholder_signal(2.5, CLEAN_SR, seed=i)
-        else:
-            prefix = "clean" if set_name == "benchmark_sentences" else f"{set_name}_clean"
-            path = cache / f"{prefix}_{i:02d}_{gnani.TTS_VOICE}.wav"
-            if not path.exists():
-                path.write_bytes(client.synthesize(ref, sample_rate=CLEAN_SR))
-            clean, sr = A.read_wav(path.read_bytes())
-            clean = A.resample(clean, sr, CLEAN_SR)
-        phone_ref = A.degrade_to_phone(clean, CLEAN_SR, None, args.noise)
-        ref_intent = parse(ref, kb)
+    prefix = "clean" if set_name == "benchmark_sentences" else f"{set_name}_clean"
+    items = core.items_from_sentences(
+        sentences, client, cache_dir=ROOT / "bench_cache",
+        cache_name=lambda i, _text: f"{prefix}_{i:02d}_{gnani.TTS_VOICE}.wav")
 
-        for label, phone, snr in conds:
-            if not phone:
-                wav, measured = A.write_wav(clean, CLEAN_SR), None
-            else:
-                y = A.degrade_to_phone(clean, CLEAN_SR, snr, args.noise, seed=i)
-                measured = channel_snr_db(phone_ref, y) if snr is not None else None
-                wav = A.write_wav(y, A.PHONE_SR)
-            row = {"sentence": i, "condition": label, "snr_db": snr,
-                   "measured_channel_snr_db": None if measured is None else round(measured, 1)}
-            if not client.mock:
-                t0 = time.perf_counter()
-                stt = client.transcribe(wav, f"s{i}.wav", fmt="verbatim", **stt_kwargs)
-                hyp_intent = parse(stt.transcript, kb)
-                row.update(reference=ref, hypothesis=stt.transcript,
-                           wer=round(A.wer(ref, stt.transcript), 4), cer=round(A.cer(ref, stt.transcript), 4),
-                           intent_ok=(hyp_intent.name, hyp_intent.slots) == (ref_intent.name, ref_intent.slots),
-                           latency_ms=round((time.perf_counter() - t0) * 1000))
-            rows.append(row)
-            print(f"[{i + 1}/{len(sentences)}] {label:<16} " + (
-                f"WER={row['wer']:.2f} CER={row['cer']:.2f} intent_ok={row['intent_ok']}" if not client.mock
-                else f"measured channel SNR={row['measured_channel_snr_db']} dB"))
+    def same_intent(ref: str, hyp: str) -> bool:
+        r, h = parse(ref, kb), parse(hyp, kb)
+        return (r.name, r.slots) == (h.name, h.slots)
 
-    table = summarise(rows, conds, client.mock)
+    rows = core.evaluate(items, conds, client, noise=args.noise, fmt="verbatim",
+                         stt_kwargs=stt_kwargs, intent_fn=same_intent)
+    for r in rows:  # keep the original results/benchmark_*.json row shape
+        r.pop("id", None)
+    table = core.markdown_table(core.summarise(rows, conds), client.mock, intent=True)
     print("\n" + table)
     if client.mock:
         return 0
@@ -131,25 +98,6 @@ def run(args) -> int:
         encoding="utf-8")
     print(f"\nsaved results/benchmark_{stamp}.json and .md")
     return 0
-
-
-def summarise(rows: list[dict], conds, mock: bool) -> str:
-    if mock:
-        lines = ["| condition | mean measured channel SNR (dB) | WER |", "|---|---|---|"]
-    else:
-        lines = ["| condition | mean measured channel SNR (dB) | WER | CER | intent+slots correct |",
-                 "|---|---|---|---|---|"]
-    for label, _, _ in conds:
-        rs = [r for r in rows if r["condition"] == label]
-        snrs = [r["measured_channel_snr_db"] for r in rs if r["measured_channel_snr_db"] is not None]
-        snr_s = f"{np.mean(snrs):.1f}" if snrs else "-"
-        if mock:
-            lines.append(f"| {label} | {snr_s} | n/a (MOCK) |")
-        else:
-            lines.append(f"| {label} | {snr_s} | {np.mean([r['wer'] for r in rs]):.3f} | "
-                         f"{np.mean([r['cer'] for r in rs]):.3f} | "
-                         f"{sum(r['intent_ok'] for r in rs)}/{len(rs)} |")
-    return "\n".join(lines)
 
 
 def main(argv=None) -> int:
