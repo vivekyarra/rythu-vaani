@@ -13,6 +13,7 @@ network and every result it returns carries ``mock=True``.
 """
 from __future__ import annotations
 
+import json
 import time
 import uuid
 from dataclasses import dataclass, field
@@ -26,12 +27,15 @@ STT_URL = f"{BASE_URL}/stt/v3"
 TTS_URL = f"{BASE_URL}/api/v1/tts/inference"
 
 STT_MODEL = "prisma-v2.5"  # sent implicitly: omitting `model` selects Prisma v2.5
+STT_MODEL_V3 = "prisma-v3.0"  # opt-in; also accepts context (keyterms, topic)
+STT_MAX_KEYTERMS = 200
 TTS_MODEL = "timbre-v2.5"
 TTS_VOICE = "Varuni"  # Timbre v2.5 Telugu voice ("clear, natural, conversational")
 LANGUAGE = "te-IN"
 
 STT_FORMATS = {"verbatim", "transcribe"}  # both valid on Prisma v2.5
 TTS_SAMPLE_RATES = {8000, 16000, 22050, 24000, 44100, 48000}
+TTS_CONTAINERS = {"wav", "ogg"}
 RETRY_STATUSES = {429, 500, 503, 504}
 
 
@@ -58,20 +62,37 @@ def build_stt_request(
     language_code: str = LANGUAGE,
     fmt: str = "transcribe",
     request_id: str | None = None,
+    model: str | None = None,
+    keyterms: list[str] | None = None,
+    topic: str | None = None,
 ) -> dict:
-    """Keyword arguments for ``httpx.Client.post`` for one Prisma v2.5 REST call."""
+    """Keyword arguments for ``httpx.Client.post`` for one Prisma REST call.
+
+    ``model=None`` omits the field, which selects Prisma v2.5. ``keyterms`` and ``topic``
+    are Prisma v3.0 context hints (docs: STT/models/prisma-v3, "Context").
+    """
     if fmt not in STT_FORMATS:
         raise ValueError(f"format must be one of {sorted(STT_FORMATS)}")
     if not audio:
         raise ValueError("audio is empty")
+    if (keyterms or topic) and model != STT_MODEL_V3:
+        raise ValueError(f"keyterms/topic need model={STT_MODEL_V3}")
+    if keyterms and len(keyterms) > STT_MAX_KEYTERMS:
+        raise ValueError(f"at most {STT_MAX_KEYTERMS} keyterms")
     headers = {"X-API-Key-ID": api_key, "X-API-Request-ID": request_id or str(uuid.uuid4())}
-    mime = "audio/wav" if filename.lower().endswith(".wav") else "application/octet-stream"
+    mime = {".wav": "audio/wav", ".ogg": "audio/ogg"}.get(filename.lower()[-4:], "application/octet-stream")
+    data = {"language_code": language_code, "format": fmt}
+    if model:
+        data["model"] = model
+    if keyterms:
+        data["keyterms"] = json.dumps(keyterms, ensure_ascii=False)
+    if topic:
+        data["topic"] = topic
     return {
         "url": STT_URL,
         "headers": headers,
         "files": {"audio_file": (filename, audio, mime)},
-        # No `model` field on purpose: the docs say omitting it selects Prisma v2.5.
-        "data": {"language_code": language_code, "format": fmt},
+        "data": data,
     }
 
 
@@ -82,14 +103,25 @@ def build_tts_request(
     voice: str = TTS_VOICE,
     sample_rate: int = 8000,
     speed: float = 1.0,
+    container: str = "wav",
 ) -> dict:
-    """Keyword arguments for ``httpx.Client.post`` for one Timbre v2.5 REST call (16-bit mono WAV)."""
+    """Keyword arguments for ``httpx.Client.post`` for one Timbre v2.5 REST call.
+
+    ``container="wav"`` gives 16-bit mono WAV; ``"ogg"`` gives OGG Opus (what WhatsApp voice notes use).
+    """
     if not text.strip():
         raise ValueError("text is empty")
     if sample_rate not in TTS_SAMPLE_RATES:
         raise ValueError(f"sample_rate must be one of {sorted(TTS_SAMPLE_RATES)}")
     if not 0.85 <= speed <= 1.15:
         raise ValueError("speed must be within 0.85..1.15")
+    if container not in TTS_CONTAINERS:
+        raise ValueError(f"container must be one of {sorted(TTS_CONTAINERS)}")
+    if container == "ogg":
+        audio_config = {"sample_rate": sample_rate, "num_channels": 1, "container": "ogg"}
+    else:
+        audio_config = {"sample_rate": sample_rate, "num_channels": 1, "sample_width": 2,
+                        "encoding": "linear_pcm", "container": "wav"}
     return {
         "url": TTS_URL,
         "headers": {"X-API-Key-ID": api_key, "Content-Type": "application/json"},
@@ -99,13 +131,7 @@ def build_tts_request(
             "voice": voice,
             "language": language,
             "speed": speed,
-            "audio_config": {
-                "sample_rate": sample_rate,
-                "num_channels": 1,
-                "sample_width": 2,
-                "encoding": "linear_pcm",
-                "container": "wav",
-            },
+            "audio_config": audio_config,
         },
     }
 
@@ -166,21 +192,25 @@ class GnaniClient:
         raise AssertionError("unreachable")
 
     def transcribe(self, audio: bytes, filename: str = "audio.wav", language_code: str = LANGUAGE,
-                   fmt: str = "transcribe") -> STTResult:
-        resp = self._post(**build_stt_request(self._key, audio, filename, language_code, fmt))
+                   fmt: str = "transcribe", model: str | None = None, keyterms: list[str] | None = None,
+                   topic: str | None = None) -> STTResult:
+        resp = self._post(**build_stt_request(self._key, audio, filename, language_code, fmt,
+                                              model=model, keyterms=keyterms, topic=topic))
         body = resp.json()
         if not body.get("success", False):
             msg, _ = _error_message(resp)
             raise GnaniError(f"STT failed: {msg}", resp.status_code, body)
         return STTResult(
             transcript=body.get("transcript", ""),
-            model=body.get("model", STT_MODEL),
+            model=body.get("model", model or STT_MODEL),
             request_id=body.get("request_id", ""),
             raw=body,
         )
 
-    def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000) -> bytes:
-        resp = self._post(**build_tts_request(self._key, text, language, sample_rate=sample_rate))
+    def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000,
+                   container: str = "wav") -> bytes:
+        resp = self._post(**build_tts_request(self._key, text, language, sample_rate=sample_rate,
+                                              container=container))
         if "json" in resp.headers.get("content-type", ""):
             msg, body = _error_message(resp)
             raise GnaniError(f"TTS returned JSON instead of audio: {msg}", resp.status_code, body)
@@ -202,7 +232,8 @@ class MockGnaniClient:
 
     def transcribe(
         self, audio: bytes, filename: str = "audio.wav", language_code: str = LANGUAGE,
-        fmt: str = "transcribe", hint: str | None = None,
+        fmt: str = "transcribe", hint: str | None = None, model: str | None = None,
+        keyterms: list[str] | None = None, topic: str | None = None,
     ) -> STTResult:
         return STTResult(
             transcript=(hint or MOCK_DEFAULT_TRANSCRIPT).strip(),
@@ -211,7 +242,9 @@ class MockGnaniClient:
             mock=True,
         )
 
-    def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000) -> bytes:
+    def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000,
+                   container: str = "wav") -> bytes:
+        """Beeps as WAV, whatever ``container`` asks for: mock audio is never sent anywhere as speech."""
         from .audio import write_wav
 
         t = np.arange(int(0.15 * sample_rate)) / sample_rate

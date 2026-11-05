@@ -23,9 +23,25 @@ NOISE_KINDS = ("white", "pink", "hum")
 
 # ---------- WAV I/O ----------
 
+def _fix_streamed_wav_sizes(data: bytes) -> bytes:
+    """Timbre streams WAV with placeholder sizes (0xFFFFFFFF); rewrite them from the real length."""
+    if len(data) < 44 or data[:4] != b"RIFF" or data[8:12] != b"WAVE":
+        return data
+    buf = bytearray(data)
+    buf[4:8] = (len(buf) - 8).to_bytes(4, "little")
+    pos = 12
+    while pos + 8 <= len(buf):
+        cid, size = bytes(buf[pos:pos + 4]), int.from_bytes(buf[pos + 4:pos + 8], "little")
+        if cid == b"data":
+            buf[pos + 4:pos + 8] = (len(buf) - pos - 8).to_bytes(4, "little")
+            break
+        pos += 8 + size + (size & 1)
+    return bytes(buf)
+
+
 def read_wav(data: bytes) -> tuple[np.ndarray, int]:
     """Decode WAV bytes to mono float32 in [-1, 1]."""
-    sr, x = wavfile.read(io.BytesIO(data))
+    sr, x = wavfile.read(io.BytesIO(_fix_streamed_wav_sizes(data)))
     if x.dtype == np.int16:
         x = x / 32768.0
     elif x.dtype == np.int32:

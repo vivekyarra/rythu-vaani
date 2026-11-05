@@ -55,10 +55,16 @@ def run(args) -> int:
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8")
     client = get_client()
-    sentences = json.loads((ROOT / "data" / "benchmark_sentences.json").read_text(encoding="utf-8"))["sentences"]
+    sentences = json.loads((ROOT / "data" / args.sentences).read_text(encoding="utf-8"))["sentences"]
     sentences = sentences[: args.limit] if args.limit else sentences
     conds = conditions(args.snrs)
     kb = default_kb()
+    stt_kwargs = {}
+    if args.stt != "v2.5":
+        stt_kwargs["model"] = gnani.STT_MODEL_V3
+    if args.stt == "v3-context":
+        stt_kwargs["keyterms"], stt_kwargs["topic"] = kb.stt_context()
+    set_name = Path(args.sentences).stem
 
     if client.mock:
         print("=" * 70 + "\n MOCK MODE: no GNANI_API_KEY. Placeholder (non-speech) fixtures, no STT.\n"
@@ -72,7 +78,8 @@ def run(args) -> int:
         if client.mock:
             clean = A.placeholder_signal(2.5, CLEAN_SR, seed=i)
         else:
-            path = cache / f"clean_{i:02d}_{gnani.TTS_VOICE}.wav"
+            prefix = "clean" if set_name == "benchmark_sentences" else f"{set_name}_clean"
+            path = cache / f"{prefix}_{i:02d}_{gnani.TTS_VOICE}.wav"
             if not path.exists():
                 path.write_bytes(client.synthesize(ref, sample_rate=CLEAN_SR))
             clean, sr = A.read_wav(path.read_bytes())
@@ -91,7 +98,7 @@ def run(args) -> int:
                    "measured_channel_snr_db": None if measured is None else round(measured, 1)}
             if not client.mock:
                 t0 = time.perf_counter()
-                stt = client.transcribe(wav, f"s{i}.wav", fmt="verbatim")
+                stt = client.transcribe(wav, f"s{i}.wav", fmt="verbatim", **stt_kwargs)
                 hyp_intent = parse(stt.transcript, kb)
                 row.update(reference=ref, hypothesis=stt.transcript,
                            wer=round(A.wer(ref, stt.transcript), 4), cer=round(A.cer(ref, stt.transcript), 4),
@@ -110,7 +117,10 @@ def run(args) -> int:
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    meta = {"date": stamp, "mode": "real", "stt": f"{gnani.STT_MODEL} (te-IN, verbatim)",
+    stt_label = {"v2.5": gnani.STT_MODEL, "v3": gnani.STT_MODEL_V3,
+                 "v3-context": f"{gnani.STT_MODEL_V3} + keyterms/topic"}[args.stt]
+    stamp = f"{stamp}_{args.stt}_{set_name}"
+    meta = {"date": stamp, "mode": "real", "stt": f"{stt_label} (te-IN, verbatim)", "sentences": args.sentences,
             "tts": f"{gnani.TTS_MODEL} voice {gnani.TTS_VOICE}", "noise": args.noise,
             "n_sentences": len(sentences),
             "channel": "8 kHz, noise added at nominal SNR, 300-3400 Hz band-pass, G.711 mu-law"}
@@ -147,6 +157,10 @@ def main(argv=None) -> int:
     p.add_argument("--snrs", type=float, nargs="+", default=[20, 10, 5, 0])
     p.add_argument("--noise", choices=A.NOISE_KINDS, default="pink")
     p.add_argument("--limit", type=int, default=0, help="only the first N sentences")
+    p.add_argument("--stt", choices=["v2.5", "v3", "v3-context"], default="v2.5",
+                   help="Prisma v2.5 (default), v3.0, or v3.0 with keyterms + topic from the KB")
+    p.add_argument("--sentences", default="benchmark_sentences.json",
+                   help="sentence file in data/ (use a held-out file to avoid tuning on the test set)")
     return run(p.parse_args(argv))
 
 

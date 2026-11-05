@@ -26,6 +26,31 @@ def test_build_stt_request_validates():
         build_stt_request("k", WAV, fmt="codemix")  # v3.0-only format
 
 
+def test_build_stt_request_v3_context():
+    req = build_stt_request("k", WAV, model="prisma-v3.0", keyterms=["మిర్చి", "గుంటూరు"], topic="farmer call")
+    assert req["data"]["model"] == "prisma-v3.0"
+    assert json.loads(req["data"]["keyterms"]) == ["మిర్చి", "గుంటూరు"]
+    assert "\\u" not in req["data"]["keyterms"]  # form field carries Telugu directly
+    assert req["data"]["topic"] == "farmer call"
+
+
+@pytest.mark.parametrize("kw", [
+    {"keyterms": ["మిర్చి"]},  # context without v3.0
+    {"model": "prisma-v3.0", "keyterms": ["x"] * 201},  # over the documented limit
+])
+def test_build_stt_request_rejects_bad_context(kw):
+    with pytest.raises(ValueError):
+        build_stt_request("k", WAV, **kw)
+
+
+def test_kb_stt_context_fits_limits():
+    from rythu_vaani.kb import default_kb
+    terms, topic = default_kb().stt_context()
+    assert 0 < len(terms) <= gnani.STT_MAX_KEYTERMS and len(terms) == len(set(terms))
+    assert "మిర్చి" in terms and "లోనొ" not in terms  # real words only, not NLU stems
+    assert 0 < len(topic) <= 1600
+
+
 def test_build_tts_request():
     req = build_tts_request("k123", "నమస్కారం")
     assert req["url"] == "https://api.vachana.ai/api/v1/tts/inference"

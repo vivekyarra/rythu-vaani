@@ -1,0 +1,10 @@
+{
+  "_note": "Off-domain synthetic calls (no crop, market or scheme). Checks that Prisma v3.0 keyterms do not make farm words appear that were never spoken. Expected intent: greeting or fallback, same as the clean reference.",
+  "sentences": [
+    "ఈరోజు వాతావరణం ఎలా ఉంది",
+    "నా ఫోన్ బిల్లు ఎంత వచ్చింది",
+    "బస్సు ఎన్ని గంటలకు వస్తుంది",
+    "నమస్కారం నాకు సహాయం కావాలి",
+    "మా అబ్బాయి పరీక్ష ఫలితాలు ఎప్పుడు వస్తాయి"
+  ]
+}

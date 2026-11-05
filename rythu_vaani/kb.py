@@ -7,6 +7,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from .config import DATA_DIR
+from .mandi import LivePrices
 from .nlu import Intent
 
 GREETING_TE = ("నమస్కారం! నేను రైతు వాణి. పంట ధరలు, పంట సలహాలు, ప్రభుత్వ పథకాల గురించి అడగండి. "
@@ -15,6 +16,16 @@ GREETING_EN = ("Hello! I am Rythu Vaani. Ask me about mandi prices, crop advice 
                "for example: what is the chilli price in Guntur?")
 FALLBACK_TE = "క్షమించండి, సరిగ్గా అర్థం కాలేదు. పంట పేరు చెప్పి, ధర, సలహా లేదా పథకం గురించి మళ్ళీ అడగండి."
 FALLBACK_EN = "Sorry, I did not understand. Please say the crop name and ask about price, advice or a scheme."
+
+# Prisma v3.0 context for farmer calls (see KnowledgeBase.stt_context)
+STT_SKIP_ALIASES = {"రుణ", "లోనొ"}  # NLU match stems, not words anyone says
+STT_EXTRA_KEYTERMS = ["రుణం", "ధర", "రేటు", "మార్కెట్", "క్వింటాలు", "పురుగు", "తెగులు", "ఎరువు", "యూరియా",
+                      "విత్తనాలు", "విత్తుకోవాలి", "ఎకరాలు", "కౌలు రైతు", "పథకం", "అర్హత", "క్రాప్ లోన్"]
+STT_TOPIC = ("A farmer near Guntur, Andhra Pradesh, calls a Telugu agriculture helpline over a phone line. "
+             "They ask about mandi prices for chilli, cotton, paddy, maize or red gram at Guntur, Tenali or "
+             "Narasaraopet; about pests, disease, fertilizer or sowing time; or whether they qualify for "
+             "crop insurance, seed subsidy or a crop loan, often saying their acreage and whether they are "
+             "a tenant farmer.")
 
 
 @dataclass
@@ -36,20 +47,39 @@ def _inr(n: float) -> str:
     return ",".join([head] + groups + [tail]) if head else ",".join(groups + [tail])
 
 
+def _dative(name_te: str) -> str:
+    """Telugu 'to/for X': పథకం -> పథకానికి (not పథకంకు)."""
+    return name_te[:-1] + "ానికి" if name_te.endswith("ం") else name_te + "కు"
+
+
 def _num(x: float) -> str:
     return str(int(x)) if float(x).is_integer() else str(x)
 
 
 class KnowledgeBase:
-    def __init__(self, data: dict):
+    def __init__(self, data: dict, live_prices: LivePrices | None = None):
         self.data = data
         self.crops = data["crops"]
         self.markets = data["markets"]
         self.schemes = data["schemes"]
+        self.live_prices = live_prices
 
     @classmethod
-    def load(cls, path: Path | None = None) -> "KnowledgeBase":
-        return cls(json.loads(Path(path or DATA_DIR / "kb.json").read_text(encoding="utf-8")))
+    def load(cls, path: Path | None = None, live_prices: LivePrices | None = None) -> "KnowledgeBase":
+        return cls(json.loads(Path(path or DATA_DIR / "kb.json").read_text(encoding="utf-8")), live_prices)
+
+    def stt_context(self) -> tuple[list[str], str]:
+        """Prisma v3.0 hints: Telugu-script crop/market/scheme names plus helpline words, and a topic.
+
+        Only words the helpline actually listens for go in, so a hint can't push the
+        transcript toward something the NLU would then misread.
+        """
+        terms: list[str] = []
+        for table in (self.crops, self.markets, self.schemes):
+            for entry in table.values():
+                terms += [a for a in entry["aliases"] if not a.isascii() and a not in STT_SKIP_ALIASES]
+        terms += STT_EXTRA_KEYTERMS
+        return list(dict.fromkeys(terms)), STT_TOPIC
 
     def answer(self, intent: Intent) -> Reply:
         handler = getattr(self, f"_{intent.name}", None)
@@ -72,6 +102,17 @@ class KnowledgeBase:
         crop = self.crops[slots["crop"]]
         mkey = slots.get("market", self.data["default_market"])
         market = self.markets[mkey]
+        if self.live_prices:
+            q = self.live_prices.quote(market["agmarknet"], crop["agmarknet"])
+            if q:
+                day_te = q.day.strftime("%d-%m-%Y")
+                return Reply(
+                    f"{market['te']} మార్కెట్‌లో {crop['te']} ధర క్వింటాలుకు {_inr(q.modal)} రూపాయలు. "
+                    f"కనిష్ఠ ధర {_inr(q.low)}, గరిష్ఠ ధర {_inr(q.high)} రూపాయలు. ఇది {day_te} నాటి ప్రభుత్వ "
+                    "అగ్‌మార్క్‌నెట్ ధర.",
+                    f"{crop['en'].capitalize()} at {market['en']} market: ₹{_inr(q.modal)} per quintal "
+                    f"(range ₹{_inr(q.low)}-₹{_inr(q.high)}), Agmarknet report of {q.day:%d %b %Y}.",
+                )
         now, last_week = self.data["prices"][mkey][slots["crop"]]
         diff = now - last_week
         if diff > 0:
@@ -120,13 +161,13 @@ class KnowledgeBase:
             reason_en = f"this scheme is only for farmers with up to {_num(s['max_acres'])} acres"
         else:
             return Reply(
-                f"{_num(acres)} ఎకరాలతో మీరు {s['te']}కు అర్హులు అయ్యే అవకాశం ఉంది. {s['benefit_te']}. "
+                f"{_num(acres)} ఎకరాలతో మీరు {_dative(s['te'])} అర్హులు అయ్యే అవకాశం ఉంది. {s['benefit_te']}. "
                 f"కావలసిన పత్రాలు: {s['docs_te']}. దరఖాస్తు కోసం మీ రైతు భరోసా కేంద్రాన్ని సంప్రదించండి.",
                 f"With {_num(acres)} acres you are likely eligible for the {s['en']}: {s['benefit_en']}. "
                 f"Documents: {s['docs_en']}. Apply at your Rythu Bharosa Kendram.",
             )
         return Reply(
-            f"{_num(acres)} ఎకరాలతో మీరు {s['te']}కు అర్హులు కాకపోవచ్చు, ఎందుకంటే {reason_te}. "
+            f"{_num(acres)} ఎకరాలతో మీరు {_dative(s['te'])} అర్హులు కాకపోవచ్చు, ఎందుకంటే {reason_te}. "
             "ఇతర పథకాల గురించి అడగండి.",
             f"With {_num(acres)} acres you may not be eligible: {reason_en}. Ask me about other schemes.",
         )
@@ -134,4 +175,5 @@ class KnowledgeBase:
 
 @lru_cache(maxsize=1)
 def default_kb() -> KnowledgeBase:
-    return KnowledgeBase.load()
+    """Live Agmarknet prices when DATA_GOV_IN_API_KEY is set, synthetic demo prices otherwise."""
+    return KnowledgeBase.load(live_prices=LivePrices.from_env())

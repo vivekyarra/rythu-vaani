@@ -22,6 +22,10 @@ KB = default_kb()
      {"scheme": "crop_loan", "acres": 2.0, "tenant": True}),
     ("కౌలు రైతుని కాదు 2.5 ఎకరాలు loan", "scheme_info", {"scheme": "crop_loan", "acres": 2.5, "tenant": False}),
     ("౪ ఎకరాలు బీమా", "scheme_info", {"scheme": "crop_insurance", "acres": 4.0}),
+    # Prisma output from a real noisy-call run: number and ఎకరాలు fused by sandhi
+    ("కౌలు రైతులు రెండెకరాలు క్రాప్ లోన్ వస్తుందా", "scheme_info",
+     {"scheme": "crop_loan", "acres": 2.0, "tenant": True}),
+    ("అరెకరం ఉంది విత్తన సబ్సిడీ", "scheme_info", {"scheme": "seed_subsidy", "acres": 0.5}),
     ("ప్రభుత్వ పథకాలు ఏమున్నాయి", "scheme_info", {}),
     ("మిర్చి", "clarify_crop", {"crop": "chilli"}),
     ("నమస్కారం", "greeting", {}),

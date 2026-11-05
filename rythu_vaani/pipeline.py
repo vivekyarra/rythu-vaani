@@ -5,6 +5,7 @@ import time
 from dataclasses import asdict, dataclass, field
 
 from . import audio as A
+from . import gnani
 from .kb import KnowledgeBase, default_kb
 from .nlu import parse
 
@@ -38,7 +39,8 @@ def _mode(client) -> str:
 
 
 def handle_text(text: str, client, kb: KnowledgeBase | None = None, *, stt_model: str | None = None,
-                timings: dict | None = None) -> CallResult:
+                timings: dict | None = None, tts_container: str = "wav") -> CallResult:
+    """``tts_container="ogg"`` returns the reply as OGG Opus (WhatsApp voice notes) instead of WAV."""
     kb = kb or default_kb()
     timings = dict(timings or {})
     t0 = time.perf_counter()
@@ -46,7 +48,10 @@ def handle_text(text: str, client, kb: KnowledgeBase | None = None, *, stt_model
     reply = kb.answer(intent)
     timings["nlu_kb"] = round((time.perf_counter() - t0) * 1000, 1)
     t0 = time.perf_counter()
-    wav = client.synthesize(reply.te)
+    if tts_container == "wav":
+        wav = client.synthesize(reply.te)
+    else:
+        wav = client.synthesize(reply.te, sample_rate=16000, container=tts_container)
     timings["tts"] = round((time.perf_counter() - t0) * 1000, 1)
     return CallResult(_mode(client), text, stt_model, intent.name, intent.slots, reply.te, reply.en, wav, timings)
 
@@ -73,12 +78,17 @@ def prepare_audio(data: bytes, filename: str, phone_line: bool = False, snr_db: 
 
 def handle_audio(data: bytes, client, filename: str = "audio.wav", *, phone_line: bool = False,
                  snr_db: float | None = None, mock_hint: str | None = None,
-                 kb: KnowledgeBase | None = None) -> CallResult:
+                 kb: KnowledgeBase | None = None, tts_container: str = "wav") -> CallResult:
     data, filename = prepare_audio(data, filename, phone_line, snr_db)
+    kb = kb or default_kb()
     t0 = time.perf_counter()
     if getattr(client, "mock", False):
         stt = client.transcribe(data, filename, hint=mock_hint)
     else:
-        stt = client.transcribe(data, filename)
+        # Prisma v3.0 with the helpline's own vocabulary: 10/10 intents down to 0 dB in the
+        # benchmark, vs 6/10 for v2.5 (results/, README "Results").
+        keyterms, topic = kb.stt_context()
+        stt = client.transcribe(data, filename, model=gnani.STT_MODEL_V3, keyterms=keyterms, topic=topic)
     timings = {"stt": round((time.perf_counter() - t0) * 1000, 1)}
-    return handle_text(stt.transcript, client, kb, stt_model=stt.model, timings=timings)
+    return handle_text(stt.transcript, client, kb, stt_model=stt.model, timings=timings,
+                       tts_container=tts_container)

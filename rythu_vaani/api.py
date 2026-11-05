@@ -2,15 +2,18 @@
 from __future__ import annotations
 
 import base64
+import hmac
+import json
 
-from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
-from fastapi.responses import FileResponse
+from fastapi import BackgroundTasks, Depends, FastAPI, File, Form, HTTPException, Query, Request, UploadFile
+from fastapi.responses import FileResponse, PlainTextResponse
 from pydantic import BaseModel, Field
 
 from . import gnani
 from .config import ROOT, get_client
 from .gnani import GnaniError
 from .pipeline import CallResult, PipelineError, handle_audio, handle_text
+from .whatsapp import WhatsAppBot, WhatsAppClient, WhatsAppSettings, parse_webhook, verify_signature
 
 app = FastAPI(title="Rythu Vaani", description="Telugu voice helpline for farmers (Gnani Prisma + Timbre)")
 MAX_UPLOAD_BYTES = 5 * 1024 * 1024
@@ -42,7 +45,7 @@ def index():
 def status(client=Depends(client_dep)):
     return {
         "mode": "MOCK" if client.mock else "real",
-        "stt_model": gnani.STT_MODEL,
+        "stt_model": gnani.STT_MODEL_V3,
         "tts_model": gnani.TTS_MODEL,
         "tts_voice": gnani.TTS_VOICE,
         "language": gnani.LANGUAGE,
@@ -76,3 +79,48 @@ async def ask_audio(
     except GnaniError as exc:
         raise HTTPException(502, f"Gnani API error: {exc}") from exc
     return _payload(res)
+
+
+# ---- WhatsApp channel (see rythu_vaani/whatsapp.py and WHATSAPP.md) ----
+
+_bot: WhatsAppBot | None = None
+
+
+def whatsapp_bot_dep() -> WhatsAppBot:
+    global _bot
+    if _bot is None:
+        settings = WhatsAppSettings.from_env()
+        if settings is None:
+            raise HTTPException(503, "WhatsApp is not configured (set the WHATSAPP_* variables in .env)")
+        _bot = WhatsAppBot(WhatsAppClient(settings), get_client())
+    return _bot
+
+
+@app.get("/whatsapp/webhook", response_class=PlainTextResponse)
+def whatsapp_verify(
+    mode: str = Query("", alias="hub.mode"),
+    token: str = Query("", alias="hub.verify_token"),
+    challenge: str = Query("", alias="hub.challenge"),
+):
+    settings = WhatsAppSettings.from_env()
+    if settings is None:
+        raise HTTPException(503, "WhatsApp is not configured")
+    if mode == "subscribe" and hmac.compare_digest(token, settings.verify_token):
+        return challenge
+    raise HTTPException(403, "verification failed")
+
+
+@app.post("/whatsapp/webhook")
+async def whatsapp_incoming(request: Request, tasks: BackgroundTasks, bot: WhatsAppBot = Depends(whatsapp_bot_dep)):
+    body = await request.body()
+    if not verify_signature(bot.wa._s.app_secret, body, request.headers.get("x-hub-signature-256")):
+        raise HTTPException(401, "bad signature")
+    try:
+        payload = json.loads(body)
+    except ValueError as exc:
+        raise HTTPException(400, "body is not JSON") from exc
+    # Answer Meta straight away (it retries slow webhooks); do the speech work afterwards.
+    for msg in parse_webhook(payload):
+        if bot.is_new(msg.id):
+            tasks.add_task(bot.handle, msg)
+    return {"ok": True}

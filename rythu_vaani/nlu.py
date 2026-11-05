@@ -17,7 +17,8 @@ PRICE_CUES = ["ధర", "రేటు", "రేట్", "ప్రైస్", "�
 SCHEME_CUES = ["పథకం", "పథకా", "స్కీమ్", "స్కీం", "అర్హత", "అర్హు", "scheme", "yojana", "eligib", "arhata"]
 ADVICE_TOPICS = {
     "pest": ["పురుగు", "పెస్ట్", "దోమ", "pest", "insect", "purugu"],
-    "disease": ["తెగులు", "తెగుళ్ళు", "వ్యాధి", "రోగం", "disease", "tegulu"],
+    # "తెగిలి": Prisma's rendering of తెగులు on a 5 dB phone line in the benchmark
+    "disease": ["తెగులు", "తెగుళ్ళు", "తెగిలి", "వ్యాధి", "రోగం", "disease", "tegulu"],
     "fertilizer": ["ఎరువు", "ఫెర్టిలైజర్", "యూరియా", "fertili", "urea", "eruvu"],
     "sowing": ["విత్త", "నాటు", "sow", "seed", "vittan"],
 }
@@ -33,6 +34,14 @@ NUMBER_WORDS = {
     "eight": 8, "nine": 9, "ten": 10, "half": 0.5,
 }
 TELUGU_DIGITS = str.maketrans("౦౧౨౩౪౫౬౭౮౯", "0123456789")
+
+# Spoken Telugu fuses a number with ఎకరం/ఎకరాలు (sandhi): రెండు + ఎకరాలు -> రెండెకరాలు.
+# The fused token is "<number stem> + ె + కర...", so match the stem before "ెకర".
+FUSED_ACRE = "ెకర"
+FUSED_ACRE_STEMS = {
+    "అర": 0.5, "ఒక": 1, "రెండ": 2, "మూడ": 3, "నాలుగ": 4, "ఐద": 5, "అయిద": 5, "ఆర": 6,
+    "ఏడ": 7, "ఎనిమిద": 8, "తొమ్మిద": 9, "పద": 10, "పన్నెండ": 12, "పదిహేన": 15, "ఇరవ": 20,
+}
 
 
 def normalize_text(s: str) -> str:
@@ -64,7 +73,18 @@ def _find_entity(tokens: list[str], table: dict) -> str | None:
     return None
 
 
+def _fused_acres(tokens: list[str]) -> float | None:
+    for tok in tokens:
+        stem, sep, _ = tok.partition(FUSED_ACRE)
+        if sep and stem in FUSED_ACRE_STEMS:
+            return float(FUSED_ACRE_STEMS[stem])
+    return None
+
+
 def _find_number(tokens: list[str]) -> float | None:
+    fused = _fused_acres(tokens)
+    if fused is not None:
+        return fused
     for tok in tokens:
         m = re.match(r"\d+(\.\d+)?", tok)
         if m:
@@ -89,10 +109,14 @@ def parse(text: str, kb) -> Intent:
     slots = {k: v for k, v in {"crop": crop, "market": market}.items() if v}
 
     scheme_hits = _hits(tokens, SCHEME_CUES)
-    if scheme or scheme_hits:
+    # Acreage or tenant status only matters for eligibility, so treat it as a scheme question
+    # even when noise has swallowed the scheme name (the reply then asks which scheme).
+    eligibility_hint = bool(_hits(tokens, TENANT_CUES)) or (
+        not crop and (_hits(tokens, ACRE_CUES) or _fused_acres(tokens) is not None))
+    if scheme or scheme_hits or eligibility_hint:
         if scheme:
             slots["scheme"] = scheme
-        if _hits(tokens, ACRE_CUES):
+        if _hits(tokens, ACRE_CUES) or _fused_acres(tokens) is not None:
             acres = _find_number(tokens)
             if acres is not None:
                 slots["acres"] = acres

@@ -1,0 +1,27 @@
+{
+  "_note": "HELD-OUT synthetic caller questions, written after the NLU fixes and never used to tune them. Numbers are written as words. Clean audio is generated with Timbre v2.5 (te-IN). 'gold' is the intended intent + slots.",
+  "sentences": [
+    "తెనాలిలో వరి రేటు ఎంత ఉంది",
+    "నరసరావుపేట మార్కెట్‌లో పత్తి ధర చెప్పండి",
+    "కంది పంటకు పురుగు వచ్చింది ఏం చేయాలి",
+    "వరి పొలంలో ఆకులు ఎండిపోతున్నాయి తెగులు వచ్చిందేమో",
+    "పత్తికి ఎరువు ఎప్పుడు వేయాలి",
+    "మిర్చి ఎప్పుడు నాటుకోవాలి",
+    "నాకు నాలుగు ఎకరాలు ఉన్నాయి పంట బీమా వస్తుందా",
+    "కౌలు రైతుని ఒక ఎకరం విత్తన సబ్సిడీకి అర్హత ఉందా",
+    "నేను కౌలు రైతుని కాదు ఆరు ఎకరాలు క్రాప్ లోన్ కావాలి",
+    "గుంటూరులో మొక్కజొన్న రేటు పెరిగిందా"
+  ],
+  "gold": [
+    ["mandi_price", {"crop": "paddy", "market": "tenali"}],
+    ["mandi_price", {"crop": "cotton", "market": "narasaraopet"}],
+    ["crop_advice", {"crop": "redgram", "topic": "pest"}],
+    ["crop_advice", {"crop": "paddy", "topic": "disease"}],
+    ["crop_advice", {"crop": "cotton", "topic": "fertilizer"}],
+    ["crop_advice", {"crop": "chilli", "topic": "sowing"}],
+    ["scheme_info", {"scheme": "crop_insurance", "acres": 4.0}],
+    ["scheme_info", {"scheme": "seed_subsidy", "acres": 1.0, "tenant": true}],
+    ["scheme_info", {"scheme": "crop_loan", "acres": 6.0, "tenant": false}],
+    ["mandi_price", {"crop": "maize", "market": "guntur"}]
+  ]
+}

@@ -6,38 +6,43 @@
     "chilli": {
       "te": "మిర్చి", "en": "chilli",
       "aliases": ["మిర్చి", "మిరప", "చిల్లీ", "chilli", "chili", "mirchi", "mirapa"],
+      "agmarknet": ["chilli", "chillies"],
       "sowing_te": "నారు ఆగస్టు, సెప్టెంబరు నెలల్లో నాటుకోవచ్చు",
       "sowing_en": "seedlings can be transplanted in August and September"
     },
     "cotton": {
       "te": "పత్తి", "en": "cotton",
       "aliases": ["పత్తి", "కాటన్", "cotton", "patti", "pathi"],
+      "agmarknet": ["cotton"],
       "sowing_te": "జూన్, జూలై నెలల్లో, మొదటి మంచి వర్షం తర్వాత",
       "sowing_en": "June and July, after the first good rain"
     },
     "paddy": {
       "te": "వరి", "en": "paddy",
       "aliases": ["వరి", "వడ్లు", "ధాన్యం", "పాడీ", "paddy", "rice", "vari", "vadlu"],
+      "agmarknet": ["paddy"],
       "sowing_te": "ఖరీఫ్‌లో జూన్ నుండి జూలై వరకు, రబీలో నవంబరు నుండి డిసెంబరు వరకు",
       "sowing_en": "June to July in kharif, November to December in rabi"
     },
     "maize": {
       "te": "మొక్కజొన్న", "en": "maize",
       "aliases": ["మొక్కజొన్న", "మక్క", "మెయిజ్", "maize", "corn", "mokkajonna"],
+      "agmarknet": ["maize"],
       "sowing_te": "ఖరీఫ్‌లో జూన్, జూలై, రబీలో అక్టోబరు, నవంబరు",
       "sowing_en": "June-July in kharif, October-November in rabi"
     },
     "redgram": {
       "te": "కంది", "en": "red gram",
       "aliases": ["కంది", "కందులు", "redgram", "tur", "toor", "kandi", "kandulu"],
+      "agmarknet": ["arhar", "red gram"],
       "sowing_te": "జూన్, జూలై నెలల్లో",
       "sowing_en": "June and July"
     }
   },
   "markets": {
-    "guntur": {"te": "గుంటూరు", "en": "Guntur", "aliases": ["గుంటూరు", "గుంటూర్", "guntur"]},
-    "tenali": {"te": "తెనాలి", "en": "Tenali", "aliases": ["తెనాలి", "tenali"]},
-    "narasaraopet": {"te": "నరసరావుపేట", "en": "Narasaraopet", "aliases": ["నరసరావుపేట", "narasaraopet", "narasaraopeta"]}
+    "guntur": {"te": "గుంటూరు", "en": "Guntur", "agmarknet": "Guntur", "aliases": ["గుంటూరు", "గుంటూర్", "guntur"]},
+    "tenali": {"te": "తెనాలి", "en": "Tenali", "agmarknet": "Tenali", "aliases": ["తెనాలి", "tenali"]},
+    "narasaraopet": {"te": "నరసరావుపేట", "en": "Narasaraopet", "agmarknet": "Narasaraopet", "aliases": ["నరసరావుపేట", "narasaraopet", "narasaraopeta"]}
   },
   "prices": {
     "guntur":       {"chilli": [14200, 13800], "cotton": [7150, 7200], "paddy": [2250, 2240], "maize": [2100, 2050], "redgram": [7400, 7600]},
@@ -83,7 +88,7 @@
     },
     "crop_loan": {
       "te": "పంట రుణ పథకం", "en": "Crop Loan Scheme (demo)",
-      "aliases": ["రుణ", "లోన్", "loan", "runam"],
+      "aliases": ["రుణ", "లోన్", "లోనొ", "loan", "runam"],
       "max_acres": 10, "tenant_ok": false,
       "benefit_te": "తక్కువ వడ్డీకి పంట రుణం",
       "benefit_en": "a low-interest crop loan",

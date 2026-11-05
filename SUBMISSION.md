@@ -26,7 +26,7 @@ who take their calls.
 
 | Model | How it is used |
 |---|---|
-| **Prisma v2.5** speech-to-text (`te-IN`) | Transcribes the caller's Telugu or code-mixed question (REST `POST /stt/v3`). Also the system under test in the noise benchmark. |
+| **Prisma v3.0** speech-to-text (`te-IN`, with `keyterms` + `topic`) | Transcribes the caller's Telugu or code-mixed question (REST `POST /stt/v3`). The noise benchmark compares it with Prisma v2.5 and plain v3.0. |
 | **Timbre v2.5** text-to-speech, Beta (`te-IN`, voice Varuni) | Speaks the answer back as 8 kHz telephone-ready WAV. Also generates the clean synthetic Telugu speech for the noise benchmark. |
 
 Evon and the agent builder are not used.
@@ -81,7 +81,7 @@ Before recording, check:
 > for a scheme. Many of them would rather just call and ask in Telugu than use an English app.
 >
 > How it works:
-> 1. The caller speaks Telugu or Telugu-English mix → Gnani **Prisma v2.5** transcribes it
+> 1. The caller speaks Telugu or Telugu-English mix → Gnani **Prisma v3.0** transcribes it, primed with farm keyterms
 > 2. A rule-based Telugu parser finds the crop, market, acreage and tenant status
 > 3. The answer comes from a small synthetic knowledge base
 > 4. Gnani **Timbre v2.5** speaks the answer back in Telugu, as 8 kHz phone-ready audio
