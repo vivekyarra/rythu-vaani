@@ -1,0 +1,69 @@
+[
+ {
+  "id": "q1_price",
+  "question_seconds": 2.4,
+  "reply_seconds": 7.04,
+  "events": {
+   "rec_start": 3.1220204830169678,
+   "rec_stop": 5.9492878913879395,
+   "response": 8.137635469436646,
+   "end": 16.925766468048096
+  },
+  "mode": "real",
+  "transcript": "గుంటూరు మార్కెట్లో మిర్చి ధర ఎంత?",
+  "intent": "mandi_price",
+  "slots": {
+   "crop": "chilli",
+   "market": "guntur"
+  },
+  "reply_te": "గుంటూరు మార్కెట్‌లో మిర్చి ధర క్వింటాలుకు 14,200 రూపాయలు. గత వారం కంటే 400 రూపాయలు పెరిగింది.",
+  "reply_en": "Chilli at Guntur market: ₹14,200 per quintal, up ₹400 from last week.",
+  "phone_line": false,
+  "snr_db": null
+ },
+ {
+  "id": "q2_loan",
+  "question_seconds": 3.36,
+  "reply_seconds": 8.16,
+  "events": {
+   "rec_start": 4.740089654922485,
+   "rec_stop": 8.537397861480713,
+   "response": 11.064196348190308,
+   "end": 20.942192316055298
+  },
+  "mode": "real",
+  "transcript": "కౌలు రైతును 2 ఎకరాలు crop లోన్ వస్తుందా?",
+  "intent": "scheme_info",
+  "slots": {
+   "scheme": "crop_loan",
+   "acres": 2.0,
+   "tenant": true
+  },
+  "reply_te": "2 ఎకరాలతో మీరు పంట రుణ పథకానికి అర్హులు కాకపోవచ్చు, ఎందుకంటే ఈ పథకం కౌలు రైతులకు వర్తించదు. ఇతర పథకాల గురించి అడగండి.",
+  "reply_en": "With 2 acres you may not be eligible: this scheme does not cover tenant farmers. Ask me about other schemes.",
+  "phone_line": true,
+  "snr_db": "5"
+ },
+ {
+  "id": "q3_pest",
+  "question_seconds": 2.24,
+  "reply_seconds": 12.0,
+  "events": {
+   "rec_start": 2.2335567474365234,
+   "rec_stop": 4.900484800338745,
+   "response": 8.316040515899658,
+   "end": 21.99369239807129
+  },
+  "mode": "real",
+  "transcript": "పత్తికి పురుగు పట్టింది, ఏం చేయాలి?",
+  "intent": "crop_advice",
+  "slots": {
+   "crop": "cotton",
+   "topic": "pest"
+  },
+  "reply_te": "పత్తి పంటలో పురుగు కనిపిస్తే, ముందుగా పసుపు జిగురు అట్టలు పెట్టండి. వేప నూనె పిచికారీ కూడా చేయవచ్చు. సరైన మందు, మోతాదు కోసం మీ రైతు భరోసా కేంద్రంలో వ్యవసాయ అధికారిని సంప్రదించండి.",
+  "reply_en": "If you see pests in your cotton, start with yellow sticky traps; a neem oil spray can also help. For the right pesticide and dose, consult the agriculture officer at your Rythu Bharosa Kendram.",
+  "phone_line": false,
+  "snr_db": null
+ }
+]
