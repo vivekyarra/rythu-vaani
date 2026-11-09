@@ -1,9 +1,9 @@
 """Synthetic caller questions (Timbre voice Lavanya), so the demo uses no real person's voice."""
 import sys, json, pathlib
-sys.path.insert(0, r"C:\Users\vivek\Downloads\yarravivek\gnani-challenge")
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from rythu_vaani.config import get_client, is_mock_mode
 assert not is_mock_mode(), "need a real key"
-out = pathlib.Path(r"C:\Users\vivek\Downloads\yarravivek\gnani-video\demo")
+out = pathlib.Path(__file__).resolve().parent
 Q = {
   "q1_price": "గుంటూరు మార్కెట్‌లో మిర్చి ధర ఎంత?",
   "q2_loan": "కౌలు రైతుని, రెండు ఎకరాలు, crop loan వస్తుందా?",
