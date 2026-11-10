@@ -106,7 +106,7 @@
   "punch": "Nobody at the bank will ever hear this call."
  },
  "problem": {
-  "listAt": 6.614000000000001,
+  "listAt": 7.081,
   "listStep": 1.6,
   "rules": [
    "Identify yourself, the lender, the purpose",
@@ -152,12 +152,12 @@
   ],
   "boxAt": [
    0.3,
-   2.5,
-   7.0,
-   11.0,
-   15.0
+   1.8,
+   5.2,
+   7.4,
+   9.2
   ],
-  "noteAt": 15.5,
+  "noteAt": 9.8,
   "note": "Mono recordings: Prisma diarization + a documented role heuristic. Agent name check uses the dialer's agent roster."
  },
  "results": {
@@ -254,64 +254,64 @@
    {
     "kind": "hook",
     "from": 0,
-    "dur": 227
+    "dur": 197
    },
    {
     "kind": "problem",
-    "from": 227,
-    "dur": 576
+    "from": 197,
+    "dur": 604
    },
    {
     "kind": "title",
-    "from": 803,
-    "dur": 264
+    "from": 801,
+    "dur": 256
    },
    {
     "kind": "demo",
-    "from": 1067,
-    "dur": 946,
-    "startFrom": 24
+    "from": 1057,
+    "dur": 914,
+    "startFrom": 70
    },
    {
     "kind": "demo",
-    "from": 2013,
-    "dur": 982,
-    "startFrom": 2282,
-    "note": "⏩ wait cut · real Prisma Batch job: 51 s"
+    "from": 1971,
+    "dur": 1077,
+    "startFrom": 1840,
+    "note": "⏩ wait cut · real Prisma Batch job: 10 s"
    },
    {
     "kind": "demo",
-    "from": 2995,
-    "dur": 618,
-    "startFrom": 3312
+    "from": 3048,
+    "dur": 592,
+    "startFrom": 3037
    },
    {
     "kind": "demo",
-    "from": 3613,
-    "dur": 296,
-    "startFrom": 4799,
-    "note": "⏩ wait cut · real Prisma Batch job: 29 s"
+    "from": 3640,
+    "dur": 286,
+    "startFrom": 4249,
+    "note": "⏩ wait cut · real Prisma Batch job: 10 s"
    },
    {
     "kind": "demo",
-    "from": 3909,
-    "dur": 222,
-    "startFrom": 5138
+    "from": 3926,
+    "dur": 399,
+    "startFrom": 4632
    },
    {
     "kind": "arch",
-    "from": 4131,
-    "dur": 527
+    "from": 4325,
+    "dur": 358
    },
    {
     "kind": "results",
-    "from": 4658,
-    "dur": 438
+    "from": 4683,
+    "dur": 454
    },
    {
     "kind": "close",
-    "from": 5096,
-    "dur": 184
+    "from": 5136,
+    "dur": 197
    }
   ],
   "audio": [
@@ -322,339 +322,334 @@
    },
    {
     "src": "n_hook.wav",
-    "from": 233,
-    "dur": 188
+    "from": 203,
+    "dur": 202
    },
    {
     "src": "n_rules.wav",
-    "from": 428,
-    "dur": 371
+    "from": 412,
+    "dur": 394
    },
    {
     "src": "n_title.wav",
-    "from": 812,
+    "from": 810,
     "dur": 248
    },
    {
     "src": "d_intro.wav",
-    "from": 1082,
-    "dur": 252
+    "from": 1073,
+    "dur": 214
    },
    {
     "src": "d_run.wav",
-    "from": 1783,
-    "dur": 223
+    "from": 1763,
+    "dur": 201
    },
    {
     "src": "hi_d02.mp3",
-    "from": 1344,
-    "dur": 439,
+    "from": 1313,
+    "dur": 447,
     "startFrom": 0
    },
    {
     "src": "d_result.wav",
-    "from": 2076,
-    "dur": 199
+    "from": 2055,
+    "dur": 171
    },
    {
     "src": "d_coach.wav",
-    "from": 2499,
-    "dur": 153
+    "from": 2506,
+    "dur": 138
    },
    {
     "src": "hi_d02.mp3",
-    "from": 2296,
-    "dur": 202,
-    "startFrom": 256
+    "from": 2322,
+    "dur": 181,
+    "startFrom": 268
    },
    {
     "src": "coach_hi_d02_THREAT.wav",
-    "from": 2684,
-    "dur": 298
+    "from": 2739,
+    "dur": 294
    },
    {
     "src": "d_telugu.wav",
-    "from": 3004,
-    "dur": 132
+    "from": 3057,
+    "dur": 119
    },
    {
     "src": "te_d02.mp3",
-    "from": 3148,
-    "dur": 441,
+    "from": 3171,
+    "dur": 442,
     "startFrom": 0
    },
    {
     "src": "d_telugu_res.wav",
-    "from": 3675,
-    "dur": 228
+    "from": 3703,
+    "dur": 216
    },
    {
     "src": "d_team.wav",
-    "from": 3915,
-    "dur": 204
+    "from": 3932,
+    "dur": 175
+   },
+   {
+    "src": "d_card.wav",
+    "from": 4115,
+    "dur": 160
    },
    {
     "src": "n_arch.wav",
-    "from": 4140,
-    "dur": 514
+    "from": 4334,
+    "dur": 351
    },
    {
     "src": "n_results.wav",
-    "from": 4667,
-    "dur": 416
+    "from": 4692,
+    "dur": 441
    },
    {
     "src": "n_close.wav",
-    "from": 5102,
-    "dur": 150
+    "from": 5142,
+    "dur": 172
    }
   ],
   "captions": [
    {
-    "from": 233,
-    "to": 296,
+    "from": 203,
+    "to": 264,
     "text": "Calls like this are rarely caught."
    },
    {
-    "from": 296,
-    "to": 419,
+    "from": 266,
+    "to": 407,
     "text": "Compliance teams can manually audit only 1–2% of collection calls."
    },
    {
-    "from": 428,
-    "to": 473,
+    "from": 412,
+    "to": 481,
     "text": "RBI's rules are clear."
    },
    {
-    "from": 473,
-    "to": 541,
+    "from": 483,
+    "to": 547,
     "text": "Identify yourself and the lender."
    },
    {
-    "from": 541,
-    "to": 598,
+    "from": 549,
+    "to": 621,
     "text": "Call only from 8 AM to 7 PM."
    },
    {
-    "from": 598,
-    "to": 658,
+    "from": 622,
+    "to": 694,
     "text": "No threats, abuse or shaming."
    },
    {
-    "from": 658,
-    "to": 735,
+    "from": 696,
+    "to": 757,
     "text": "Never tell anyone else about the debt."
    },
    {
-    "from": 735,
-    "to": 797,
+    "from": 759,
+    "to": 807,
     "text": "And offer a grievance channel."
    },
    {
-    "from": 812,
-    "to": 952,
+    "from": 810,
+    "to": 951,
     "text": "Vaani Audit checks every call, in Hindi, Telugu and code-mixed speech,"
    },
    {
     "from": 952,
-    "to": 1058,
+    "to": 1059,
     "text": "with Gnani's Prisma speech-to-text and Timbre voices."
    },
    {
-    "from": 1082,
-    "to": 1199,
+    "from": 1073,
+    "to": 1162,
     "text": "This is a real run on the live Gnani API."
    },
    {
-    "from": 1199,
-    "to": 1332,
+    "from": 1163,
+    "to": 1289,
     "text": "First, a synthetic Hindi call, made at 8:15 PM."
    },
    {
-    "from": 1356,
-    "to": 1519,
+    "from": 1325,
+    "to": 1488,
     "label": "Agent (Hindi)",
     "text": "Hello, this is Amit from Navdhan Finance, about your gold-loan instalment."
    },
    {
-    "from": 1534,
-    "to": 1594,
+    "from": 1503,
+    "to": 1563,
     "label": "Borrower (Hindi)",
     "text": "Why are you calling so late at night?"
    },
    {
-    "from": 1611,
-    "to": 1772,
+    "from": 1580,
+    "to": 1741,
     "label": "Agent (Hindi)",
     "text": "You haven't paid for three months. Pay by tomorrow, or we'll bring the police to your house."
    },
    {
-    "from": 1783,
-    "to": 1943,
+    "from": 1763,
+    "to": 1902,
     "text": "Gnani Prisma transcribes both sides of the call, agent and borrower,"
    },
    {
-    "from": 1943,
-    "to": 2004,
+    "from": 1904,
+    "to": 1966,
     "text": "and timestamps every turn."
    },
    {
-    "from": 2076,
-    "to": 2206,
+    "from": 2055,
+    "to": 2168,
     "text": "Each violation comes with the exact quote, and the second it happened."
    },
    {
-    "from": 2206,
-    "to": 2273,
+    "from": 2170,
+    "to": 2228,
     "text": "Click it, and you hear the evidence."
    },
    {
-    "from": 2308,
-    "to": 2469,
+    "from": 2322,
+    "to": 2482,
     "label": "Agent (Hindi)",
     "text": "You haven't paid for three months. Pay by tomorrow, or we'll bring the police to your house."
    },
    {
-    "from": 2499,
-    "to": 2608,
+    "from": 2506,
+    "to": 2604,
     "text": "For coaching, Timbre speaks the compliant way to say it,"
    },
    {
-    "from": 2608,
-    "to": 2650,
+    "from": 2606,
+    "to": 2645,
     "text": "in the same language."
    },
    {
-    "from": 2684,
-    "to": 2982,
+    "from": 2739,
+    "to": 3033,
     "label": "Timbre, compliant version",
     "text": "I understand things are hard right now. Your EMI is pending. You can pay today, or we can make an easy payment plan for you."
    },
    {
-    "from": 3004,
-    "to": 3059,
+    "from": 3057,
+    "to": 3117,
     "text": "The same works in Telugu."
    },
    {
-    "from": 3059,
-    "to": 3133,
+    "from": 3118,
+    "to": 3178,
     "text": "Listen to this agent and a farmer."
    },
    {
-    "from": 3160,
-    "to": 3325,
+    "from": 3183,
+    "to": 3349,
     "label": "Agent (Telugu)",
     "text": "Hello, this is Suresh from Navdhan Finance, calling about your tractor-loan dues."
    },
    {
-    "from": 3345,
-    "to": 3443,
+    "from": 3368,
+    "to": 3467,
     "label": "Borrower (Telugu)",
     "text": "Go on... this month's harvest money hasn't come in yet."
    },
    {
-    "from": 3454,
-    "to": 3579,
+    "from": 3478,
+    "to": 3603,
     "label": "Agent (Telugu)",
     "text": "Same excuse every time. You're a big liar."
    },
    {
-    "from": 3675,
-    "to": 3791,
+    "from": 3703,
+    "to": 3807,
     "text": "He called the farmer a liar, threatened to seize his tractor,"
    },
    {
-    "from": 3791,
-    "to": 3848,
+    "from": 3809,
+    "to": 3860,
     "text": "and gave no grievance channel."
    },
    {
-    "from": 3848,
-    "to": 3900,
+    "from": 3862,
+    "to": 3921,
     "text": "All flagged, with evidence."
    },
    {
-    "from": 3915,
-    "to": 4040,
+    "from": 3932,
+    "to": 4046,
     "text": "Managers see compliance by agent, the top violation types,"
    },
    {
-    "from": 4040,
-    "to": 4117,
+    "from": 4048,
+    "to": 4108,
     "text": "and a coaching card for every agent."
    },
    {
-    "from": 4140,
-    "to": 4170,
-    "text": "Under the hood:"
+    "from": 4115,
+    "to": 4196,
+    "text": "Open any agent, and you get their coaching card:"
    },
    {
-    "from": 4170,
-    "to": 4270,
-    "text": "Prisma v3.0 Batch transcribes each leg of the call,"
-   },
-   {
-    "from": 4270,
-    "to": 4334,
-    "text": "with domain keywords and a topic."
+    "from": 4198,
+    "to": 4277,
+    "text": "what went wrong, and the right way to say it."
    },
    {
     "from": 4334,
-    "to": 4425,
+    "to": 4499,
+    "text": "Under the hood, Prisma v3.0 Batch transcribes each side of the call, with domain keywords."
+   },
+   {
+    "from": 4501,
+    "to": 4610,
     "text": "Deterministic RBI rules produce every finding,"
    },
    {
-    "from": 4425,
-    "to": 4499,
+    "from": 4612,
+    "to": 4686,
     "text": "with a timestamp and a verbatim quote."
    },
    {
-    "from": 4499,
-    "to": 4617,
-    "text": "An optional LLM may only add a finding whose quote is really"
-   },
-   {
-    "from": 4617,
-    "to": 4652,
-    "text": "in the transcript."
-   },
-   {
-    "from": 4667,
-    "to": 4767,
+    "from": 4692,
+    "to": 4773,
     "text": "On 12 held-out calls never used for tuning,"
    },
    {
-    "from": 4767,
-    "to": 4861,
+    "from": 4774,
+    "to": 4907,
     "text": "F1 is 0.94 with Prisma v3.0 and keywords,"
    },
    {
-    "from": 4861,
-    "to": 4901,
+    "from": 4909,
+    "to": 4985,
     "text": "and 0.92 at 0 dB."
    },
    {
-    "from": 4901,
-    "to": 4963,
+    "from": 4987,
+    "to": 5045,
     "text": "The weak spot is the rules:"
    },
    {
-    "from": 4963,
-    "to": 5081,
+    "from": 5046,
+    "to": 5134,
     "text": "new ways of shaming were caught only half the time."
    },
    {
-    "from": 5102,
-    "to": 5171,
+    "from": 5142,
+    "to": 5216,
     "text": "Every call audited, with evidence."
    },
    {
-    "from": 5171,
-    "to": 5250,
+    "from": 5218,
+    "to": 5316,
     "text": "Built solo by Yarra Vivek, on Gnani AI."
    }
   ],
-  "duration": 5280
+  "duration": 5333
  },
  "vertical": {
   "scenes": [
@@ -671,8 +666,8 @@
    {
     "kind": "demo",
     "from": 329,
-    "dur": 997,
-    "startFrom": 2267,
+    "dur": 1092,
+    "startFrom": 1825,
     "crop": {
      "x": 90,
      "y": 0,
@@ -681,13 +676,13 @@
    },
    {
     "kind": "results",
-    "from": 1325,
-    "dur": 270
+    "from": 1421,
+    "dur": 246
    },
    {
     "kind": "close",
-    "from": 1595,
-    "dur": 150
+    "from": 1667,
+    "dur": 108
    }
   ],
   "audio": [
@@ -698,24 +693,24 @@
    },
    {
     "src": "d_result.wav",
-    "from": 407,
-    "dur": 199
+    "from": 428,
+    "dur": 171
    },
    {
     "src": "d_coach.wav",
-    "from": 829,
-    "dur": 153
+    "from": 878,
+    "dur": 138
    },
    {
     "src": "hi_d02.mp3",
-    "from": 627,
-    "dur": 202,
-    "startFrom": 256
+    "from": 694,
+    "dur": 181,
+    "startFrom": 268
    },
    {
     "src": "coach_hi_d02_THREAT.wav",
-    "from": 1015,
-    "dur": 298
+    "from": 1111,
+    "dur": 294
    }
   ],
   "captions": [
@@ -726,38 +721,38 @@
     "text": "You haven't paid in three months. Pay by tomorrow, or we bring the police to your house."
    },
    {
-    "from": 407,
-    "to": 537,
+    "from": 428,
+    "to": 541,
     "text": "Each violation comes with the exact quote, and the second it happened."
    },
    {
-    "from": 537,
-    "to": 604,
+    "from": 543,
+    "to": 600,
     "text": "Click it, and you hear the evidence."
    },
    {
-    "from": 639,
-    "to": 799,
+    "from": 694,
+    "to": 855,
     "label": "Agent (Hindi)",
     "text": "You haven't paid for three months. Pay by tomorrow, or we'll bring the police to your house."
    },
    {
-    "from": 829,
-    "to": 939,
+    "from": 878,
+    "to": 977,
     "text": "For coaching, Timbre speaks the compliant way to say it,"
    },
    {
-    "from": 939,
-    "to": 980,
+    "from": 979,
+    "to": 1018,
     "text": "in the same language."
    },
    {
-    "from": 1015,
-    "to": 1313,
+    "from": 1111,
+    "to": 1406,
     "label": "Timbre, compliant version",
     "text": "I understand things are hard right now. Your EMI is pending. You can pay today, or we can make an easy payment plan for you."
    }
   ],
-  "duration": 1745
+  "duration": 1775
  }
 }

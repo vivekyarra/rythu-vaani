@@ -13,70 +13,74 @@
    "stt": {
     "model": "prisma-v3.0",
     "language_code": "hi-IN",
-    "job_id": "01a1c153-0eef-72e3-aca9-6087b1408fa4",
-    "job_wall_s": 51.07,
+    "job_id": "01a1c50a-cdcd-7f0c-8733-49d8c7561c57",
+    "job_wall_s": 9.7,
     "duration_s": 27.58,
     "keywords_accepted": true,
     "topic_accepted": true
    },
    "roles": {
-    "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
-    "agent_speaker": "ch0"
+    "method": "Prisma diarization + role heuristic (mono)",
+    "agent_speaker": 1,
+    "scores": {
+     "1": 9.0,
+     "2": 0.0
+    }
    },
    "segments": [
     {
      "start": 0.0,
      "end": 6.272,
      "text": "हेलो, मैं Navdhan Finance से अमित बोल रहा हूँ, आपके गोल्ड लोन की किस्त के बारे में।",
-     "speaker_id": "ch0",
+     "speaker_id": 1,
      "language": "hi-IN",
      "role": "agent"
     },
     {
-     "start": 6.028,
+     "start": 6.272,
      "end": 8.928,
-     "text": "अपनी रात को phone क्यों कर रहे हो?",
-     "speaker_id": "ch1",
+     "text": "इतनी रात को phone क्यों कर रहे हो?",
+     "speaker_id": 2,
      "language": "hi-IN",
      "role": "borrower"
     },
     {
-     "start": 8.524,
-     "end": 14.848,
+     "start": 8.928,
+     "end": 14.26,
      "text": "3 महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए, तो पुलिस लेकर आपके घर आएंगे।",
-     "speaker_id": "ch0",
+     "speaker_id": 1,
      "language": "hi-IN",
      "role": "agent"
     },
     {
-     "start": 14.284,
-     "end": 17.28,
+     "start": 14.26,
+     "end": 16.63,
      "text": "आप ऐसी धमकी नहीं दे सकते।",
-     "speaker_id": "ch1",
+     "speaker_id": 2,
      "language": "hi-IN",
      "role": "borrower"
     },
     {
-     "start": 16.716,
-     "end": 21.44,
+     "start": 16.63,
+     "end": 20.92,
      "text": "और आपके मोहल्ले में सबको बता देंगे कि आप कर्ज नहीं चुकाते।",
-     "speaker_id": "ch0",
+     "speaker_id": 1,
      "language": "hi-IN",
      "role": "agent"
     },
     {
-     "start": 20.908,
+     "start": 20.92,
      "end": 23.712,
      "text": "मैं अगले हफ्ते पैसे दे दूंगा।",
-     "speaker_id": "ch1",
+     "speaker_id": 2,
      "language": "hi-IN",
      "role": "borrower"
     },
     {
-     "start": 23.372,
+     "start": 23.712,
      "end": 27.168,
-     "text": "अगले हफ्ते नहीं, कल ही चाहिए। फोन रखो।",
-     "speaker_id": "ch0",
+     "text": "अगले हफ्ते नहीं, कल ही चाहिए, phone रखो।",
+     "speaker_id": 1,
      "language": "hi-IN",
      "role": "agent"
     }
@@ -97,8 +101,8 @@
     },
     {
      "category": "THREAT",
-     "start": 8.524,
-     "end": 14.848,
+     "start": 8.928,
+     "end": 14.26,
      "quote": "3 महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए, तो पुलिस लेकर आपके घर आएंगे।",
      "matched": "पुलिस",
      "note": "",
@@ -110,8 +114,8 @@
     },
     {
      "category": "SHAMING",
-     "start": 16.716,
-     "end": 21.44,
+     "start": 16.63,
+     "end": 20.92,
      "quote": "और आपके मोहल्ले में सबको बता देंगे कि आप कर्ज नहीं चुकाते।",
      "matched": "मोहल्ल … बता",
      "note": "",
@@ -123,9 +127,9 @@
     },
     {
      "category": "NO_GRIEVANCE",
-     "start": 23.372,
+     "start": 23.712,
      "end": 27.168,
-     "quote": "अगले हफ्ते नहीं, कल ही चाहिए। फोन रखो।",
+     "quote": "अगले हफ्ते नहीं, कल ही चाहिए, phone रखो।",
      "matched": "",
      "note": "no grievance/complaint channel offered by the agent",
      "source": "rule",
@@ -198,7 +202,7 @@
     ],
     "critical": 2
    },
-   "audit_wall_s": 51.1
+   "audit_wall_s": 30.84
   },
   "te_d02": {
    "call_id": "te_d02",
@@ -212,70 +216,74 @@
    "stt": {
     "model": "prisma-v3.0",
     "language_code": "te-IN",
-    "job_id": "01a1c154-5e86-711a-86fa-10bf120b8888",
-    "job_wall_s": 29.41,
+    "job_id": "01a1c50c-069d-7908-adaf-8706f50c3814",
+    "job_wall_s": 10.2,
     "duration_s": 27.45,
     "keywords_accepted": true,
     "topic_accepted": true
    },
    "roles": {
-    "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
-    "agent_speaker": "ch0"
+    "method": "Prisma diarization + role heuristic (mono)",
+    "agent_speaker": 1,
+    "scores": {
+     "1": 9.0,
+     "2": 0.0
+    }
    },
    "segments": [
     {
      "start": 0.0,
      "end": 6.688,
      "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్, మీ ట్రాక్టర్ లోన్ బకాయి గురించి ఫోన్ చేశాను.",
-     "speaker_id": "ch0",
+     "speaker_id": 1,
      "language": "te-IN",
      "role": "agent"
     },
     {
-     "start": 6.22,
-     "end": 10.56,
+     "start": 6.688,
+     "end": 9.84,
      "text": "చెప్పండి, ఈ నెల పంట డబ్బులు ఇంకా రాలేదు.",
-     "speaker_id": "ch1",
+     "speaker_id": 2,
      "language": "te-IN",
      "role": "borrower"
     },
     {
-     "start": 9.804,
-     "end": 15.072,
+     "start": 9.84,
+     "end": 14.38,
      "text": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
-     "speaker_id": "ch0",
+     "speaker_id": 1,
      "language": "te-IN",
      "role": "agent"
     },
     {
-     "start": 14.444,
+     "start": 14.38,
      "end": 16.8,
      "text": "అలా మాట్లాడకండి.",
-     "speaker_id": "ch1",
+     "speaker_id": 2,
      "language": "te-IN",
      "role": "borrower"
     },
     {
-     "start": 16.332,
-     "end": 22.976,
+     "start": 16.8,
+     "end": 22.4,
      "text": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
-     "speaker_id": "ch0",
+     "speaker_id": 1,
      "language": "te-IN",
      "role": "agent"
     },
     {
-     "start": 22.316,
+     "start": 22.4,
      "end": 25.024,
      "text": "వచ్చే వారం కడతాను.",
-     "speaker_id": "ch1",
+     "speaker_id": 2,
      "language": "te-IN",
      "role": "borrower"
     },
     {
-     "start": 24.62,
+     "start": 25.024,
      "end": 27.445,
-     "text": "లేదు, రేపే కట్టాలి.",
-     "speaker_id": "ch0",
+     "text": "ఏపే కట్టాలి?",
+     "speaker_id": 1,
      "language": "te-IN",
      "role": "agent"
     }
@@ -283,8 +291,8 @@
    "findings": [
     {
      "category": "ABUSE",
-     "start": 9.804,
-     "end": 15.072,
+     "start": 9.84,
+     "end": 14.38,
      "quote": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
      "matched": "అబద్ధాలకోరు",
      "note": "",
@@ -296,8 +304,8 @@
     },
     {
      "category": "THREAT",
-     "start": 16.332,
-     "end": 22.976,
+     "start": 16.8,
+     "end": 22.4,
      "quote": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
      "matched": "మనుషులు వచ్చి",
      "note": "",
@@ -309,9 +317,9 @@
     },
     {
      "category": "NO_GRIEVANCE",
-     "start": 24.62,
+     "start": 25.024,
      "end": 27.445,
-     "quote": "లేదు, రేపే కట్టాలి.",
+     "quote": "ఏపే కట్టాలి?",
      "matched": "",
      "note": "no grievance/complaint channel offered by the agent",
      "source": "rule",
@@ -384,7 +392,7 @@
     ],
     "critical": 2
    },
-   "audit_wall_s": 29.43
+   "audit_wall_s": 18.12
   }
  },
  "coach": [
@@ -398,113 +406,113 @@
  "marks": [
   {
    "name": "dashboard",
-   "at": 0.51
+   "at": 2.03
   },
   {
    "name": "say",
-   "at": 1.31,
+   "at": 2.85,
    "key": "d_intro",
-   "seconds": 8.48
+   "seconds": 7.821
   },
   {
    "name": "listen",
-   "at": 10.04,
+   "at": 10.93,
    "call": "hi_d02",
    "seconds": 14.579
   },
   {
    "name": "say",
-   "at": 24.68,
+   "at": 25.86,
    "key": "d_run",
-   "seconds": 6.64
+   "seconds": 6.168
   },
   {
    "name": "run",
-   "at": 24.68,
+   "at": 25.86,
    "call": "hi_d02"
   },
   {
    "name": "result",
-   "at": 76.47,
+   "at": 61.73,
    "call": "hi_d02",
    "mode": "live",
-   "job_wall_s": 51.07,
-   "audit_wall_s": 51.1
+   "job_wall_s": 9.7,
+   "audit_wall_s": 30.84
   },
   {
    "name": "say",
-   "at": 78.18,
+   "at": 64.13,
    "key": "d_result",
-   "seconds": 6.4
+   "seconds": 5.844
   },
   {
    "name": "evidence",
-   "at": 84.83,
+   "at": 70.24,
    "call": "hi_d02",
-   "start": 8.524,
-   "seconds": 6.724000000000002
+   "start": 8.928,
+   "seconds": 5.731999999999999
   },
   {
    "name": "say",
-   "at": 92.25,
+   "at": 79.15,
    "key": "d_coach",
-   "seconds": 5.28
+   "seconds": 4.345
   },
   {
    "name": "coach",
-   "at": 97.78,
+   "at": 84.28,
    "file": "coach_hi_d02_THREAT.wav",
    "text": "मैं समझता हूँ कि अभी मुश्किल है। आपकी EMI बाकी है। आप आज भुगतान कर सकते हैं, या हम आपके लिए एक आसान भुगतान योजना बना सकते हैं।",
    "category": "THREAT"
   },
   {
    "name": "coach_end",
-   "at": 108.39
+   "at": 96.84
   },
   {
    "name": "say",
-   "at": 110.71,
+   "at": 101.53,
    "key": "d_telugu",
-   "seconds": 4.56
+   "seconds": 3.637
   },
   {
    "name": "listen",
-   "at": 115.53,
+   "at": 105.43,
    "call": "te_d02",
    "seconds": 14.682
   },
   {
    "name": "run",
-   "at": 130.22,
+   "at": 120.17,
    "call": "te_d02"
   },
   {
    "name": "result",
-   "at": 160.38,
+   "at": 142.03,
    "call": "te_d02",
    "mode": "live",
-   "job_wall_s": 29.41,
-   "audit_wall_s": 29.43
+   "job_wall_s": 10.2,
+   "audit_wall_s": 18.12
   },
   {
    "name": "say",
-   "at": 162.03,
+   "at": 143.71,
    "key": "d_telugu_res",
-   "seconds": 7.92
+   "seconds": 7.3
   },
   {
    "name": "say",
-   "at": 171.46,
+   "at": 154.61,
    "key": "d_team",
-   "seconds": 6.4
+   "seconds": 6.128
   },
   {
    "name": "coaching card",
-   "at": 176.66
+   "at": 165.7
   },
   {
    "name": "end",
-   "at": 180.11
+   "at": 167.72
   }
  ],
  "audio_events": [
@@ -512,45 +520,45 @@
    "type": "play",
    "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
    "from": 0,
-   "at": 10.033
+   "at": 10.846699999988079
   },
   {
    "type": "pause",
    "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
-   "at": 24.657299999999815
+   "at": 25.76209999996424
   },
   {
    "type": "play",
    "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
-   "from": 8.524,
-   "at": 85.49879999999982
+   "from": 8.928,
+   "at": 73.017
   },
   {
    "type": "pause",
    "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
-   "at": 92.23470000000019
+   "at": 79.05259999996424
   },
   {
    "type": "play",
-   "src": "blob:http://127.0.0.1:8100/d2a984bd-56be-434e-be12-eb38de917bdc",
+   "src": "blob:http://127.0.0.1:8100/ad117fe7-315f-496f-aa2d-520243934150",
    "from": 0,
-   "at": 98.431
+   "at": 86.91580000001193
   },
   {
    "type": "pause",
-   "src": "blob:http://127.0.0.1:8100/d2a984bd-56be-434e-be12-eb38de917bdc",
-   "at": 108.37270000000018
+   "src": "blob:http://127.0.0.1:8100/ad117fe7-315f-496f-aa2d-520243934150",
+   "at": 96.72809999996424
   },
   {
    "type": "play",
    "src": "http://127.0.0.1:8100/api/calls/te_d02/audio",
    "from": 0,
-   "at": 115.513
+   "at": 105.337
   },
   {
    "type": "pause",
    "src": "http://127.0.0.1:8100/api/calls/te_d02/audio",
-   "at": 130.20389999999992
+   "at": 120.05830000001193
   }
  ]
 }

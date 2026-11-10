@@ -33,14 +33,29 @@ HTMLMediaElement.prototype.play = function() {
   return _play.call(this);
 };
 window.addEventListener('DOMContentLoaded', () => {
+  const Z = %ZOOM%;
   const st = document.createElement('style');
-  st.textContent = `html{zoom:%ZOOM%} *{cursor:none!important} header .sub{display:none!important}`;
+  st.textContent = `html{zoom:${Z}} *{cursor:none!important} header .sub{display:none!important}
+    #__cur{position:fixed;left:-80px;top:-80px;z-index:2147483647;pointer-events:none;transform-origin:3px 2px;
+      transition:transform .09s ease-out;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+    #__cur.down{transform:scale(.86)}
+    #__ring{position:fixed;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;z-index:2147483646;
+      pointer-events:none;background:rgba(32,113,212,.28);opacity:0}`;
   document.head.appendChild(st);
+  // The page is CSS-zoomed, so anything positioned inside it is scaled by Z: divide mouse coordinates by Z.
   const c = document.createElement('div');
-  c.innerHTML = '<svg width="30" height="30" viewBox="0 0 24 24"><path d="M4 2l15 9-6.5 1.5L16 20l-3 1.5-3.5-7.5L4 18z" fill="#111" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>';
-  Object.assign(c.style, {position:'fixed', left:'-50px', top:'-50px', zIndex:2147483647, pointerEvents:'none'});
-  document.body.appendChild(c);
-  document.addEventListener('mousemove', e => { c.style.left = (e.clientX-4)+'px'; c.style.top = (e.clientY-2)+'px'; });
+  c.id = '__cur';
+  c.innerHTML = '<svg width="22" height="30" viewBox="0 0 22 30"><path d="M2 2v22.5l5.6-5.4 3.9 9 3.6-1.6-3.9-8.8h7.8z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  const ring = document.createElement('div');
+  ring.id = '__ring';
+  document.body.append(ring, c);
+  const at = (el, e, dx=0, dy=0) => { el.style.left = (e.clientX / Z - dx) + 'px'; el.style.top = (e.clientY / Z - dy) + 'px'; };
+  document.addEventListener('mousemove', e => at(c, e, 2, 2), true);
+  document.addEventListener('mousedown', e => {
+    c.classList.add('down'); at(ring, e);
+    ring.animate([{opacity:.9, transform:'scale(.5)'}, {opacity:0, transform:'scale(1.5)'}], {duration:420, easing:'ease-out'});
+  }, true);
+  document.addEventListener('mouseup', () => c.classList.remove('down'), true);
 });
 """.replace("%ZOOM%", str(ZOOM))
 
@@ -54,6 +69,20 @@ class Rec:
 
     def __init__(self, page):
         self.page, self.t0, self.marks, self.busy_until = page, time.time(), [], 0.0
+        self.pos = (960.0, 540.0)
+
+    def move(self, x, y, dur=0.55):
+        """Ease-in-out glide along a slight arc, like a person moving a mouse (not a straight robotic line)."""
+        x0, y0 = self.pos
+        n = max(12, int(dur * 60))
+        bend = 0.08 * ((x - x0) ** 2 + (y - y0) ** 2) ** 0.5
+        for i in range(1, n + 1):
+            t = i / n
+            e = 4 * t ** 3 if t < 0.5 else 1 - (-2 * t + 2) ** 3 / 2
+            arc = bend * 4 * t * (1 - t)
+            self.page.mouse.move(x0 + (x - x0) * e, y0 + (y - y0) * e - arc)
+            self.page.wait_for_timeout(int(dur * 1000 / n))
+        self.pos = (x, y)
 
     def now(self):
         return time.time() - self.t0
@@ -74,16 +103,22 @@ class Rec:
         if left > 0:
             self.wait(left)
 
-    def glide(self, sel, steps=22, nth=0):
+    def glide(self, sel, nth=0, dur=0.55):
         loc = self.page.locator(sel).nth(nth)
         loc.scroll_into_view_if_needed()
+        self.page.wait_for_timeout(250)  # let any smooth scroll settle before measuring
         b = loc.bounding_box()
-        self.page.mouse.move(b["x"] + b["width"] / 2, b["y"] + b["height"] / 2, steps=steps)
-        self.page.wait_for_timeout(200)
+        self.move(b["x"] + b["width"] / 2, b["y"] + b["height"] / 2, dur)
+        self.page.wait_for_timeout(260)  # rest on the target before clicking
         return loc
 
     def click(self, sel, nth=0):
-        self.glide(sel, nth=nth).click()
+        """Click exactly where the visible cursor is: a real mouse press at the element's centre."""
+        self.glide(sel, nth=nth)
+        self.page.mouse.down()
+        self.page.wait_for_timeout(90)
+        self.page.mouse.up()
+        self.page.wait_for_timeout(150)
 
     def wait(self, s):
         self.page.wait_for_timeout(int(s * 1000))
@@ -165,7 +200,7 @@ def main():
         r = Rec(page)
         page.goto(URL)
         page.wait_for_selector("#agentbars .bar")
-        page.mouse.move(900, 500)
+        page.mouse.move(*r.pos)
         r.mark("dashboard")
         r.wait(0.8)
         r.say("d_intro")

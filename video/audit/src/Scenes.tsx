@@ -135,11 +135,6 @@ export const Demo: React.FC<{ startFrom: number; label: string; crop?: { x: numb
             borderTop: `2px solid ${C.line}`, borderBottom: `2px solid ${C.line}` }}>{video}</div>
         </>
       ) : video}
-      <div style={{ position: "absolute", top: vertical ? 150 : 22, right: vertical ? undefined : 24, left: vertical ? 60 : undefined,
-        background: "rgba(11,11,11,0.82)", color: "#fff", fontSize: vertical ? 30 : 22, fontWeight: 700, padding: "8px 16px", borderRadius: 10,
-        display: "flex", gap: 10, alignItems: "center", opacity: interpolate(f, [0, 6], [0, 1], { extrapolateRight: "clamp" }) }}>
-        <div style={{ width: 12, height: 12, borderRadius: 6, background: "#0ca30c" }} />{label}
-      </div>
       {note && (
         <div style={{ position: "absolute", top: vertical ? 1420 : 80, right: vertical ? undefined : 24, left: vertical ? 60 : undefined,
           background: C.warn, color: C.ink, fontSize: vertical ? 30 : 22, fontWeight: 800, padding: "8px 16px", borderRadius: 10,

@@ -1,67 +1,276 @@
 {
  "n_hook": {
-  "hash": "b6855f79b8e28b42",
+  "hash": "e40aae95ad9f00c4",
+  "voice": "Avinash",
   "text": "Calls like this are rarely caught. Compliance teams can manually audit only one or two percent of collection calls.",
-  "seconds": 6.214
+  "seconds": 6.681,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Calls like this are rarely caught.",
+    "seconds": 1.928
+   },
+   {
+    "text": "Compliance teams can manually audit only one or two percent of collection calls.",
+    "seconds": 4.573
+   }
+  ]
  },
  "n_rules": {
-  "hash": "9b1c16251313f60e",
+  "hash": "a1d2269650335933",
+  "voice": "Avinash",
   "text": "R B I's rules are clear. Identify yourself and the lender. Call only from eight A M to seven P M. No threats, abuse or shaming. Never tell anyone else about the debt. And offer a grievance channel.",
-  "seconds": 12.286
+  "seconds": 13.055,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "R B I's rules are clear.",
+    "seconds": 2.187
+   },
+   {
+    "text": "Identify yourself and the lender.",
+    "seconds": 2.01
+   },
+   {
+    "text": "Call only from eight A M to seven P M.",
+    "seconds": 2.266
+   },
+   {
+    "text": "No threats, abuse or shaming.",
+    "seconds": 2.271
+   },
+   {
+    "text": "Never tell anyone else about the debt.",
+    "seconds": 1.931
+   },
+   {
+    "text": "And offer a grievance channel.",
+    "seconds": 1.489
+   }
+  ]
  },
  "n_title": {
-  "hash": "8f070a159a5d924e",
+  "hash": "08fd4db26732fc0e",
+  "voice": "Avinash",
   "text": "Vaani Audit checks every call, in Hindi, Telugu and code-mixed speech, with Gnani's Prisma speech-to-text and Timbre voices.",
-  "seconds": 8.214
+  "seconds": 8.196,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Vaani Audit checks every call, in Hindi, Telugu and code-mixed speech,",
+    "seconds": 4.573
+   },
+   {
+    "text": "with Gnani's Prisma speech-to-text and Timbre voices.",
+    "seconds": 3.444
+   }
+  ]
  },
  "d_intro": {
-  "hash": "2ebe9e77025f9cbe",
+  "hash": "c742b7c43f1138b6",
+  "voice": "Avinash",
   "text": "This is a real run on the live Gnani A P I. First, a synthetic Hindi call, made at eight fifteen P M.",
-  "seconds": 8.32
+  "seconds": 7.08,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "This is a real run on the live Gnani A P I.",
+    "seconds": 2.835
+   },
+   {
+    "text": "First, a synthetic Hindi call, made at eight fifteen P M.",
+    "seconds": 4.065
+   }
+  ]
  },
  "d_run": {
-  "hash": "2b7073207010c9ee",
+  "hash": "abd015ad007f46a8",
+  "voice": "Avinash",
   "text": "Gnani Prisma transcribes both sides of the call, agent and borrower, and timestamps every turn.",
-  "seconds": 7.36
+  "seconds": 6.627,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Gnani Prisma transcribes both sides of the call, agent and borrower,",
+    "seconds": 4.504
+   },
+   {
+    "text": "and timestamps every turn.",
+    "seconds": 1.943
+   }
+  ]
  },
  "d_result": {
-  "hash": "1073b8dde8dd3e2f",
+  "hash": "162917f105f6cd9a",
+  "voice": "Avinash",
   "text": "Each violation comes with the exact quote, and the second it happened. Click it, and you hear the evidence.",
-  "seconds": 6.56
+  "seconds": 5.632,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Each violation comes with the exact quote, and the second it happened.",
+    "seconds": 3.646
+   },
+   {
+    "text": "Click it, and you hear the evidence.",
+    "seconds": 1.806
+   }
+  ]
  },
  "d_coach": {
-  "hash": "e2a644a113695b73",
+  "hash": "6d7c21aa5148b2c4",
+  "voice": "Avinash",
   "text": "For coaching, Timbre speaks the compliant way to say it, in the same language.",
-  "seconds": 5.04
+  "seconds": 4.53,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "For coaching, Timbre speaks the compliant way to say it,",
+    "seconds": 3.165
+   },
+   {
+    "text": "in the same language.",
+    "seconds": 1.185
+   }
+  ]
  },
  "d_telugu": {
-  "hash": "d376b0d8598e5792",
+  "hash": "acb94a8439256854",
+  "voice": "Avinash",
   "text": "The same works in Telugu. Listen to this agent and a farmer.",
-  "seconds": 4.32
+  "seconds": 3.902,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "The same works in Telugu.",
+    "seconds": 1.858
+   },
+   {
+    "text": "Listen to this agent and a farmer.",
+    "seconds": 1.864
+   }
+  ]
  },
  "d_telugu_res": {
-  "hash": "cb003e1f83644890",
+  "hash": "afd77bc63092bb97",
+  "voice": "Avinash",
   "text": "He called the farmer a liar, threatened to seize his tractor, and gave no grievance channel. All flagged, with evidence.",
-  "seconds": 7.52
+  "seconds": 7.143,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "He called the farmer a liar, threatened to seize his tractor,",
+    "seconds": 3.359
+   },
+   {
+    "text": "and gave no grievance channel.",
+    "seconds": 1.576
+   },
+   {
+    "text": "All flagged, with evidence.",
+    "seconds": 1.848
+   }
+  ]
  },
  "d_team": {
-  "hash": "79b7feb940276214",
+  "hash": "0521b0c6e68f3a47",
+  "voice": "Avinash",
   "text": "Managers see compliance by agent, the top violation types, and a coaching card for every agent.",
-  "seconds": 6.72
+  "seconds": 5.751,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Managers see compliance by agent, the top violation types,",
+    "seconds": 3.685
+   },
+   {
+    "text": "and a coaching card for every agent.",
+    "seconds": 1.886
+   }
+  ]
  },
  "n_arch": {
-  "hash": "f8cffcc6653ecc4b",
-  "text": "Under the hood: Prisma v3 Batch transcribes each leg of the call, with domain keywords and a topic. Deterministic R B I rules produce every finding, with a timestamp and a verbatim quote. An optional L L M may only add a finding whose quote is really in the transcript.",
-  "seconds": 17.074
+  "hash": "988b265a2e19df94",
+  "voice": "Avinash",
+  "text": "Under the hood, Prisma v3 Batch transcribes each side of the call, with domain keywords. Deterministic R B I rules produce every finding, with a timestamp and a verbatim quote.",
+  "seconds": 11.626,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Under the hood, Prisma v3 Batch transcribes each side of the call, with domain keywords.",
+    "seconds": 5.384
+   },
+   {
+    "text": "Deterministic R B I rules produce every finding,",
+    "seconds": 3.52
+   },
+   {
+    "text": "with a timestamp and a verbatim quote.",
+    "seconds": 2.361
+   }
+  ]
  },
  "n_results": {
-  "hash": "93bea49c0512232a",
+  "hash": "422a0afd25ca739b",
+  "voice": "Avinash",
   "text": "On 12 held-out calls never used for tuning, F1 is point 94 with Prisma v3 and keywords, and point 92 at zero decibels. The weak spot is the rules: new ways of shaming were caught only half the time.",
-  "seconds": 13.786
+  "seconds": 14.625,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "On 12 held-out calls never used for tuning,",
+    "seconds": 2.58
+   },
+   {
+    "text": "F1 is point 94 with Prisma v3 and keywords,",
+    "seconds": 4.305
+   },
+   {
+    "text": "and point 92 at zero decibels.",
+    "seconds": 2.426
+   },
+   {
+    "text": "The weak spot is the rules:",
+    "seconds": 1.794
+   },
+   {
+    "text": "new ways of shaming were caught only half the time.",
+    "seconds": 2.799
+   }
+  ]
  },
  "n_close": {
-  "hash": "56633e1b7387e46e",
+  "hash": "b4d55fb966f72be3",
+  "voice": "Avinash",
   "text": "Every call audited, with evidence. Built solo by Yarra Vivek, on Gnani AI.",
-  "seconds": 4.929
+  "seconds": 5.669,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Every call audited, with evidence.",
+    "seconds": 2.342
+   },
+   {
+    "text": "Built solo by Yarra Vivek, on Gnani AI.",
+    "seconds": 3.147
+   }
+  ]
+ },
+ "d_card": {
+  "hash": "6b4d96d0302b7987",
+  "voice": "Avinash",
+  "text": "Open any agent, and you get their coaching card: what went wrong, and the right way to say it.",
+  "seconds": 5.28,
+  "gap": 0.18,
+  "chunks": [
+   {
+    "text": "Open any agent, and you get their coaching card:",
+    "seconds": 2.587
+   },
+   {
+    "text": "what went wrong, and the right way to say it.",
+    "seconds": 2.513
+   }
+  ]
  }
 }

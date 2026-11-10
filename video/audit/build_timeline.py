@@ -61,14 +61,12 @@ def chunks(text, max_words=12):
 
 
 def narr_caps(key, start_s):
+    """One caption per synthesised chunk, timed to that chunk's measured audio (see build_assets.py)."""
     n = NARR[key]
-    parts = chunks(n["text"])
-    total = sum(len(p) for p in parts)
     caps, t = [], start_s
-    for p in parts:
-        d = n["seconds"] * len(p) / total
-        caps.append({"from": f(t), "to": f(t + d), "text": p})
-        t += d
+    for ch in n["chunks"]:
+        caps.append({"from": f(t), "to": f(t + ch["seconds"] + 0.12), "text": display(ch["text"])})
+        t += ch["seconds"] + n["gap"]
     return caps
 
 
@@ -219,7 +217,7 @@ if __name__ == "__main__":
             {"t": "RBI checklist rules", "s": "deterministic\nevery finding = time + verbatim quote", "gnani": False},
             {"t": "Optional LLM reviewer", "s": "may only ADD findings\nwhose quote is in the transcript", "gnani": False},
             {"t": "Scorecard · coaching", "s": "team dashboard\nGnani Timbre speaks the fix", "gnani": True}],
-            "boxAt": [0.3, 2.5, 7.0, 11.0, 15.0], "noteAt": 15.5,
+            "boxAt": [0.3, 1.8, 5.2, 7.4, 9.2], "noteAt": 9.8,
             "note": "Mono recordings: Prisma diarization + a documented role heuristic. Agent name check uses the dialer's agent roster."},
         "results": results,
         "close": {"line": "100% of calls audited, not 2%.",
@@ -232,31 +230,34 @@ if __name__ == "__main__":
     # ------------------------------------------------ main 16:9 cut
     m = Cut()
     m.audio.append({"src": "hook.wav", "from": 0, "dur": f(HOOK["seconds"]) + 3})
-    m.scene("hook", HOOK["seconds"] + 2.0)
+    m.scene("hook", HOOK["seconds"] + 1.0)
     t0 = m.t
     d = m.narr("n_hook", t0 + 0.2)
     d2 = m.narr("n_rules", t0 + 0.2 + d + 0.3)
     T["problem"]["listAt"] = d + 0.4
-    m.scene("problem", d + d2 + 0.7)
+    m.scene("problem", d + d2 + 0.4)
     m.narr("n_title", m.t + 0.3)
-    m.scene("title", NARR["n_title"]["seconds"] + 0.6)
+    m.scene("title", NARR["n_title"]["seconds"] + 0.35)
     m.demo(mark("dashboard") + 0.3, mark("run", "hi_d02") + NARR["d_run"]["seconds"] + 0.3)
     wait = lambda c: next(x for x in LOG["marks"] if x["name"] == "result" and x["call"] == c)["job_wall_s"]  # noqa: E731
     m.demo(mark("result", "hi_d02") - 0.4, mark("coach_end") + 0.4, note=f"⏩ wait cut · real Prisma Batch job: {wait('hi_d02'):.0f} s")
     m.demo(say_at("d_telugu") - 0.3, mark("run", "te_d02") + 0.8)
     m.demo(mark("result", "te_d02") - 0.4, say_at("d_telugu_res") + NARR["d_telugu_res"]["seconds"] + 0.3,
            note=f"⏩ wait cut · real Prisma Batch job: {wait('te_d02'):.0f} s")
-    m.demo(say_at("d_team") - 0.2, max(mark("coaching card") + 2.0, say_at("d_team") + NARR["d_team"]["seconds"] + 0.3))
+    seg_out, seg_a = m.t, say_at("d_team") - 0.2
+    m.demo(seg_a, max(mark("coaching card") + 2.0, say_at("d_team") + NARR["d_team"]["seconds"] + 0.3))
+    if "d_card" in NARR:  # fills the silent move to the coaching card
+        m.narr("d_card", seg_out + (say_at("d_team") + NARR["d_team"]["seconds"] + 0.35 - seg_a))
     m.narr("n_arch", m.t + 0.3)
-    m.scene("arch", NARR["n_arch"]["seconds"] + 0.5)
+    m.scene("arch", NARR["n_arch"]["seconds"] + 0.3)
     if "n_results" in NARR:
         m.narr("n_results", m.t + 0.3)
-        m.scene("results", NARR["n_results"]["seconds"] + 0.8)
+        m.scene("results", NARR["n_results"]["seconds"] + 0.5)
     else:
         m.scene("results", 14)
     if "n_close" in NARR:
         m.narr("n_close", m.t + 0.2)
-    m.scene("close", max(5.0, NARR.get("n_close", {}).get("seconds", 0) + 1.2))
+    m.scene("close", max(4.5, NARR.get("n_close", {}).get("seconds", 0) + 0.9))
     T["main"] = m.done()
 
     # ------------------------------------------------ vertical 9:16 cut (45-60 s)
@@ -267,8 +268,8 @@ if __name__ == "__main__":
     v.scene("title", 3.2)
     crop = {"x": 90, "y": 0, "scale": 1080 / 1250}
     v.demo(mark("result", "hi_d02") - 0.9, mark("coach_end") + 0.4, crop=crop)
-    v.scene("results", 9.0)
-    v.scene("close", 5.0)
+    v.scene("results", 8.2)
+    v.scene("close", 3.6)
     T["vertical"] = v.done()
 
     (D / "src" / "timeline.json").write_text(json.dumps(T, ensure_ascii=False, indent=1), encoding="utf-8")
