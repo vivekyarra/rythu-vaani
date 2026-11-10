@@ -1,0 +1,90 @@
+{
+ "name": "hi_d05",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.36,
+   "text": "नमस्कार मैं नवधन फाइनेंस से अमित बोल रहा हूँ क्या मैं विजय जी से बात कर रहा हूँ",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 6.36,
+   "end": 8.13,
+   "text": "हाँ बोलिए",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 8.13,
+   "end": 14.54,
+   "text": "विजय जी, आपके होम लोन की इस महीने की ई एम आई बाकी है, उसी के बारे में कॉल किया है।",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 14.54,
+   "end": 18.624,
+   "text": "आप लोग बार बार फोन करके परेशान करते हो।",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 18.624,
+   "end": 28.09,
+   "text": "मैं समझता हूँ परेशानी के लिए माफ़ी चाहता हूँ, लगातार देरी होने पर एग्रीमेंट के अनुसार क्रेडिट ब्यूरो को रिपोर्ट किया जा सकता है, बस यही बताना था।",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 28.09,
+   "end": 31.31,
+   "text": "ठीक है, मैं गुरुवार तक भर दूँगा।",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 31.31,
+   "end": 39.36,
+   "text": "बहुत धन्यवाद, अगर आपको कोई शिकायत हो तो आप हमारी शिकायत हेल्पलाइन या नज़दीकी ब्रांच से संपर्क कर सकते हैं।",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 39.36,
+   "end": 40.3,
+   "text": "ठीक है",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 40.3,
+ "job_id": "01a1c145-217e-7857-a348-924e96e0bbe1",
+ "mock": false,
+ "job_wall_s": 16.01,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

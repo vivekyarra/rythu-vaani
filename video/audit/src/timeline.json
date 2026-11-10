@@ -1,0 +1,763 @@
+{
+ "hook": {
+  "native": "“तीन महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए तो पुलिस लेकर आपके घर आएंगे।”",
+  "english": "You haven't paid in three months. Pay by tomorrow, or we bring the police to your house.",
+  "time": "8:15 PM",
+  "language": "HINDI",
+  "clipSec": 5.56,
+  "wave": [
+   0.0,
+   0.0,
+   0.1979999989271164,
+   0.4560000002384186,
+   0.722000002861023,
+   0.6039999723434448,
+   0.36899998784065247,
+   0.7749999761581421,
+   0.3540000021457672,
+   0.33799999952316284,
+   0.6570000052452087,
+   0.26499998569488525,
+   0.6629999876022339,
+   0.20100000500679016,
+   0.3230000138282776,
+   0.6809999942779541,
+   0.3799999952316284,
+   0.41499999165534973,
+   0.8059999942779541,
+   0.164000004529953,
+   0.3310000002384186,
+   0.5569999814033508,
+   0.8960000276565552,
+   0.6919999718666077,
+   0.3619999885559082,
+   0.5550000071525574,
+   0.7260000109672546,
+   0.5669999718666077,
+   0.24699999392032623,
+   0.21899999678134918,
+   0.013000000268220901,
+   0.0010000000474974513,
+   0.0010000000474974513,
+   0.007000000216066837,
+   0.007000000216066837,
+   0.0020000000949949026,
+   0.19900000095367432,
+   0.7919999957084656,
+   0.4830000102519989,
+   0.028999999165534973,
+   0.8029999732971191,
+   0.03400000184774399,
+   0.37400001287460327,
+   0.5450000166893005,
+   0.06800000369548798,
+   0.5059999823570251,
+   0.21400000154972076,
+   0.4189999997615814,
+   0.40400001406669617,
+   0.1420000046491623,
+   0.1899999976158142,
+   0.27900001406669617,
+   0.4050000011920929,
+   0.0689999982714653,
+   0.33899998664855957,
+   0.017999999225139618,
+   0.01600000075995922,
+   0.2879999876022339,
+   0.38999998569488525,
+   0.3529999852180481,
+   0.04899999871850014,
+   0.26600000262260437,
+   0.5860000252723694,
+   0.05400000140070915,
+   0.5479999780654907,
+   0.34200000762939453,
+   0.11500000208616257,
+   0.8050000071525574,
+   0.8849999904632568,
+   0.0949999988079071,
+   0.08100000023841858,
+   0.49399998784065247,
+   0.15700000524520874,
+   0.18400000035762787,
+   0.15000000596046448,
+   0.9580000042915344,
+   1.0,
+   0.8560000061988831,
+   0.47200000286102295,
+   0.19099999964237213,
+   0.15299999713897705,
+   0.2370000034570694,
+   0.03500000014901161,
+   0.003000000026077032,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "stamps": [
+   "Threat",
+   "After 7 PM"
+  ],
+  "stampAt": 3.2,
+  "punchAt": 5.859999999999999,
+  "punch": "Nobody at the bank will ever hear this call."
+ },
+ "problem": {
+  "listAt": 6.614000000000001,
+  "listStep": 1.6,
+  "rules": [
+   "Identify yourself, the lender, the purpose",
+   "Call only 8 AM – 7 PM",
+   "No threats or intimidation",
+   "No abuse, no public shaming",
+   "Never disclose the debt to others",
+   "Offer a grievance channel"
+  ]
+ },
+ "title": {
+  "tagline": "Every collection call audited. In Hindi, Telugu and code-mixed speech. With evidence.",
+  "sub": "Built on Gnani Prisma (speech-to-text) and Timbre (text-to-speech)"
+ },
+ "demoLabel": "LIVE Gnani API · real screen recording · synthetic calls",
+ "arch": {
+  "boxes": [
+   {
+    "t": "Call recording + metadata",
+    "s": "WAV, dual-channel or mono\ncall time, agent ID",
+    "gnani": false
+   },
+   {
+    "t": "Gnani Prisma v3.0 Batch",
+    "s": "each leg transcribed\nkeywords + topic\ntimestamps",
+    "gnani": true
+   },
+   {
+    "t": "RBI checklist rules",
+    "s": "deterministic\nevery finding = time + verbatim quote",
+    "gnani": false
+   },
+   {
+    "t": "Optional LLM reviewer",
+    "s": "may only ADD findings\nwhose quote is in the transcript",
+    "gnani": false
+   },
+   {
+    "t": "Scorecard · coaching",
+    "s": "team dashboard\nGnani Timbre speaks the fix",
+    "gnani": true
+   }
+  ],
+  "boxAt": [
+   0.3,
+   2.5,
+   7.0,
+   11.0,
+   15.0
+  ],
+  "noteAt": 15.5,
+  "note": "Mono recordings: Prisma diarization + a documented role heuristic. Agent name check uses the dialer's agent roster."
+ },
+ "results": {
+  "title": "Measured on the live Gnani API",
+  "subtitle": "12 held-out synthetic calls, never used for tuning · micro F1 over 6 violation categories · dual-channel",
+  "chartLabel": "VIOLATION DETECTION F1 (HIGHER IS BETTER)",
+  "rowsAt": 0.8,
+  "rows": [
+   {
+    "cond": "Phone line, no added noise",
+    "vals": [
+     {
+      "sys": "Prisma v2.5",
+      "v": 0.9411764705882353,
+      "label": "0.94"
+     },
+     {
+      "sys": "v3.0 + keywords",
+      "v": 0.9411764705882353,
+      "label": "0.94"
+     }
+    ]
+   },
+   {
+    "cond": "10 dB SNR",
+    "vals": [
+     {
+      "sys": "Prisma v2.5",
+      "v": 0.9411764705882353,
+      "label": "0.94"
+     },
+     {
+      "sys": "v3.0 + keywords",
+      "v": 0.9411764705882353,
+      "label": "0.94"
+     }
+    ]
+   },
+   {
+    "cond": "5 dB SNR",
+    "vals": [
+     {
+      "sys": "Prisma v2.5",
+      "v": 0.9230769230769231,
+      "label": "0.92"
+     },
+     {
+      "sys": "v3.0 + keywords",
+      "v": 0.9411764705882353,
+      "label": "0.94"
+     }
+    ]
+   },
+   {
+    "cond": "0 dB SNR",
+    "vals": [
+     {
+      "sys": "Prisma v2.5",
+      "v": 0.9230769230769231,
+      "label": "0.92"
+     },
+     {
+      "sys": "v3.0 + keywords",
+      "v": 0.9230769230769231,
+      "label": "0.92"
+     }
+    ]
+   }
+  ],
+  "factsAt": 3.5,
+  "facts": [
+   {
+    "big": "0.18 → 0.16",
+    "small": "character error rate, Prisma v2.5 → v3.0 + keywords (phone line, no added noise)"
+   },
+   {
+    "big": "0.96",
+    "small": "F1 of the rules on the exact script: shaming recall only 0.50, false 'no disclosure' flags (precision 0.80) are the main errors"
+   },
+   {
+    "big": "9 / 26",
+    "small": "mono calls where diarization found one speaker (mono F1 0.92): dual-channel recording fixes roles"
+   }
+  ]
+ },
+ "close": {
+  "line": "100% of calls audited, not 2%.",
+  "limits": "Limits: synthetic calls only (contest rule) · 12 held-out calls is a small test set ·\nrules miss novel phrasings (see per-category table) · not legal advice.",
+  "credit": "Built solo by Yarra Vivek · Vignan's Lara Institute of Technology & Science",
+  "url": "github.com/vivekyarra/rythu-vaani · vaani_audit/"
+ },
+ "main": {
+  "scenes": [
+   {
+    "kind": "hook",
+    "from": 0,
+    "dur": 227
+   },
+   {
+    "kind": "problem",
+    "from": 227,
+    "dur": 576
+   },
+   {
+    "kind": "title",
+    "from": 803,
+    "dur": 264
+   },
+   {
+    "kind": "demo",
+    "from": 1067,
+    "dur": 946,
+    "startFrom": 24
+   },
+   {
+    "kind": "demo",
+    "from": 2013,
+    "dur": 982,
+    "startFrom": 2282,
+    "note": "⏩ wait cut · real Prisma Batch job: 51 s"
+   },
+   {
+    "kind": "demo",
+    "from": 2995,
+    "dur": 618,
+    "startFrom": 3312
+   },
+   {
+    "kind": "demo",
+    "from": 3613,
+    "dur": 296,
+    "startFrom": 4799,
+    "note": "⏩ wait cut · real Prisma Batch job: 29 s"
+   },
+   {
+    "kind": "demo",
+    "from": 3909,
+    "dur": 222,
+    "startFrom": 5138
+   },
+   {
+    "kind": "arch",
+    "from": 4131,
+    "dur": 527
+   },
+   {
+    "kind": "results",
+    "from": 4658,
+    "dur": 438
+   },
+   {
+    "kind": "close",
+    "from": 5096,
+    "dur": 184
+   }
+  ],
+  "audio": [
+   {
+    "src": "hook.wav",
+    "from": 0,
+    "dur": 170
+   },
+   {
+    "src": "n_hook.wav",
+    "from": 233,
+    "dur": 188
+   },
+   {
+    "src": "n_rules.wav",
+    "from": 428,
+    "dur": 371
+   },
+   {
+    "src": "n_title.wav",
+    "from": 812,
+    "dur": 248
+   },
+   {
+    "src": "d_intro.wav",
+    "from": 1082,
+    "dur": 252
+   },
+   {
+    "src": "d_run.wav",
+    "from": 1783,
+    "dur": 223
+   },
+   {
+    "src": "hi_d02.mp3",
+    "from": 1344,
+    "dur": 439,
+    "startFrom": 0
+   },
+   {
+    "src": "d_result.wav",
+    "from": 2076,
+    "dur": 199
+   },
+   {
+    "src": "d_coach.wav",
+    "from": 2499,
+    "dur": 153
+   },
+   {
+    "src": "hi_d02.mp3",
+    "from": 2296,
+    "dur": 202,
+    "startFrom": 256
+   },
+   {
+    "src": "coach_hi_d02_THREAT.wav",
+    "from": 2684,
+    "dur": 298
+   },
+   {
+    "src": "d_telugu.wav",
+    "from": 3004,
+    "dur": 132
+   },
+   {
+    "src": "te_d02.mp3",
+    "from": 3148,
+    "dur": 441,
+    "startFrom": 0
+   },
+   {
+    "src": "d_telugu_res.wav",
+    "from": 3675,
+    "dur": 228
+   },
+   {
+    "src": "d_team.wav",
+    "from": 3915,
+    "dur": 204
+   },
+   {
+    "src": "n_arch.wav",
+    "from": 4140,
+    "dur": 514
+   },
+   {
+    "src": "n_results.wav",
+    "from": 4667,
+    "dur": 416
+   },
+   {
+    "src": "n_close.wav",
+    "from": 5102,
+    "dur": 150
+   }
+  ],
+  "captions": [
+   {
+    "from": 233,
+    "to": 296,
+    "text": "Calls like this are rarely caught."
+   },
+   {
+    "from": 296,
+    "to": 419,
+    "text": "Compliance teams can manually audit only 1–2% of collection calls."
+   },
+   {
+    "from": 428,
+    "to": 473,
+    "text": "RBI's rules are clear."
+   },
+   {
+    "from": 473,
+    "to": 541,
+    "text": "Identify yourself and the lender."
+   },
+   {
+    "from": 541,
+    "to": 598,
+    "text": "Call only from 8 AM to 7 PM."
+   },
+   {
+    "from": 598,
+    "to": 658,
+    "text": "No threats, abuse or shaming."
+   },
+   {
+    "from": 658,
+    "to": 735,
+    "text": "Never tell anyone else about the debt."
+   },
+   {
+    "from": 735,
+    "to": 797,
+    "text": "And offer a grievance channel."
+   },
+   {
+    "from": 812,
+    "to": 952,
+    "text": "Vaani Audit checks every call, in Hindi, Telugu and code-mixed speech,"
+   },
+   {
+    "from": 952,
+    "to": 1058,
+    "text": "with Gnani's Prisma speech-to-text and Timbre voices."
+   },
+   {
+    "from": 1082,
+    "to": 1199,
+    "text": "This is a real run on the live Gnani API."
+   },
+   {
+    "from": 1199,
+    "to": 1332,
+    "text": "First, a synthetic Hindi call, made at 8:15 PM."
+   },
+   {
+    "from": 1356,
+    "to": 1519,
+    "label": "Agent (Hindi)",
+    "text": "Hello, this is Amit from Navdhan Finance, about your gold-loan instalment."
+   },
+   {
+    "from": 1534,
+    "to": 1594,
+    "label": "Borrower (Hindi)",
+    "text": "Why are you calling so late at night?"
+   },
+   {
+    "from": 1611,
+    "to": 1772,
+    "label": "Agent (Hindi)",
+    "text": "You haven't paid for three months. Pay by tomorrow, or we'll bring the police to your house."
+   },
+   {
+    "from": 1783,
+    "to": 1943,
+    "text": "Gnani Prisma transcribes both sides of the call, agent and borrower,"
+   },
+   {
+    "from": 1943,
+    "to": 2004,
+    "text": "and timestamps every turn."
+   },
+   {
+    "from": 2076,
+    "to": 2206,
+    "text": "Each violation comes with the exact quote, and the second it happened."
+   },
+   {
+    "from": 2206,
+    "to": 2273,
+    "text": "Click it, and you hear the evidence."
+   },
+   {
+    "from": 2308,
+    "to": 2469,
+    "label": "Agent (Hindi)",
+    "text": "You haven't paid for three months. Pay by tomorrow, or we'll bring the police to your house."
+   },
+   {
+    "from": 2499,
+    "to": 2608,
+    "text": "For coaching, Timbre speaks the compliant way to say it,"
+   },
+   {
+    "from": 2608,
+    "to": 2650,
+    "text": "in the same language."
+   },
+   {
+    "from": 2684,
+    "to": 2982,
+    "label": "Timbre, compliant version",
+    "text": "I understand things are hard right now. Your EMI is pending. You can pay today, or we can make an easy payment plan for you."
+   },
+   {
+    "from": 3004,
+    "to": 3059,
+    "text": "The same works in Telugu."
+   },
+   {
+    "from": 3059,
+    "to": 3133,
+    "text": "Listen to this agent and a farmer."
+   },
+   {
+    "from": 3160,
+    "to": 3325,
+    "label": "Agent (Telugu)",
+    "text": "Hello, this is Suresh from Navdhan Finance, calling about your tractor-loan dues."
+   },
+   {
+    "from": 3345,
+    "to": 3443,
+    "label": "Borrower (Telugu)",
+    "text": "Go on... this month's harvest money hasn't come in yet."
+   },
+   {
+    "from": 3454,
+    "to": 3579,
+    "label": "Agent (Telugu)",
+    "text": "Same excuse every time. You're a big liar."
+   },
+   {
+    "from": 3675,
+    "to": 3791,
+    "text": "He called the farmer a liar, threatened to seize his tractor,"
+   },
+   {
+    "from": 3791,
+    "to": 3848,
+    "text": "and gave no grievance channel."
+   },
+   {
+    "from": 3848,
+    "to": 3900,
+    "text": "All flagged, with evidence."
+   },
+   {
+    "from": 3915,
+    "to": 4040,
+    "text": "Managers see compliance by agent, the top violation types,"
+   },
+   {
+    "from": 4040,
+    "to": 4117,
+    "text": "and a coaching card for every agent."
+   },
+   {
+    "from": 4140,
+    "to": 4170,
+    "text": "Under the hood:"
+   },
+   {
+    "from": 4170,
+    "to": 4270,
+    "text": "Prisma v3.0 Batch transcribes each leg of the call,"
+   },
+   {
+    "from": 4270,
+    "to": 4334,
+    "text": "with domain keywords and a topic."
+   },
+   {
+    "from": 4334,
+    "to": 4425,
+    "text": "Deterministic RBI rules produce every finding,"
+   },
+   {
+    "from": 4425,
+    "to": 4499,
+    "text": "with a timestamp and a verbatim quote."
+   },
+   {
+    "from": 4499,
+    "to": 4617,
+    "text": "An optional LLM may only add a finding whose quote is really"
+   },
+   {
+    "from": 4617,
+    "to": 4652,
+    "text": "in the transcript."
+   },
+   {
+    "from": 4667,
+    "to": 4767,
+    "text": "On 12 held-out calls never used for tuning,"
+   },
+   {
+    "from": 4767,
+    "to": 4861,
+    "text": "F1 is 0.94 with Prisma v3.0 and keywords,"
+   },
+   {
+    "from": 4861,
+    "to": 4901,
+    "text": "and 0.92 at 0 dB."
+   },
+   {
+    "from": 4901,
+    "to": 4963,
+    "text": "The weak spot is the rules:"
+   },
+   {
+    "from": 4963,
+    "to": 5081,
+    "text": "new ways of shaming were caught only half the time."
+   },
+   {
+    "from": 5102,
+    "to": 5171,
+    "text": "Every call audited, with evidence."
+   },
+   {
+    "from": 5171,
+    "to": 5250,
+    "text": "Built solo by Yarra Vivek, on Gnani AI."
+   }
+  ],
+  "duration": 5280
+ },
+ "vertical": {
+  "scenes": [
+   {
+    "kind": "hook",
+    "from": 0,
+    "dur": 233
+   },
+   {
+    "kind": "title",
+    "from": 233,
+    "dur": 96
+   },
+   {
+    "kind": "demo",
+    "from": 329,
+    "dur": 997,
+    "startFrom": 2267,
+    "crop": {
+     "x": 90,
+     "y": 0,
+     "scale": 0.864
+    }
+   },
+   {
+    "kind": "results",
+    "from": 1325,
+    "dur": 270
+   },
+   {
+    "kind": "close",
+    "from": 1595,
+    "dur": 150
+   }
+  ],
+  "audio": [
+   {
+    "src": "hook.wav",
+    "from": 0,
+    "dur": 170
+   },
+   {
+    "src": "d_result.wav",
+    "from": 407,
+    "dur": 199
+   },
+   {
+    "src": "d_coach.wav",
+    "from": 829,
+    "dur": 153
+   },
+   {
+    "src": "hi_d02.mp3",
+    "from": 627,
+    "dur": 202,
+    "startFrom": 256
+   },
+   {
+    "src": "coach_hi_d02_THREAT.wav",
+    "from": 1015,
+    "dur": 298
+   }
+  ],
+  "captions": [
+   {
+    "from": 0,
+    "to": 167,
+    "label": "Agent (Hindi)",
+    "text": "You haven't paid in three months. Pay by tomorrow, or we bring the police to your house."
+   },
+   {
+    "from": 407,
+    "to": 537,
+    "text": "Each violation comes with the exact quote, and the second it happened."
+   },
+   {
+    "from": 537,
+    "to": 604,
+    "text": "Click it, and you hear the evidence."
+   },
+   {
+    "from": 639,
+    "to": 799,
+    "label": "Agent (Hindi)",
+    "text": "You haven't paid for three months. Pay by tomorrow, or we'll bring the police to your house."
+   },
+   {
+    "from": 829,
+    "to": 939,
+    "text": "For coaching, Timbre speaks the compliant way to say it,"
+   },
+   {
+    "from": 939,
+    "to": 980,
+    "text": "in the same language."
+   },
+   {
+    "from": 1015,
+    "to": 1313,
+    "label": "Timbre, compliant version",
+    "text": "I understand things are hard right now. Your EMI is pending. You can pay today, or we can make an easy payment plan for you."
+   }
+  ],
+  "duration": 1745
+ }
+}

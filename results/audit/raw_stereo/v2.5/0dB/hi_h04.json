@@ -1,0 +1,106 @@
+{
+ "name": "hi_h04",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 3.008,
+   "text": "नमस्ते, मैं अमित बोल रहा हूँ",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 3.008,
+   "end": 7.968,
+   "text": "क्या गीता देवी जी से बात हो रही है आपके किस्त के सिलसिले में फ़ोन किया",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 7.372,
+   "end": 12.352,
+   "text": "हाँ मैं गीता बोल रही हूँ, आप किस कंपनी से हैं?",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 11.852,
+   "end": 18.656,
+   "text": "जी वो छोड़िए, बस इतना बताइए कि ₹5,000 की बकाया किश्त कब तक जमा करेंगे",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 18.444,
+   "end": 23.104,
+   "text": "इस महीने बेटी की स्कूल फीस भरनी थी अगले महीने दे दूंगी",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 22.572,
+   "end": 30.816,
+   "text": "समझ सकता हूँ पर मैं नहीं चाहता की हमारी सील टीम आपके घर आकर सामान जब्त करे आप भी नहीं चाहेंगे",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 30.476,
+   "end": 33.024,
+   "text": "आप मुझे डरा रहे हैं क्या",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 32.78,
+   "end": 37.856,
+   "text": "माफ कीजिए अगर ऐसा लगा आप अगले बुधवार तक जमा कर दीजिए",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 37.452,
+   "end": 40.48,
+   "text": "ठीक है कोशीश करूँगी",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 39.98,
+   "end": 46.08,
+   "text": "धन्यवाद कोई शिकायत हो तो आप नज़दीकी शाखा में शिकायत अधिकारी से मिल सकती हैं",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 46.2,
+ "job_id": "01a1c151-8f53-7a9a-b8f7-fb5188bf4e1f",
+ "mock": false,
+ "job_wall_s": 61.33,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

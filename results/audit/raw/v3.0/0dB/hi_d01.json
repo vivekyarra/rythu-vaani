@@ -1,0 +1,122 @@
+{
+ "name": "hi_d01",
+ "segments": [
+  {
+   "start": 0.268,
+   "end": 5.53,
+   "text": "नमस्ते, मैं Nabha Finance से अमित बोल रहा हूँ। क्या मेरी बात राकेश जी से हो रही है?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 5.53,
+   "end": 8.2,
+   "text": "हाँ, मैं राकेश बोल रहा हूँ।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 8.2,
+   "end": 13.248,
+   "text": "राकेश जी, मैं आपके personal loan की EMI के बारे में call कर रहा हूँ।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 13.248,
+   "end": 16.128,
+   "text": "1000 रुपए की किस्त 10 दिन से मांग रहे हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 16.128,
+   "end": 21.184,
+   "text": "इस महीने तनख्वाह late है, मैं अगले सोमवार तक भर दूंगा।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 21.184,
+   "end": 25.696,
+   "text": "कोई बात नहीं। मैं सोमवार की तारीख note कर लेता हूँ।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 25.696,
+   "end": 29.472,
+   "text": "देरी होने पर loan agreement के हिसाब से late fees",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 29.472,
+   "end": 31.872,
+   "text": "ठीक।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 31.872,
+   "end": 37.728,
+   "text": "अगर आपको कोई शिकायत है, तो आप हमारे शिकायत अधिकारी से helpline पर बात कर सकते हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 37.728,
+   "end": 40.224,
+   "text": "नंबर आपके loan agreement से जुड़ा है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 40.224,
+   "end": 41.94,
+   "text": "ठीक है, धन्यवाद।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 41.94,
+   "end": 45.315,
+   "text": "नमस्कार, आपका दिन शुभ हो।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 45.31,
+ "job_id": "01a1c158-8fa0-7079-a5ea-6a6b4be83e5d",
+ "mock": false,
+ "job_wall_s": 32.32,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

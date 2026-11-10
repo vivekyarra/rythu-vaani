@@ -1,0 +1,2185 @@
+{
+ "hi_d01": {
+  "id": "hi_d01",
+  "split": "dev",
+  "language": "hi-IN",
+  "agent_id": "AG-101",
+  "call_time": "2026-10-12T11:05:00+05:30",
+  "summary": "Compliant reminder call: agent identifies, states purpose, agrees a date, offers grievance channel.",
+  "voices": {
+   "agent": "Prakash",
+   "borrower": "Yashraj",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 45.31,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.68,
+    "text": "नमस्ते, मैं नवधन फाइनेंस से अमित बोल रहा हूँ। क्या मेरी बात राकेश जी से हो रही है?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.142,
+    "end": 7.982,
+    "text": "हाँ, मैं राकेश बोल रहा हूँ।"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 8.555,
+    "end": 15.595,
+    "text": "राकेश जी, मैं आपके पर्सनल लोन की EMI के बारे में कॉल कर रहा हूँ। पाँच हज़ार रुपये की किस्त दस दिन से बाकी है।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 16.315,
+    "end": 20.555,
+    "text": "हाँ, इस महीने तनख्वाह देर से आई। मैं अगले सोमवार तक भर दूँगा।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 21.105,
+    "end": 29.185,
+    "text": "ठीक है, कोई बात नहीं। मैं सोमवार की तारीख नोट कर लेता हूँ। देरी होने पर लोन एग्रीमेंट के हिसाब से लेट फीस लगेगी।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 29.737,
+    "end": 31.417,
+    "text": "ठीक है, समझ गया।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 31.915,
+    "end": 39.755,
+    "text": "अगर आपको कोई शिकायत हो, तो आप हमारे शिकायत अधिकारी से हेल्पलाइन पर बात कर सकते हैं। नंबर आपके लोन एग्रीमेंट में दिया है।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 40.418,
+    "end": 41.778,
+    "text": "ठीक है, धन्यवाद।"
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 42.171,
+    "end": 44.651,
+    "text": "धन्यवाद राकेश जी, आपका दिन शुभ हो।"
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "hi_d02": {
+  "id": "hi_d02",
+  "split": "dev",
+  "language": "hi-IN",
+  "agent_id": "AG-101",
+  "call_time": "2026-10-13T20:15:00+05:30",
+  "summary": "Late-night call; agent threatens to bring police home and to tell the whole neighbourhood; no grievance channel.",
+  "voices": {
+   "agent": "Prakash",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 27.58,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.84,
+    "text": "हैलो, मैं नवधन फाइनेंस से अमित बोल रहा हूँ, आपके गोल्ड लोन की किस्त के बारे में।"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.326,
+    "end": 8.326,
+    "text": "इतनी रात को फोन क्यों कर रहे हो?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 8.919,
+    "end": 14.279,
+    "text": "तीन महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए तो पुलिस लेकर आपके घर आएंगे।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 14.675,
+    "end": 16.595,
+    "text": "आप ऐसे धमकी नहीं दे सकते।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 17.171,
+    "end": 20.931,
+    "text": "और आपके मोहल्ले में सबको बता देंगे कि आप कर्ज़ नहीं चुकाते।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 21.32,
+    "end": 23.4,
+    "text": "मैं अगले हफ्ते पैसे दे दूँगा।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 23.832,
+    "end": 26.872,
+    "text": "अगले हफ्ते नहीं, कल ही चाहिए। फोन रखो।"
+   }
+  ],
+  "labels": [
+   {
+    "category": "THREAT",
+    "turn": 2
+   },
+   {
+    "category": "SHAMING",
+    "turn": 4
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   },
+   {
+    "category": "CALL_HOURS"
+   }
+  ],
+  "mock_audio": false
+ },
+ "hi_d03": {
+  "id": "hi_d03",
+  "split": "dev",
+  "language": "hi-IN",
+  "agent_id": "AG-102",
+  "call_time": "2026-10-14T14:30:00+05:30",
+  "summary": "Agent refuses to say who is calling and insults the borrower.",
+  "voices": {
+   "agent": "Avinash",
+   "borrower": "Shubham",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 28.55,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 4.0,
+    "text": "हाँ, सुनीता जी? आपकी EMI अभी तक क्यों नहीं आई?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 4.367,
+    "end": 6.447,
+    "text": "जी, आप कौन बोल रहे हैं?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 7.024,
+    "end": 10.384,
+    "text": "वो छोड़िए, पहले बताइए पैसे कब देंगी।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 10.809,
+    "end": 13.289,
+    "text": "पहले बताइए आप कहाँ से बोल रहे हैं।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 13.977,
+    "end": 17.897,
+    "text": "आप जैसे बेशर्म लोग लोन लेते हैं और फिर भाग जाते हैं।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 18.259,
+    "end": 19.539,
+    "text": "आप तमीज़ से बात कीजिए।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 20.246,
+    "end": 27.046,
+    "text": "शुक्रवार तक चार हज़ार रुपये जमा कर दीजिए। कोई शिकायत है तो आप हमारी हेल्पलाइन पर कॉल कर सकती हैं।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 27.457,
+    "end": 28.177,
+    "text": "ठीक है।"
+   }
+  ],
+  "labels": [
+   {
+    "category": "ABUSE",
+    "turn": 4
+   },
+   {
+    "category": "NO_DISCLOSURE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "hi_d04": {
+  "id": "hi_d04",
+  "split": "dev",
+  "language": "hi-IN",
+  "agent_id": "AG-102",
+  "call_time": "2026-10-15T10:00:00+05:30",
+  "summary": "Borrower's wife picks up; agent tells her the bike-loan amount and overdue status.",
+  "voices": {
+   "agent": "Avinash",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 31.52,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.68,
+    "text": "नमस्ते, मैं नवधन फाइनेंस से रोहित बोल रहा हूँ। क्या मनोज जी से बात हो सकती है?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.335,
+    "end": 9.935,
+    "text": "मैं उनकी पत्नी बोल रही हूँ, वो अभी घर पर नहीं हैं।"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 10.54,
+    "end": 16.86,
+    "text": "अच्छा, उनको बता दीजिए कि उनकी बाइक लोन की छह हज़ार रुपये की EMI दो महीने से बकाया है।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 17.298,
+    "end": 19.378,
+    "text": "मुझे इस बारे में कुछ नहीं पता था।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 19.827,
+    "end": 23.667,
+    "text": "ठीक है, कृपया उनसे कहिए कि मुझे इसी नंबर पर कॉल कर लें।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 24.147,
+    "end": 25.667,
+    "text": "ठीक है, मैं बता दूँगी।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 26.068,
+    "end": 31.028,
+    "text": "किसी भी शिकायत के लिए आप हमारे ग्रीवेंस ऑफिसर से संपर्क कर सकते हैं। धन्यवाद।"
+   }
+  ],
+  "labels": [
+   {
+    "category": "THIRD_PARTY",
+    "turn": 2
+   }
+  ],
+  "mock_audio": false
+ },
+ "hi_d05": {
+  "id": "hi_d05",
+  "split": "dev",
+  "language": "hi-IN",
+  "agent_id": "AG-101",
+  "call_time": "2026-10-16T16:00:00+05:30",
+  "summary": "Compliant call with an annoyed borrower; agent correctly mentions credit-bureau reporting per agreement.",
+  "voices": {
+   "agent": "Prakash",
+   "borrower": "Kalpana",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 40.3,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 6.08,
+    "text": "नमस्कार, मैं नवधन फाइनेंस से अमित बोल रहा हूँ। क्या मैं विजय जी से बात कर रहा हूँ?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.697,
+    "end": 8.137,
+    "text": "हाँ, बोलिए।"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 8.622,
+    "end": 14.302,
+    "text": "विजय जी, आपके होम लोन की इस महीने की EMI बाकी है, उसी के बारे में कॉल किया है।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 14.876,
+    "end": 17.916,
+    "text": "आप लोग बार बार फोन करके परेशान करते हो!"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 18.653,
+    "end": 28.093,
+    "text": "मैं समझता हूँ, परेशानी के लिए माफ़ी चाहता हूँ। लगातार देरी होने पर एग्रीमेंट के अनुसार क्रेडिट ब्यूरो को रिपोर्ट किया जा सकता है, बस यही बताना था।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 28.69,
+    "end": 31.33,
+    "text": "ठीक है, मैं गुरुवार तक भर दूँगा।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 31.744,
+    "end": 38.624,
+    "text": "बहुत धन्यवाद। अगर आपको कोई शिकायत हो तो आप हमारी शिकायत हेल्पलाइन या नज़दीकी ब्रांच से संपर्क कर सकते हैं।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 39.207,
+    "end": 39.927,
+    "text": "ठीक है।"
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "te_d01": {
+  "id": "te_d01",
+  "split": "dev",
+  "language": "te-IN",
+  "agent_id": "AG-103",
+  "call_time": "2026-10-12T12:00:00+05:30",
+  "summary": "Compliant Telugu reminder call with grievance channel.",
+  "voices": {
+   "agent": "Harshad",
+   "borrower": "Chetana",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 36.85,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.52,
+    "text": "నమస్కారం, నేను నవధన్ ఫైనాన్స్ నుండి కిరణ్ మాట్లాడుతున్నాను. లక్ష్మి గారితో మాట్లాడుతున్నానా?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 5.909,
+    "end": 7.269,
+    "text": "అవును, చెప్పండి."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 7.748,
+    "end": 14.468,
+    "text": "లక్ష్మి గారు, మీ పర్సనల్ లోన్ EMI మూడు వేల రూపాయలు ఈ నెల ఇంకా కట్టలేదు, దాని గురించి కాల్ చేశాను."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 15.036,
+    "end": 18.156,
+    "text": "ఈ వారం కొంచెం ఇబ్బందిగా ఉంది, శనివారం కడతాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 18.746,
+    "end": 24.506,
+    "text": "సరే అండి, శనివారం అని నోట్ చేసుకుంటాను. ఆలస్యమైతే అగ్రిమెంట్ ప్రకారం లేట్ ఫీజు పడుతుంది."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 25.171,
+    "end": 26.771,
+    "text": "సరే, అర్థమైంది."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 27.167,
+    "end": 33.967,
+    "text": "మీకు ఏదైనా ఫిర్యాదు ఉంటే మా గ్రీవెన్స్ ఆఫీసర్‌ని హెల్ప్‌లైన్ ద్వారా సంప్రదించవచ్చు, నంబర్ మీ లోన్ అగ్రిమెంట్‌లో ఉంది."
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 34.576,
+    "end": 36.496,
+    "text": "సరే, ధన్యవాదాలు."
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "te_d02": {
+  "id": "te_d02",
+  "split": "dev",
+  "language": "te-IN",
+  "agent_id": "AG-104",
+  "call_time": "2026-10-13T13:00:00+05:30",
+  "summary": "Agent calls the farmer a liar and threatens to seize the tractor and file a police case; no grievance channel.",
+  "voices": {
+   "agent": "Devansh",
+   "borrower": "Kalpana",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 27.45,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.92,
+    "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్, మీ ట్రాక్టర్ లోన్ బకాయి గురించి ఫోన్ చేశాను."
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.564,
+    "end": 9.844,
+    "text": "చెప్పండి, ఈ నెల పంట డబ్బులు ఇంకా రాలేదు."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 10.222,
+    "end": 14.382,
+    "text": "ప్రతిసారీ ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 14.807,
+    "end": 16.087,
+    "text": "అలా మాట్లాడకండి."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 16.789,
+    "end": 22.309,
+    "text": "రేపటికి డబ్బు కట్టకపోతే మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు, పోలీస్ కేసు కూడా పెడతాం."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 22.659,
+    "end": 24.339,
+    "text": "వచ్చే వారం కడతాను."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 25.046,
+    "end": 26.966,
+    "text": "లేదు, రేపే కట్టాలి."
+   }
+  ],
+  "labels": [
+   {
+    "category": "ABUSE",
+    "turn": 2
+   },
+   {
+    "category": "THREAT",
+    "turn": 4
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "te_d03": {
+  "id": "te_d03",
+  "split": "dev",
+  "language": "te-IN",
+  "agent_id": "AG-103",
+  "call_time": "2026-10-14T21:00:00+05:30",
+  "summary": "9 PM call; brother picks up, agent reveals the overdue EMI and threatens to post in the village WhatsApp group.",
+  "voices": {
+   "agent": "Harshad",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 24.8,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 4.08,
+    "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి కిరణ్. రవి గారు ఉన్నారా?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 4.523,
+    "end": 7.243,
+    "text": "నేను వాళ్ళ అన్నయ్యని, రవి ఇంట్లో లేడు."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 7.931,
+    "end": 13.051,
+    "text": "మీ తమ్ముడు బైక్ లోన్ EMI నాలుగు వేలు మూడు నెలలుగా కట్టలేదు, మీరే చెప్పండి."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 13.667,
+    "end": 14.867,
+    "text": "ఇది నాకు తెలియదు."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 15.364,
+    "end": 19.044,
+    "text": "కట్టకపోతే మీ ఊరి వాట్సాప్ గ్రూప్‌లో అందరికీ చెప్తాం."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 19.432,
+    "end": 21.272,
+    "text": "సరే, నేను వాడికి చెప్తాను."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 21.703,
+    "end": 24.263,
+    "text": "ఏదైనా ఫిర్యాదు ఉంటే మా బ్రాంచ్‌కి రావచ్చు."
+   }
+  ],
+  "labels": [
+   {
+    "category": "THIRD_PARTY",
+    "turn": 2
+   },
+   {
+    "category": "SHAMING",
+    "turn": 4
+   },
+   {
+    "category": "CALL_HOURS"
+   }
+  ],
+  "mock_audio": false
+ },
+ "te_d04": {
+  "id": "te_d04",
+  "split": "dev",
+  "language": "te-IN",
+  "agent_id": "AG-104",
+  "call_time": "2026-10-15T09:30:00+05:30",
+  "summary": "Agent never gives his name or the lender, only 'collection team'.",
+  "voices": {
+   "agent": "Devansh",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 21.4,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 2.0,
+    "text": "హలో, శ్రీనివాస్ గారా?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 2.688,
+    "end": 4.048,
+    "text": "అవును, ఎవరు?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 4.784,
+    "end": 8.784,
+    "text": "మీ లోన్ పేమెంట్ పెండింగ్ ఉంది, ఎప్పుడు కడతారు?"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 9.312,
+    "end": 11.312,
+    "text": "మీరు ఎవరు, ఏ కంపెనీ?"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 12.023,
+    "end": 15.143,
+    "text": "కలెక్షన్ టీమ్ నుండి. ఈ శుక్రవారం లోపు కట్టండి."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 15.628,
+    "end": 17.148,
+    "text": "సరే, కడతాను."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 17.584,
+    "end": 20.944,
+    "text": "సరే. ఏదైనా సమస్య ఉంటే మా హెల్ప్‌లైన్‌కి కాల్ చేయండి."
+   }
+  ],
+  "labels": [
+   {
+    "category": "NO_DISCLOSURE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "te_d05": {
+  "id": "te_d05",
+  "split": "dev",
+  "language": "te-IN",
+  "agent_id": "AG-104",
+  "call_time": "2026-10-16T15:00:00+05:30",
+  "summary": "Wife answers; agent correctly asks for a call-back without revealing the loan (hard negative).",
+  "voices": {
+   "agent": "Devansh",
+   "borrower": "Shubham",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 28.37,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 6.48,
+    "text": "నమస్కారం, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్ మాట్లాడుతున్నాను. ప్రసాద్ గారితో మాట్లాడవచ్చా?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 7.041,
+    "end": 9.921,
+    "text": "నేను ఆయన భార్యని, ఆయన ఆఫీసుకు వెళ్ళారు."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 10.358,
+    "end": 16.918,
+    "text": "సరే అండి, ఒక ముఖ్యమైన విషయం గురించి మాట్లాడాలి. దయచేసి ఈ నంబర్‌కి తిరిగి కాల్ చేయమని చెప్పండి."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 17.591,
+    "end": 18.471,
+    "text": "ఏ విషయం?"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 19.023,
+    "end": 25.903,
+    "text": "క్షమించండి, అది ఆయనతోనే మాట్లాడాలి. ఏదైనా ఫిర్యాదు ఉంటే మా హెల్ప్‌లైన్‌లో చెప్పవచ్చు. ధన్యవాదాలు అండి."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 26.357,
+    "end": 27.717,
+    "text": "సరే, చెప్తాను."
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "he_d01": {
+  "id": "he_d01",
+  "split": "dev",
+  "language": "hi-en",
+  "agent_id": "AG-105",
+  "call_time": "2026-10-13T17:30:00+05:30",
+  "summary": "Polite tone but a false arrest-warrant threat; no grievance channel.",
+  "voices": {
+   "agent": "Riyaa",
+   "borrower": "Yashraj",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 32.48,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 6.56,
+    "text": "Hello, मैं Navdhan Finance से नेहा बोल रही हूँ। क्या मेरी बात अर्जुन जी से हो रही है?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.973,
+    "end": 8.173,
+    "text": "हाँ, बोलिए।"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 8.72,
+    "end": 15.44,
+    "text": "अर्जुन जी, आपके credit card loan का सात हज़ार rupees का EMI overdue है, इसी के लिए call किया है।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 16.09,
+    "end": 18.89,
+    "text": "मेरी job चली गई है, थोड़ा time चाहिए।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 19.434,
+    "end": 25.274,
+    "text": "मैं समझ सकती हूँ, लेकिन अगर इस week payment नहीं हुआ तो आपके against arrest warrant निकल जाएगा।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 26.009,
+    "end": 28.249,
+    "text": "क्या? इतनी सी बात पे arrest?"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 28.751,
+    "end": 31.871,
+    "text": "हाँ, इसलिए जल्दी payment कर दीजिए। Thank you."
+   }
+  ],
+  "labels": [
+   {
+    "category": "THREAT",
+    "turn": 4
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "he_d02": {
+  "id": "he_d02",
+  "split": "dev",
+  "language": "hi-en",
+  "agent_id": "AG-102",
+  "call_time": "2026-10-15T11:30:00+05:30",
+  "summary": "Compliant Hinglish call offering restructuring and a grievance officer.",
+  "voices": {
+   "agent": "Avinash",
+   "borrower": "Shubham",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 36.06,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.68,
+    "text": "Good morning, मैं Navdhan Finance से रोहित बोल रहा हूँ। क्या मैं प्रिया जी से बात कर रहा हूँ?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.176,
+    "end": 7.296,
+    "text": "हाँ, बोलिए।"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 7.786,
+    "end": 14.826,
+    "text": "प्रिया जी, आपके two-wheeler loan की EMI की due date निकल गई है, उसी के reminder के लिए call किया है।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 15.398,
+    "end": 19.078,
+    "text": "अरे, मैं भूल गई थी। आज ही online pay कर देती हूँ।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 19.532,
+    "end": 24.492,
+    "text": "Thank you. अगर payment में कोई problem हो तो हम restructuring options भी discuss कर सकते हैं।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 24.907,
+    "end": 26.507,
+    "text": "ठीक है, शुक्रिया।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 27.255,
+    "end": 33.655,
+    "text": "और कोई complaint हो तो आप हमारे grievance officer को email कर सकती हैं, details आपके loan agreement में हैं।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 34.393,
+    "end": 35.673,
+    "text": "Okay, thank you."
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "tn_d01": {
+  "id": "tn_d01",
+  "split": "dev",
+  "language": "te-en",
+  "agent_id": "AG-103",
+  "call_time": "2026-10-16T18:00:00+05:30",
+  "summary": "Agent refuses to identify himself and calls the borrower a cheater.",
+  "voices": {
+   "agent": "Harshad",
+   "borrower": "Yashraj",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 26.5,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 4.0,
+    "text": "Hello, రమేష్ గారా? మీ EMI ఎందుకు pay చేయలేదు?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 4.499,
+    "end": 5.859,
+    "text": "ఎవరు మాట్లాడుతున్నారు?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 6.53,
+    "end": 10.21,
+    "text": "అది important కాదు. మీ payment మూడు weeks నుండి overdue."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 10.849,
+    "end": 13.729,
+    "text": "Salary late అయింది sir, next week pay చేస్తాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 14.127,
+    "end": 17.967,
+    "text": "మీలాంటి cheaters వల్లే company కి loss. Useless fellow."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 18.565,
+    "end": 20.165,
+    "text": "Please respect గా మాట్లాడండి."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 20.896,
+    "end": 25.776,
+    "text": "Monday లోపల pay చేయండి. ఏదైనా complaint ఉంటే మా customer care కి call చేయండి."
+   }
+  ],
+  "labels": [
+   {
+    "category": "ABUSE",
+    "turn": 4
+   },
+   {
+    "category": "NO_DISCLOSURE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "tn_d02": {
+  "id": "tn_d02",
+  "split": "dev",
+  "language": "te-en",
+  "agent_id": "AG-103",
+  "call_time": "2026-10-17T19:30:00+05:30",
+  "summary": "7:30 PM; colleague picks up, agent discloses the EMI amount and threatens to sit at the office.",
+  "voices": {
+   "agent": "Harshad",
+   "borrower": "Chetana",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 29.43,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 4.64,
+    "text": "Hello, నేను Navdhan Finance నుండి కిరణ్ మాట్లాడుతున్నాను. సాయి గారు ఉన్నారా?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 5.328,
+    "end": 8.128,
+    "text": "నేను ఆయన colleague ని, ఆయన meeting లో ఉన్నారు."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 8.813,
+    "end": 15.133,
+    "text": "ఆయనకి చెప్పండి, personal loan EMI ఎనిమిది వేల rupees two months నుండి pending ఉంది."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 15.881,
+    "end": 17.241,
+    "text": "సరే, చెప్తాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 17.767,
+    "end": 22.247,
+    "text": "ఈ week pay చేయకపోతే మేము direct గా మీ office కి వచ్చి కూర్చుంటాం."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 22.896,
+    "end": 24.256,
+    "text": "ఇది నా problem కాదు sir."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 24.726,
+    "end": 28.806,
+    "text": "సరే, మా grievance helpline number loan agreement లో ఉంది, ఆయనకి చెప్పండి."
+   }
+  ],
+  "labels": [
+   {
+    "category": "THIRD_PARTY",
+    "turn": 2
+   },
+   {
+    "category": "THREAT",
+    "turn": 4
+   },
+   {
+    "category": "CALL_HOURS"
+   }
+  ],
+  "mock_audio": false
+ },
+ "hi_h01": {
+  "id": "hi_h01",
+  "split": "heldout",
+  "language": "hi-IN",
+  "agent_id": "AG-101",
+  "call_time": "2026-10-12T11:10:00+05:30",
+  "summary": "Agent discloses properly, calmly explains late charges and possible credit-bureau reporting to an angry borrower, and shares the grievance helpline and branch.",
+  "voices": {
+   "agent": "Prakash",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 62.13,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 6.24,
+    "text": "नमस्ते, क्या मैं सुनील जी से बात कर रहा हूँ? मैं अमित बोल रहा हूँ, नवधन फाइनेंस से।"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.752,
+    "end": 10.832,
+    "text": "हाँ, मैं सुनील ही बोल रहा हूँ। बताइए, क्या बात है?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 11.196,
+    "end": 19.756,
+    "text": "सुनील जी, आपके ट्रैक्टर लोन की इस महीने की किस्त, छह हज़ार दो सौ रुपये, अभी बकाया है। उसी बारे में फोन किया।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 20.339,
+    "end": 25.779,
+    "text": "हर हफ्ते आप लोग फोन करते हो! फसल अभी बिकी नहीं है, मैं पैसे कहाँ से लाऊँ?"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 26.397,
+    "end": 33.837,
+    "text": "मैं आपकी परेशानी समझता हूँ। बस जानकारी के लिए बता दूँ, लोन एग्रीमेंट के अनुसार देरी पर लेट पेमेंट चार्ज लगेगा।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 34.472,
+    "end": 35.992,
+    "text": "कितना चार्ज लगेगा?"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 36.742,
+    "end": 45.142,
+    "text": "एग्रीमेंट में लिखी दर से। लगातार देरी होने पर खाता क्रेडिट ब्यूरो को रिपोर्ट हो सकता है, जिससे आगे लोन मिलने में दिक्कत होगी।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 45.747,
+    "end": 50.387,
+    "text": "ठीक है, अगले सोमवार तक मंडी से पैसा आ जाएगा, तब जमा कर दूँगा।"
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 50.8,
+    "end": 59.12,
+    "text": "धन्यवाद सुनील जी। कोई शिकायत हो तो लोन एग्रीमेंट में छपे हेल्पलाइन नंबर पर या नज़दीकी शाखा के शिकायत अधिकारी से बात कर सकते हैं।"
+   },
+   {
+    "turn": 9,
+    "speaker": "borrower",
+    "start": 59.589,
+    "end": 61.509,
+    "text": "ठीक है, नमस्ते।"
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "hi_h02": {
+  "id": "hi_h02",
+  "split": "heldout",
+  "language": "hi-IN",
+  "agent_id": "AG-102",
+  "call_time": "2026-10-15T20:15:00+05:30",
+  "summary": "Late-night call where the agent insults the jobless borrower as shameless and threatens a police report and lock-up, with no grievance channel.",
+  "voices": {
+   "agent": "Avinash",
+   "borrower": "Shubham",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 44.85,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 8.8,
+    "text": "नमस्कार, मैं रोहित, नवधन फाइनेंस से। राजेश जी, आपके बाइक लोन की दो किस्तें बकाया हैं, उसी के लिए फोन किया है।"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 9.419,
+    "end": 13.259,
+    "text": "भाई साहब, इतनी रात को फोन? मैं अभी खाना खा रहा हूँ।"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 13.694,
+    "end": 19.374,
+    "text": "रात हो या दिन, पैसा तो देना पड़ेगा! तीन महीने से बस बहाने चल रहे हैं।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 19.826,
+    "end": 22.466,
+    "text": "नौकरी छूट गई है, मुझे थोड़ा समय चाहिए।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 23.12,
+    "end": 27.92,
+    "text": "तुम जैसे बेशर्म लोग ही उधार लेकर भाग जाते हैं। झूठ बोलना बंद करो।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 28.529,
+    "end": 29.969,
+    "text": "आप ऐसे बात मत कीजिए।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 30.518,
+    "end": 36.438,
+    "text": "परसों तक पैसा नहीं आया तो थाने में तुम्हारे नाम की रिपोर्ट लिखवा दूँगा, फिर हवालात में बैठकर सोचना।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 37.121,
+    "end": 39.281,
+    "text": "ठीक है, मैं कोशिश करता हूँ।"
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 39.905,
+    "end": 44.465,
+    "text": "कोशिश नहीं, परसों तक पूरे नौ हज़ार रुपये चाहिए। फोन रखो।"
+   }
+  ],
+  "labels": [
+   {
+    "category": "ABUSE",
+    "turn": 4
+   },
+   {
+    "category": "THREAT",
+    "turn": 6
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   },
+   {
+    "category": "CALL_HOURS"
+   }
+  ],
+  "mock_audio": false
+ },
+ "hi_h03": {
+  "id": "hi_h03",
+  "split": "heldout",
+  "language": "hi-IN",
+  "agent_id": "AG-101",
+  "call_time": "2026-10-16T13:30:00+05:30",
+  "summary": "Borrower's wife answers; agent reveals the overdue dairy-loan amount to her and threatens to tell the sarpanch and neighbours, no grievance channel.",
+  "voices": {
+   "agent": "Prakash",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 44.71,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.68,
+    "text": "नमस्ते, क्या महेश जी घर पर हैं? मैं अमित बोल रहा हूँ, नवधन फाइनेंस से।"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.276,
+    "end": 10.276,
+    "text": "मैं उनकी पत्नी बोल रही हूँ, वो खेत पर गए हैं। क्या काम है?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 10.979,
+    "end": 19.299,
+    "text": "देखिए भाभी जी, आपके पति ने भैंस के लिए जो लोन लिया था, उसकी दो किस्तें, कुल आठ हज़ार चार सौ रुपये, बकाया हैं।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 19.877,
+    "end": 21.957,
+    "text": "मुझे तो इस बारे में कुछ पता ही नहीं था।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 22.645,
+    "end": 26.405,
+    "text": "अब तो पता चल गया है। उनसे कहिए गुरुवार तक जमा कर दें।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 26.796,
+    "end": 29.996,
+    "text": "मैं बता दूँगी, पर वो आजकल बहुत परेशान हैं।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 30.411,
+    "end": 37.211,
+    "text": "परेशान तो हम भी हैं। गुरुवार तक नहीं हुआ तो सरपंच और पड़ोसियों को बता देंगे कि महेश जी पैसा नहीं लौटा रहे।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 37.818,
+    "end": 40.778,
+    "text": "ऐसा मत कीजिए, पूरे गाँव में बदनामी होगी।"
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 41.304,
+    "end": 44.104,
+    "text": "तो फिर पैसों का इंतज़ाम करवाइए। नमस्ते।"
+   }
+  ],
+  "labels": [
+   {
+    "category": "THIRD_PARTY",
+    "turn": 2
+   },
+   {
+    "category": "SHAMING",
+    "turn": 6
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "hi_h04": {
+  "id": "hi_h04",
+  "split": "heldout",
+  "language": "hi-IN",
+  "agent_id": "AG-101",
+  "call_time": "2026-10-20T10:05:00+05:30",
+  "summary": "Agent dodges naming the lender and politely warns that a field team may come and seize household goods; grievance branch is mentioned at the end.",
+  "voices": {
+   "agent": "Prakash",
+   "borrower": "Chetana",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 46.2,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 7.28,
+    "text": "नमस्ते, मैं अमित बोल रहा हूँ। क्या गीता देवी जी से बात हो रही है? आपकी किस्त के सिलसिले में फोन किया है।"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 7.753,
+    "end": 11.513,
+    "text": "हाँ, मैं गीता बोल रही हूँ। आप किस कंपनी से हैं?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 12.231,
+    "end": 17.991,
+    "text": "जी, वो छोड़िए, बस इतना बताइए कि पाँच हज़ार रुपये की बकाया किस्त कब तक जमा करेंगी?"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 18.709,
+    "end": 22.389,
+    "text": "इस महीने बेटी की स्कूल फीस भरनी थी, अगले महीने दे दूँगी।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 22.9,
+    "end": 30.18,
+    "text": "समझ सकता हूँ जी। पर मैं नहीं चाहता कि हमारी फील्ड टीम आपके घर आकर सामान ज़ब्त करे, आप भी नहीं चाहेंगी न?"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 30.866,
+    "end": 32.626,
+    "text": "आप मुझे डरा रहे हैं क्या?"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 33.186,
+    "end": 37.266,
+    "text": "माफ़ कीजिए अगर ऐसा लगा। आप अगले बुधवार तक जमा कर दीजिए।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 37.866,
+    "end": 39.786,
+    "text": "ठीक है, कोशिश करूँगी।"
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 40.336,
+    "end": 45.616,
+    "text": "धन्यवाद। कोई शिकायत हो तो आप नज़दीकी शाखा में शिकायत अधिकारी से मिल सकती हैं।"
+   }
+  ],
+  "labels": [
+   {
+    "category": "THREAT",
+    "turn": 4
+   },
+   {
+    "category": "NO_DISCLOSURE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "te_h01": {
+  "id": "te_h01",
+  "split": "heldout",
+  "language": "te-IN",
+  "agent_id": "AG-104",
+  "call_time": "2026-10-13T16:20:00+05:30",
+  "summary": "Borrower's brother answers and the agent declines to reveal anything; after handover the agent discloses properly, mentions late fee and gives the helpline/branch.",
+  "voices": {
+   "agent": "Devansh",
+   "borrower": "Shubham",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 53.24,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 2.96,
+    "text": "నమస్కారం, రమేష్ గారితో మాట్లాడవచ్చా?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 3.368,
+    "end": 7.608,
+    "text": "నేను ఆయన తమ్ముడిని. అన్నయ్య స్నానం చేస్తున్నాడు, ఏం పని?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 8.126,
+    "end": 15.166,
+    "text": "పర్వాలేదండి, ఇది ఆయనతోనే మాట్లాడాల్సిన వ్యక్తిగత విషయం. ఆయన ఖాళీ అయ్యాక ఫోన్ ఇవ్వగలరా?"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 15.522,
+    "end": 18.322,
+    "text": "ఇదిగో, అన్నయ్య వచ్చాడు, ఫోన్ ఇస్తున్నాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "borrower",
+    "start": 18.811,
+    "end": 21.211,
+    "text": "హలో, రమేష్ మాట్లాడుతున్నాను."
+   },
+   {
+    "turn": 5,
+    "speaker": "agent",
+    "start": 21.695,
+    "end": 29.135,
+    "text": "నమస్కారం రమేష్ గారు, నేను సురేష్, నవధన్ ఫైనాన్స్ నుంచి. మీ పంపుసెట్ లోన్ ఈ నెల వాయిదా గురించి కాల్ చేశాను."
+   },
+   {
+    "turn": 6,
+    "speaker": "borrower",
+    "start": 29.796,
+    "end": 33.796,
+    "text": "అవునండి, ఈ వారం కొంచెం ఆలస్యం అయింది. శుక్రవారం కడతాను."
+   },
+   {
+    "turn": 7,
+    "speaker": "agent",
+    "start": 34.346,
+    "end": 41.706,
+    "text": "సరేనండి. శుక్రవారం లోపు కట్టకపోతే ఒప్పందం ప్రకారం ఆలస్య రుసుము పడుతుందని మాత్రమే గుర్తు చేస్తున్నాను."
+   },
+   {
+    "turn": 8,
+    "speaker": "borrower",
+    "start": 42.251,
+    "end": 43.611,
+    "text": "సరే, తెలుసండి."
+   },
+   {
+    "turn": 9,
+    "speaker": "agent",
+    "start": 44.311,
+    "end": 52.631,
+    "text": "ఏదైనా ఫిర్యాదు ఉంటే మీ లోన్ ఒప్పందంలో ఉన్న హెల్ప్‌లైన్ నంబర్‌కు గానీ, దగ్గరలోని బ్రాంచ్‌కు గానీ సంప్రదించవచ్చు. ధన్యవాదాలు."
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "te_h02": {
+  "id": "te_h02",
+  "split": "heldout",
+  "language": "te-IN",
+  "agent_id": "AG-103",
+  "call_time": "2026-10-17T07:20:00+05:30",
+  "summary": "Early-morning call; agent never gives a name, calls the borrower a cheat and threatens to post her photo as a defaulter in the village WhatsApp group.",
+  "voices": {
+   "agent": "Harshad",
+   "borrower": "Kalpana",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 43.75,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.84,
+    "text": "హలో, లక్ష్మి గారా? నవధన్ ఫైనాన్స్ నుంచి, మీ పాడి లోన్ వాయిదా గురించి."
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.225,
+    "end": 11.025,
+    "text": "అవును. ఇంత పొద్దున్నే ఫోన్ ఎందుకు? పిల్లల్ని బడికి పంపిస్తున్నాను."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 11.636,
+    "end": 16.996,
+    "text": "పొద్దున్న కాకపోతే మీరు ఫోన్ ఎత్తరు కదా! రెండు నెలలుగా మూడు వేల ఐదు వందలు కట్టలేదు."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 17.594,
+    "end": 20.874,
+    "text": "పాల డబ్బులు ఇంకా రాలేదండి, వచ్చే వారం కడతాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 21.595,
+    "end": 26.635,
+    "text": "ప్రతిసారి ఇదే అబద్ధం. మీలాంటి మోసగాళ్ళకి లోన్ ఇవ్వడమే మా తప్పు."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 27.157,
+    "end": 28.677,
+    "text": "మర్యాదగా మాట్లాడండి."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 29.053,
+    "end": 35.693,
+    "text": "మర్యాద కావాలంటే డబ్బులు కట్టండి. లేకపోతే మీ ఊరి వాట్సాప్ గ్రూప్‌లో మీ ఫోటో పెట్టి బాకీదారు అని రాస్తాం."
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 36.125,
+    "end": 39.565,
+    "text": "దయచేసి అలా చేయకండి, వచ్చే సోమవారం కడతాను."
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 39.937,
+    "end": 43.377,
+    "text": "సోమవారం అంటే సోమవారమే. ఫోన్ పెట్టేస్తున్నా."
+   }
+  ],
+  "labels": [
+   {
+    "category": "ABUSE",
+    "turn": 4
+   },
+   {
+    "category": "SHAMING",
+    "turn": 6
+   },
+   {
+    "category": "NO_DISCLOSURE"
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   },
+   {
+    "category": "CALL_HOURS"
+   }
+  ],
+  "mock_audio": false
+ },
+ "te_h03": {
+  "id": "te_h03",
+  "split": "heldout",
+  "language": "te-IN",
+  "agent_id": "AG-104",
+  "call_time": "2026-10-21T15:45:00+05:30",
+  "summary": "A colleague answers and is told the overdue personal-loan amount; once the borrower comes on, the agent threatens a police case and jail, no grievance channel.",
+  "voices": {
+   "agent": "Devansh",
+   "borrower": "Shubham",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 49.16,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 5.6,
+    "text": "నమస్కారం, నేను సురేష్, నవధన్ ఫైనాన్స్ నుంచి. వెంకట్ గారితో మాట్లాడాలి."
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 6.046,
+    "end": 10.446,
+    "text": "నేను ఆయన సహోద్యోగిని. ఆయన ఫోన్ డెస్క్ మీద వదిలి మీటింగ్‌కి వెళ్ళారు."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 10.899,
+    "end": 16.899,
+    "text": "అయితే ఆయనకి చెప్పండి, ఆయన పర్సనల్ లోన్ వాయిదా పన్నెండు వేల రూపాయలు నలభై రోజులుగా బాకీ ఉంది."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 17.518,
+    "end": 20.478,
+    "text": "ఆగండి, ఆయన ఇప్పుడే వస్తున్నారు, ఫోన్ ఇస్తాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "borrower",
+    "start": 20.947,
+    "end": 23.107,
+    "text": "హలో, వెంకట్ మాట్లాడుతున్నాను."
+   },
+   {
+    "turn": 5,
+    "speaker": "agent",
+    "start": 23.556,
+    "end": 30.356,
+    "text": "వెంకట్ గారు, నేను సురేష్, నవధన్ ఫైనాన్స్. మీ పర్సనల్ లోన్ వాయిదా బాకీ గురించి కాల్ చేశాను."
+   },
+   {
+    "turn": 6,
+    "speaker": "borrower",
+    "start": 31.097,
+    "end": 34.217,
+    "text": "జీతం ఆలస్యమైంది సార్, పది రోజుల్లో కడతాను."
+   },
+   {
+    "turn": 7,
+    "speaker": "agent",
+    "start": 34.86,
+    "end": 41.58,
+    "text": "పది రోజులు కుదరదు. ఈ వారంలో కట్టకపోతే మీ మీద పోలీస్ కేసు పెడతాం, జైలుకి వెళ్ళాల్సి వస్తుంది."
+   },
+   {
+    "turn": 8,
+    "speaker": "borrower",
+    "start": 42.039,
+    "end": 44.039,
+    "text": "ఇంత చిన్న బాకీకి అంత పెద్ద మాటలా?"
+   },
+   {
+    "turn": 9,
+    "speaker": "agent",
+    "start": 44.523,
+    "end": 48.683,
+    "text": "మీ ఇష్టం. శుక్రవారం లోపు కట్టండి, అంతే."
+   }
+  ],
+  "labels": [
+   {
+    "category": "THIRD_PARTY",
+    "turn": 2
+   },
+   {
+    "category": "THREAT",
+    "turn": 7
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "te_h04": {
+  "id": "te_h04",
+  "split": "heldout",
+  "language": "te-IN",
+  "agent_id": "AG-104",
+  "call_time": "2026-10-23T12:05:00+05:30",
+  "summary": "Otherwise polite call with proper disclosure and grievance email, but the agent says a letter about the dues may be sent to the borrower's school principal.",
+  "voices": {
+   "agent": "Devansh",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 51.97,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 9.04,
+    "text": "నమస్కారం, శ్రీనివాస్ గారేనా? నేను సురేష్, నవధన్ ఫైనాన్స్ నుంచి, మీ ద్విచక్ర వాహన లోన్ వాయిదా గురించి మాట్లాడుతున్నాను."
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 9.737,
+    "end": 12.777,
+    "text": "అవునండి. ఈ నెల కొంచెం ఇబ్బందిగా ఉంది."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 13.412,
+    "end": 19.492,
+    "text": "అర్థమైందండి. ఈ నెల వాయిదా నాలుగు వేల ఐదు వందల రూపాయలు, గడువు దాటి పది రోజులైంది."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 19.85,
+    "end": 23.13,
+    "text": "జీతం వచ్చాక ఇరవయ్యో తేదీకి కడతాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 23.494,
+    "end": 32.454,
+    "text": "సరేనండి. కానీ మళ్ళీ ఆలస్యమైతే, మీ స్కూల్ ప్రిన్సిపాల్ గారికి మర్యాదగా ఒక లేఖ పంపి మీ బాకీ విషయం తెలియజేయాల్సి వస్తుంది."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 33.182,
+    "end": 35.582,
+    "text": "అది నా ఉద్యోగానికి ఇబ్బంది అవుతుంది కదండి."
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 36.23,
+    "end": 44.79,
+    "text": "అందుకే సమయానికి కట్టమని కోరుతున్నాను. ఫిర్యాదు ఉంటే మా ఫిర్యాదుల అధికారికి ఈమెయిల్ చేయవచ్చు, వివరాలు లోన్ ఒప్పందంలో ఉన్నాయి."
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 45.168,
+    "end": 48.288,
+    "text": "సరే, ఇరవయ్యో తేదీకి తప్పకుండా కడతాను."
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 48.765,
+    "end": 51.245,
+    "text": "ధన్యవాదాలు శ్రీనివాస్ గారు, శుభదినం."
+   }
+  ],
+  "labels": [
+   {
+    "category": "SHAMING",
+    "turn": 4
+   }
+  ],
+  "mock_audio": false
+ },
+ "hien_h01": {
+  "id": "hien_h01",
+  "split": "heldout",
+  "language": "hi-en",
+  "agent_id": "AG-105",
+  "call_time": "2026-10-14T17:30:00+05:30",
+  "summary": "Compliant Hinglish call: agent stays polite with an irritated borrower, correctly mentions late charges and credit-bureau reporting, and gives the grievance officer email route.",
+  "voices": {
+   "agent": "Riyaa",
+   "borrower": "Shubham",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 53.15,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 7.28,
+    "text": "Hello पूजा जी, मैं नेहा बोल रही हूँ Navdhan Finance से। आपके personal loan की EMI के regarding call किया है।"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 7.702,
+    "end": 13.302,
+    "text": "Again? मैंने बोला था salary late आएगी! आप लोग daily call करके irritate कर रहे हो।"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 13.779,
+    "end": 19.699,
+    "text": "Sorry for the inconvenience, पूजा जी। मैं बस reminder दे रही हूँ, due date पाँच दिन पहले निकल गई है।"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 20.265,
+    "end": 23.465,
+    "text": "तो मैं क्या करूँ? Company ने ही salary hold की है।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 23.947,
+    "end": 29.947,
+    "text": "Totally समझ सकती हूँ। बस inform कर दूँ, agreement के हिसाब से late payment charges apply होंगे।"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 30.519,
+    "end": 32.279,
+    "text": "और अगर next week भी नहीं हुआ तो?"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 32.767,
+    "end": 39.967,
+    "text": "तो as per loan agreement, account credit bureau को overdue report हो सकता है, जिससे आपका credit score affect होगा।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 40.642,
+    "end": 43.202,
+    "text": "ठीक है, next Tuesday तक pay कर दूँगी।"
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 43.769,
+    "end": 51.129,
+    "text": "Thank you पूजा जी। कोई complaint हो तो हमारे grievance officer को email कर सकती हैं, details आपके loan agreement में हैं।"
+   },
+   {
+    "turn": 9,
+    "speaker": "borrower",
+    "start": 51.506,
+    "end": 52.786,
+    "text": "Okay, bye."
+   }
+  ],
+  "labels": [],
+  "mock_audio": false
+ },
+ "hien_h02": {
+  "id": "hien_h02",
+  "split": "heldout",
+  "language": "hi-en",
+  "agent_id": "AG-102",
+  "call_time": "2026-10-18T21:05:00+05:30",
+  "summary": "Night call from an unnamed 'recovery department' agent who calls the borrower a fraud and warns that 'our boys' will come to his house; no grievance channel.",
+  "voices": {
+   "agent": "Avinash",
+   "borrower": "Yashraj",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 37.61,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 3.12,
+    "text": "Hello, विकास? Payment कब कर रहे हो?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 3.723,
+    "end": 6.203,
+    "text": "कौन बोल रहा है? इतनी रात को call?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 6.555,
+    "end": 11.995,
+    "text": "Recovery department से। तुम्हारा eleven thousand का loan pending है, समझ नहीं आता क्या?"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 12.389,
+    "end": 15.909,
+    "text": "Bhai, मैं already बोल चुका हूँ, next month pay करूँगा।"
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 16.587,
+    "end": 21.787,
+    "text": "Next month, next month! तुम पूरे fraud आदमी हो, दिमाग़ है भी या नहीं?"
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 22.471,
+    "end": 23.591,
+    "text": "Language ठीक रखो।"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 24.298,
+    "end": 30.858,
+    "text": "Language छोड़ो। Kal तक पैसा नहीं आया तो हमारे boys तुम्हारे घर आएँगे, फिर देखना क्या होता है।"
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 31.34,
+    "end": 32.7,
+    "text": "आप धमकी दे रहे हो?"
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 33.331,
+    "end": 37.251,
+    "text": "जो समझना है समझो। Kal शाम तक transfer करो।"
+   }
+  ],
+  "labels": [
+   {
+    "category": "ABUSE",
+    "turn": 4
+   },
+   {
+    "category": "THREAT",
+    "turn": 6
+   },
+   {
+    "category": "NO_DISCLOSURE"
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   },
+   {
+    "category": "CALL_HOURS"
+   }
+  ],
+  "mock_audio": false
+ },
+ "teen_h01": {
+  "id": "teen_h01",
+  "split": "heldout",
+  "language": "te-en",
+  "agent_id": "AG-103",
+  "call_time": "2026-10-22T14:10:00+05:30",
+  "summary": "Borrower's wife answers and is told the overdue tractor-loan EMI amount; when the borrower comes on, the agent calls him a cheater; no grievance channel.",
+  "voices": {
+   "agent": "Harshad",
+   "borrower": "Kalpana",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 47.95,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 4.56,
+    "text": "Hello, నేను కిరణ్, Navdhan Finance నుంచి. ప్రసాద్ గారు ఉన్నారా?"
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 4.989,
+    "end": 9.309,
+    "text": "నేను ఆయన wife ని, ఆయన shop లో ఉన్నారు. ఏం విషయం?"
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 9.934,
+    "end": 16.734,
+    "text": "Madam, మీ husband tractor loan EMI మూడు months గా pending, total పదిహేను thousand rupees overdue ఉంది."
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 17.184,
+    "end": 21.184,
+    "text": "అయ్యో, నాకు తెలియదు. ఉండండి, ఆయన్ని పిలుస్తాను."
+   },
+   {
+    "turn": 4,
+    "speaker": "borrower",
+    "start": 21.764,
+    "end": 23.444,
+    "text": "Hello, ప్రసాద్ speaking."
+   },
+   {
+    "turn": 5,
+    "speaker": "agent",
+    "start": 23.89,
+    "end": 30.53,
+    "text": "ప్రసాద్ గారు, కిరణ్ here, Navdhan Finance. మీ tractor loan EMI pending గురించి call చేశాను."
+   },
+   {
+    "turn": 6,
+    "speaker": "borrower",
+    "start": 31.208,
+    "end": 34.888,
+    "text": "Harvest payment ఇంకా రాలేదండి, next week clear చేస్తాను."
+   },
+   {
+    "turn": 7,
+    "speaker": "agent",
+    "start": 35.538,
+    "end": 40.978,
+    "text": "ప్రతిసారి ఇదే story. మీలాంటి cheaters వల్లే మా company నష్టపోతోంది, సిగ్గు లేదా?"
+   },
+   {
+    "turn": 8,
+    "speaker": "borrower",
+    "start": 41.633,
+    "end": 43.953,
+    "text": "మీరు అలా మాట్లాడటం correct కాదు."
+   },
+   {
+    "turn": 9,
+    "speaker": "agent",
+    "start": 44.444,
+    "end": 47.244,
+    "text": "Next Monday కి full amount పడాలి, అంతే."
+   }
+  ],
+  "labels": [
+   {
+    "category": "THIRD_PARTY",
+    "turn": 2
+   },
+   {
+    "category": "ABUSE",
+    "turn": 7
+   },
+   {
+    "category": "NO_GRIEVANCE"
+   }
+  ],
+  "mock_audio": false
+ },
+ "teen_h02": {
+  "id": "teen_h02",
+  "split": "heldout",
+  "language": "te-en",
+  "agent_id": "AG-103",
+  "call_time": "2026-10-24T10:40:00+05:30",
+  "summary": "Agent never gives a name, warns a 'loan defaulter' notice will be stuck on the house wall and, in a sympathetic tone, claims a court arrest warrant will come tomorrow; helpline mentioned.",
+  "voices": {
+   "agent": "Harshad",
+   "borrower": "Tarika",
+   "model": "timbre-v3.0"
+  },
+  "duration_s": 47.46,
+  "turns": [
+   {
+    "turn": 0,
+    "speaker": "agent",
+    "start": 0.4,
+    "end": 7.12,
+    "text": "Good morning, అనిత గారా? Navdhan Finance collections team నుంచి call చేస్తున్నాం, మీ dairy loan EMI గురించి."
+   },
+   {
+    "turn": 1,
+    "speaker": "borrower",
+    "start": 7.476,
+    "end": 9.876,
+    "text": "అవును, నేనే. చెప్పండి."
+   },
+   {
+    "turn": 2,
+    "speaker": "agent",
+    "start": 10.61,
+    "end": 15.33,
+    "text": "మీ EMI ఆరు వేల రూపాయలు last month నుంచి pending ఉంది. ఎప్పుడు pay చేస్తారు?"
+   },
+   {
+    "turn": 3,
+    "speaker": "borrower",
+    "start": 15.99,
+    "end": 19.75,
+    "text": "మా ఆయనకి hospital ఖర్చులు అయ్యాయి, కొంచెం time కావాలి."
+   },
+   {
+    "turn": 4,
+    "speaker": "agent",
+    "start": 20.119,
+    "end": 26.679,
+    "text": "Understand చేసుకుంటాను madam, కానీ లేకపోతే మా field team మీ ఇంటి గోడ మీద loan defaulter notice అంటించాల్సి వస్తుంది."
+   },
+   {
+    "turn": 5,
+    "speaker": "borrower",
+    "start": 27.322,
+    "end": 30.442,
+    "text": "అయ్యో, అలా చేస్తే ఊర్లో ఎలా తిరగాలి?"
+   },
+   {
+    "turn": 6,
+    "speaker": "agent",
+    "start": 31.191,
+    "end": 36.951,
+    "text": "అంతే కాదు madam, మా lawyer రేపే court నుంచి arrest warrant తెప్పిస్తారు. మీ మంచి కోసమే చెప్తున్నాను."
+   },
+   {
+    "turn": 7,
+    "speaker": "borrower",
+    "start": 37.412,
+    "end": 39.572,
+    "text": "సరే, Thursday కి సగం కడతాను."
+   },
+   {
+    "turn": 8,
+    "speaker": "agent",
+    "start": 40.272,
+    "end": 45.152,
+    "text": "Okay, thank you. ఏమైనా complaint ఉంటే మీ loan agreement లో ఉన్న helpline number కి call చేయొచ్చు."
+   },
+   {
+    "turn": 9,
+    "speaker": "borrower",
+    "start": 45.853,
+    "end": 46.733,
+    "text": "సరే."
+   }
+  ],
+  "labels": [
+   {
+    "category": "SHAMING",
+    "turn": 4
+   },
+   {
+    "category": "THREAT",
+    "turn": 6
+   },
+   {
+    "category": "NO_DISCLOSURE"
+   }
+  ],
+  "mock_audio": false
+ }
+}

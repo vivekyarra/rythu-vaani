@@ -21,3 +21,9 @@ results/*
 # vaani-bench default output
 vaani-bench-results/
 .vaani-bench-cache/
+.vaani-audit-cache/
+node_modules/
+video/audit/public/*.webm
+video/audit/out/
+!video/audit/public/*.wav
+!results/audit/

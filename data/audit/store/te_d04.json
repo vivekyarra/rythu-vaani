@@ -1,0 +1,160 @@
+{
+ "call_id": "te_d04",
+ "agent_id": "AG-104",
+ "agent_name": "Suresh",
+ "language": "te-IN",
+ "call_time": "2026-10-15T09:30:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "te-IN",
+  "job_id": "01a1c14d-2c69-7d23-9af2-b7a0f892e530",
+  "job_wall_s": 25.83,
+  "duration_s": 21.4,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 2.752,
+   "text": "హలో శ్రీనివాస్ గారా.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 2.22,
+   "end": 4.8,
+   "text": "అవును, ఎవరు?",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 4.364,
+   "end": 8.768,
+   "text": "మీ లోన్ పేమెంట్ పెండింగ్ ఉంది, ఎప్పుడు కడతారు?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 8.876,
+   "end": 11.968,
+   "text": "మీరు ఎవరు? ఏ కంపెనీ?",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 11.66,
+   "end": 15.904,
+   "text": "కలెక్షన్ టీమ్ నుండి ఈ శుక్రవారం లోపు కట్టండి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 15.244,
+   "end": 17.792,
+   "text": "సరే, కడతాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 17.196,
+   "end": 21.401,
+   "text": "సరే, ఏదైనా సమస్య ఉంటే మా హెల్ప్‌లైన్ కి కాల్ చేయండి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "NO_DISCLOSURE",
+   "start": 0.0,
+   "end": 2.752,
+   "quote": "హలో శ్రీనివాస్ గారా.",
+   "matched": "",
+   "note": "missing in opening: agent name, lender",
+   "source": "rule",
+   "title": "Identity, lender and purpose stated",
+   "severity": "major",
+   "tip": "Open every call with your name, the lender and the purpose.",
+   "rephrase": "నమస్కారం, నేను Navdhan Finance నుండి Suresh మాట్లాడుతున్నాను. మీ లోన్ EMI గురించి కాల్ చేస్తున్నాను."
+  }
+ ],
+ "scorecard": {
+  "score": 90,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": true,
+    "findings": 0
+   }
+  ],
+  "critical": 0
+ },
+ "split": "dev"
+}

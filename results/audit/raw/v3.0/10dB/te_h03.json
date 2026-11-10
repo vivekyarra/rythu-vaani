@@ -1,0 +1,106 @@
+{
+ "name": "te_h03",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.65,
+   "text": "నమస్కారం నేను సురేష్ నవధన్ ఫైనాన్స్ నుంచి వెంకట్ గారితో మాట్లాడాలి",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 5.65,
+   "end": 10.9,
+   "text": "నేను ఆయన సహోద్యోగి. ఆయన ఫోన్ డెస్క్ మీద వదిలి మీటింగ్ కి వెళ్లారు.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 10.9,
+   "end": 16.99,
+   "text": "అయితే ఆయనకి చెప్పండి ఆయన పర్సనల్ లోన్ వాయిదా పన్నెండు వేల రూపాయలు నలభై రోజులుగా బాకీ ఉంది.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 16.99,
+   "end": 23.68,
+   "text": "ఆగండి, ఆయన ఇప్పుడే వస్తున్నారు. ఫోన్ ఇస్తాను. హలో, వెంకట్ మాట్లాడుతున్నాను.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 23.68,
+   "end": 27.488,
+   "text": "వెంకట్ గారు, నేను సురేష్, నవధన్ ఫైనాన్స్.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 27.488,
+   "end": 31.008,
+   "text": "పర్సనల్ లోన్ వాయిదా బాకీ గురించి కాల్ చేశాను",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 31.008,
+   "end": 34.912,
+   "text": "జీతం ఆలస్యమైంది సార్ పది రోజుల్లో కడతాను",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 34.912,
+   "end": 41.79,
+   "text": "రోజులు కుదరదు. ఈ వారంలో కట్టకపోతే మీ మీద పోలీస్ కేసు పెడతాం, జైలుకి వెళ్లాల్సి వస్తుంది.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 41.79,
+   "end": 44.51,
+   "text": "ఇంత చిన్న బాకీకి అంత పెద్ద మాటలా?",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 44.51,
+   "end": 49.155,
+   "text": "మీ ఇష్టం, శుక్రవారం లోపు కట్టండి అంతే.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 49.16,
+ "job_id": "01a1c14a-5534-76ab-9c02-32e859ef2024",
+ "mock": false,
+ "job_wall_s": 28.73,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

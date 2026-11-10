@@ -1,0 +1,173 @@
+{
+ "call_id": "he_d01",
+ "agent_id": "AG-105",
+ "agent_name": "Neha",
+ "language": "hi-en",
+ "call_time": "2026-10-13T17:30:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "hi-IN",
+  "job_id": "01a1c14d-4e9f-7a73-9969-a71e9d7e6c6a",
+  "job_wall_s": 47.09,
+  "duration_s": 32.48,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 7.296,
+   "text": "Hello, मैं Navdhan Finance से नेहा बोल रही हूँ। क्या मेरी बात अर्जुन जी से हो रही है?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 6.604,
+   "end": 8.896,
+   "text": "हाँ, बोलिए।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 8.3,
+   "end": 16.032,
+   "text": "अर्जुन जी, आपके क्रेडिट कार्ड लोन का 7,000 rupees का ईएमआई overdue है, इसी के लिए कॉल किया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 15.692,
+   "end": 19.456,
+   "text": "मेरी job चली गई है, थोड़ा time चाहिए।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 19.02,
+   "end": 26.048,
+   "text": "मैं समझ सकती हूँ, लेकिन अगर इस week payment नहीं हुआ तो आपके against arrest warrant निकल जाएगा।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 25.58,
+   "end": 28.928,
+   "text": "क्या इतनी सी बात पे arrest?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 28.332,
+   "end": 32.478,
+   "text": "हाँ, इसलिए जल्दी payment कर दीजिए, thank you।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "THREAT",
+   "start": 19.02,
+   "end": 26.048,
+   "quote": "मैं समझ सकती हूँ, लेकिन अगर इस week payment नहीं हुआ तो आपके against arrest warrant निकल जाएगा।",
+   "matched": "arrest",
+   "note": "",
+   "source": "rule",
+   "title": "No threats or intimidation",
+   "severity": "critical",
+   "tip": "Replace threats with options: today's payment, or a payment plan.",
+   "rephrase": "मैं समझती हूँ कि अभी मुश्किल है। आपका EMI overdue है। आप आज payment कर सकते हैं, या हम आपके लिए एक easy payment plan बना सकते हैं।"
+  },
+  {
+   "category": "NO_GRIEVANCE",
+   "start": 28.332,
+   "end": 32.478,
+   "quote": "हाँ, इसलिए जल्दी payment कर दीजिए, thank you।",
+   "matched": "",
+   "note": "no grievance/complaint channel offered by the agent",
+   "source": "rule",
+   "title": "Grievance channel offered",
+   "severity": "major",
+   "tip": "Before ending, tell the borrower how to raise a complaint.",
+   "rephrase": "अगर आपकी कोई complaint हो, तो आप हमारे grievance officer से contact कर सकते हैं। Helpline number आपके loan agreement में है।"
+  }
+ ],
+ "scorecard": {
+  "score": 65,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": false,
+    "findings": 1
+   }
+  ],
+  "critical": 1
+ },
+ "split": "dev"
+}

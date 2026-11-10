@@ -1,0 +1,186 @@
+{
+ "call_id": "te_d02",
+ "agent_id": "AG-104",
+ "agent_name": "Suresh",
+ "language": "te-IN",
+ "call_time": "2026-10-13T13:00:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "te-IN",
+  "job_id": "01a1c154-5e86-711a-86fa-10bf120b8888",
+  "job_wall_s": 29.41,
+  "duration_s": 27.45,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.688,
+   "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్, మీ ట్రాక్టర్ లోన్ బకాయి గురించి ఫోన్ చేశాను.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 6.22,
+   "end": 10.56,
+   "text": "చెప్పండి, ఈ నెల పంట డబ్బులు ఇంకా రాలేదు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 9.804,
+   "end": 15.072,
+   "text": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 14.444,
+   "end": 16.8,
+   "text": "అలా మాట్లాడకండి.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 16.332,
+   "end": 22.976,
+   "text": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 22.316,
+   "end": 25.024,
+   "text": "వచ్చే వారం కడతాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 24.62,
+   "end": 27.445,
+   "text": "లేదు, రేపే కట్టాలి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "ABUSE",
+   "start": 9.804,
+   "end": 15.072,
+   "quote": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
+   "matched": "అబద్ధాలకోరు",
+   "note": "",
+   "source": "rule",
+   "title": "Respectful language",
+   "severity": "critical",
+   "tip": "Stay respectful; acknowledge the situation and ask for a date.",
+   "rephrase": "మీ పరిస్థితి నాకు అర్థమైంది. కలిసి ఒక దారి చూద్దాం. మీరు ఏ తేదీకి కట్టగలరు?"
+  },
+  {
+   "category": "THREAT",
+   "start": 16.332,
+   "end": 22.976,
+   "quote": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
+   "matched": "మనుషులు వచ్చి",
+   "note": "",
+   "source": "rule",
+   "title": "No threats or intimidation",
+   "severity": "critical",
+   "tip": "Replace threats with options: today's payment, or a payment plan.",
+   "rephrase": "మీ ఇబ్బంది నాకు అర్థమైంది. మీ EMI బకాయి ఉంది. ఈ రోజు కట్టవచ్చు, లేదా మీ కోసం ఒక సులభమైన పేమెంట్ ప్లాన్ చేయగలం."
+  },
+  {
+   "category": "NO_GRIEVANCE",
+   "start": 24.62,
+   "end": 27.445,
+   "quote": "లేదు, రేపే కట్టాలి.",
+   "matched": "",
+   "note": "no grievance/complaint channel offered by the agent",
+   "source": "rule",
+   "title": "Grievance channel offered",
+   "severity": "major",
+   "tip": "Before ending, tell the borrower how to raise a complaint.",
+   "rephrase": "మీకు ఏదైనా ఫిర్యాదు ఉంటే, మా గ్రీవెన్స్ ఆఫీసర్‌ని సంప్రదించవచ్చు. హెల్ప్‌లైన్ నంబర్ మీ లోన్ అగ్రిమెంట్‌లో ఉంది."
+  }
+ ],
+ "scorecard": {
+  "score": 40,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": false,
+    "findings": 1
+   }
+  ],
+  "critical": 2
+ },
+ "audit_wall_s": 29.43
+}

@@ -1,0 +1,90 @@
+{
+ "name": "he_d02",
+ "segments": [
+  {
+   "start": 0.076,
+   "end": 6.368,
+   "text": "Good morning, मैं Navadhan Finance से रोहित बोल रहा हूँ, क्या मैं प्रिया जी से बात कर रहा हूँ?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.772,
+   "end": 7.872,
+   "text": "हाँ, बोलिए।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 7.404,
+   "end": 15.424,
+   "text": "प्रिया जी, आपके two wheeler loan की EMI की due date निकल गई है, उसी के reminder के लिए call किया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 14.988,
+   "end": 19.648,
+   "text": "अरे, मैं भूल गई थी, आज ही online pay कर देती हूँ।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 19.18,
+   "end": 25.184,
+   "text": "Thank you अगर payment में कोई problem हो तो हम restructuring options भी discuss कर सकते हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 24.524,
+   "end": 27.072,
+   "text": "ठीक है, शुक्रिया।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 26.892,
+   "end": 34.336,
+   "text": "और कोई complaint हो तो आप हमारे grievance officer को email कर सकती हैं। Details आपके loan agreement में हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 34.028,
+   "end": 36.056,
+   "text": "Okay, thank you.",
+   "speaker_id": "ch1",
+   "language": "en-IN",
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 36.06,
+ "job_id": "01a1c152-03a8-70ff-ba17-78228a350af4",
+ "mock": false,
+ "job_wall_s": 18.66,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

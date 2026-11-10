@@ -1,0 +1,114 @@
+{
+ "name": "teen_h02",
+ "segments": [
+  {
+   "start": 0.14,
+   "end": 7.03,
+   "text": "గుడ్ మార్నింగ్ అనిత గారా, నవభవన్ ఫైనాన్స్ కలెక్షన్స్ టీమ్ నుంచి కాల్ చేస్తున్నాను. మీ డెయిరీ లోన్ ఈఎంఐ గురించి.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 7.03,
+   "end": 10.688,
+   "text": "అవును, నేనే. చెప్పండి.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 10.688,
+   "end": 14.432,
+   "text": "మాయ ఆరు పేల రూపాయలు లాస్ట్ మంత్ నుంచి పెన్షన్.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 14.432,
+   "end": 15.5,
+   "text": "చెప్పండి",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 15.5,
+   "end": 20.16,
+   "text": "మా ఆయనకి హాస్పిటల్ ఖర్చులు అయ్యాయి, కొంచెం టైం కావాలి.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 20.16,
+   "end": 27.232,
+   "text": "అండర్స్టాండ్ చేసుకుంటారు మేడం. కానీ లేకపోతే మా ఫీల్డ్ టీమ్ మీ ఇంటి గోడ మీద లోన్ డిఫాల్టర్ నోటీస్ అంటె పంపిస్తాం మేడం.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 27.232,
+   "end": 31.2,
+   "text": "తీస్తే ఊర్లో ఎలా తిరగాలి?",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 31.2,
+   "end": 37.12,
+   "text": "కాదు మేడం మా లాయర్ రేపే కోర్టు నుంచి అరెస్ట్ వారెంట్ తెప్పిస్తారు. మీ మంచి కోసమే చెప్తున్నాను.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 37.12,
+   "end": 40.256,
+   "text": "సరే, థర్డ్ డేకి సగం కడతాను.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 40.256,
+   "end": 45.888,
+   "text": "ఏమైనా కంప్లైంట్ ఉంటే మీ లోన్ అగ్రిమెంట్ లో ఉన్న హెల్ప్ లైన్ నెంబర్ కి కాల్ చేయొచ్చు",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 45.888,
+   "end": 47.168,
+   "text": "సరే.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 47.46,
+ "job_id": "01a1c158-4a2c-79a6-a92a-7d3ba2afe99a",
+ "mock": false,
+ "job_wall_s": 18.16,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

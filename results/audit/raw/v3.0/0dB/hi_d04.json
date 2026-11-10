@@ -1,0 +1,82 @@
+{
+ "name": "hi_d04",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 4.55,
+   "text": "नमस्ते, मैं नवजीवन Finance से रोहित बोल रहा हूँ।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 6.336,
+   "end": 10.304,
+   "text": "नहीं बोल रही। वो अभी घर पर नहीं है।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 11.02,
+   "end": 17.376,
+   "text": "उनको बता दीजिए कि उनकी बाइक लोन की 6,000 रुपये की ईएमआई दो महीने से बकाया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 17.376,
+   "end": 19.776,
+   "text": "सारे।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 19.776,
+   "end": 24.224,
+   "text": "कृपया उनसे कहिए कि मुझे इसी number पर call करें।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 24.224,
+   "end": 26.16,
+   "text": "मैं बता दूंगी।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 26.16,
+   "end": 30.816,
+   "text": "की शिकायत के लिए आप हमारे grievance officer से संपर्क कर सकते हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 31.52,
+ "job_id": "01a1c158-8fa0-7079-a5ea-6a6b4be83e5d",
+ "mock": false,
+ "job_wall_s": 32.32,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

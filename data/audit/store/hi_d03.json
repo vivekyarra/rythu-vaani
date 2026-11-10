@@ -1,0 +1,181 @@
+{
+ "call_id": "hi_d03",
+ "agent_id": "AG-102",
+ "agent_name": "Rohit",
+ "language": "hi-IN",
+ "call_time": "2026-10-14T14:30:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "hi-IN",
+  "job_id": "01a1c14d-2e21-7be0-8fae-912af2d9fde4",
+  "job_wall_s": 46.43,
+  "duration_s": 28.55,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 4.64,
+   "text": "हाँ सुनीता जी, आपकी EMI अभी तक क्यों नहीं आई?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 3.98,
+   "end": 7.104,
+   "text": "जी, आप कौन बोल रहे हैं?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 6.668,
+   "end": 11.04,
+   "text": "वो छोड़िए, पहले बताइए पैसे कब देंगी?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 10.412,
+   "end": 13.92,
+   "text": "पहले बताइये आप कहाँ से बोल रहे हैं?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 13.516,
+   "end": 18.432,
+   "text": "आप जैसे बेशर्म लोग loan लेते हैं और फिर भाग जाते हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 17.804,
+   "end": 20.288,
+   "text": "आप तमीज़ से बात कीजिए।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 19.884,
+   "end": 27.744,
+   "text": "शुक्रवार तक 4000 रुपये जमा कर दीजिए। कोई शिकायत है तो आप हमारी हेल्पलाइन पर call कर सकती हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 27.116,
+   "end": 28.554,
+   "text": "ठीक है।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  }
+ ],
+ "findings": [
+  {
+   "category": "NO_DISCLOSURE",
+   "start": 0.012,
+   "end": 4.64,
+   "quote": "हाँ सुनीता जी, आपकी EMI अभी तक क्यों नहीं आई?",
+   "matched": "",
+   "note": "missing in opening: agent name, lender",
+   "source": "rule",
+   "title": "Identity, lender and purpose stated",
+   "severity": "major",
+   "tip": "Open every call with your name, the lender and the purpose.",
+   "rephrase": "नमस्ते, मैं Navdhan Finance से Rohit बोल रहा हूँ। मैं आपके लोन की EMI के बारे में कॉल कर रहा हूँ।"
+  },
+  {
+   "category": "ABUSE",
+   "start": 13.516,
+   "end": 18.432,
+   "quote": "आप जैसे बेशर्म लोग loan लेते हैं और फिर भाग जाते हैं।",
+   "matched": "बेशर्म",
+   "note": "",
+   "source": "rule",
+   "title": "Respectful language",
+   "severity": "critical",
+   "tip": "Stay respectful; acknowledge the situation and ask for a date.",
+   "rephrase": "मैं आपकी स्थिति समझता हूँ। चलिए मिलकर कोई रास्ता निकालते हैं। आप किस तारीख तक भुगतान कर पाएंगे?"
+  }
+ ],
+ "scorecard": {
+  "score": 65,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": true,
+    "findings": 0
+   }
+  ],
+  "critical": 1
+ },
+ "split": "dev"
+}

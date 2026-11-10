@@ -1,0 +1,82 @@
+{
+ "name": "hi_d04",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.272,
+   "text": "नमस्ते, मैं Navin Finance से रोहित बोल रहा हूँ। क्या मनोज जी से बात हो सकती है?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.9,
+   "end": 10.4,
+   "text": "मैं उनकी पत्नी बोल रही हूँ। वो अभी घर पर नहीं है।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 11.18,
+   "end": 17.504,
+   "text": "बता दीजिए कि उनकी बाइक लोन की 6,000 रुपये की ईएमआई दो महीने से बकाया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 16.972,
+   "end": 20.064,
+   "text": "मुझे इस बारे में कुछ नहीं पता था।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 19.532,
+   "end": 24.256,
+   "text": "कृपया उनसे कहिए कि मुझे इसी number पर call करें।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 23.82,
+   "end": 26.4,
+   "text": "ठीक है, मैं बता दूँगी।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 25.836,
+   "end": 31.424,
+   "text": "किसी भी शिकायत के लिए आप हमारे grievance officer से संपर्क कर सकते हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 31.52,
+ "job_id": "01a1c154-80e5-7079-bbfd-cf6c1010642c",
+ "mock": false,
+ "job_wall_s": 56.2,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

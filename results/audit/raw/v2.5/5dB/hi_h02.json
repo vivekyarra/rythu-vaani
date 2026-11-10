@@ -1,0 +1,106 @@
+{
+ "name": "hi_h02",
+ "segments": [
+  {
+   "start": 0.044,
+   "end": 9.408,
+   "text": "नमस्कार मैं रोहित नवधन फनैन्स से राजेश जी आपके बाइक लोन की 2 किस्तें बकाया है इसी के लिए फ़ोन किया",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 9.408,
+   "end": 11.95,
+   "text": "भाई साहब इतनी रात को फ़ोन",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 11.95,
+   "end": 13.33,
+   "text": "मैं अभी खाना खा रहा हूँ",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 13.33,
+   "end": 19.936,
+   "text": "रात हो या दिन पैसा तो देना पड़ेगा 3 महीने से बस बहाने चल रहे हैं",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.936,
+   "end": 22.86,
+   "text": "नौकरी छूट गई है, मुझे थोड़ा समय चाहिए।",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 22.86,
+   "end": 28.48,
+   "text": "तुम जैसे बेशक लोग ही उधार लेकर भाग जाते हैं झूठ बोलना बंद करो",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 28.48,
+   "end": 30.02,
+   "text": "आप ऐसे बात मत कीजिए",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 30.02,
+   "end": 37.152,
+   "text": "परसों तक पैसा नहीं आया तो थाने में तुम्हारे नाम की रिपोर्ट लिखवा दूंगा फिर हवालात में बैठकर सोचना",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 37.152,
+   "end": 39.776,
+   "text": "ठीक है, मैं कोशीश करता हूँ",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 39.776,
+   "end": 44.847,
+   "text": "कोशिश नहीं परसों तक पूरे ₹9,000 चाहिए फ़ोन रखो",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 44.85,
+ "job_id": "01a1c147-4b06-7bd2-8811-20ac31417239",
+ "mock": false,
+ "job_wall_s": 17.71,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

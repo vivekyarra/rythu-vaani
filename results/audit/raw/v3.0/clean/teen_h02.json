@@ -1,0 +1,106 @@
+{
+ "name": "teen_h02",
+ "segments": [
+  {
+   "start": 0.108,
+   "end": 7.09,
+   "text": "గుడ్ మార్నింగ్ అనిత గారా, నవధాన్ ఫైనాన్స్ కలెక్షన్స్ టీమ్ నుంచి కాల్ చేస్తున్నా. మీ డైరీ లోన్ ఈఎంఐ గురించి.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 7.09,
+   "end": 10.56,
+   "text": "అవును, నేనే. చెప్పండి.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 10.56,
+   "end": 15.63,
+   "text": "మీ ఈఎమ్ఐ ఆరు వేల రూపాయలు లాస్ట్ మంత్ నుంచి పెండింగ్ ఉంది. ఎప్పుడు పే చేస్తారు.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 15.63,
+   "end": 19.73,
+   "text": "మా ఆయనకి హాస్పిటల్ ఖర్చులు అయ్యాయి, కొంచెం టైమ్ కావాలి.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 19.73,
+   "end": 26.64,
+   "text": "అండర్స్టాండ్ చేసుకుంటాను మేడమ్, కానీ లేకపోతే మా ఫీల్డ్ టీమ్ మీ ఇంటి గోడ మీద లోన్ డిఫాల్టర్ నోటీస్ అంటించాల్సి వస్తుంది.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 26.64,
+   "end": 31.136,
+   "text": "అయ్యో, అలా చేస్తే ఊర్లో ఎలా తిరగాలి?",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 31.136,
+   "end": 36.94,
+   "text": "అంతేకాదు మేడం, మా లాయర్ రేపే కోర్టు నుంచి అరెస్ట్ వారెంట్ తెప్పిస్తారు, మీ మంచి కోసమే చెప్తున్నాను.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 36.94,
+   "end": 40.288,
+   "text": "సరే, థర్స్ డే కి సగం కడతాను.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 40.288,
+   "end": 45.92,
+   "text": "థాంక్యూ. ఏమైనా కంప్లైంట్ ఉంటే మీ లోన్ అగ్రిమెంట్ లో ఉన్న హెల్ప్ లైన్ నంబర్ కి కాల్ చేయొచ్చు.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 45.92,
+   "end": 47.36,
+   "text": "సరే.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 47.46,
+ "job_id": "01a1c149-9efa-750e-b955-514075b2b686",
+ "mock": false,
+ "job_wall_s": 23.37,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

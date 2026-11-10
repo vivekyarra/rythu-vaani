@@ -1,0 +1,98 @@
+{
+ "name": "hi_d03",
+ "segments": [
+  {
+   "start": 0.62,
+   "end": 4.672,
+   "text": "सुनीता जी आपकी इ एम आई अभी तक क्यों नहीं आई",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 4.011,
+   "end": 7.072,
+   "text": "जी आप कौन बोल रहे हैं",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 6.7,
+   "end": 11.072,
+   "text": "वो छोड़िए पहले बताइए कैसे कर दें",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 10.412,
+   "end": 13.824,
+   "text": "पहले बताइए आप कहाँ से बोल रहे हैं",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 13.74,
+   "end": 18.432,
+   "text": "आप जैसे बेशर्म लोग लोन लेते हैं और फिर भाग जाते हैं",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 17.804,
+   "end": 20.0,
+   "text": "आप तमीज़ से बात",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 20.012,
+   "end": 23.584,
+   "text": "शुक्रवार तक ₹4,000 जमा थे",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 23.584,
+   "end": 27.552,
+   "text": "कोई शिकायत है तो आप हमारी हेल्पलैन पर कॉल कर सकते हैं",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 27.276,
+   "end": 28.554,
+   "text": "ठीक है",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 28.55,
+ "job_id": "01a1c151-8f53-7a9a-b8f7-fb5188bf4e1f",
+ "mock": false,
+ "job_wall_s": 61.33,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

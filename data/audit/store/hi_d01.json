@@ -1,0 +1,162 @@
+{
+ "call_id": "hi_d01",
+ "agent_id": "AG-101",
+ "agent_name": "Amit",
+ "language": "hi-IN",
+ "call_time": "2026-10-12T11:05:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "hi-IN",
+  "job_id": "01a1c14d-2e21-7be0-8fae-912af2d9fde4",
+  "job_wall_s": 46.43,
+  "duration_s": 45.31,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.24,
+   "text": "नमस्ते, मैं Navdhan Finance से अमित बोल रहा हूँ। क्या मेरी बात राकेश जी से हो रही है?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.772,
+   "end": 8.672,
+   "text": "हाँ, मैं राकेश बोल रहा हूँ।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 8.108,
+   "end": 16.224,
+   "text": "राकेश जी, मैं आपके पर्सनल लोन की EMI के बारे में कॉल कर रहा हूँ, 5,000 रुपये की किस्त दस दिन से बाकी है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 15.884,
+   "end": 21.312,
+   "text": "हाँ, इस महीने तनख्वाह देर से आई, मैं अगले सोमवार तक भर दूँगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 20.78,
+   "end": 29.728,
+   "text": "ठीक है, कोई बात नहीं। मैं सोमवार की तारीख नोट कर लेता हूँ। देरी होने पर loan agreement के हिसाब से late fee लगेगी।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 29.388,
+   "end": 32.031,
+   "text": "ठीक है, समझ गया।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 31.468,
+   "end": 40.48,
+   "text": "अगर आपको कोई शिकायत हो, तो आप हमारे शिकायत अधिकारी से हेल्पलाइन पर बात कर सकते हैं, नंबर आपके लोन एग्रीमेंट में दिया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 40.044,
+   "end": 42.496,
+   "text": "ठीक है, धन्यवाद।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 41.74,
+   "end": 45.312,
+   "text": "धन्यवाद రాకేష్ जी, आपका दिन शुभ हो।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [],
+ "scorecard": {
+  "score": 100,
+  "compliant": true,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": true,
+    "findings": 0
+   }
+  ],
+  "critical": 0
+ },
+ "split": "dev"
+}

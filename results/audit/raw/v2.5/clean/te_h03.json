@@ -1,0 +1,42 @@
+{
+ "name": "te_h03",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 31.04,
+   "text": "నమస్కారం నేను సురేష్ నవధన్ ఫైనాన్స్ నుంచి వెంకట్ గారితో మాట్లాడాలి నేను ఆయన సహోద్యోగిని ఆయన ఫోన్ డెస్క్ మీద వదిలి మీటింగ్ కి వెళ్లారు అయితే ఆయనకి చెప్పండి ఆయన పర్సనల్ లోన్ వాయిదా పన్నెండు వేల రూపాయలు నలభై రోజులుగా బాకీ ఉంది ఆగండి ఆయన ఇప్పుడే వస్తున్నారు ఫోన్ ఇస్తాను హలో వెంకట్ మాట్లాడుతున్నాను వెంకట్ గారు నేను సురేష్ నవధన్ ఫైనాన్స్ మీ పర్సనల్ లోన్ వాయిదా బాకీ గురించి కాల్ చేశాను",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 31.04,
+   "end": 49.155,
+   "text": "జీతం ఆలస్యమైంది సర్ పది రోజుల్లో కడతాను పది రోజులు కుదరదు ఈ వారంలో కట్టకపోతే మీ మీద పోలీస్ కేసు పెడతాం జైలుకు వెళ్లాల్సి వస్తుంది ఇంత చిన్న బాకీకి అంత పెద్ద మాటలా మీ ఇష్టం శుక్రవారం లోపు కట్టండి అంతే",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 49.16,
+ "job_id": "01a1c145-5e28-7eb8-9443-179c2b1e1db2",
+ "mock": false,
+ "job_wall_s": 28.48,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

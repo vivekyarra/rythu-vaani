@@ -1,0 +1,114 @@
+{
+ "name": "te_d01",
+ "segments": [
+  {
+   "start": 0.236,
+   "end": 5.45,
+   "text": "నమస్కారం నేను నవధన్ ఫైనాన్స్ నుంచి కిరణ్ మాట్లాడుతున్న లక్ష్మి గారితో మాట్లాడుతున్నాను",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 5.45,
+   "end": 7.29,
+   "text": "అవును చెప్పండి",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 7.29,
+   "end": 14.75,
+   "text": "లక్ష్మి గారు మీ పర్సనల్ లోన్ ఈఎంఐ మూడు వేల రూపాయలు ఈ నెల ఇంకా కట్టలేదు దాని గురించి కాల్ చేసి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 14.75,
+   "end": 18.72,
+   "text": "ఈ వారం కొంచెం ఇబ్బందిగా ఉంది శనివారం కాదు",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 18.72,
+   "end": 21.76,
+   "text": "సరే అండి శనివారం నోట్ చేసుకుంటా",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 21.76,
+   "end": 25.216,
+   "text": "ఆలస్యమైతే అగ్రిమెంట్ ప్రకారం డేట్ తీసుకొస్తుంది",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 25.216,
+   "end": 27.12,
+   "text": "సరే అర్థమైంది",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 27.12,
+   "end": 32.0,
+   "text": "మీకు ఏదైనా ఫిర్యాదు ఉంటే మా గ్రీవెన్స్ ఆఫీసర్ ని హెల్ప్ లైన్ ద్వారా సంప్రదించు",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 32.0,
+   "end": 34.496,
+   "text": "నంబర్ మీ లోన్ అగ్రిమెంట్",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 34.496,
+   "end": 35.84,
+   "text": "సరే",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 35.84,
+   "end": 36.853,
+   "text": "ధన్యవాదాలు",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 36.85,
+ "job_id": "01a1c148-5c11-7f05-affb-ceafb0e539be",
+ "mock": false,
+ "job_wall_s": 15.93,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

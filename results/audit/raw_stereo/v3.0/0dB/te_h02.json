@@ -1,0 +1,106 @@
+{
+ "name": "te_h02",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 1.632,
+   "text": "హలో.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 1.632,
+   "end": 6.464,
+   "text": "లెవదన్ ఫైనాన్స్ నుంచి మీ పాడి లోన్ వాయిదా గురించి",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.9,
+   "end": 11.744,
+   "text": "అవును, ఇంత పొద్దున్నే ఫోన్ ఎందుకు? పిల్లల్ని బడికి పంపిస్తున్నాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 11.212,
+   "end": 17.632,
+   "text": "వద్దులే, కాకపోతే మీరు ఫోన్ ఎత్తరు కదా? రెండు నెలలుగా మూడు వేల ఐదు వందలు కట్టలేదు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 17.196,
+   "end": 21.696,
+   "text": "పాల డబ్బులు ఇంకా రాలేదండి, వచ్చే వారం కడతాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 21.196,
+   "end": 27.36,
+   "text": "ప్రతిసారి ఇదే అబద్ధం. మీలాంటి మోసగాళ్లకి లోన్ ఇవ్వడమే మా తప్పు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 26.796,
+   "end": 29.28,
+   "text": "మర్యాదగా మాట్లాడండి.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 28.748,
+   "end": 36.352,
+   "text": "మర్యాద కావాలంటే డబ్బులు కట్టండి, లేకపోతే మీ ఊరి వాట్సాప్ గ్రూప్ లో మీ ఫోటో పెట్టి \"బాజీదారు\" అని రాస్తాం.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 35.82,
+   "end": 40.256,
+   "text": "దయచేసి అలా చేయకండి. వచ్చే సోమవారం కడతాను",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 39.692,
+   "end": 43.751,
+   "text": "సోమవారం అంటే సోమవారమే ఫోన్ పెట్టేస్తున్నా.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 43.75,
+ "job_id": "01a1c154-59d2-7a27-9b3d-15bf4c09b499",
+ "mock": false,
+ "job_wall_s": 30.07,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

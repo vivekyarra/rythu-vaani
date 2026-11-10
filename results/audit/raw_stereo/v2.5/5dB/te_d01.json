@@ -1,0 +1,90 @@
+{
+ "name": "te_d01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.336,
+   "text": "నమస్కారం నేను నవధన్ ఫైనాన్స్ నుండి కిరణ్ మాట్లాడుతున్నాను లక్ష్మి గారితో మాట్లాడుతున్నాను",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 5.516,
+   "end": 8.064,
+   "text": "అవును చెప్పండి",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 7.308,
+   "end": 15.36,
+   "text": "లక్ష్మి గారు మీ పర్సనల్ లోన్ ఈఎంఐ మూడు వేల రూపాయలు ఈ నెల ఇంకా కట్టలేదు దాని గురించి కాల్ చేశాను",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 14.604,
+   "end": 18.944,
+   "text": "ఈ వారం కొంచెం ఇబ్బందిగా ఉంది శనివారం కడతాను",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 18.412,
+   "end": 25.312,
+   "text": "సరే అండి శనివారం నోట్ చేసుకుంటాను ఆలస్యమైతే అగ్రిమెంట్ ప్రకారం లేట్ ఫీజు పడుతుంది",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 24.78,
+   "end": 27.424,
+   "text": "సరే అర్థమైంది",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 26.764,
+   "end": 34.656,
+   "text": "మీకు ఏదైనా ఫిర్యాదు ఉంటే మా గ్రీవెన్స్ ఆఫీసర్ ని హెల్ప్ లైన్ ద్వారా సంప్రదించవచ్చు నంబర్ మీ లోన్ అగ్రిమెంట్ లో ఉంది",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 34.188,
+   "end": 36.853,
+   "text": "సరే ధన్యవాదాలు",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 36.85,
+ "job_id": "01a1c150-2fde-7ec4-a95e-7c35817e609c",
+ "mock": false,
+ "job_wall_s": 44.0,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

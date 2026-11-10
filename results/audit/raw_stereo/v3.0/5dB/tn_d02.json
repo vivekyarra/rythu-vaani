@@ -1,0 +1,82 @@
+{
+ "name": "tn_d02",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 5.44,
+   "text": "హలో, నేను నవధాన్ ఫైనాన్స్ నుండి కిరణ్ మాట్లాడుతున్నాను, సాయి గారు ఉన్నారా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 4.844,
+   "end": 8.864,
+   "text": "నేను ఆయన కొలీగ్ ని, ఆయన మీటింగ్ లో ఉన్నారు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 8.46,
+   "end": 15.872,
+   "text": "ఆయనకి చెప్పండి పర్సనల్ లోన్ ఈఎమ్ఐ ఎనిమిది వేల రూపాయలు టూ మంత్స్ నుండి పెండింగ్ ఉంది.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 15.532,
+   "end": 17.856,
+   "text": "సరే, చెప్తాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 17.388,
+   "end": 22.944,
+   "text": "ఈ వీక్ పే చేయకపోతే, మేము డైరెక్ట్ గా మీ ఆఫీస్ కి వచ్చి కూర్చుంటాం.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 22.508,
+   "end": 25.024,
+   "text": "ఇది నా ప్రాబ్లం కాదు సార్",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 24.428,
+   "end": 29.427,
+   "text": "సరే, మా గ్రీవెన్స్ హెల్ప్ లైన్ నంబర్ లోన్ అగ్రిమెంట్ లో ఉంది, ఆయనకి చెప్పండి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 29.43,
+ "job_id": "01a1c153-9404-7966-a751-740c8480b10d",
+ "mock": false,
+ "job_wall_s": 32.73,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

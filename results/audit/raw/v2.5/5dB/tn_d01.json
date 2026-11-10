@@ -1,0 +1,74 @@
+{
+ "name": "tn_d01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 4.704,
+   "text": "హలో రమేష్ గారా మీ ఈఎంఐ ఎందుకు పే చేయలేదు",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 4.704,
+   "end": 6.496,
+   "text": "ఎవరు మాట్లాడుతున్నారు",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 6.496,
+   "end": 10.88,
+   "text": "అది ఇంపార్టంట్ కాదు మీ పేమెంట్ మూడు వీక్స్ నుండి ఓవర్",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 10.88,
+   "end": 18.496,
+   "text": "సాలరీ లేట్ అయింది సర్ నెక్స్ట్ వీక్ పే చేస్తా మీలాంటి సీటర్స్ వల్లే కంపెనీకి లాస్ యూస్లెస్ ఫెలో",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 18.496,
+   "end": 20.8,
+   "text": "ప్లీజ్ రెస్పెక్ట్ ఆచారి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 20.8,
+   "end": 26.336,
+   "text": "మండే లోపల పే చేయండి ఏదైనా కంప్లైంట్ ఉంటే మా కస్టమర్ కేర్ కి కాల్ చేయండి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 26.5,
+ "job_id": "01a1c147-e685-78aa-bbe9-20a196954fb6",
+ "mock": false,
+ "job_wall_s": 11.88,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

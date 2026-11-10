@@ -1,0 +1,90 @@
+{
+ "name": "he_d02",
+ "segments": [
+  {
+   "start": 0.108,
+   "end": 6.4,
+   "text": "गुड मॉर्निंग मैं नवभारत फनैन्स से रोहित बोल रहा हूँ क्या मैं प्रिया जी से बात कर रहा हूँ",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 5.772,
+   "end": 7.872,
+   "text": "हाँ बोलिए",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 7.436,
+   "end": 15.424,
+   "text": "प्रिया जी आपके टू व्हीलर लोन की इ एम आई की दुए डेट निकल गई है इसी के रिमाइंडर के लिए कॉल किया है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 15.82,
+   "end": 19.616,
+   "text": "मैं भूल गई थी आज ही ऑनलाइन पे कर देती हूँ",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 20.204,
+   "end": 24.928,
+   "text": "अगर पेमेंट में कोई प्रॉब्लम हो तो हम रीस्ट्रक्चरिंग ऑप्शन्ज़ भी डिस्कस कर",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 24.524,
+   "end": 27.008,
+   "text": "ठीक है शुक्रिया",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 26.892,
+   "end": 33.984,
+   "text": "और कोई कंप्लेंट हो तो आप हमारे ग्रीवेंस ऑफिसर को ईमेल कर सकते हैं डीटेल्स आपके लोन अग्रीमेंट में",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 34.028,
+   "end": 36.056,
+   "text": "ओके थैंक यू",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 36.06,
+ "job_id": "01a1c151-1218-7d5a-b021-1f7fa50bb537",
+ "mock": false,
+ "job_wall_s": 23.33,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

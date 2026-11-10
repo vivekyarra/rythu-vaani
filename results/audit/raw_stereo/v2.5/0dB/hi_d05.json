@@ -1,0 +1,114 @@
+{
+ "name": "hi_d05",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 4.384,
+   "text": "नमस्कार मैं नवधन फनैन्स से अमित बोल रहा हूँ",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 4.384,
+   "end": 6.944,
+   "text": "क्या मैं विदेशी से बात कर रहा हूँ",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 6.348,
+   "end": 8.768,
+   "text": "हाँ बोलिए",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 8.204,
+   "end": 14.688,
+   "text": "विजय जी आपके होम लोन की इस महीने की इ एम आई बाकी है उसी के बारे में कॉल कीजिए",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 14.508,
+   "end": 18.624,
+   "text": "आप लोग बार बार फोन करके परेशान करते हैं",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 18.252,
+   "end": 27.072,
+   "text": "मैं समझता हूँ परेशानी के लिए माफ़ी चाहता हूँ लगातार देरी होने पर एग्रीमेंट के अनुसार क्रेडिट ब्यूरो को रिपोर्ट किया जाए",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 27.072,
+   "end": 28.64,
+   "text": "बस यही बता",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 28.524,
+   "end": 31.872,
+   "text": "ठीक है मैं गुरुवार तक भर दूंगा",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 31.404,
+   "end": 33.056,
+   "text": "बहुत",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 33.056,
+   "end": 39.008,
+   "text": "अगर आपको कोई शिकायत हो तो आप हमारी शिकायत हेल्पलाइन या नज़दीकी ब्रांच से संपर्क कर सकते हैं",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 38.892,
+   "end": 40.3,
+   "text": "ठीक है",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 40.3,
+ "job_id": "01a1c151-8f53-7a9a-b8f7-fb5188bf4e1f",
+ "mock": false,
+ "job_wall_s": 61.33,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

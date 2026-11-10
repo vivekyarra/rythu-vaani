@@ -1,0 +1,98 @@
+{
+ "name": "teen_h02",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 7.48,
+   "text": "గుడ్ మార్నింగ్ అనిత గార నవధన్ ఫైనాన్స్ కలెక్షన్స్ టీమ్ నుంచి కాల్ చేస్తున్నా మీ డైరీ లోన్ ఈఎంఐ గురించి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 7.48,
+   "end": 10.592,
+   "text": "అవును నేనే చెప్పండి",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 10.592,
+   "end": 15.97,
+   "text": "ఈఎంఐ ఆరు వేల రూపాయలు లాస్ట్ మంత్ నుంచి పెండింగ్ ఉంది ఎప్పుడు పే చేస్తారు",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 15.97,
+   "end": 19.73,
+   "text": "మా ఆయనకి హాస్పిటల్ ఖర్చులయ్యాయి కొంచెం టైం కావాలి",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.73,
+   "end": 27.328,
+   "text": "అండర్స్టాండ్ చేసుకుంటాను మేడమ్ కానీ లేకపోతే మా ఫీల్డ్ మీ ఇంటి గోడ మీద లోన్ డిఫాల్టర్ నోటీసు అంటించాల్సి వస్తుంది",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 27.328,
+   "end": 31.168,
+   "text": "అయ్యో అలా చేస్తే ఊర్లో ఎలా తిరగాలి",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 31.168,
+   "end": 37.4,
+   "text": "అంతేకాదు మేడమ్ మా లాయర్ రేపే కోర్టు నుంచి అరెస్ట్ వారెంట్ తెప్పిస్తారు మీ మంచి కోసమే చెబుతున్నాను",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 37.4,
+   "end": 40.128,
+   "text": "సరే థర్స్ డే కి సగం కడతాను",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 40.128,
+   "end": 45.984,
+   "text": "ఓకే థాంక్ యు ఏమైనా కంప్లీట్ ఉంటే మీ లోన్ అగ్రిమెంట్ లో ఉన్న హెల్ప్లైన్ నంబర్ కి కాల్ చేయొచ్చు",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 47.46,
+ "job_id": "01a1c147-e685-78aa-bbe9-20a196954fb6",
+ "mock": false,
+ "job_wall_s": 11.88,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

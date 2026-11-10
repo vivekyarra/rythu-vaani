@@ -1,0 +1,223 @@
+{
+ "call_id": "teen_h01",
+ "agent_id": "AG-103",
+ "agent_name": "Kiran",
+ "language": "te-en",
+ "call_time": "2026-10-22T14:10:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "te-IN",
+  "job_id": "01a1c14d-35fb-7980-9da5-c6ac4e81f7de",
+  "job_wall_s": 31.86,
+  "duration_s": 47.95,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.408,
+   "text": "హలో, నేను కిరణ్. నవధాన్ ఫైనాన్స్ నుంచి ప్రసాద్ గారు ఉన్నారా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 4.62,
+   "end": 10.016,
+   "text": "నేను ఆయన వైఫ్ ని, ఆయన షాప్ లో ఉన్నారు. ఏం విషయం?",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 9.612,
+   "end": 17.472,
+   "text": "మ్యాడమ్, మీ హస్బెండ్ ట్రాక్టర్ లోన్ ఈఎంఐ మూడు మంత్స్ గా పెండింగ్, టోటల్ పదిహేను థౌజండ్ రూపీస్ ఓవడ్యూ ఉంది.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 16.844,
+   "end": 21.856,
+   "text": "అయ్యో, నాకు తెలియదు. ఉండండి, ఆయన్ని పిలుస్తాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 21.856,
+   "end": 24.192,
+   "text": "హలో, ప్రసాద్ స్పీకింగ్.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 23.532,
+   "end": 31.2,
+   "text": "ప్రసాద్ గారు, కిరణ్ హియర్, నవధాన్ ఫైనాన్స్, మీ ట్రాక్టర్ లోన్ ఈఎంఐ పెండింగ్ గురించి కాల్ చేశాను.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 30.828,
+   "end": 35.616,
+   "text": "హర్వెస్ట్ పేమెంట్ ఇంకా రాలేదండి, నెక్స్ట్ వీక్ క్లియర్ చేస్తాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 35.084,
+   "end": 41.696,
+   "text": "ప్రతిసారి ఇదే స్టోరీ. మీలాంటి చీటర్స్ వల్లే మా కంపెనీ నష్టపోతోంది. సిగ్గులేదా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 41.26,
+   "end": 44.64,
+   "text": "మీరు అలా మాట్లాడటం కరెక్ట్ కాదు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 44.044,
+   "end": 47.936,
+   "text": "నెక్స్ట్ మండే కి ఫుల్ అమౌంట్ పడాలి, అంతే.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "NO_DISCLOSURE",
+   "start": 0.0,
+   "end": 5.408,
+   "quote": "హలో, నేను కిరణ్. నవధాన్ ఫైనాన్స్ నుంచి ప్రసాద్ గారు ఉన్నారా?",
+   "matched": "",
+   "note": "missing in opening: lender",
+   "source": "rule",
+   "title": "Identity, lender and purpose stated",
+   "severity": "major",
+   "tip": "Open every call with your name, the lender and the purpose.",
+   "rephrase": "Hello, నేను Navdhan Finance నుండి Kiran మాట్లాడుతున్నాను. మీ loan EMI గురించి call చేస్తున్నాను."
+  },
+  {
+   "category": "THIRD_PARTY",
+   "start": 9.612,
+   "end": 17.472,
+   "quote": "మ్యాడమ్, మీ హస్బెండ్ ట్రాక్టర్ లోన్ ఈఎంఐ మూడు మంత్స్ గా పెండింగ్, టోటల్ పదిహేను థౌజండ్ రూపీస్ ఓవడ్యూ ఉంది.",
+   "matched": "లోన్",
+   "note": "someone other than the borrower is on the line",
+   "source": "rule",
+   "title": "No disclosure to third parties",
+   "severity": "critical",
+   "tip": "If someone else answers, leave only your name and lender and ask for a call-back.",
+   "rephrase": "పర్వాలేదు అండి. Navdhan Finance నుండి Kiran call చేశారని, ఈ number కి call back చేయమని please చెప్పండి. Thank you."
+  },
+  {
+   "category": "ABUSE",
+   "start": 35.084,
+   "end": 41.696,
+   "quote": "ప్రతిసారి ఇదే స్టోరీ. మీలాంటి చీటర్స్ వల్లే మా కంపెనీ నష్టపోతోంది. సిగ్గులేదా?",
+   "matched": "చీటర్",
+   "note": "",
+   "source": "rule",
+   "title": "Respectful language",
+   "severity": "critical",
+   "tip": "Stay respectful; acknowledge the situation and ask for a date.",
+   "rephrase": "మీ situation నాకు అర్థమైంది. కలిసి ఒక solution చూద్దాం. మీరు ఏ date కి pay చేయగలరు?"
+  },
+  {
+   "category": "NO_GRIEVANCE",
+   "start": 44.044,
+   "end": 47.936,
+   "quote": "నెక్స్ట్ మండే కి ఫుల్ అమౌంట్ పడాలి, అంతే.",
+   "matched": "",
+   "note": "no grievance/complaint channel offered by the agent",
+   "source": "rule",
+   "title": "Grievance channel offered",
+   "severity": "major",
+   "tip": "Before ending, tell the borrower how to raise a complaint.",
+   "rephrase": "మీకు ఏదైనా complaint ఉంటే, మా grievance officer ని contact చేయవచ్చు. Helpline number మీ loan agreement లో ఉంది."
+  }
+ ],
+ "scorecard": {
+  "score": 30,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": false,
+    "findings": 1
+   }
+  ],
+  "critical": 2
+ },
+ "split": "heldout"
+}

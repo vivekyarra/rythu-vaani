@@ -1,0 +1,82 @@
+{
+ "name": "te_d03",
+ "segments": [
+  {
+   "start": 0.076,
+   "end": 4.96,
+   "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి కిరణ్. రవి గారు ఉన్నారా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 4.075,
+   "end": 7.968,
+   "text": "నేను వాళ్ళ అన్నయ్యని, రవి ఇంట్లో లేడు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 7.564,
+   "end": 13.888,
+   "text": "మీ తమ్ముడు బైక్ లోన్ ఈఎమ్ఐ నాలుగు వేలు మూడు నెలలుగా కట్టలేదు మీరే చెప్పండి",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 13.292,
+   "end": 15.52,
+   "text": "ఇది నాకు తెలియదు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 14.988,
+   "end": 19.712,
+   "text": "కట్టకపోతే, మీ ఊరి వాట్సాప్ గ్రూప్ లో అందరికీ చెప్తాం.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 19.052,
+   "end": 22.016,
+   "text": "సరే, నేను వాడికి చెప్తాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 21.292,
+   "end": 24.798,
+   "text": "ఏదైనా ఫిర్యాదు ఉంటే మా బ్రాంచ్కి రావచ్చు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 24.8,
+ "job_id": "01a1c152-bd0b-715a-b7fc-09d3dda7f2b1",
+ "mock": false,
+ "job_wall_s": 40.7,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

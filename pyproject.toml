@@ -21,6 +21,10 @@ test = ["pytest>=8.0"]
 
 [project.scripts]
 vaani-bench = "vaani_bench.cli:main"
+vaani-audit = "vaani_audit.cli:main"
 
 [tool.setuptools]
-packages = ["rythu_vaani", "vaani_bench"]
+packages = ["rythu_vaani", "vaani_bench", "vaani_audit"]
+
+[tool.setuptools.package-data]
+vaani_audit = ["web/*.html"]

@@ -1,0 +1,98 @@
+{
+ "name": "hi_d05",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.36,
+   "text": "नमस्कार, मैं Navdhanya Finance से अमित बोल रहा हूँ। क्या मैं विजय जी से बात कर रहा हूँ?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 6.36,
+   "end": 8.43,
+   "text": "हाँ, बोलिए।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 8.43,
+   "end": 14.77,
+   "text": "विजय जी, आपके home loan की इस महीने की EMI बाकी है, उसी के बारे में call किया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 14.77,
+   "end": 18.624,
+   "text": "आप लोग बार-बार फोन करके परेशान करते हैं।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 18.624,
+   "end": 27.072,
+   "text": "मैं समझता हूँ, परेशानी के लिए माफी चाहता हूँ। लगातार देरी होने पर agreement के अनुसार credit bureau को report किया जा सकता है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 27.072,
+   "end": 28.704,
+   "text": "बस यही बताना था।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 28.704,
+   "end": 31.41,
+   "text": "ठीक है, मैं गुरुवार तक भर दूँगा।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 31.41,
+   "end": 39.328,
+   "text": "बहुत धन्यवाद, अगर आपको कोई शिकायत हो तो आप हमारी शिकायत helpline या नजदीकी branch से संपर्क कर सकते हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 39.328,
+   "end": 40.3,
+   "text": "ठीक है।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 40.3,
+ "job_id": "01a1c149-fe26-79a2-bd3f-c31abecd7b21",
+ "mock": false,
+ "job_wall_s": 22.67,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "name": "hi_d04",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 4.55,
+   "text": "नमस्ते मैं लव फनैन्स से रोहित बोल रहा हूँ क्या मनोज",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 6.336,
+   "end": 10.304,
+   "text": "मैं उनकी पत्नी बोल रही हूँ, वो अभी घर पर नहीं है।",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 11.02,
+   "end": 17.376,
+   "text": "उनको बता दीजिए कि उनके बाइक लोन की ₹6,000 की ई एम आई 2 महीने से बचा",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 17.376,
+   "end": 19.776,
+   "text": "मुझे इस बारे में कुछ नहीं",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.776,
+   "end": 24.224,
+   "text": "कृपया उनसे कहिए कि मुझे इसी नंबर पर कॉल",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 24.224,
+   "end": 26.16,
+   "text": "ठीक है मैं बता दूंगी",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 26.16,
+   "end": 30.816,
+   "text": "किसी भी शिकायत के लिए आप हमारे ग्रीवेंस ऑफिसर से संपर्क कर सकते हैं",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 31.52,
+ "job_id": "01a1c148-1ab7-7393-8dc5-28ea42178c20",
+ "mock": false,
+ "job_wall_s": 17.53,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

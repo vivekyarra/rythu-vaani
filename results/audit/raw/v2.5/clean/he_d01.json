@@ -1,0 +1,82 @@
+{
+ "name": "he_d01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.77,
+   "text": "हेलो, मैं नवधान फाइनेंस से नेहा बोल रही हूँ, क्या मेरी बात अर्जुन जी से हो रही है?",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 6.77,
+   "end": 8.14,
+   "text": "हाँ बोलिए",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 8.14,
+   "end": 16.032,
+   "text": "अर्जुन जी आपके क्रेडिट कार्ड लोन का ₹7,000 का इ एम आई ओवरड्यू है, इसी के लिए कॉल किया है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 16.032,
+   "end": 19.456,
+   "text": "मेरी जॉब चली गई है, थोड़ा टाइम चाहिए।",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.456,
+   "end": 26.048,
+   "text": "मैं समझ सकती हूँ, लेकिन अगर इस वीक पेमेंट नहीं हुआ तो आपके अगेंस्ट अरेस्ट वारंट निकल जाएगा।",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 26.048,
+   "end": 28.18,
+   "text": "क्या इतनी सी बात पे अरेस्ट",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 28.18,
+   "end": 32.478,
+   "text": "हाँ इसलिए जल्दी पेमेंट कर दीजिए थैंक यू",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 32.48,
+ "job_id": "01a1c145-cd82-7e8b-9c11-4711fa7586ed",
+ "mock": false,
+ "job_wall_s": 18.19,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

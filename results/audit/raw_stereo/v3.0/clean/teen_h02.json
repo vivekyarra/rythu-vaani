@@ -1,0 +1,106 @@
+{
+ "name": "teen_h02",
+ "segments": [
+  {
+   "start": 0.108,
+   "end": 7.808,
+   "text": "గుడ్ మార్నింగ్ అనిత గారా, నవధాన్ ఫైనాన్స్ కలెక్షన్స్ టీమ్ నుంచి కాల్ చేస్తున్నా. మీ డైరీ లోన్ ఈఎంఐ గురించి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 7.084,
+   "end": 10.56,
+   "text": "అవును, నేనే. చెప్పండి.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 10.156,
+   "end": 16.128,
+   "text": "మీ ఈఎమ్ఐ ఆరు వేల రూపాయలు లాస్ట్ మంత్ నుంచి పెండింగ్ ఉంది ఎప్పుడు పే చేస్తారు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 15.532,
+   "end": 20.512,
+   "text": "మా ఆయనకి హాస్పిటల్ ఖర్చులు అయ్యాయి, కొంచెం టైం కావాలి.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 19.692,
+   "end": 27.584,
+   "text": "అండర్స్టాండ్ చేసుకుంటాను మేడమ్ కానీ లేకపోతే మా ఫీల్డ్ టీమ్ మీ ఇంటి గోడ మీద లోన్ డిఫాల్టర్ నోటీస్ అంటించాల్సి వస్తుంది.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 26.956,
+   "end": 31.104,
+   "text": "అయ్యో, అలా చేస్తే ఊర్లో ఎలా తిరగాలి?",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 30.796,
+   "end": 37.792,
+   "text": "అంతేకాదు మేడం, మా లాయర్ రేపే కోర్టు నుంచి అరెస్ట్ వారెంట్ తెప్పిస్తారు, మీ మంచి కోసమే చెప్తున్నాను.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 37.036,
+   "end": 40.256,
+   "text": "సరే, థర్స్ డే కి సగం కడతాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 39.82,
+   "end": 45.92,
+   "text": "ఓకే థాంక్యూ. ఏమైనా కంప్లైంట్ ఉంటే మీ లోన్ అగ్రిమెంట్ లో ఉన్న హెల్ప్లైన్ నంబర్ కి కాల్ చేయొచ్చు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 45.484,
+   "end": 47.072,
+   "text": "సరే.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 47.46,
+ "job_id": "01a1c151-f530-7523-896a-f8a6da78fb31",
+ "mock": false,
+ "job_wall_s": 15.27,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

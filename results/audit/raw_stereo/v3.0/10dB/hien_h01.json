@@ -1,0 +1,106 @@
+{
+ "name": "hien_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 8.0,
+   "text": "Hello पूजा जी, मैं नेहा बोल रही हूँ Navdhanya Finance से, आपके personal loan की EMI के regarding call किया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 7.244,
+   "end": 13.856,
+   "text": "Again मैंने बोला था salary late आएगी, आप लोग daily call करके irritate कर रहे हो।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 13.42,
+   "end": 20.512,
+   "text": "Sorry for the inconvenience पूजा जी, मैं बस reminder दे रही हूँ, due date 5 दिन पहले निकल गई है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 19.948,
+   "end": 24.128,
+   "text": "तो मैं क्या करूँ? कंपनी ने ही salary hold की है।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 23.596,
+   "end": 30.656,
+   "text": "Totally समझ सकती हूँ, बस inform कर दूँ, agreement के हिसाब से late payment charges apply होंगे।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 30.06,
+   "end": 32.928,
+   "text": "और अगर next week भी नहीं हुआ तो?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 32.491,
+   "end": 40.544,
+   "text": "तो as per loan agreement, account credit bureau को overdue report हो सकता है, जिससे आपका credit score affect होगा।",
+   "speaker_id": "ch0",
+   "language": "en-IN",
+   "role": "agent"
+  },
+  {
+   "start": 40.3,
+   "end": 43.872,
+   "text": "ठीक है next Tuesday तक pay कर दूँगी।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 43.404,
+   "end": 51.872,
+   "text": "Thank you पूजा जी, कोई complaint हो तो हमारे grievance officer को email कर सकती हैं, details आपके loan agreement में हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 51.116,
+   "end": 53.152,
+   "text": "Okay bye।",
+   "speaker_id": "ch1",
+   "language": "en-IN",
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 53.15,
+ "job_id": "01a1c152-fe3d-7798-b16c-364631f702fc",
+ "mock": false,
+ "job_wall_s": 51.95,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

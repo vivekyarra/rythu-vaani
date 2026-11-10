@@ -1,0 +1,556 @@
+{
+ "live": true,
+ "results": {
+  "hi_d02": {
+   "call_id": "hi_d02",
+   "agent_id": "AG-101",
+   "agent_name": "Amit",
+   "language": "hi-IN",
+   "call_time": "2026-10-13T20:15:00+05:30",
+   "lender": "Navdhan Finance",
+   "synthetic": true,
+   "mock": false,
+   "stt": {
+    "model": "prisma-v3.0",
+    "language_code": "hi-IN",
+    "job_id": "01a1c153-0eef-72e3-aca9-6087b1408fa4",
+    "job_wall_s": 51.07,
+    "duration_s": 27.58,
+    "keywords_accepted": true,
+    "topic_accepted": true
+   },
+   "roles": {
+    "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+    "agent_speaker": "ch0"
+   },
+   "segments": [
+    {
+     "start": 0.0,
+     "end": 6.272,
+     "text": "हेलो, मैं Navdhan Finance से अमित बोल रहा हूँ, आपके गोल्ड लोन की किस्त के बारे में।",
+     "speaker_id": "ch0",
+     "language": "hi-IN",
+     "role": "agent"
+    },
+    {
+     "start": 6.028,
+     "end": 8.928,
+     "text": "अपनी रात को phone क्यों कर रहे हो?",
+     "speaker_id": "ch1",
+     "language": "hi-IN",
+     "role": "borrower"
+    },
+    {
+     "start": 8.524,
+     "end": 14.848,
+     "text": "3 महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए, तो पुलिस लेकर आपके घर आएंगे।",
+     "speaker_id": "ch0",
+     "language": "hi-IN",
+     "role": "agent"
+    },
+    {
+     "start": 14.284,
+     "end": 17.28,
+     "text": "आप ऐसी धमकी नहीं दे सकते।",
+     "speaker_id": "ch1",
+     "language": "hi-IN",
+     "role": "borrower"
+    },
+    {
+     "start": 16.716,
+     "end": 21.44,
+     "text": "और आपके मोहल्ले में सबको बता देंगे कि आप कर्ज नहीं चुकाते।",
+     "speaker_id": "ch0",
+     "language": "hi-IN",
+     "role": "agent"
+    },
+    {
+     "start": 20.908,
+     "end": 23.712,
+     "text": "मैं अगले हफ्ते पैसे दे दूंगा।",
+     "speaker_id": "ch1",
+     "language": "hi-IN",
+     "role": "borrower"
+    },
+    {
+     "start": 23.372,
+     "end": 27.168,
+     "text": "अगले हफ्ते नहीं, कल ही चाहिए। फोन रखो।",
+     "speaker_id": "ch0",
+     "language": "hi-IN",
+     "role": "agent"
+    }
+   ],
+   "findings": [
+    {
+     "category": "CALL_HOURS",
+     "start": 0.0,
+     "end": 0.0,
+     "quote": "call metadata: started 20:15 IST",
+     "matched": "20:15",
+     "note": "allowed window 08:00-19:00",
+     "source": "rule",
+     "title": "Call within 8 AM - 7 PM",
+     "severity": "major",
+     "tip": "Dial only between 8 AM and 7 PM.",
+     "rephrase": "ग्राहकों को सिर्फ़ सुबह आठ बजे से शाम सात बजे के बीच ही कॉल करें।"
+    },
+    {
+     "category": "THREAT",
+     "start": 8.524,
+     "end": 14.848,
+     "quote": "3 महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए, तो पुलिस लेकर आपके घर आएंगे।",
+     "matched": "पुलिस",
+     "note": "",
+     "source": "rule",
+     "title": "No threats or intimidation",
+     "severity": "critical",
+     "tip": "Replace threats with options: today's payment, or a payment plan.",
+     "rephrase": "मैं समझता हूँ कि अभी मुश्किल है। आपकी EMI बाकी है। आप आज भुगतान कर सकते हैं, या हम आपके लिए एक आसान भुगतान योजना बना सकते हैं।"
+    },
+    {
+     "category": "SHAMING",
+     "start": 16.716,
+     "end": 21.44,
+     "quote": "और आपके मोहल्ले में सबको बता देंगे कि आप कर्ज नहीं चुकाते।",
+     "matched": "मोहल्ल … बता",
+     "note": "",
+     "source": "rule",
+     "title": "No public shaming",
+     "severity": "critical",
+     "tip": "Never mention neighbours, family, employer or groups; promise confidentiality.",
+     "rephrase": "आपके लोन की जानकारी पूरी तरह गोपनीय है, यह सिर्फ़ आपके और हमारे बीच रहेगी। क्या हम भुगतान की एक तारीख तय कर सकते हैं?"
+    },
+    {
+     "category": "NO_GRIEVANCE",
+     "start": 23.372,
+     "end": 27.168,
+     "quote": "अगले हफ्ते नहीं, कल ही चाहिए। फोन रखो।",
+     "matched": "",
+     "note": "no grievance/complaint channel offered by the agent",
+     "source": "rule",
+     "title": "Grievance channel offered",
+     "severity": "major",
+     "tip": "Before ending, tell the borrower how to raise a complaint.",
+     "rephrase": "अगर आपको कोई शिकायत हो, तो आप हमारे शिकायत अधिकारी से संपर्क कर सकते हैं। हेल्पलाइन नंबर आपके लोन एग्रीमेंट में दिया है।"
+    }
+   ],
+   "scorecard": {
+    "score": 30,
+    "compliant": false,
+    "checks": [
+     {
+      "id": "NO_DISCLOSURE",
+      "title": "Identity, lender and purpose stated",
+      "severity": "major",
+      "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+      "passed": true,
+      "findings": 0
+     },
+     {
+      "id": "CALL_HOURS",
+      "title": "Call within 8 AM - 7 PM",
+      "severity": "major",
+      "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+      "passed": false,
+      "findings": 1
+     },
+     {
+      "id": "THREAT",
+      "title": "No threats or intimidation",
+      "severity": "critical",
+      "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+      "passed": false,
+      "findings": 1
+     },
+     {
+      "id": "ABUSE",
+      "title": "Respectful language",
+      "severity": "critical",
+      "rule": "No abusive, insulting or demeaning words.",
+      "passed": true,
+      "findings": 0
+     },
+     {
+      "id": "SHAMING",
+      "title": "No public shaming",
+      "severity": "critical",
+      "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+      "passed": false,
+      "findings": 1
+     },
+     {
+      "id": "THIRD_PARTY",
+      "title": "No disclosure to third parties",
+      "severity": "critical",
+      "rule": "Loan details are never shared with anyone other than the borrower.",
+      "passed": true,
+      "findings": 0
+     },
+     {
+      "id": "NO_GRIEVANCE",
+      "title": "Grievance channel offered",
+      "severity": "major",
+      "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+      "passed": false,
+      "findings": 1
+     }
+    ],
+    "critical": 2
+   },
+   "audit_wall_s": 51.1
+  },
+  "te_d02": {
+   "call_id": "te_d02",
+   "agent_id": "AG-104",
+   "agent_name": "Suresh",
+   "language": "te-IN",
+   "call_time": "2026-10-13T13:00:00+05:30",
+   "lender": "Navdhan Finance",
+   "synthetic": true,
+   "mock": false,
+   "stt": {
+    "model": "prisma-v3.0",
+    "language_code": "te-IN",
+    "job_id": "01a1c154-5e86-711a-86fa-10bf120b8888",
+    "job_wall_s": 29.41,
+    "duration_s": 27.45,
+    "keywords_accepted": true,
+    "topic_accepted": true
+   },
+   "roles": {
+    "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+    "agent_speaker": "ch0"
+   },
+   "segments": [
+    {
+     "start": 0.0,
+     "end": 6.688,
+     "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్, మీ ట్రాక్టర్ లోన్ బకాయి గురించి ఫోన్ చేశాను.",
+     "speaker_id": "ch0",
+     "language": "te-IN",
+     "role": "agent"
+    },
+    {
+     "start": 6.22,
+     "end": 10.56,
+     "text": "చెప్పండి, ఈ నెల పంట డబ్బులు ఇంకా రాలేదు.",
+     "speaker_id": "ch1",
+     "language": "te-IN",
+     "role": "borrower"
+    },
+    {
+     "start": 9.804,
+     "end": 15.072,
+     "text": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
+     "speaker_id": "ch0",
+     "language": "te-IN",
+     "role": "agent"
+    },
+    {
+     "start": 14.444,
+     "end": 16.8,
+     "text": "అలా మాట్లాడకండి.",
+     "speaker_id": "ch1",
+     "language": "te-IN",
+     "role": "borrower"
+    },
+    {
+     "start": 16.332,
+     "end": 22.976,
+     "text": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
+     "speaker_id": "ch0",
+     "language": "te-IN",
+     "role": "agent"
+    },
+    {
+     "start": 22.316,
+     "end": 25.024,
+     "text": "వచ్చే వారం కడతాను.",
+     "speaker_id": "ch1",
+     "language": "te-IN",
+     "role": "borrower"
+    },
+    {
+     "start": 24.62,
+     "end": 27.445,
+     "text": "లేదు, రేపే కట్టాలి.",
+     "speaker_id": "ch0",
+     "language": "te-IN",
+     "role": "agent"
+    }
+   ],
+   "findings": [
+    {
+     "category": "ABUSE",
+     "start": 9.804,
+     "end": 15.072,
+     "quote": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
+     "matched": "అబద్ధాలకోరు",
+     "note": "",
+     "source": "rule",
+     "title": "Respectful language",
+     "severity": "critical",
+     "tip": "Stay respectful; acknowledge the situation and ask for a date.",
+     "rephrase": "మీ పరిస్థితి నాకు అర్థమైంది. కలిసి ఒక దారి చూద్దాం. మీరు ఏ తేదీకి కట్టగలరు?"
+    },
+    {
+     "category": "THREAT",
+     "start": 16.332,
+     "end": 22.976,
+     "quote": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
+     "matched": "మనుషులు వచ్చి",
+     "note": "",
+     "source": "rule",
+     "title": "No threats or intimidation",
+     "severity": "critical",
+     "tip": "Replace threats with options: today's payment, or a payment plan.",
+     "rephrase": "మీ ఇబ్బంది నాకు అర్థమైంది. మీ EMI బకాయి ఉంది. ఈ రోజు కట్టవచ్చు, లేదా మీ కోసం ఒక సులభమైన పేమెంట్ ప్లాన్ చేయగలం."
+    },
+    {
+     "category": "NO_GRIEVANCE",
+     "start": 24.62,
+     "end": 27.445,
+     "quote": "లేదు, రేపే కట్టాలి.",
+     "matched": "",
+     "note": "no grievance/complaint channel offered by the agent",
+     "source": "rule",
+     "title": "Grievance channel offered",
+     "severity": "major",
+     "tip": "Before ending, tell the borrower how to raise a complaint.",
+     "rephrase": "మీకు ఏదైనా ఫిర్యాదు ఉంటే, మా గ్రీవెన్స్ ఆఫీసర్‌ని సంప్రదించవచ్చు. హెల్ప్‌లైన్ నంబర్ మీ లోన్ అగ్రిమెంట్‌లో ఉంది."
+    }
+   ],
+   "scorecard": {
+    "score": 40,
+    "compliant": false,
+    "checks": [
+     {
+      "id": "NO_DISCLOSURE",
+      "title": "Identity, lender and purpose stated",
+      "severity": "major",
+      "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+      "passed": true,
+      "findings": 0
+     },
+     {
+      "id": "CALL_HOURS",
+      "title": "Call within 8 AM - 7 PM",
+      "severity": "major",
+      "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+      "passed": true,
+      "findings": 0
+     },
+     {
+      "id": "THREAT",
+      "title": "No threats or intimidation",
+      "severity": "critical",
+      "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+      "passed": false,
+      "findings": 1
+     },
+     {
+      "id": "ABUSE",
+      "title": "Respectful language",
+      "severity": "critical",
+      "rule": "No abusive, insulting or demeaning words.",
+      "passed": false,
+      "findings": 1
+     },
+     {
+      "id": "SHAMING",
+      "title": "No public shaming",
+      "severity": "critical",
+      "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+      "passed": true,
+      "findings": 0
+     },
+     {
+      "id": "THIRD_PARTY",
+      "title": "No disclosure to third parties",
+      "severity": "critical",
+      "rule": "Loan details are never shared with anyone other than the borrower.",
+      "passed": true,
+      "findings": 0
+     },
+     {
+      "id": "NO_GRIEVANCE",
+      "title": "Grievance channel offered",
+      "severity": "major",
+      "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+      "passed": false,
+      "findings": 1
+     }
+    ],
+    "critical": 2
+   },
+   "audit_wall_s": 29.43
+  }
+ },
+ "coach": [
+  {
+   "file": "coach_hi_d02_THREAT.wav",
+   "call": "hi_d02",
+   "category": "THREAT",
+   "text": "मैं समझता हूँ कि अभी मुश्किल है। आपकी EMI बाकी है। आप आज भुगतान कर सकते हैं, या हम आपके लिए एक आसान भुगतान योजना बना सकते हैं।"
+  }
+ ],
+ "marks": [
+  {
+   "name": "dashboard",
+   "at": 0.51
+  },
+  {
+   "name": "say",
+   "at": 1.31,
+   "key": "d_intro",
+   "seconds": 8.48
+  },
+  {
+   "name": "listen",
+   "at": 10.04,
+   "call": "hi_d02",
+   "seconds": 14.579
+  },
+  {
+   "name": "say",
+   "at": 24.68,
+   "key": "d_run",
+   "seconds": 6.64
+  },
+  {
+   "name": "run",
+   "at": 24.68,
+   "call": "hi_d02"
+  },
+  {
+   "name": "result",
+   "at": 76.47,
+   "call": "hi_d02",
+   "mode": "live",
+   "job_wall_s": 51.07,
+   "audit_wall_s": 51.1
+  },
+  {
+   "name": "say",
+   "at": 78.18,
+   "key": "d_result",
+   "seconds": 6.4
+  },
+  {
+   "name": "evidence",
+   "at": 84.83,
+   "call": "hi_d02",
+   "start": 8.524,
+   "seconds": 6.724000000000002
+  },
+  {
+   "name": "say",
+   "at": 92.25,
+   "key": "d_coach",
+   "seconds": 5.28
+  },
+  {
+   "name": "coach",
+   "at": 97.78,
+   "file": "coach_hi_d02_THREAT.wav",
+   "text": "मैं समझता हूँ कि अभी मुश्किल है। आपकी EMI बाकी है। आप आज भुगतान कर सकते हैं, या हम आपके लिए एक आसान भुगतान योजना बना सकते हैं।",
+   "category": "THREAT"
+  },
+  {
+   "name": "coach_end",
+   "at": 108.39
+  },
+  {
+   "name": "say",
+   "at": 110.71,
+   "key": "d_telugu",
+   "seconds": 4.56
+  },
+  {
+   "name": "listen",
+   "at": 115.53,
+   "call": "te_d02",
+   "seconds": 14.682
+  },
+  {
+   "name": "run",
+   "at": 130.22,
+   "call": "te_d02"
+  },
+  {
+   "name": "result",
+   "at": 160.38,
+   "call": "te_d02",
+   "mode": "live",
+   "job_wall_s": 29.41,
+   "audit_wall_s": 29.43
+  },
+  {
+   "name": "say",
+   "at": 162.03,
+   "key": "d_telugu_res",
+   "seconds": 7.92
+  },
+  {
+   "name": "say",
+   "at": 171.46,
+   "key": "d_team",
+   "seconds": 6.4
+  },
+  {
+   "name": "coaching card",
+   "at": 176.66
+  },
+  {
+   "name": "end",
+   "at": 180.11
+  }
+ ],
+ "audio_events": [
+  {
+   "type": "play",
+   "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
+   "from": 0,
+   "at": 10.033
+  },
+  {
+   "type": "pause",
+   "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
+   "at": 24.657299999999815
+  },
+  {
+   "type": "play",
+   "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
+   "from": 8.524,
+   "at": 85.49879999999982
+  },
+  {
+   "type": "pause",
+   "src": "http://127.0.0.1:8100/api/calls/hi_d02/audio",
+   "at": 92.23470000000019
+  },
+  {
+   "type": "play",
+   "src": "blob:http://127.0.0.1:8100/d2a984bd-56be-434e-be12-eb38de917bdc",
+   "from": 0,
+   "at": 98.431
+  },
+  {
+   "type": "pause",
+   "src": "blob:http://127.0.0.1:8100/d2a984bd-56be-434e-be12-eb38de917bdc",
+   "at": 108.37270000000018
+  },
+  {
+   "type": "play",
+   "src": "http://127.0.0.1:8100/api/calls/te_d02/audio",
+   "from": 0,
+   "at": 115.513
+  },
+  {
+   "type": "pause",
+   "src": "http://127.0.0.1:8100/api/calls/te_d02/audio",
+   "at": 130.20389999999992
+  }
+ ]
+}

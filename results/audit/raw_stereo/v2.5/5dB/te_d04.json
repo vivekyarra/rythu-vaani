@@ -1,0 +1,82 @@
+{
+ "name": "te_d04",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 2.784,
+   "text": "హలో శ్రీనివాస్ గారా",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 2.22,
+   "end": 4.864,
+   "text": "అవును ఎవరు",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 4.396,
+   "end": 8.8,
+   "text": "మీ లోన్ పేమెంట్ పెండింగ్ ఉంది ఎప్పుడు కడతారు",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 8.876,
+   "end": 12.032,
+   "text": "మీరు ఎవరు ఏ కంపెనీ",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 11.788,
+   "end": 15.936,
+   "text": "కలెక్షన్ టీమ్ నుండి ఈ శుక్రవారం లోపు కట్టండి",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 15.244,
+   "end": 17.792,
+   "text": "సరే కడతాను",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 17.196,
+   "end": 21.401,
+   "text": "సరే ఏదైనా సమస్య ఉంటే మా హెల్ప్ లైన్ కి కాల్ చేయండి",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 21.4,
+ "job_id": "01a1c150-2fde-7ec4-a95e-7c35817e609c",
+ "mock": false,
+ "job_wall_s": 44.0,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

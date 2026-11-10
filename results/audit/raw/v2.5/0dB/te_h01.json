@@ -1,0 +1,90 @@
+{
+ "name": "te_h01",
+ "segments": [
+  {
+   "start": 0.236,
+   "end": 21.44,
+   "text": "నమస్కారం రమేష్ గారితో మాట్లాడవచ్చా నేను ఆయన తమ్ముడిని అన్నయ్య స్నానం చేస్తున్నాడు ఏం పని పర్వాలేదండి ఇది ఆయనతోనే మాట్లాడాల్సిన వ్యక్తిగత విషయం ఆయన ఖాళీ అయ్యాక ఫోన్ ఇవ్వగలరా ఇగో అన్నయ్య వచ్చాడు ఫోన్ ఇస్తున్నాను హలో రమేష్ మాట్లాడుతున్న",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 21.44,
+   "end": 26.304,
+   "text": "నమస్కారం రమేష్ గారు నేను సురేష్ నవధన్ ఫైనాన్స్ నుంచి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 26.304,
+   "end": 29.856,
+   "text": "మీ పంపుసెట్ లోన్ ఈ నెల వాయిదా గురించి కాల్ చేశాను",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 29.856,
+   "end": 34.432,
+   "text": "అవునండి ఈ వారం కొంచెం ఆలస్యం అయింది శుక్రవారం",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 34.432,
+   "end": 35.84,
+   "text": "సరేనండి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 35.84,
+   "end": 42.144,
+   "text": "శుక్రవారం లోపు కట్టకపోతే ఒప్పందం ప్రకారం ఆలస్య రుసుము పడుతుందని మాత్రమే గుర్తుచేస్తున్నారు",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 42.144,
+   "end": 44.352,
+   "text": "సరే తెలుసండి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 44.352,
+   "end": 53.216,
+   "text": "ఏదైనా ఫిర్యాదు ఉంటే ఈ లోన్ ఒప్పందంలో ఉన్న హెల్ప్ లైన్ నంబర్ కు గానీ దగ్గర్లోని బ్రాంచ్ కు గాని సంప్రదించవచ్చు ధన్యవాదాలు",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 53.24,
+ "job_id": "01a1c148-5c11-7f05-affb-ceafb0e539be",
+ "mock": false,
+ "job_wall_s": 15.93,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

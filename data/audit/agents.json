@@ -1,0 +1,13 @@
+{
+  "_note": "SYNTHETIC roster. Fictional agents of the fictional lender 'Navdhan Finance'. Voices are Gnani Timbre v3.0 voices used to synthesise the demo calls.",
+  "lender": {"name": "Navdhan Finance", "aliases": ["navdhan", "nav dhan", "नवधन", "नव धन", "नवधान", "नौधन", "నవధన్", "నవధన", "నవ్ధన్", "నవ ధన్"]},
+  "agents": {
+    "AG-101": {"name": "Amit",   "gender": "m", "aliases": ["amit", "अमित", "అమిత్"],   "voice": "Prakash", "team": "Hindi"},
+    "AG-102": {"name": "Rohit",  "gender": "m", "aliases": ["rohit", "रोहित", "రోహిత్"], "voice": "Avinash", "team": "Hindi"},
+    "AG-103": {"name": "Kiran",  "gender": "m", "aliases": ["kiran", "किरण", "కిరణ్"],   "voice": "Harshad", "team": "Telugu"},
+    "AG-104": {"name": "Suresh", "gender": "m", "aliases": ["suresh", "सुरेश", "సురేష్", "సురేశ్"], "voice": "Devansh", "team": "Telugu"},
+    "AG-105": {"name": "Neha",   "gender": "f", "aliases": ["neha", "नेहा", "నేహా"],     "voice": "Riyaa",   "team": "Hindi"}
+  },
+  "borrower_voices": {"f": ["Kalpana", "Chetana", "Tarika"], "m": ["Yashraj", "Shubham"]},
+  "coach_voice": {"m": "Prakash", "f": "Tarika"}
+}

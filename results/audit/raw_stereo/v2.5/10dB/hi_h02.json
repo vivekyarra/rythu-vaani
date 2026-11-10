@@ -1,0 +1,98 @@
+{
+ "name": "hi_h02",
+ "segments": [
+  {
+   "start": 0.044,
+   "end": 9.408,
+   "text": "नमस्कार मैं रोहित नवधन फनैन्स से राजेश जी आपके बाइक लोन की 2 किस्से बकाया है उसी के लिए फ़ोन किया है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 9.132,
+   "end": 13.888,
+   "text": "भाई साहब इतनी रात को फोन मैं अभी खाना खा रहा हूँ",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 13.356,
+   "end": 19.936,
+   "text": "रात हो या दिन पैसा तो देना पड़ेगा 3 महीने से बस बहाने चल रहे हैं",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 19.468,
+   "end": 23.232,
+   "text": "नौकरी छूट गई है, मुझे थोड़ा समय चाहिए।",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 22.668,
+   "end": 28.48,
+   "text": "तुम जैसे बेशर्म लोग ही उधार लेकर भाग जाते हैं झूठ बोलना बंद करो",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 28.3,
+   "end": 30.624,
+   "text": "आप ऐसे बात मत कीजिए",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 30.06,
+   "end": 37.12,
+   "text": "वर्षों तक पैसा नहीं आया तो थाने में तुम्हारे नाम की रिपोर्ट लिखवा दूंगा फिर हवालात में बैठकर सोचना",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 36.716,
+   "end": 39.808,
+   "text": "ठीक है, मैं कोशीश करता हूँ",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 39.468,
+   "end": 44.847,
+   "text": "कोशीश नहीं परसों तक पूरे ₹9,000 चाहिए फ़ोन रखो",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 44.85,
+ "job_id": "01a1c14f-45fc-7bd9-b6b2-a5218e900f6e",
+ "mock": false,
+ "job_wall_s": 43.0,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

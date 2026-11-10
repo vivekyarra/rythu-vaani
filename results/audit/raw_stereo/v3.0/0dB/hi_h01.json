@@ -1,0 +1,114 @@
+{
+ "name": "hi_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.816,
+   "text": "नमस्ते, क्या मैं सुनील जी से बात कर रहा हूँ? मैं अमित बोल रहा हूँ, नवधन Finance से।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 6.412,
+   "end": 11.616,
+   "text": "हाँ, मैं सुनील ही बोल रहा हूँ। बताइए, क्या बात है?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 10.828,
+   "end": 19.776,
+   "text": "सुनील, आपके tractor loan की किश्त होने की किश्त 6,200 रुपये अभी बकाया है, उसी बारे में फोन किया था।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 20.364,
+   "end": 26.528,
+   "text": "कैसे आप लोग phone करते हो? फसल अभी बिकी नहीं है, मैं पैसे कहाँ से लाऊँ?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 26.028,
+   "end": 34.08,
+   "text": "मैं आपकी परेशानी समझता हूँ। बस जानकारी के लिए बता रहा हूँ। Loan agreement के अनुसार देरी पर late payment charge होता है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 34.892,
+   "end": 36.608,
+   "text": "ठीक है, हाँ।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 36.364,
+   "end": 45.376,
+   "text": "agreement में लिखी दर से लगातार देरी होने पर खाता credit bureau को report देता है, जिससे आगे loan मिलने में दिक्कत होती है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 46.444,
+   "end": 51.136,
+   "text": "अगले सोमवार तक मंडी से पैसा आ जाएगा, तब जमा कर दूँगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 50.636,
+   "end": 52.224,
+   "text": "धन्यवाद भैया।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 52.224,
+   "end": 59.648,
+   "text": "कोई शिकायत हो तो loan agreement में अपने helpline number पर या नजदीकी शाखा के शिकायत अधिकारी से बात कर सकते हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 59.82,
+   "end": 61.696,
+   "text": "नमस्ते।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 62.13,
+ "job_id": "01a1c154-80e5-7079-bbfd-cf6c1010642c",
+ "mock": false,
+ "job_wall_s": 56.2,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

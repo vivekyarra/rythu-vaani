@@ -1,0 +1,98 @@
+{
+ "name": "te_h01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 3.712,
+   "text": "నమస్కారం రమేష్ గారితో మాట్లాడవచ్చా",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 2.924,
+   "end": 8.288,
+   "text": "నేను ఆయన తమ్ముడిని అన్నయ్య స్నానం చేస్తున్నాడు ఏం పని",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 7.756,
+   "end": 15.776,
+   "text": "పర్వాలేదండి ఇది ఆయనతోనే మాట్లాడాల్సిన వ్యక్తిగత విషయం ఆయన ఖాళీ అయ్యాక ఫోన్ ఇవ్వగలరా",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 15.148,
+   "end": 21.728,
+   "text": "ఇదిగో అన్నయ్య వచ్చాడు ఫోన్ ఇస్తున్నాను హలో రమేష్ మాట్లాడుతున్నాను",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 21.26,
+   "end": 29.888,
+   "text": "నమస్కారం రమేష్ గారు నేను సురేష్ నవధన్ ఫైనాన్స్ నుంచి మీ పంపుసెట్ లోన్ ఈ నెల వాయిదా గురించి కాల్ చేశాను",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 29.42,
+   "end": 34.56,
+   "text": "అవునండి ఈ వారం కొంచెం ఆలస్యమైంది శుక్రవారం కడతాను",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 33.996,
+   "end": 42.496,
+   "text": "సరేనండి శుక్రవారం లోపు కట్టకపోతే ఒప్పందం ప్రకారం ఆలస్య రుసుము పడుతుందని మాత్రమే గుర్తుచేస్తున్నాను",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 41.9,
+   "end": 44.352,
+   "text": "సరే తెలుసండి",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 43.884,
+   "end": 53.241,
+   "text": "ఏదైనా ఫిర్యాదు ఉంటే మీ లోన్ ఒప్పందంలో ఉన్న హెల్ప్ లైన్ నంబర్ కు గానీ దగ్గర్లోని బ్రాంచ్ కు గాని సంప్రదించవచ్చు ధన్యవాదాలు",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 53.24,
+ "job_id": "01a1c14e-746b-73ed-8525-d4c1e98742e6",
+ "mock": false,
+ "job_wall_s": 61.99,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "name": "hien_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.17,
+   "text": "हेलो पूजा जी, मैं नेहा बोल रही हूँ Navdhanya Finance से, आपके personal loan की EMI के regarding call किया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 7.17,
+   "end": 13.856,
+   "text": "Again मैंने बोला था salary late आएगी, आप लोग daily call करके irritate कर रहे हो।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 13.856,
+   "end": 19.83,
+   "text": "Sorry for the inconvenience पूजा जी, मैं बस reminder दे रही हूँ, due date 5 दिन पहले निकल गई है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 19.83,
+   "end": 24.064,
+   "text": "तो मैं क्या करूं? कंपनी ने ही salary hold की है।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 24.064,
+   "end": 30.26,
+   "text": "समझ सकती हूँ, बस inform कर दूँ, agreement के हिसाब से late payment charges apply होंगे।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 30.26,
+   "end": 32.74,
+   "text": "और अगर next week भी नहीं हुआ तो?",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 32.74,
+   "end": 40.576,
+   "text": "So as per loan agreement, account credit bureau को overdue report हो सकता है, जिससे आपका credit score affect होगा।",
+   "speaker_id": 1,
+   "language": "en-IN",
+   "role": null
+  },
+  {
+   "start": 40.576,
+   "end": 43.776,
+   "text": "ठीक है next Tuesday तक pay कर दूँगा।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 43.776,
+   "end": 51.39,
+   "text": "Thank you पूजा जी, कोई complaint हो तो हमारे grievance officer को email कर सकती हैं, details आपके loan agreement में हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 51.39,
+   "end": 53.152,
+   "text": "Okay bye.",
+   "speaker_id": 2,
+   "language": "en-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 53.15,
+ "job_id": "01a1c157-d8de-77a0-82ad-3a3000414b2d",
+ "mock": false,
+ "job_wall_s": 26.97,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

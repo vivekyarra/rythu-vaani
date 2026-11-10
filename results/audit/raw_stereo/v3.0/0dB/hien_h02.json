@@ -1,0 +1,98 @@
+{
+ "name": "hien_h02",
+ "segments": [
+  {
+   "start": 0.076,
+   "end": 3.904,
+   "text": "Hello विकास, payment कब कर रहे हो?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 3.404,
+   "end": 6.88,
+   "text": "कौन बोल रहा है? इतनी रात को call",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 6.156,
+   "end": 12.704,
+   "text": "रिकवरी डिपार्टमेंट से तुम्हारा 11,000 का लोन पेंडिंग है समझ नहीं आता क्या",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 12.076,
+   "end": 16.48,
+   "text": "भाई, मैं already बोल चुका हूँ, next month pay करूँगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 16.204,
+   "end": 22.368,
+   "text": "Next month, next month तुम पूरे fraud आदमी हो। दिमाग है भी या नहीं?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 22.092,
+   "end": 24.288,
+   "text": "Language ठीक रखो",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 23.98,
+   "end": 31.52,
+   "text": "छोड़ो, कल तक पैसा नहीं आया तो हमारे boys तुम्हारे घर आएंगे, फिर देखना क्या होता है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 30.892,
+   "end": 33.216,
+   "text": "आप धमकी दे रहे हो?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 33.004,
+   "end": 37.607,
+   "text": "जो समझना है समझो, कल शाम तक transfer करो।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 37.61,
+ "job_id": "01a1c154-7d68-7791-8af8-f71d2e963293",
+ "mock": false,
+ "job_wall_s": 54.85,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

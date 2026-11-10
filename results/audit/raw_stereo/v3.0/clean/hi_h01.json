@@ -1,0 +1,106 @@
+{
+ "name": "hi_h01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.944,
+   "text": "नमस्ते, क्या मैं सुनील जी से बात कर रहा हूँ? मैं अमित बोल रहा हूँ Navdhanya Finance से।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 6.38,
+   "end": 11.584,
+   "text": "हाँ, मैं सुनील ही बोल रहा हूँ, बताइए क्या बात है?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 10.828,
+   "end": 19.776,
+   "text": "सुनील जी, आपके tractor loan की इस महीने की किस्त 6,200 रुपये अभी बकाया है, उसी बारे में phone किया।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 19.948,
+   "end": 26.496,
+   "text": "हर हफ्ते आप लोग फोन करते हो, फसल अभी बिकी नहीं है, मैं पैसे कहाँ से लाऊँ?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 25.996,
+   "end": 34.4,
+   "text": "मैं आपकी परेशानी समझता हूँ, बस जानकारी के लिए बता दूँ, loan agreement के अनुसार देरी पर late payment charge लगेगा।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 34.188,
+   "end": 36.576,
+   "text": "कितना charge लगेगा?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 36.364,
+   "end": 45.6,
+   "text": "agreement में लिखी दर से लगातार देरी होने पर खाता credit bureau को report हो सकता है। जिससे आगे loan मिलने में दिक्कत होगी।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 45.388,
+   "end": 51.136,
+   "text": "ठीक है अगले सोमवार तक मंडी से पैसा आ जाएगा तब जमा कर दूंगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 50.412,
+   "end": 59.744,
+   "text": "धन्यवाद, सुनील जी। कोई शिकायत हो तो loan agreement में छपे helpline number पर या नजदीकी शाखा के शिकायत अधिकारी से बात कर सकते हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 59.244,
+   "end": 61.696,
+   "text": "ठीक है, नमस्ते।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 62.13,
+ "job_id": "01a1c152-1c37-7fce-9af5-a98bba76ecd6",
+ "mock": false,
+ "job_wall_s": 38.99,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

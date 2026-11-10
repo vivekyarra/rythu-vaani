@@ -1,0 +1,82 @@
+{
+ "name": "te_d02",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.688,
+   "text": "హలో నేను నవధన్ ఫైనాన్స్ నుండి సురేష్ మీ ట్రాక్టర్ లోన్ బకాయి గురించి ఫోన్ చేశాను.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 6.22,
+   "end": 10.56,
+   "text": "చెప్పండి, ఈ నెల పంట డబ్బులు ఇంకా రాలేదు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 10.22,
+   "end": 15.072,
+   "text": "ప్రతిసారి ఇదే సాకు చెబుతారు. మీరు పెద్ద అబద్ధాలకోరు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 14.444,
+   "end": 16.832,
+   "text": "అలా మాట్లాడకండి",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 16.428,
+   "end": 22.976,
+   "text": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 22.38,
+   "end": 25.056,
+   "text": "వచ్చే వారం కడతాను",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 24.62,
+   "end": 27.445,
+   "text": "లేదు రేపే కట్టాలి",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 27.45,
+ "job_id": "01a1c153-8a5c-7c73-a902-c7dfd1e1c02d",
+ "mock": false,
+ "job_wall_s": 23.04,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

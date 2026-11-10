@@ -1,3 +1,37 @@
+# Rythu Vaani + Vaani Audit: Indian-language voice AI on Gnani Prisma and Timbre
+
+## ⭐ Main entry: Vaani Audit, a collection-call compliance auditor
+
+Banks and NBFCs must follow RBI fair-practices rules on loan-recovery calls, but compliance teams can
+manually audit only about 1–2% of them. **Vaani Audit** checks every call, in Hindi, Telugu and code-mixed
+speech:
+* **Gnani Prisma v3.0 Batch** transcribes each leg of the call with timestamps, domain `keywords` and a `topic`;
+* RBI-checklist rules flag threats, abuse, shaming, third-party disclosure, late-hour calls and missing
+  identity or grievance info, each with **the exact quote and the second it happened**;
+* **Gnani Timbre v3.0** speaks the compliant rephrasing, in the same language, for agent coaching.
+
+| | |
+|---|---|
+| 1-page pitch | [`AUDIT_PITCH.md`](AUDIT_PITCH.md) |
+| Code, how to run, full results | [`vaani_audit/README.md`](vaani_audit/README.md) |
+| Demo video (2:56, 1080p) and 9:16 cut | [`video/out/`](video/out/) |
+| Benchmark output and raw Prisma transcripts | [`results/audit/`](results/audit/) |
+| Form answers and post drafts | [`SUBMISSION_AUDIT.md`](SUBMISSION_AUDIT.md) |
+
+**Measured on the live Gnani API (12 held-out synthetic calls, dual-channel, micro F1 over 6 categories):**
+0.94 with Prisma v3.0 + keywords on a clean phone line, 0.94 at 10 dB and 5 dB, and 0.92 at 0 dB. Prisma
+v2.5 scores 0.94 / 0.94 / 0.92 / 0.92, with a higher character error rate. The rules alone, on perfect
+text, reach 0.96. The main weakness is new phrasings of public shaming (recall 0.50).
+
+```bash
+pip install -r requirements.txt && export GNANI_API_KEY=...   # no key = clearly labelled MOCK mode
+python -m vaani_audit serve                                   # http://127.0.0.1:8100
+```
+
+Everything below this line is the original entry, **Rythu Vaani**. It is unchanged and still works.
+
+---
+
 # Rythu Vaani (రైతు వాణి): a Telugu voice helpline for farmers
 
 A farmer in a village near Guntur calls from a basic phone over a noisy line and asks, in Telugu

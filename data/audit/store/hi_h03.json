@@ -1,0 +1,202 @@
+{
+ "call_id": "hi_h03",
+ "agent_id": "AG-101",
+ "agent_name": "Amit",
+ "language": "hi-IN",
+ "call_time": "2026-10-16T13:30:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "hi-IN",
+  "job_id": "01a1c14d-2e21-7be0-8fae-912af2d9fde4",
+  "job_wall_s": 46.43,
+  "duration_s": 44.71,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.464,
+   "text": "नमस्ते, क्या महेश जी घर पर हैं? मैं अमित बोल रहा हूँ Navdhan Finance से।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.836,
+   "end": 11.04,
+   "text": "मैं उनकी पत्नी बोल रही हूँ, वो खेप पर गए हैं, क्या काम है?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 10.572,
+   "end": 20.064,
+   "text": "देखिए भाभी जी, आपके पति ने भैंस के लिए जो लोन लिया था, उसकी दो किश्तें कुल 8400 रुपये हैं। बकाया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 19.436,
+   "end": 22.656,
+   "text": "मुझे तो इस बारे में कुछ पता ही नहीं था।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 22.188,
+   "end": 27.232,
+   "text": "अब तो पता चल गया है, उनसे कहिये गुरुवार तक जमा कर दें।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 26.412,
+   "end": 30.72,
+   "text": "मैं बता दूँगी, पर वह आजकल बहुत परेशान है।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 30.028,
+   "end": 37.888,
+   "text": "परेशान तो हम भी हैं। गुरुवार तक नहीं हुआ तो सरपंच और पड़ोसियों को बता देंगे कि महेश जी पैसा नहीं लौटा रहे।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 37.42,
+   "end": 41.568,
+   "text": "ऐसा मत कीजिए, पूरे गाँव में बदनामी होगी।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 40.94,
+   "end": 44.711,
+   "text": "तो फिर पैसों का इंतजाम करवाइए। नमस्ते।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "THIRD_PARTY",
+   "start": 10.572,
+   "end": 20.064,
+   "quote": "देखिए भाभी जी, आपके पति ने भैंस के लिए जो लोन लिया था, उसकी दो किश्तें कुल 8400 रुपये हैं। बकाया है।",
+   "matched": "लोन",
+   "note": "someone other than the borrower is on the line",
+   "source": "rule",
+   "title": "No disclosure to third parties",
+   "severity": "critical",
+   "tip": "If someone else answers, leave only your name and lender and ask for a call-back.",
+   "rephrase": "कोई बात नहीं। कृपया उन्हें बताइए कि Navdhan Finance से Amit का फोन आया था, और वे इस नंबर पर वापस कॉल कर लें। धन्यवाद।"
+  },
+  {
+   "category": "SHAMING",
+   "start": 30.028,
+   "end": 37.888,
+   "quote": "परेशान तो हम भी हैं। गुरुवार तक नहीं हुआ तो सरपंच और पड़ोसियों को बता देंगे कि महेश जी पैसा नहीं लौटा रहे।",
+   "matched": "पडोस … बता",
+   "note": "",
+   "source": "rule",
+   "title": "No public shaming",
+   "severity": "critical",
+   "tip": "Never mention neighbours, family, employer or groups; promise confidentiality.",
+   "rephrase": "आपके लोन की जानकारी पूरी तरह गोपनीय है, यह सिर्फ़ आपके और हमारे बीच रहेगी। क्या हम भुगतान की एक तारीख तय कर सकते हैं?"
+  },
+  {
+   "category": "NO_GRIEVANCE",
+   "start": 40.94,
+   "end": 44.711,
+   "quote": "तो फिर पैसों का इंतजाम करवाइए। नमस्ते।",
+   "matched": "",
+   "note": "no grievance/complaint channel offered by the agent",
+   "source": "rule",
+   "title": "Grievance channel offered",
+   "severity": "major",
+   "tip": "Before ending, tell the borrower how to raise a complaint.",
+   "rephrase": "अगर आपको कोई शिकायत हो, तो आप हमारे शिकायत अधिकारी से संपर्क कर सकते हैं। हेल्पलाइन नंबर आपके लोन एग्रीमेंट में दिया है।"
+  }
+ ],
+ "scorecard": {
+  "score": 40,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": false,
+    "findings": 1
+   }
+  ],
+  "critical": 2
+ },
+ "split": "heldout"
+}

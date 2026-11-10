@@ -1,0 +1,106 @@
+{
+ "name": "hien_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.47,
+   "text": "हैलो पूजा जी मैं नेहा बोल रही हूँ नवधान फनैन्स से आपके पर्सनल लोन की इ एम आई के रिगार्डिंग कॉल किया है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 7.47,
+   "end": 13.888,
+   "text": "अगेन मैंने बोला था सैलरी लेट आएगी आप लोग डेली कॉल करके इरिटेट कर रहे हो",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 13.888,
+   "end": 20.1,
+   "text": "सॉरी फॉर दी इनकन्वीनियेन्स पूजा जी मैं बस रिमाइंडर दे रही हूँ ड्यू डेट 5 दिन पहले निकल गई है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 20.1,
+   "end": 24.064,
+   "text": "तो मैं क्या करूं कंपनी ने ही सैलरी होल्ड की",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 24.064,
+   "end": 29.91,
+   "text": "टोटली समझ सकती हूँ बस इन्फॉर्म कर दूँ अग्रीमेंट के हिसाब से लेट पेमेंट चार्जेज अप्लाई होंगे",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 29.91,
+   "end": 32.49,
+   "text": "और अगर नेक्स्ट वीक भी नहीं हुआ तो",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 32.49,
+   "end": 40.544,
+   "text": "सो एस पर लोन अग्रीमेंट अकाउन्ट क्रेडिट ब्यूरो को ओवरड्यू रिपोर्ट दे सकता है जिससे आपका क्रेडिट स्कोर इफेक्ट होगा",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 40.544,
+   "end": 43.808,
+   "text": "ठीक है नेक्स्ट ट्यूसडे तक पे कर दू",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 43.808,
+   "end": 51.01,
+   "text": "थैंक यू पूजा जी कोई कंप्लेंट हो तो हमारे ग्रीवेंस ऑफिसर को ईमेल कर सकती हैं डीटेल्स आपके लोन अग्रीमेंट में है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 51.01,
+   "end": 53.152,
+   "text": "ओके बाई",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 53.15,
+ "job_id": "01a1c148-9b9a-7106-988f-e3ccb005bc72",
+ "mock": false,
+ "job_wall_s": 10.91,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

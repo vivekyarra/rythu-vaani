@@ -1,0 +1,106 @@
+{
+ "name": "hi_d01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.272,
+   "text": "नमस्ते, मैं Navdhanya Finance से अमित बोल रहा हूँ, क्या मेरी बात राकेश जी से हो रही है?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.772,
+   "end": 8.704,
+   "text": "हाँ, मैं राकेश बोल रहा हूँ।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 8.108,
+   "end": 13.216,
+   "text": "राकेश जी, मैं आपके personal loan की EMI के बारे में call कर रहा हूँ।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 13.216,
+   "end": 16.192,
+   "text": "5,000 रुपये की किस्त 10 दिन से बाकी है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 16.46,
+   "end": 21.312,
+   "text": "इस महीने तनख्वाह देर से आई, मैं अगले सोमवार तक भर दूँगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 20.78,
+   "end": 29.632,
+   "text": "ठीक है, कोई बात नहीं। मैं सोमवार की तारीख नोट कर लेता हूँ। देरी होने पर loan agreement के हिसाब से late fees लगेगी।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 29.42,
+   "end": 32.128,
+   "text": "ठीक है समझ गया।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 31.468,
+   "end": 40.352,
+   "text": "अगर आपको कोई शिकायत हो, तो आप हमारे शिकायत अधिकारी से helpline पर बात कर सकते हैं। नंबर आपके loan agreement में दिया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 40.076,
+   "end": 42.464,
+   "text": "ठीक है, धन्यवाद।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 41.804,
+   "end": 45.248,
+   "text": "धन्यवाद राकेश जी, आपका दिन शुभ हो।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 45.31,
+ "job_id": "01a1c153-a980-77b9-8cdd-a1dde8ff24d7",
+ "mock": false,
+ "job_wall_s": 52.23,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

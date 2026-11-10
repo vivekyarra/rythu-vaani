@@ -1,0 +1,228 @@
+{
+ "call_id": "hien_h02",
+ "agent_id": "AG-102",
+ "agent_name": "Rohit",
+ "language": "hi-en",
+ "call_time": "2026-10-18T21:05:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "hi-IN",
+  "job_id": "01a1c14d-4e9f-7a73-9969-a71e9d7e6c6a",
+  "job_wall_s": 47.09,
+  "duration_s": 37.61,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.044,
+   "end": 3.904,
+   "text": "Hello, विकास payment कब कर रहे हो?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 3.372,
+   "end": 6.848,
+   "text": "कौन बोल रहा है इतनी रात को call?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 6.156,
+   "end": 12.64,
+   "text": "रिकवरी डिपार्टमेंट से तुम्हारा 11,000 का लोन पेंडिंग है, समझ नहीं आता क्या?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 11.98,
+   "end": 16.576,
+   "text": "भाई, मैं already बोल चुका हूँ, next month pay करूँगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 16.172,
+   "end": 22.336,
+   "text": "Next month, next month... तुम पूरे फ्रॉड आदमी हो, दिमाग है भी या नहीं?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 22.06,
+   "end": 24.32,
+   "text": "language ठीक रखो।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 23.852,
+   "end": 31.52,
+   "text": "language छोड़ो, कल तक पैसा नहीं आया तो हमारे boys तुम्हारे घर आएंगे, फिर देखना क्या होता है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 30.86,
+   "end": 33.312,
+   "text": "आप धमकी दे रहे हो?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 32.908,
+   "end": 37.607,
+   "text": "जो समझना है समझो, कल शाम तक transfer करो।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "CALL_HOURS",
+   "start": 0.0,
+   "end": 0.0,
+   "quote": "call metadata: started 21:05 IST",
+   "matched": "21:05",
+   "note": "allowed window 08:00-19:00",
+   "source": "rule",
+   "title": "Call within 8 AM - 7 PM",
+   "severity": "major",
+   "tip": "Dial only between 8 AM and 7 PM.",
+   "rephrase": "Customers को सिर्फ़ morning आठ बजे से evening सात बजे के बीच ही call करें।"
+  },
+  {
+   "category": "NO_DISCLOSURE",
+   "start": 0.044,
+   "end": 3.904,
+   "quote": "Hello, विकास payment कब कर रहे हो?",
+   "matched": "",
+   "note": "missing in opening: agent name, lender",
+   "source": "rule",
+   "title": "Identity, lender and purpose stated",
+   "severity": "major",
+   "tip": "Open every call with your name, the lender and the purpose.",
+   "rephrase": "Hello, मैं Navdhan Finance से Rohit बोल रहा हूँ। मैं आपके loan के EMI के बारे में call कर रहा हूँ।"
+  },
+  {
+   "category": "ABUSE",
+   "start": 16.172,
+   "end": 22.336,
+   "quote": "Next month, next month... तुम पूरे फ्रॉड आदमी हो, दिमाग है भी या नहीं?",
+   "matched": "फ्रॉड",
+   "note": "",
+   "source": "rule",
+   "title": "Respectful language",
+   "severity": "critical",
+   "tip": "Stay respectful; acknowledge the situation and ask for a date.",
+   "rephrase": "मैं आपकी situation समझता हूँ। चलिए मिलकर कोई solution निकालते हैं। आप किस date तक payment कर पाएंगे?"
+  },
+  {
+   "category": "THREAT",
+   "start": 23.852,
+   "end": 31.52,
+   "quote": "language छोड़ो, कल तक पैसा नहीं आया तो हमारे boys तुम्हारे घर आएंगे, फिर देखना क्या होता है।",
+   "matched": "तुम्हारे घर आ",
+   "note": "",
+   "source": "rule",
+   "title": "No threats or intimidation",
+   "severity": "critical",
+   "tip": "Replace threats with options: today's payment, or a payment plan.",
+   "rephrase": "मैं समझता हूँ कि अभी मुश्किल है। आपका EMI overdue है। आप आज payment कर सकते हैं, या हम आपके लिए एक easy payment plan बना सकते हैं।"
+  },
+  {
+   "category": "NO_GRIEVANCE",
+   "start": 32.908,
+   "end": 37.607,
+   "quote": "जो समझना है समझो, कल शाम तक transfer करो।",
+   "matched": "",
+   "note": "no grievance/complaint channel offered by the agent",
+   "source": "rule",
+   "title": "Grievance channel offered",
+   "severity": "major",
+   "tip": "Before ending, tell the borrower how to raise a complaint.",
+   "rephrase": "अगर आपकी कोई complaint हो, तो आप हमारे grievance officer से contact कर सकते हैं। Helpline number आपके loan agreement में है।"
+  }
+ ],
+ "scorecard": {
+  "score": 20,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": false,
+    "findings": 1
+   }
+  ],
+  "critical": 2
+ },
+ "split": "heldout"
+}

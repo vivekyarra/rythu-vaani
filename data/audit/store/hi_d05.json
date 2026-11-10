@@ -1,0 +1,154 @@
+{
+ "call_id": "hi_d05",
+ "agent_id": "AG-101",
+ "agent_name": "Amit",
+ "language": "hi-IN",
+ "call_time": "2026-10-16T16:00:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "hi-IN",
+  "job_id": "01a1c14d-2e21-7be0-8fae-912af2d9fde4",
+  "job_wall_s": 46.43,
+  "duration_s": 40.3,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.88,
+   "text": "नमस्कार, मैं Navdhan Finance से अमित बोल रहा हूँ। क्या मैं विजय जी से बात कर रहा हूँ?",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 6.316,
+   "end": 8.736,
+   "text": "हाँ, बोलिए।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 8.172,
+   "end": 15.072,
+   "text": "विजय जी, आपके home loan की इस महीने की EMI बाकी है, उसी के बारे में call किया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 14.412,
+   "end": 18.592,
+   "text": "आप लोग बार बार phone करके परेशान करते हो।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 18.252,
+   "end": 28.896,
+   "text": "मैं समझता हूँ, परेशानी के लिए माफ़ी चाहता हूँ, लगातार देरी होने पर agreement के अनुसार credit bureau को report किया जा सकता है। बस यही बताना था।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 28.332,
+   "end": 31.904,
+   "text": "ठीक है, मैं गुरुवार तक भर दूँगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 31.34,
+   "end": 39.36,
+   "text": "बहुत धन्यवाद, अगर आपको कोई शिकायत हो तो आप हमारी शिकायत हेल्पलाइन या नजदीकी ब्रांच से संपर्क कर सकते हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 38.892,
+   "end": 40.3,
+   "text": "ठीक है।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  }
+ ],
+ "findings": [],
+ "scorecard": {
+  "score": 100,
+  "compliant": true,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": true,
+    "findings": 0
+   }
+  ],
+  "critical": 0
+ },
+ "split": "dev"
+}

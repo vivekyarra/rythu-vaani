@@ -1,0 +1,98 @@
+{
+ "name": "hi_h04",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 7.4,
+   "text": "नमस्ते, मैं अमित बोल रहा हूँ। क्या गीता देवी जी से बात हो रही है? आपकी किस्त के सिलसिले में फोन किया था।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 7.4,
+   "end": 12.15,
+   "text": "हाँ, मैं गीता बोल रही हूँ। आप किस company से हैं?",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 12.15,
+   "end": 18.688,
+   "text": "वो छोड़िए, बस इतना बताइए कि 5,000 रुपये की बकाया किस्त कब तक जमा करेंगे?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 18.688,
+   "end": 22.45,
+   "text": "इस महीने बेटी की school fees भरनी थी, अगले महीने दे दूँगा।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 22.45,
+   "end": 30.88,
+   "text": "समझ सकता हूँ जी, पर मैं नहीं चाहता कि हमारी field team आपके घर आकर सामान जब्त करे, आप भी नहीं चाहेंगे।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 30.88,
+   "end": 33.056,
+   "text": "आप मुझे डरा रहे हैं क्या?",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 33.056,
+   "end": 37.856,
+   "text": "माफ कीजिए अगर ऐसा लगा, आप अगले बुधवार तक जमा कर दीजिए।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 37.856,
+   "end": 39.9,
+   "text": "ठीक है, कोशिश करूंगी।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 39.9,
+   "end": 46.144,
+   "text": "धन्यवाद। कोई शिकायत हो तो आप नजदीकी शाखा में शिकायत अधिकारी से मिल सकते हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 46.2,
+ "job_id": "01a1c157-ca55-72ed-8e55-732e0d218397",
+ "mock": false,
+ "job_wall_s": 25.27,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

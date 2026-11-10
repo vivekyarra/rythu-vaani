@@ -1,0 +1,170 @@
+{
+ "call_id": "hien_h01",
+ "agent_id": "AG-105",
+ "agent_name": "Neha",
+ "language": "hi-en",
+ "call_time": "2026-10-14T17:30:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "hi-IN",
+  "job_id": "01a1c14d-4e9f-7a73-9969-a71e9d7e6c6a",
+  "job_wall_s": 47.09,
+  "duration_s": 53.15,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.968,
+   "text": "हेलो पूजा जी, मैं Neha बोल रही हूँ Navdhan Finance से, आपके पर्सनल लोन की EMI के रिगार्डिंग कॉल किया है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 7.244,
+   "end": 13.856,
+   "text": "again, मैंने बोला था salary late आएगी, आप लोग daily call करके irritate कर रहे हो।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 13.42,
+   "end": 20.48,
+   "text": "सॉरी फॉर द इनकन्विनिएंस पूजा जी, मैं बस रिमाइंडर दे रही हूँ, due date 5 दिन पहले निकल गई है।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 19.916,
+   "end": 24.128,
+   "text": "तो मैं क्या करूँ? कंपनी ने ही salary hold की है।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 23.596,
+   "end": 30.624,
+   "text": "टोटली समझ सकती हूँ, बस इन्फॉर्म कर दूँ, agreement के हिसाब से late payment charges apply होंगे।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 30.06,
+   "end": 32.864,
+   "text": "और अगर next week भी नहीं हुआ तो?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 32.332,
+   "end": 40.544,
+   "text": "तो as per loan agreement, account credit bureau को overdue report हो सकता है, जिससे आपका credit score affect होगा।",
+   "speaker_id": "ch0",
+   "language": "en-IN",
+   "role": "agent"
+  },
+  {
+   "start": 40.268,
+   "end": 43.904,
+   "text": "ठीक है, next Tuesday तक pay कर दूँगी।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 43.404,
+   "end": 51.84,
+   "text": "थैंक यू पूजा जी, कोई complaint हो तो हमारे ग्रीवेंस ऑफिसर को email कर सकती हैं, details आपके loan agreement में हैं।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 51.148,
+   "end": 53.152,
+   "text": "Okay, bye.",
+   "speaker_id": "ch1",
+   "language": "en-IN",
+   "role": "borrower"
+  }
+ ],
+ "findings": [],
+ "scorecard": {
+  "score": 100,
+  "compliant": true,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": true,
+    "findings": 0
+   }
+  ],
+  "critical": 0
+ },
+ "split": "heldout"
+}

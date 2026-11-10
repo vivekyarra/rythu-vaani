@@ -1,0 +1,228 @@
+{
+ "call_id": "te_h02",
+ "agent_id": "AG-103",
+ "agent_name": "Kiran",
+ "language": "te-IN",
+ "call_time": "2026-10-17T07:20:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "te-IN",
+  "job_id": "01a1c14d-2c69-7d23-9af2-b7a0f892e530",
+  "job_wall_s": 25.83,
+  "duration_s": 43.75,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.656,
+   "text": "హలో లక్ష్మి గారా, నవధన్ ఫైనాన్స్ నుంచి మీ పాడి లోన్ వాయిదా గురించి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.868,
+   "end": 11.712,
+   "text": "అవును, ఇంత పొద్దున్నే ఫోన్ ఎందుకు? పిల్లల్ని బడికి పంపిస్తున్నాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 11.244,
+   "end": 17.6,
+   "text": "పొద్దున కాకపోతే మీరు ఫోన్ ఎత్తరు కదా? రెండు నెలలుగా మూడు వేల ఐదు వందలు కట్టలేదు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 17.196,
+   "end": 21.664,
+   "text": "పాలె డబ్బులు ఇంకా రాలేదండి, వచ్చే వారం కడతాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 21.196,
+   "end": 27.328,
+   "text": "ప్రతిసారి ఇదే అబద్ధం. మీలాంటి మోసగాళ్లకి లోన్ ఇవ్వడమే మా తప్పు.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 26.7,
+   "end": 29.344,
+   "text": "మర్యాదగా మాట్లాడండి.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 28.652,
+   "end": 36.256,
+   "text": "మర్యాద కావాలంటే డబ్బులు కట్టండి, లేకపోతే మీ ఊరి వాట్సాప్ గ్రూప్ లో మీ ఫోటో పెట్టి \"బాకీదారు\" అని రాస్తాం.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 35.82,
+   "end": 40.256,
+   "text": "దయచేసి అలా చేయకండి, వచ్చే సోమవారం కడతాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 39.66,
+   "end": 43.751,
+   "text": "సోమవారం అంటే సోమవారమే ఫోన్ పెట్టేస్తున్నా.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "CALL_HOURS",
+   "start": 0.0,
+   "end": 0.0,
+   "quote": "call metadata: started 07:20 IST",
+   "matched": "07:20",
+   "note": "allowed window 08:00-19:00",
+   "source": "rule",
+   "title": "Call within 8 AM - 7 PM",
+   "severity": "major",
+   "tip": "Dial only between 8 AM and 7 PM.",
+   "rephrase": "కస్టమర్లకు ఉదయం ఎనిమిది నుండి సాయంత్రం ఏడు గంటల మధ్యలోనే కాల్ చేయండి."
+  },
+  {
+   "category": "NO_DISCLOSURE",
+   "start": 0.012,
+   "end": 6.656,
+   "quote": "హలో లక్ష్మి గారా, నవధన్ ఫైనాన్స్ నుంచి మీ పాడి లోన్ వాయిదా గురించి.",
+   "matched": "",
+   "note": "missing in opening: agent name",
+   "source": "rule",
+   "title": "Identity, lender and purpose stated",
+   "severity": "major",
+   "tip": "Open every call with your name, the lender and the purpose.",
+   "rephrase": "నమస్కారం, నేను Navdhan Finance నుండి Kiran మాట్లాడుతున్నాను. మీ లోన్ EMI గురించి కాల్ చేస్తున్నాను."
+  },
+  {
+   "category": "ABUSE",
+   "start": 21.196,
+   "end": 27.328,
+   "quote": "ప్రతిసారి ఇదే అబద్ధం. మీలాంటి మోసగాళ్లకి లోన్ ఇవ్వడమే మా తప్పు.",
+   "matched": "మోసగా",
+   "note": "",
+   "source": "rule",
+   "title": "Respectful language",
+   "severity": "critical",
+   "tip": "Stay respectful; acknowledge the situation and ask for a date.",
+   "rephrase": "మీ పరిస్థితి నాకు అర్థమైంది. కలిసి ఒక దారి చూద్దాం. మీరు ఏ తేదీకి కట్టగలరు?"
+  },
+  {
+   "category": "SHAMING",
+   "start": 28.652,
+   "end": 36.256,
+   "quote": "మర్యాద కావాలంటే డబ్బులు కట్టండి, లేకపోతే మీ ఊరి వాట్సాప్ గ్రూప్ లో మీ ఫోటో పెట్టి \"బాకీదారు\" అని రాస్తాం.",
+   "matched": "ఊరి … ఫోటో",
+   "note": "",
+   "source": "rule",
+   "title": "No public shaming",
+   "severity": "critical",
+   "tip": "Never mention neighbours, family, employer or groups; promise confidentiality.",
+   "rephrase": "మీ లోన్ వివరాలు పూర్తిగా గోప్యంగా ఉంటాయి, మీకు మాకు మధ్యలోనే ఉంటాయి. కట్టే తేదీ ఒకటి నిర్ణయిద్దామా?"
+  },
+  {
+   "category": "NO_GRIEVANCE",
+   "start": 39.66,
+   "end": 43.751,
+   "quote": "సోమవారం అంటే సోమవారమే ఫోన్ పెట్టేస్తున్నా.",
+   "matched": "",
+   "note": "no grievance/complaint channel offered by the agent",
+   "source": "rule",
+   "title": "Grievance channel offered",
+   "severity": "major",
+   "tip": "Before ending, tell the borrower how to raise a complaint.",
+   "rephrase": "మీకు ఏదైనా ఫిర్యాదు ఉంటే, మా గ్రీవెన్స్ ఆఫీసర్‌ని సంప్రదించవచ్చు. హెల్ప్‌లైన్ నంబర్ మీ లోన్ అగ్రిమెంట్‌లో ఉంది."
+  }
+ ],
+ "scorecard": {
+  "score": 20,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": false,
+    "findings": 1
+   }
+  ],
+  "critical": 2
+ },
+ "split": "heldout"
+}

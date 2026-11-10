@@ -1,0 +1,106 @@
+{
+ "name": "hi_h03",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.048,
+   "text": "नमस्ते क्या महेश जी घर पर है मैं अमित बोल रहा हूँ",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 6.048,
+   "end": 10.944,
+   "text": "मैं उनकी पत्नी बोल रही हूँ, वो खेत पर गए हैं क्या कहा",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 10.944,
+   "end": 19.936,
+   "text": "देखिए सारू जी आपके पति ने भैंस के लिए जो लोन लिया था उसकी 2 किस्तें कुल ₹8,400 बकाया",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.936,
+   "end": 22.496,
+   "text": "मुझे तो इस बारे में कुछ पता ही नहीं था",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 22.496,
+   "end": 26.69,
+   "text": "अब तो पता चल गया उनसे कहिए गुरुवार तक जल्दी",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 26.69,
+   "end": 30.368,
+   "text": "मैं बता दूंगी पर वो आजकल बहुत परेशान",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 30.368,
+   "end": 37.46,
+   "text": "परेशान तो हम भी हैं गुरुवार तक नहीं हुआ तो सरपंच और पड़ोसियों को बता देंगे कि महेश जी पैसा नहीं लौटा रहे",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 37.46,
+   "end": 39.36,
+   "text": "ऐसा मत करो",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 39.36,
+   "end": 41.344,
+   "text": "पूरे गांव में बदनामी है",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 41.344,
+   "end": 44.711,
+   "text": "जैसे पैसों का इंतजाम कर नमस्ते",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 44.71,
+ "job_id": "01a1c148-1ab7-7393-8dc5-28ea42178c20",
+ "mock": false,
+ "job_wall_s": 17.53,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

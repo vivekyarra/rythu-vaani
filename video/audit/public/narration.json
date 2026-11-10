@@ -1,0 +1,67 @@
+{
+ "n_hook": {
+  "hash": "b6855f79b8e28b42",
+  "text": "Calls like this are rarely caught. Compliance teams can manually audit only one or two percent of collection calls.",
+  "seconds": 6.214
+ },
+ "n_rules": {
+  "hash": "9b1c16251313f60e",
+  "text": "R B I's rules are clear. Identify yourself and the lender. Call only from eight A M to seven P M. No threats, abuse or shaming. Never tell anyone else about the debt. And offer a grievance channel.",
+  "seconds": 12.286
+ },
+ "n_title": {
+  "hash": "8f070a159a5d924e",
+  "text": "Vaani Audit checks every call, in Hindi, Telugu and code-mixed speech, with Gnani's Prisma speech-to-text and Timbre voices.",
+  "seconds": 8.214
+ },
+ "d_intro": {
+  "hash": "2ebe9e77025f9cbe",
+  "text": "This is a real run on the live Gnani A P I. First, a synthetic Hindi call, made at eight fifteen P M.",
+  "seconds": 8.32
+ },
+ "d_run": {
+  "hash": "2b7073207010c9ee",
+  "text": "Gnani Prisma transcribes both sides of the call, agent and borrower, and timestamps every turn.",
+  "seconds": 7.36
+ },
+ "d_result": {
+  "hash": "1073b8dde8dd3e2f",
+  "text": "Each violation comes with the exact quote, and the second it happened. Click it, and you hear the evidence.",
+  "seconds": 6.56
+ },
+ "d_coach": {
+  "hash": "e2a644a113695b73",
+  "text": "For coaching, Timbre speaks the compliant way to say it, in the same language.",
+  "seconds": 5.04
+ },
+ "d_telugu": {
+  "hash": "d376b0d8598e5792",
+  "text": "The same works in Telugu. Listen to this agent and a farmer.",
+  "seconds": 4.32
+ },
+ "d_telugu_res": {
+  "hash": "cb003e1f83644890",
+  "text": "He called the farmer a liar, threatened to seize his tractor, and gave no grievance channel. All flagged, with evidence.",
+  "seconds": 7.52
+ },
+ "d_team": {
+  "hash": "79b7feb940276214",
+  "text": "Managers see compliance by agent, the top violation types, and a coaching card for every agent.",
+  "seconds": 6.72
+ },
+ "n_arch": {
+  "hash": "f8cffcc6653ecc4b",
+  "text": "Under the hood: Prisma v3 Batch transcribes each leg of the call, with domain keywords and a topic. Deterministic R B I rules produce every finding, with a timestamp and a verbatim quote. An optional L L M may only add a finding whose quote is really in the transcript.",
+  "seconds": 17.074
+ },
+ "n_results": {
+  "hash": "93bea49c0512232a",
+  "text": "On 12 held-out calls never used for tuning, F1 is point 94 with Prisma v3 and keywords, and point 92 at zero decibels. The weak spot is the rules: new ways of shaming were caught only half the time.",
+  "seconds": 13.786
+ },
+ "n_close": {
+  "hash": "56633e1b7387e46e",
+  "text": "Every call audited, with evidence. Built solo by Yarra Vivek, on Gnani AI.",
+  "seconds": 4.929
+ }
+}

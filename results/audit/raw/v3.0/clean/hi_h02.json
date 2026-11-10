@@ -1,0 +1,66 @@
+{
+ "name": "hi_h02",
+ "segments": [
+  {
+   "start": 0.044,
+   "end": 9.44,
+   "text": "नमस्कार, मैं रोहित नवधन फाइनेंस से। राजेश जी, आपके bike loan की दो किश्तें बकाया हैं। उसी के लिए फोन किया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 9.44,
+   "end": 28.448,
+   "text": "भाई साहब, इतनी रात को phone? मैं अभी खाना खा रहा हूँ। रात हो या दिन, पैसा तो देना पड़ेगा। तीन महीने से बस बहाने चल रहे हैं, नौकरी छूट गई है, मुझे थोड़ा समय चाहिए तुम जैसे बेशर्म लोग ही उधार लेकर भाग जाते हैं। झूठ बोलना बंद करो।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 28.448,
+   "end": 37.12,
+   "text": "आप ऐसे बात मत कीजिए। परसों तक पैसा नहीं आया तो थाने में तुम्हारे नाम की report लिखवा दूँगा, फिर हवालात में बैठकर सोचना।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 37.12,
+   "end": 39.808,
+   "text": "ठीक है, मैं कोशिश करता हूँ।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 39.808,
+   "end": 44.847,
+   "text": "कोशिश नहीं, परसों तक पूरे 9,000 रुपये चाहिए, फोन रखो।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 44.85,
+ "job_id": "01a1c148-f5f4-7b17-b693-8fd40707b04d",
+ "mock": false,
+ "job_wall_s": 18.62,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "name": "te_h03",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.87,
+   "text": "నమస్కారం నేను సురేష్ నవధన్ ఫైనాన్స్ నుంచి వెంకట్ గారితో మాట్లాడాను",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 5.87,
+   "end": 10.91,
+   "text": "నేను ఆయన సహోద్యోగిని. ఆయన ఫోన్ డెస్క్ మీద వదిలి మీటింగ్ కి వెళ్ళారు.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 10.91,
+   "end": 17.02,
+   "text": "ఆయనకి చెప్పండి ఆయన పర్సనల్ లోన్ వాయిదా పన్నెండు వేల రూపాయలు నలభై రోజులుగా బాకీ ఉంది.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 17.02,
+   "end": 23.584,
+   "text": "ఆగండి, ఆయన ఇప్పుడే వస్తున్నారు. ఫోన్ ఇస్తాను. హలో, వెంకట్ మాట్లాడుతున్నాను.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 23.584,
+   "end": 31.008,
+   "text": "వెంకట్ గారు నేను సురేష్ నవధన్ ఫైనాన్స్ మీ పర్సనల్ లోన్ వాయిదా బాకీ గురించి కాల్ చేశాను.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 31.008,
+   "end": 34.88,
+   "text": "జీతం ఆలస్యమైంది సార్ పది రోజుల్లో కడతాను",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 34.88,
+   "end": 41.71,
+   "text": "ఈ రోజులు కుదరదు. ఈ వారంలో కట్టకపోతే మీ మీద పోలీస్ కేసు పెడతాం, జైలుకి వెళ్లాల్సి వస్తుంది.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 41.71,
+   "end": 44.22,
+   "text": "ఇంత చిన్న బాకీకి అంత పెద్ద మాటలా?",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 44.22,
+   "end": 49.155,
+   "text": "మీ ఇష్టం, శుక్రవారం లోపు కట్టండి అంతే.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 49.16,
+ "job_id": "01a1c157-cc42-7c82-90f9-a8cdf9770540",
+ "mock": false,
+ "job_wall_s": 15.45,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

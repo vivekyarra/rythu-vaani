@@ -1,0 +1,74 @@
+{
+ "name": "he_d01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.58,
+   "text": "Hello, मैं Navdhanya Finance से नेहा बोल रही हूँ, क्या मेरी बात अर्जुन जी से हो रही है?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 6.58,
+   "end": 8.74,
+   "text": "हाँ, बोलिए।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 8.74,
+   "end": 16.0,
+   "text": "अर्जुन जी, आपके क्रेडिट कार्ड लोन का 7,000 rupees का ईएमआई overdue है, इसी के लिए कॉल किया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 16.0,
+   "end": 19.136,
+   "text": "Job सही होगी। थोड़ा time लगेगा।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 19.136,
+   "end": 26.08,
+   "text": "मैं समझ सकती हूँ, लेकिन अगर इस week payment नहीं हुआ तो आपके against arrest warrant निकल जाएगा।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 26.9,
+   "end": 32.478,
+   "text": "हाँ, इसलिए जल्दी payment कर दीजिए। Thank you.",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 32.48,
+ "job_id": "01a1c158-4d2e-7cfc-9767-a071e157b2fa",
+ "mock": false,
+ "job_wall_s": 14.31,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

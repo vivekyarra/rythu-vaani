@@ -1,0 +1,106 @@
+{
+ "name": "teen_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.472,
+   "text": "హలో, నేను కిరణ్ లవ్హాన్ ఫైనాన్స్ నుంచి. ప్రసాద్ గారు ఉన్నారా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 4.62,
+   "end": 10.08,
+   "text": "నేను ఆయన వైఫ్ ని. ఆయన షాప్ లో ఉన్నారు. ఏం విషయం?",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 9.644,
+   "end": 17.504,
+   "text": "మేడం, మీ హస్బెండ్ ట్రాక్టర్ లోన్ ఈఎంఐ మూడు మంత్స్ గా పెండింగ్, టోటల్ పదిహేను థౌజండ్ రూపీస్ ఓవడి ఉంది.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 17.612,
+   "end": 21.888,
+   "text": "నాకు తెలియదు ఉండండి ఆయన్ని పిలుస్తాను",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 21.888,
+   "end": 24.224,
+   "text": "హలో ప్రసాద్ స్వీటీ.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 23.66,
+   "end": 31.264,
+   "text": "ప్రసాద్ గారు కిరణ్ హియర్ నా భన్ ఫైనాన్స్ మీ ట్రాక్టర్ లోన్ ఈఎంఐ పెండింగ్ గురించి కాల్ చేశాను.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 30.828,
+   "end": 35.68,
+   "text": "హర్వెస్ట్ పేమెంట్ ఇంకా రాలేదండి, నెక్స్ట్ వీక్ క్లియర్ చేస్తాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 35.308,
+   "end": 41.728,
+   "text": "ప్రతిసారి ఇదే స్టోరీ. మీలాంటి చీటర్స్ వల్లే మా కంపెనీ నష్టపోతోంది. సిగ్గులేదా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 41.26,
+   "end": 44.64,
+   "text": "మీరు అలా మాట్లాడటం కరెక్ట్ కాదు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 44.3,
+   "end": 47.936,
+   "text": "నెక్స్ట్ మండే కి ఫుల్ అమౌంట్ పడాలి, అన్ సే.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 47.95,
+ "job_id": "01a1c153-9404-7966-a751-740c8480b10d",
+ "mock": false,
+ "job_wall_s": 32.73,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "name": "hi_d01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.272,
+   "text": "नमस्ते, मैं नवधन फनैन्स से अमित बोल रहा हूँ क्या मेरी बात राकेश जी से हो रही है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 5.772,
+   "end": 8.704,
+   "text": "हाँ मैं राकेश बोल रहा हूँ",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 8.108,
+   "end": 16.192,
+   "text": "राकेश जी मैं आपके पर्सनल लोन की इ एम आई के बारे में कॉल कर रहा हूँ ₹5,000 की किस्त 10 दिन से बाकी है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 16.46,
+   "end": 21.28,
+   "text": "इस महीने तनख्वाह देर से आई मैं अगले सोमवार तक भर दूंगा",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 20.78,
+   "end": 29.664,
+   "text": "ठीक है कोई बात नहीं मैं सोमवार की तारीख नोट कर लेता हूँ देरी होने पर लोन अग्रीमेंट के हिसाब से लेट फीस लगेगी",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 29.42,
+   "end": 32.064,
+   "text": "ठीक है समझ गया",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 31.468,
+   "end": 40.384,
+   "text": "अगर आपको कोई शिकायत हो तो आप हमारे शिकायत अधिकारी से हेल्पलैन पर बात कर सकते हैं नंबर आपके लोन अग्रीमेंट में दिया है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 40.076,
+   "end": 42.464,
+   "text": "ठीक है धन्यवाद",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 41.804,
+   "end": 45.28,
+   "text": "धन्यवाद राकेश जी, आपका दिन शुभ हो",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 45.31,
+ "job_id": "01a1c14f-45fc-7bd9-b6b2-a5218e900f6e",
+ "mock": false,
+ "job_wall_s": 43.0,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

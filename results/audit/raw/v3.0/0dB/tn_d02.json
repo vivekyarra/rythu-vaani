@@ -1,0 +1,82 @@
+{
+ "name": "tn_d02",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 4.78,
+   "text": "హలో, నేను నవభవన్ ఫైనాన్స్ నుండి కిరణ్ మాట్లాడుతున్నాను. సాయి గారు ఉన్నారా?",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 4.78,
+   "end": 8.768,
+   "text": "నేను ఆయన కాలేజీలో ఆయన మీటింగ్లో ఉన్నా.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 8.768,
+   "end": 15.776,
+   "text": "ఆయనకి చెప్పండి పర్సనల్ లోన్ ఈఎంఐ ఎనిమిది వేల రూపాయలు టూ మంత్స్ నుండి పెండింగ్ ఉంది.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 15.776,
+   "end": 17.888,
+   "text": "సరే, చెప్తాను.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 17.888,
+   "end": 22.976,
+   "text": "పే చేయకపోతే మేము డైరెక్ట్ గా మీ ఆఫీస్ కి వచ్చి కూర్చుంటాం",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 22.976,
+   "end": 24.832,
+   "text": "నా ప్రాబ్లం కాదు.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 24.832,
+   "end": 28.288,
+   "text": "సరే, మా గ్రీవెన్స్ రిప్లై నంబర్ లోన్ అగ్రిమెంట్ లో.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 29.43,
+ "job_id": "01a1c158-4a2c-79a6-a92a-7d3ba2afe99a",
+ "mock": false,
+ "job_wall_s": 18.16,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

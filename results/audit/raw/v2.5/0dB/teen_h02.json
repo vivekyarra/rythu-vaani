@@ -1,0 +1,98 @@
+{
+ "name": "teen_h02",
+ "segments": [
+  {
+   "start": 0.14,
+   "end": 7.03,
+   "text": "గుడ్ మార్నింగ్ అనిత గారా నవ్ ఫైనాన్స్ కలెక్షన్స్ టీమ్ నుంచి కాల్ చేస్తారు మీ డైరీ లోన్ ఈఎంఐ గురించి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 7.03,
+   "end": 10.688,
+   "text": "అవును నేను చెప్పండి",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 10.688,
+   "end": 14.432,
+   "text": "ఈ ఎంఐ ఆరు వేల రూపాయలు లాస్ట్ మంత్ నుంచి పెండింగ్",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 15.5,
+   "end": 20.16,
+   "text": "మా ఆయనకి హాస్పిటల్ ఖర్చులు అయ్యాయి కొంచెం టైం కావాలి",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 20.16,
+   "end": 27.232,
+   "text": "అండర్స్టాండ్ చేసుకుంటాను మేడం కానీ లేకపోతే మా కీర్తి మీ ఇంటి గోడ మీద లోన్ డిఫాల్టర్ నోటీసు అంటే",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 27.232,
+   "end": 31.2,
+   "text": "అయ్యో అలా చేస్తే ఊర్లో ఎలా తిరగాలి",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 31.2,
+   "end": 37.12,
+   "text": "అంతేకాదు మేడమ్ మా లాయర్ రేపే కోర్టు నుంచి అరెస్ట్ వారెంట్ తెప్పిస్తారు నేను మంచి కోసమే చెప్తున్నా",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 37.12,
+   "end": 40.256,
+   "text": "సరే కల్తీకి సగం కడతా",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 40.256,
+   "end": 45.888,
+   "text": "ఓకే థాంక్ యు ఏమైనా కంప్లీట్ ఉంటే మీ లోన్ అగ్రిమెంట్ లో ఉన్న హెల్ప్ లైన్ నెంబర్ కి కాల్ చేయండి",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 47.46,
+ "job_id": "01a1c148-c4a8-7ffd-9c85-3750250dc1d2",
+ "mock": false,
+ "job_wall_s": 11.61,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

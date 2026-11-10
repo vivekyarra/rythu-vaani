@@ -1,0 +1,106 @@
+{
+ "name": "hien_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 8.0,
+   "text": "हैलो पूजा जी मैं नेहा बोल रही हूँ नवधान फनैन्स से आपके पर्सनल लोन की इ एम आई के रिगार्डिंग कॉल किया है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 7.244,
+   "end": 13.856,
+   "text": "अगेन मैने बोला था सैलरी लेट आएगी आप लोग डेली कॉल करके इरिटेट कर रहे हो",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 13.42,
+   "end": 20.512,
+   "text": "सॉरी फॉर दी इनकन्वीनियेन्स पूजा जी मैं बस रिमाइंडर दे रही हूँ दुए डेट 5 दिन पहले निकल गई है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 19.948,
+   "end": 24.128,
+   "text": "तो मैं क्या करूँ, कंपनी ने ही सैलरी होल्ड की है",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 23.596,
+   "end": 30.656,
+   "text": "टोटली समझ सकती हूँ बस इन्फॉर्म कर दूँ अग्रीमेंट के हिसाब से लेट पेमेंट चार्जेज अप्लाई होंगे",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 30.06,
+   "end": 32.928,
+   "text": "और अगर नेक्स्ट वीक भी नहीं हुआ तो",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 32.491,
+   "end": 40.544,
+   "text": "तो एस पर लोन अग्रीमेंट अकाउन्ट क्रेडिट ब्यूरो को ओवरड्यू रिपोर्ट हो सकता है जिससे आपका क्रेडिट स्कोर इफेक्ट होगा",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 40.3,
+   "end": 43.872,
+   "text": "ठीक है नेक्स्ट ट्यूसडे तक पे कर दूंगी",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 43.404,
+   "end": 51.872,
+   "text": "थैंक यू पूजा जी कोई कंप्लेंट हो तो हमारे ग्रीवेंस ऑफिसर को ईमेल कर सकती हैं डीटेल्स आपके लोन अग्रीमेंट में है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 51.116,
+   "end": 53.152,
+   "text": "ओके बाय",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 53.15,
+ "job_id": "01a1c14f-648e-7c37-aaa6-2688088ec201",
+ "mock": false,
+ "job_wall_s": 50.05,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

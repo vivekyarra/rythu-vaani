@@ -1,0 +1,106 @@
+{
+ "name": "hien_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.47,
+   "text": "हेलो पूजा जी, मैं नेहा बोल रही हूँ Navdhanya Finance से, आपके personal loan की EMI के regarding call किया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 7.47,
+   "end": 13.888,
+   "text": "Again, मैंने बोला था salary late आएगी। आप लोग daily call करके irritate कर रहे हो।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 13.888,
+   "end": 20.1,
+   "text": "मैं बस reminder दे रही हूँ, due date 5 दिन पहले निकल गई है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 20.1,
+   "end": 24.064,
+   "text": "तो मैं क्या करूं? company ने ही salary hold की है।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 24.064,
+   "end": 29.91,
+   "text": "inform कर दूँ agreement के हिसाब से late payment charges apply होंगे।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 29.91,
+   "end": 32.49,
+   "text": "और अगर next week ही नहीं हुआ तो?",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 32.49,
+   "end": 40.544,
+   "text": "As per loan agreement, account credit bureau को overdue report भेजता है, जिससे आपका credit score affect होगा।",
+   "speaker_id": 1,
+   "language": "en-IN",
+   "role": null
+  },
+  {
+   "start": 40.544,
+   "end": 43.808,
+   "text": "ठीक है, next Tuesday तक pay कर दीजिए।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 43.808,
+   "end": 51.01,
+   "text": "जी पूजा जी, कोई complaint हो तो हमारे grievance officer को email कर सकते हैं, details आपके loan agreement में हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 51.01,
+   "end": 53.152,
+   "text": "Okay bye.",
+   "speaker_id": 2,
+   "language": "en-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 53.15,
+ "job_id": "01a1c158-4d2e-7cfc-9767-a071e157b2fa",
+ "mock": false,
+ "job_wall_s": 14.31,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

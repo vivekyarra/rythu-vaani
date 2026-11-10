@@ -1,0 +1,66 @@
+{
+ "name": "hi_h04",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 18.72,
+   "text": "नमस्ते, मैं अमित बोल रहा हूँ। क्या गीता देवी जी से बात हो रही है? आपकी किस्त के सिलसिले में फोन किया है। मैं गीता बोल रही हूँ। आप किस company से हैं? जी वो छोड़िए। बस इतना बताइये कि 5,000 रुपये की बकाया किस्त कब तक जमा करेंगे।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 18.72,
+   "end": 30.848,
+   "text": "इस महीने बेटी की school fees भरनी थी, अगले महीने दे दूँगी। समझ सकता हूँ जी? पर मैं नहीं चाहता कि हमारी field team आपके घर आकर सामान जब्त करे, आप भी नहीं चाहेंगे ना?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 30.848,
+   "end": 32.992,
+   "text": "आप मुझे डरा रहे हैं क्या?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 32.992,
+   "end": 37.888,
+   "text": "माफ कीजिए, अगर ऐसा लगा, आप अगले बुधवार तक जमा कर दीजिए।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 37.888,
+   "end": 46.196,
+   "text": "ठीक है, कोशिश करूंगी। धन्यवाद। कोई शिकायत हो तो आप नजदीकी शाखा में शिकायत अधिकारी से मिल सकती हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 46.2,
+ "job_id": "01a1c148-f5f4-7b17-b693-8fd40707b04d",
+ "mock": false,
+ "job_wall_s": 18.62,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

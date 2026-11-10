@@ -1,0 +1,106 @@
+{
+ "name": "hi_d01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.7,
+   "text": "नमस्ते मैं नवधन फनैन्स से अमित बोल रहा हूँ क्या मेरी बात राकेश जी से हो रही है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 5.7,
+   "end": 8.59,
+   "text": "हाँ मैं राकेश बोल रहा हूँ",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 8.59,
+   "end": 13.216,
+   "text": "राकेश जी मैं आपके पर्सनल लोन की इ एम आई के बारे में कॉल कर रहा हूँ",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 13.216,
+   "end": 16.128,
+   "text": "₹5,000 की किस्त 10 दिन से बाकी",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 16.128,
+   "end": 21.0,
+   "text": "हाँ इस महीने तनख्वाह देर से मैं अगले सोमवार तक भर दूंगा",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 21.0,
+   "end": 29.632,
+   "text": "ठीक है कोई बात नहीं मैं सोमवार की तारीख नोट कर लेता हूँ देरी होने पर लोन अग्रीमेंट के हिसाब से लेट फीस लगेगी",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 29.632,
+   "end": 31.968,
+   "text": "ठीक है समझ गया",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 31.968,
+   "end": 40.352,
+   "text": "अगर आपको कोई शिकायत हो तो आप हमारे शिकायत अधिकारी से हेल्पलैन पर बात कर सकते हैं, नंबर आपके लोन एग्रीमेंट में दिया है।",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 40.352,
+   "end": 41.68,
+   "text": "ठीक है धन्यवाद",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 41.68,
+   "end": 45.248,
+   "text": "धन्यवाद राकेश जी, आपका दिन शुभ हो",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 45.31,
+ "job_id": "01a1c147-4b06-7bd2-8811-20ac31417239",
+ "mock": false,
+ "job_wall_s": 17.71,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

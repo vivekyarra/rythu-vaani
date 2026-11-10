@@ -104,6 +104,7 @@ def build_tts_request(
     sample_rate: int = 8000,
     speed: float = 1.0,
     container: str = "wav",
+    model: str = TTS_MODEL,
 ) -> dict:
     """Keyword arguments for ``httpx.Client.post`` for one Timbre v2.5 REST call.
 
@@ -127,7 +128,7 @@ def build_tts_request(
         "headers": {"X-API-Key-ID": api_key, "Content-Type": "application/json"},
         "json": {
             "text": text,
-            "model": TTS_MODEL,
+            "model": model,
             "voice": voice,
             "language": language,
             "speed": speed,
@@ -208,9 +209,9 @@ class GnaniClient:
         )
 
     def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000,
-                   container: str = "wav", voice: str = TTS_VOICE) -> bytes:
-        resp = self._post(**build_tts_request(self._key, text, language, voice=voice,
-                                              sample_rate=sample_rate, container=container))
+                   container: str = "wav", voice: str = TTS_VOICE, model: str = TTS_MODEL, speed: float = 1.0) -> bytes:
+        resp = self._post(**build_tts_request(self._key, text, language, voice=voice, speed=speed,
+                                              sample_rate=sample_rate, container=container, model=model))
         if "json" in resp.headers.get("content-type", ""):
             msg, body = _error_message(resp)
             raise GnaniError(f"TTS returned JSON instead of audio: {msg}", resp.status_code, body)
@@ -243,7 +244,7 @@ class MockGnaniClient:
         )
 
     def synthesize(self, text: str, language: str = LANGUAGE, sample_rate: int = 8000,
-                   container: str = "wav", voice: str = TTS_VOICE) -> bytes:
+                   container: str = "wav", voice: str = TTS_VOICE, model: str = TTS_MODEL) -> bytes:
         """Beeps as WAV, whatever ``container`` asks for: mock audio is never sent anywhere as speech."""
         from .audio import write_wav
 

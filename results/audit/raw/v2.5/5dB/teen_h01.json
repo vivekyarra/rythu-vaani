@@ -1,0 +1,106 @@
+{
+ "name": "teen_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.79,
+   "text": "హలో నేను కిరణ్ నవ్వన్ ఫైనాన్స్ నుంచి ప్రసాద్ గారు ఉన్నారా",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 4.79,
+   "end": 10.08,
+   "text": "నేను ఆయన వైఫ్ ను ఆయన షాప్ లో ఉన్నాను ఏం విషయం",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 10.08,
+   "end": 16.95,
+   "text": "మేడమ్ మీ హస్బండ్ ట్రాక్టర్ లోన్ ఈఎంఐ మూడు మంత్స్ పెండింగ్ టోటల్ పదిహేను తౌసండ్ రుపీస్",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 16.95,
+   "end": 21.888,
+   "text": "అయ్యో నాకు తెలియదు ఉండండి ఆయన్ని పిలుస్తారు",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 21.888,
+   "end": 23.98,
+   "text": "హలో ప్రసాద్ స్పీకింగ్",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 23.98,
+   "end": 31.264,
+   "text": "ప్రసాద్ గారు కిరణ్ హియర్ నా ధన్ ఫైనాన్స్ మీ ట్రాక్టర్ లోన్ ఈఎంఐ పెండింగ్ గురించి కాల్ చేశాను",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 31.264,
+   "end": 35.552,
+   "text": "సర్విస్ పేమెంట్ ఇంకా రాలేదండి నెక్స్ట్ వీక్ క్లియర్ చేస్తాను",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 35.552,
+   "end": 41.728,
+   "text": "ప్రతిసారి ఇదే స్టోరీ మీలాంటి చీటర్స్ వల్లే మా కంపెనీ నష్టపోతుంది సిగ్గులేదా",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 41.728,
+   "end": 44.43,
+   "text": "మీరు అలా మాట్లాడటం కరెక్ట్ సర్",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 44.43,
+   "end": 47.936,
+   "text": "నెక్స్ట్ మండే కి ఫుల్ అమౌంట్ పడాలి అంతే",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 47.95,
+ "job_id": "01a1c147-e685-78aa-bbe9-20a196954fb6",
+ "mock": false,
+ "job_wall_s": 11.88,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

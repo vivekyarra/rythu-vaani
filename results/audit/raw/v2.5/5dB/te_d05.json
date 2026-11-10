@@ -1,0 +1,42 @@
+{
+ "name": "te_d05",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 19.104,
+   "text": "నమస్కారం నేను నవధన్ ఫైనాన్స్ నుండి సురేష్ మాట్లాడుతున్నాను ప్రసాద్ గారితో మాట్లాడవచ్చా నేను ఆయన భార్య ఆయన ఆఫీస్ కి వెళ్లాను సరే అండి ఒక ముఖ్యమైన విషయం గురించి మాట్లాడాలి దయచేసి ఈ నంబర్ కి తిరిగి కాల్ చేయమని చెప్పండి ఏ విషయం",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.104,
+   "end": 28.366,
+   "text": "క్షమించండి అది ఆయనతోనే మాట్లాడాలి ఏదైనా ఫిర్యాదు ఉంటే మా హెల్ప్ లైన్ లో చెప్పవచ్చు ధన్యవాదాలు అండి సరే చెప్తాను",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 28.37,
+ "job_id": "01a1c147-8c7e-7482-aa4d-68fe887ebce0",
+ "mock": false,
+ "job_wall_s": 15.79,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

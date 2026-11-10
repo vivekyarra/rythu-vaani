@@ -1,0 +1,138 @@
+{
+ "call_id": "te_d05",
+ "agent_id": "AG-104",
+ "agent_name": "Suresh",
+ "language": "te-IN",
+ "call_time": "2026-10-16T15:00:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "te-IN",
+  "job_id": "01a1c14d-2c69-7d23-9af2-b7a0f892e530",
+  "job_wall_s": 25.83,
+  "duration_s": 28.37,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.168,
+   "text": "నమస్కారం, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్ మాట్లాడుతున్నాను, ప్రసాద్ గారితో మాట్లాడవచ్చా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 6.636,
+   "end": 10.624,
+   "text": "నేను ఆయన భార్యని. ఆయన ఆఫీసుకు వెళ్లారు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 9.996,
+   "end": 17.696,
+   "text": "సరే అండి, ఒక ముఖ్యమైన విషయం గురించి మాట్లాడాలి, దయచేసి ఈ నంబర్‌కి తిరిగి కాల్ చేయమని చెప్పండి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 17.196,
+   "end": 19.072,
+   "text": "ఏ విషయం?",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 18.668,
+   "end": 26.688,
+   "text": "క్షమించండి, అది ఆయనతోనే మాట్లాడాలి. ఏదైనా ఫిర్యాదు ఉంటే మా హెల్ప్‌లైన్ లో చెప్పవచ్చు. ధన్యవాదాలండి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 25.964,
+   "end": 28.366,
+   "text": "సరే, చెప్తాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  }
+ ],
+ "findings": [],
+ "scorecard": {
+  "score": 100,
+  "compliant": true,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": true,
+    "findings": 0
+   }
+  ],
+  "critical": 0
+ },
+ "split": "dev"
+}

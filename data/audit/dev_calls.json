@@ -1,0 +1,247 @@
+[
+  {
+    "id": "hi_d01", "split": "dev", "language": "hi-IN", "agent_id": "AG-101",
+    "call_time": "2026-10-12T11:05:00+05:30",
+    "summary": "Compliant reminder call: agent identifies, states purpose, agrees a date, offers grievance channel.",
+    "turns": [
+      {"speaker": "agent", "text": "नमस्ते, मैं नवधन फाइनेंस से अमित बोल रहा हूँ। क्या मेरी बात राकेश जी से हो रही है?", "style": "calm"},
+      {"speaker": "borrower", "text": "हाँ, मैं राकेश बोल रहा हूँ।", "style": "calm"},
+      {"speaker": "agent", "text": "राकेश जी, मैं आपके पर्सनल लोन की EMI के बारे में कॉल कर रहा हूँ। पाँच हज़ार रुपये की किस्त दस दिन से बाकी है।", "style": "calm"},
+      {"speaker": "borrower", "text": "हाँ, इस महीने तनख्वाह देर से आई। मैं अगले सोमवार तक भर दूँगा।", "style": "calm"},
+      {"speaker": "agent", "text": "ठीक है, कोई बात नहीं। मैं सोमवार की तारीख नोट कर लेता हूँ। देरी होने पर लोन एग्रीमेंट के हिसाब से लेट फीस लगेगी।", "style": "calm"},
+      {"speaker": "borrower", "text": "ठीक है, समझ गया।", "style": "calm"},
+      {"speaker": "agent", "text": "अगर आपको कोई शिकायत हो, तो आप हमारे शिकायत अधिकारी से हेल्पलाइन पर बात कर सकते हैं। नंबर आपके लोन एग्रीमेंट में दिया है।", "style": "calm"},
+      {"speaker": "borrower", "text": "ठीक है, धन्यवाद।", "style": "calm"},
+      {"speaker": "agent", "text": "धन्यवाद राकेश जी, आपका दिन शुभ हो।", "style": "calm"}
+    ],
+    "labels": []
+  },
+  {
+    "id": "hi_d02", "split": "dev", "language": "hi-IN", "agent_id": "AG-101",
+    "call_time": "2026-10-13T20:15:00+05:30",
+    "summary": "Late-night call; agent threatens to bring police home and to tell the whole neighbourhood; no grievance channel.",
+    "turns": [
+      {"speaker": "agent", "text": "हैलो, मैं नवधन फाइनेंस से अमित बोल रहा हूँ, आपके गोल्ड लोन की किस्त के बारे में।", "style": "calm"},
+      {"speaker": "borrower", "text": "इतनी रात को फोन क्यों कर रहे हो?", "style": "calm"},
+      {"speaker": "agent", "text": "तीन महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए तो पुलिस लेकर आपके घर आएंगे।", "style": "angry"},
+      {"speaker": "borrower", "text": "आप ऐसे धमकी नहीं दे सकते।", "style": "calm"},
+      {"speaker": "agent", "text": "और आपके मोहल्ले में सबको बता देंगे कि आप कर्ज़ नहीं चुकाते।", "style": "angry"},
+      {"speaker": "borrower", "text": "मैं अगले हफ्ते पैसे दे दूँगा।", "style": "calm"},
+      {"speaker": "agent", "text": "अगले हफ्ते नहीं, कल ही चाहिए। फोन रखो।", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "THREAT", "turn": 2},
+      {"category": "SHAMING", "turn": 4},
+      {"category": "NO_GRIEVANCE"},
+      {"category": "CALL_HOURS"}
+    ]
+  },
+  {
+    "id": "hi_d03", "split": "dev", "language": "hi-IN", "agent_id": "AG-102",
+    "call_time": "2026-10-14T14:30:00+05:30",
+    "summary": "Agent refuses to say who is calling and insults the borrower.",
+    "turns": [
+      {"speaker": "agent", "text": "हाँ, सुनीता जी? आपकी EMI अभी तक क्यों नहीं आई?", "style": "calm"},
+      {"speaker": "borrower", "text": "जी, आप कौन बोल रहे हैं?", "style": "calm"},
+      {"speaker": "agent", "text": "वो छोड़िए, पहले बताइए पैसे कब देंगी।", "style": "calm"},
+      {"speaker": "borrower", "text": "पहले बताइए आप कहाँ से बोल रहे हैं।", "style": "calm"},
+      {"speaker": "agent", "text": "आप जैसे बेशर्म लोग लोन लेते हैं और फिर भाग जाते हैं।", "style": "angry"},
+      {"speaker": "borrower", "text": "आप तमीज़ से बात कीजिए।", "style": "calm"},
+      {"speaker": "agent", "text": "शुक्रवार तक चार हज़ार रुपये जमा कर दीजिए। कोई शिकायत है तो आप हमारी हेल्पलाइन पर कॉल कर सकती हैं।", "style": "calm"},
+      {"speaker": "borrower", "text": "ठीक है।", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "ABUSE", "turn": 4},
+      {"category": "NO_DISCLOSURE"}
+    ]
+  },
+  {
+    "id": "hi_d04", "split": "dev", "language": "hi-IN", "agent_id": "AG-102",
+    "call_time": "2026-10-15T10:00:00+05:30",
+    "summary": "Borrower's wife picks up; agent tells her the bike-loan amount and overdue status.",
+    "turns": [
+      {"speaker": "agent", "text": "नमस्ते, मैं नवधन फाइनेंस से रोहित बोल रहा हूँ। क्या मनोज जी से बात हो सकती है?", "style": "calm"},
+      {"speaker": "borrower", "text": "मैं उनकी पत्नी बोल रही हूँ, वो अभी घर पर नहीं हैं।", "style": "calm"},
+      {"speaker": "agent", "text": "अच्छा, उनको बता दीजिए कि उनकी बाइक लोन की छह हज़ार रुपये की EMI दो महीने से बकाया है।", "style": "calm"},
+      {"speaker": "borrower", "text": "मुझे इस बारे में कुछ नहीं पता था।", "style": "calm"},
+      {"speaker": "agent", "text": "ठीक है, कृपया उनसे कहिए कि मुझे इसी नंबर पर कॉल कर लें।", "style": "calm"},
+      {"speaker": "borrower", "text": "ठीक है, मैं बता दूँगी।", "style": "calm"},
+      {"speaker": "agent", "text": "किसी भी शिकायत के लिए आप हमारे ग्रीवेंस ऑफिसर से संपर्क कर सकते हैं। धन्यवाद।", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "THIRD_PARTY", "turn": 2}
+    ]
+  },
+  {
+    "id": "hi_d05", "split": "dev", "language": "hi-IN", "agent_id": "AG-101",
+    "call_time": "2026-10-16T16:00:00+05:30",
+    "summary": "Compliant call with an annoyed borrower; agent correctly mentions credit-bureau reporting per agreement.",
+    "turns": [
+      {"speaker": "agent", "text": "नमस्कार, मैं नवधन फाइनेंस से अमित बोल रहा हूँ। क्या मैं विजय जी से बात कर रहा हूँ?", "style": "calm"},
+      {"speaker": "borrower", "text": "हाँ, बोलिए।", "style": "calm"},
+      {"speaker": "agent", "text": "विजय जी, आपके होम लोन की इस महीने की EMI बाकी है, उसी के बारे में कॉल किया है।", "style": "calm"},
+      {"speaker": "borrower", "text": "आप लोग बार बार फोन करके परेशान करते हो!", "style": "calm"},
+      {"speaker": "agent", "text": "मैं समझता हूँ, परेशानी के लिए माफ़ी चाहता हूँ। लगातार देरी होने पर एग्रीमेंट के अनुसार क्रेडिट ब्यूरो को रिपोर्ट किया जा सकता है, बस यही बताना था।", "style": "calm"},
+      {"speaker": "borrower", "text": "ठीक है, मैं गुरुवार तक भर दूँगा।", "style": "calm"},
+      {"speaker": "agent", "text": "बहुत धन्यवाद। अगर आपको कोई शिकायत हो तो आप हमारी शिकायत हेल्पलाइन या नज़दीकी ब्रांच से संपर्क कर सकते हैं।", "style": "calm"},
+      {"speaker": "borrower", "text": "ठीक है।", "style": "calm"}
+    ],
+    "labels": []
+  },
+  {
+    "id": "te_d01", "split": "dev", "language": "te-IN", "agent_id": "AG-103",
+    "call_time": "2026-10-12T12:00:00+05:30",
+    "summary": "Compliant Telugu reminder call with grievance channel.",
+    "turns": [
+      {"speaker": "agent", "text": "నమస్కారం, నేను నవధన్ ఫైనాన్స్ నుండి కిరణ్ మాట్లాడుతున్నాను. లక్ష్మి గారితో మాట్లాడుతున్నానా?", "style": "calm"},
+      {"speaker": "borrower", "text": "అవును, చెప్పండి.", "style": "calm"},
+      {"speaker": "agent", "text": "లక్ష్మి గారు, మీ పర్సనల్ లోన్ EMI మూడు వేల రూపాయలు ఈ నెల ఇంకా కట్టలేదు, దాని గురించి కాల్ చేశాను.", "style": "calm"},
+      {"speaker": "borrower", "text": "ఈ వారం కొంచెం ఇబ్బందిగా ఉంది, శనివారం కడతాను.", "style": "calm"},
+      {"speaker": "agent", "text": "సరే అండి, శనివారం అని నోట్ చేసుకుంటాను. ఆలస్యమైతే అగ్రిమెంట్ ప్రకారం లేట్ ఫీజు పడుతుంది.", "style": "calm"},
+      {"speaker": "borrower", "text": "సరే, అర్థమైంది.", "style": "calm"},
+      {"speaker": "agent", "text": "మీకు ఏదైనా ఫిర్యాదు ఉంటే మా గ్రీవెన్స్ ఆఫీసర్‌ని హెల్ప్‌లైన్ ద్వారా సంప్రదించవచ్చు, నంబర్ మీ లోన్ అగ్రిమెంట్‌లో ఉంది.", "style": "calm"},
+      {"speaker": "borrower", "text": "సరే, ధన్యవాదాలు.", "style": "calm"}
+    ],
+    "labels": []
+  },
+  {
+    "id": "te_d02", "split": "dev", "language": "te-IN", "agent_id": "AG-104",
+    "call_time": "2026-10-13T13:00:00+05:30",
+    "summary": "Agent calls the farmer a liar and threatens to seize the tractor and file a police case; no grievance channel.",
+    "turns": [
+      {"speaker": "agent", "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్, మీ ట్రాక్టర్ లోన్ బకాయి గురించి ఫోన్ చేశాను.", "style": "calm"},
+      {"speaker": "borrower", "text": "చెప్పండి, ఈ నెల పంట డబ్బులు ఇంకా రాలేదు.", "style": "calm"},
+      {"speaker": "agent", "text": "ప్రతిసారీ ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.", "style": "angry"},
+      {"speaker": "borrower", "text": "అలా మాట్లాడకండి.", "style": "calm"},
+      {"speaker": "agent", "text": "రేపటికి డబ్బు కట్టకపోతే మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు, పోలీస్ కేసు కూడా పెడతాం.", "style": "angry"},
+      {"speaker": "borrower", "text": "వచ్చే వారం కడతాను.", "style": "calm"},
+      {"speaker": "agent", "text": "లేదు, రేపే కట్టాలి.", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "ABUSE", "turn": 2},
+      {"category": "THREAT", "turn": 4},
+      {"category": "NO_GRIEVANCE"}
+    ]
+  },
+  {
+    "id": "te_d03", "split": "dev", "language": "te-IN", "agent_id": "AG-103",
+    "call_time": "2026-10-14T21:00:00+05:30",
+    "summary": "9 PM call; brother picks up, agent reveals the overdue EMI and threatens to post in the village WhatsApp group.",
+    "turns": [
+      {"speaker": "agent", "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి కిరణ్. రవి గారు ఉన్నారా?", "style": "calm"},
+      {"speaker": "borrower", "text": "నేను వాళ్ళ అన్నయ్యని, రవి ఇంట్లో లేడు.", "style": "calm"},
+      {"speaker": "agent", "text": "మీ తమ్ముడు బైక్ లోన్ EMI నాలుగు వేలు మూడు నెలలుగా కట్టలేదు, మీరే చెప్పండి.", "style": "calm"},
+      {"speaker": "borrower", "text": "ఇది నాకు తెలియదు.", "style": "calm"},
+      {"speaker": "agent", "text": "కట్టకపోతే మీ ఊరి వాట్సాప్ గ్రూప్‌లో అందరికీ చెప్తాం.", "style": "angry"},
+      {"speaker": "borrower", "text": "సరే, నేను వాడికి చెప్తాను.", "style": "calm"},
+      {"speaker": "agent", "text": "ఏదైనా ఫిర్యాదు ఉంటే మా బ్రాంచ్‌కి రావచ్చు.", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "THIRD_PARTY", "turn": 2},
+      {"category": "SHAMING", "turn": 4},
+      {"category": "CALL_HOURS"}
+    ]
+  },
+  {
+    "id": "te_d04", "split": "dev", "language": "te-IN", "agent_id": "AG-104",
+    "call_time": "2026-10-15T09:30:00+05:30",
+    "summary": "Agent never gives his name or the lender, only 'collection team'.",
+    "turns": [
+      {"speaker": "agent", "text": "హలో, శ్రీనివాస్ గారా?", "style": "calm"},
+      {"speaker": "borrower", "text": "అవును, ఎవరు?", "style": "calm"},
+      {"speaker": "agent", "text": "మీ లోన్ పేమెంట్ పెండింగ్ ఉంది, ఎప్పుడు కడతారు?", "style": "calm"},
+      {"speaker": "borrower", "text": "మీరు ఎవరు, ఏ కంపెనీ?", "style": "calm"},
+      {"speaker": "agent", "text": "కలెక్షన్ టీమ్ నుండి. ఈ శుక్రవారం లోపు కట్టండి.", "style": "calm"},
+      {"speaker": "borrower", "text": "సరే, కడతాను.", "style": "calm"},
+      {"speaker": "agent", "text": "సరే. ఏదైనా సమస్య ఉంటే మా హెల్ప్‌లైన్‌కి కాల్ చేయండి.", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "NO_DISCLOSURE"}
+    ]
+  },
+  {
+    "id": "te_d05", "split": "dev", "language": "te-IN", "agent_id": "AG-104",
+    "call_time": "2026-10-16T15:00:00+05:30",
+    "summary": "Wife answers; agent correctly asks for a call-back without revealing the loan (hard negative).",
+    "turns": [
+      {"speaker": "agent", "text": "నమస్కారం, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్ మాట్లాడుతున్నాను. ప్రసాద్ గారితో మాట్లాడవచ్చా?", "style": "calm"},
+      {"speaker": "borrower", "text": "నేను ఆయన భార్యని, ఆయన ఆఫీసుకు వెళ్ళారు.", "style": "calm"},
+      {"speaker": "agent", "text": "సరే అండి, ఒక ముఖ్యమైన విషయం గురించి మాట్లాడాలి. దయచేసి ఈ నంబర్‌కి తిరిగి కాల్ చేయమని చెప్పండి.", "style": "calm"},
+      {"speaker": "borrower", "text": "ఏ విషయం?", "style": "calm"},
+      {"speaker": "agent", "text": "క్షమించండి, అది ఆయనతోనే మాట్లాడాలి. ఏదైనా ఫిర్యాదు ఉంటే మా హెల్ప్‌లైన్‌లో చెప్పవచ్చు. ధన్యవాదాలు అండి.", "style": "calm"},
+      {"speaker": "borrower", "text": "సరే, చెప్తాను.", "style": "calm"}
+    ],
+    "labels": []
+  },
+  {
+    "id": "he_d01", "split": "dev", "language": "hi-en", "agent_id": "AG-105",
+    "call_time": "2026-10-13T17:30:00+05:30",
+    "summary": "Polite tone but a false arrest-warrant threat; no grievance channel.",
+    "turns": [
+      {"speaker": "agent", "text": "Hello, मैं Navdhan Finance से नेहा बोल रही हूँ। क्या मेरी बात अर्जुन जी से हो रही है?", "style": "calm"},
+      {"speaker": "borrower", "text": "हाँ, बोलिए।", "style": "calm"},
+      {"speaker": "agent", "text": "अर्जुन जी, आपके credit card loan का सात हज़ार rupees का EMI overdue है, इसी के लिए call किया है।", "style": "calm"},
+      {"speaker": "borrower", "text": "मेरी job चली गई है, थोड़ा time चाहिए।", "style": "calm"},
+      {"speaker": "agent", "text": "मैं समझ सकती हूँ, लेकिन अगर इस week payment नहीं हुआ तो आपके against arrest warrant निकल जाएगा।", "style": "calm"},
+      {"speaker": "borrower", "text": "क्या? इतनी सी बात पे arrest?", "style": "calm"},
+      {"speaker": "agent", "text": "हाँ, इसलिए जल्दी payment कर दीजिए। Thank you.", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "THREAT", "turn": 4},
+      {"category": "NO_GRIEVANCE"}
+    ]
+  },
+  {
+    "id": "he_d02", "split": "dev", "language": "hi-en", "agent_id": "AG-102",
+    "call_time": "2026-10-15T11:30:00+05:30",
+    "summary": "Compliant Hinglish call offering restructuring and a grievance officer.",
+    "turns": [
+      {"speaker": "agent", "text": "Good morning, मैं Navdhan Finance से रोहित बोल रहा हूँ। क्या मैं प्रिया जी से बात कर रहा हूँ?", "style": "calm"},
+      {"speaker": "borrower", "text": "हाँ, बोलिए।", "style": "calm"},
+      {"speaker": "agent", "text": "प्रिया जी, आपके two-wheeler loan की EMI की due date निकल गई है, उसी के reminder के लिए call किया है।", "style": "calm"},
+      {"speaker": "borrower", "text": "अरे, मैं भूल गई थी। आज ही online pay कर देती हूँ।", "style": "calm"},
+      {"speaker": "agent", "text": "Thank you. अगर payment में कोई problem हो तो हम restructuring options भी discuss कर सकते हैं।", "style": "calm"},
+      {"speaker": "borrower", "text": "ठीक है, शुक्रिया।", "style": "calm"},
+      {"speaker": "agent", "text": "और कोई complaint हो तो आप हमारे grievance officer को email कर सकती हैं, details आपके loan agreement में हैं।", "style": "calm"},
+      {"speaker": "borrower", "text": "Okay, thank you.", "style": "calm"}
+    ],
+    "labels": []
+  },
+  {
+    "id": "tn_d01", "split": "dev", "language": "te-en", "agent_id": "AG-103",
+    "call_time": "2026-10-16T18:00:00+05:30",
+    "summary": "Agent refuses to identify himself and calls the borrower a cheater.",
+    "turns": [
+      {"speaker": "agent", "text": "Hello, రమేష్ గారా? మీ EMI ఎందుకు pay చేయలేదు?", "style": "calm"},
+      {"speaker": "borrower", "text": "ఎవరు మాట్లాడుతున్నారు?", "style": "calm"},
+      {"speaker": "agent", "text": "అది important కాదు. మీ payment మూడు weeks నుండి overdue.", "style": "calm"},
+      {"speaker": "borrower", "text": "Salary late అయింది sir, next week pay చేస్తాను.", "style": "calm"},
+      {"speaker": "agent", "text": "మీలాంటి cheaters వల్లే company కి loss. Useless fellow.", "style": "angry"},
+      {"speaker": "borrower", "text": "Please respect గా మాట్లాడండి.", "style": "calm"},
+      {"speaker": "agent", "text": "Monday లోపల pay చేయండి. ఏదైనా complaint ఉంటే మా customer care కి call చేయండి.", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "ABUSE", "turn": 4},
+      {"category": "NO_DISCLOSURE"}
+    ]
+  },
+  {
+    "id": "tn_d02", "split": "dev", "language": "te-en", "agent_id": "AG-103",
+    "call_time": "2026-10-17T19:30:00+05:30",
+    "summary": "7:30 PM; colleague picks up, agent discloses the EMI amount and threatens to sit at the office.",
+    "turns": [
+      {"speaker": "agent", "text": "Hello, నేను Navdhan Finance నుండి కిరణ్ మాట్లాడుతున్నాను. సాయి గారు ఉన్నారా?", "style": "calm"},
+      {"speaker": "borrower", "text": "నేను ఆయన colleague ని, ఆయన meeting లో ఉన్నారు.", "style": "calm"},
+      {"speaker": "agent", "text": "ఆయనకి చెప్పండి, personal loan EMI ఎనిమిది వేల rupees two months నుండి pending ఉంది.", "style": "calm"},
+      {"speaker": "borrower", "text": "సరే, చెప్తాను.", "style": "calm"},
+      {"speaker": "agent", "text": "ఈ week pay చేయకపోతే మేము direct గా మీ office కి వచ్చి కూర్చుంటాం.", "style": "angry"},
+      {"speaker": "borrower", "text": "ఇది నా problem కాదు sir.", "style": "calm"},
+      {"speaker": "agent", "text": "సరే, మా grievance helpline number loan agreement లో ఉంది, ఆయనకి చెప్పండి.", "style": "calm"}
+    ],
+    "labels": [
+      {"category": "THIRD_PARTY", "turn": 2},
+      {"category": "THREAT", "turn": 4},
+      {"category": "CALL_HOURS"}
+    ]
+  }
+]

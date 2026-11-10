@@ -1,0 +1,199 @@
+{
+ "call_id": "tn_d02",
+ "agent_id": "AG-103",
+ "agent_name": "Kiran",
+ "language": "te-en",
+ "call_time": "2026-10-17T19:30:00+05:30",
+ "lender": "Navdhan Finance",
+ "synthetic": true,
+ "mock": false,
+ "stt": {
+  "model": "prisma-v3.0",
+  "language_code": "te-IN",
+  "job_id": "01a1c14d-35fb-7980-9da5-c6ac4e81f7de",
+  "job_wall_s": 31.86,
+  "duration_s": 29.43,
+  "keywords_accepted": true,
+  "topic_accepted": true
+ },
+ "roles": {
+  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
+  "agent_speaker": "ch0"
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.344,
+   "text": "హలో, నేను నవధాన్ ఫైనాన్స్ నుండి కిరణ్ మాట్లాడుతున్నాను. సాయి గారు ఉన్నారా?",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 4.876,
+   "end": 8.896,
+   "text": "నేను ఆయన కొలీగ్ ని, ఆయన మీటింగ్ లో ఉన్నారు.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 8.428,
+   "end": 15.872,
+   "text": "ఆయనకి చెప్పండి, పర్సనల్ లోన్ ఈ ఎం ఐ ఎనిమిది వేల రూపీస్ టూ మంత్స్ నుండి పెండింగ్ ఉంది.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 15.5,
+   "end": 17.856,
+   "text": "సరే, చెప్తాను.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 17.324,
+   "end": 22.912,
+   "text": "ఈ వీక్ పే చేయకపోతే మేము డైరెక్ట్ గా మీ ఆఫీస్ కి వచ్చి కూర్చుంటాం.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  },
+  {
+   "start": 22.508,
+   "end": 25.056,
+   "text": "ఇది నా ప్రాబ్లమ్ కాదు సర్.",
+   "speaker_id": "ch1",
+   "language": "te-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 24.428,
+   "end": 29.427,
+   "text": "సరే, మా గ్రీవెన్స్ హెల్ప్‌లైన్ నంబర్ లోన్ అగ్రిమెంట్ లో ఉంది, ఆయనకి చెప్పండి.",
+   "speaker_id": "ch0",
+   "language": "te-IN",
+   "role": "agent"
+  }
+ ],
+ "findings": [
+  {
+   "category": "CALL_HOURS",
+   "start": 0.0,
+   "end": 0.0,
+   "quote": "call metadata: started 19:30 IST",
+   "matched": "19:30",
+   "note": "allowed window 08:00-19:00",
+   "source": "rule",
+   "title": "Call within 8 AM - 7 PM",
+   "severity": "major",
+   "tip": "Dial only between 8 AM and 7 PM.",
+   "rephrase": "Customers కి morning ఎనిమిది నుండి evening ఏడు గంటల మధ్యలోనే call చేయండి."
+  },
+  {
+   "category": "NO_DISCLOSURE",
+   "start": 0.0,
+   "end": 5.344,
+   "quote": "హలో, నేను నవధాన్ ఫైనాన్స్ నుండి కిరణ్ మాట్లాడుతున్నాను. సాయి గారు ఉన్నారా?",
+   "matched": "",
+   "note": "missing in opening: lender",
+   "source": "rule",
+   "title": "Identity, lender and purpose stated",
+   "severity": "major",
+   "tip": "Open every call with your name, the lender and the purpose.",
+   "rephrase": "Hello, నేను Navdhan Finance నుండి Kiran మాట్లాడుతున్నాను. మీ loan EMI గురించి call చేస్తున్నాను."
+  },
+  {
+   "category": "THIRD_PARTY",
+   "start": 8.428,
+   "end": 15.872,
+   "quote": "ఆయనకి చెప్పండి, పర్సనల్ లోన్ ఈ ఎం ఐ ఎనిమిది వేల రూపీస్ టూ మంత్స్ నుండి పెండింగ్ ఉంది.",
+   "matched": "లోన్",
+   "note": "someone other than the borrower is on the line",
+   "source": "rule",
+   "title": "No disclosure to third parties",
+   "severity": "critical",
+   "tip": "If someone else answers, leave only your name and lender and ask for a call-back.",
+   "rephrase": "పర్వాలేదు అండి. Navdhan Finance నుండి Kiran call చేశారని, ఈ number కి call back చేయమని please చెప్పండి. Thank you."
+  },
+  {
+   "category": "THREAT",
+   "start": 17.324,
+   "end": 22.912,
+   "quote": "ఈ వీక్ పే చేయకపోతే మేము డైరెక్ట్ గా మీ ఆఫీస్ కి వచ్చి కూర్చుంటాం.",
+   "matched": "మీ ఆఫీస్ కి వచ్చి",
+   "note": "",
+   "source": "rule",
+   "title": "No threats or intimidation",
+   "severity": "critical",
+   "tip": "Replace threats with options: today's payment, or a payment plan.",
+   "rephrase": "మీ problem నాకు అర్థమైంది. మీ EMI overdue ఉంది. ఈ రోజు pay చేయవచ్చు, లేదా మీ కోసం ఒక easy payment plan చేయగలం."
+  }
+ ],
+ "scorecard": {
+  "score": 30,
+  "compliant": false,
+  "checks": [
+   {
+    "id": "NO_DISCLOSURE",
+    "title": "Identity, lender and purpose stated",
+    "severity": "major",
+    "rule": "Agent states own name, the lender and the purpose (loan/EMI) at the start of the call.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "CALL_HOURS",
+    "title": "Call within 8 AM - 7 PM",
+    "severity": "major",
+    "rule": "Recovery calls only between 08:00 and 19:00 (borrower's local time).",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "THREAT",
+    "title": "No threats or intimidation",
+    "severity": "critical",
+    "rule": "No threats of police, jail, arrest, seizure, home/office visits or harm.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "ABUSE",
+    "title": "Respectful language",
+    "severity": "critical",
+    "rule": "No abusive, insulting or demeaning words.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "SHAMING",
+    "title": "No public shaming",
+    "severity": "critical",
+    "rule": "No threat to tell neighbours, relatives, employer, social groups, or to post notices.",
+    "passed": true,
+    "findings": 0
+   },
+   {
+    "id": "THIRD_PARTY",
+    "title": "No disclosure to third parties",
+    "severity": "critical",
+    "rule": "Loan details are never shared with anyone other than the borrower.",
+    "passed": false,
+    "findings": 1
+   },
+   {
+    "id": "NO_GRIEVANCE",
+    "title": "Grievance channel offered",
+    "severity": "major",
+    "rule": "Agent tells the borrower how to raise a complaint (grievance officer/helpline/branch).",
+    "passed": true,
+    "findings": 0
+   }
+  ],
+  "critical": 2
+ },
+ "split": "dev"
+}

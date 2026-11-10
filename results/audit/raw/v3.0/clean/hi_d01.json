@@ -1,0 +1,58 @@
+{
+ "name": "hi_d01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 16.224,
+   "text": "नमस्ते, मैं Navdhanya Finance से अमित बोल रहा हूँ। क्या मेरी बात राकेश जी से हो रही है? हाँ, मैं राकेश बोल रहा हूँ। राकेश जी, मैं आपके personal loan की EMI के बारे में call कर रहा हूँ, 5,000 रुपये की किस्त 10 दिन से बाकी है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 16.224,
+   "end": 29.728,
+   "text": "हाँ, इस महीने तनख्वाह देर से आई, मैं अगले सोमवार तक भर दूंगा, ठीक है? कोई बात नहीं। मैं सोमवार की तारीख नोट कर लेता हूँ, देरी होने पर loan agreement के हिसाब से late fees लगेगी।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 29.728,
+   "end": 40.48,
+   "text": "ठीक है, समझ गया। अगर आपको कोई शिकायत हो तो आप हमारे शिकायत अधिकारी से helpline पर बात कर सकते हैं। नंबर आपके लोन एग्रीमेंट में दिया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 40.48,
+   "end": 45.312,
+   "text": "ठीक है, धन्यवाद, धन्यवाद राकेश जी, आपका दिन शुभ हो।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 45.31,
+ "job_id": "01a1c148-f5f4-7b17-b693-8fd40707b04d",
+ "mock": false,
+ "job_wall_s": 18.62,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

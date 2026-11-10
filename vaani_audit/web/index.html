@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaani Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f4f1; --surface:#fcfcfb; --surface-2:#f0efec; --line:#e3e2dd;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#7a7974;
+  --brand:#2a78d6; --brand-ink:#1c5cab; --brand-soft:#e6f0fc;
+  --good:#0ca30c; --good-ink:#006300; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b; --critical-soft:#fbeaea;
+  --agent:#2a78d6; --borrower:#7a7974;
+  --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.05);
+  font-family:Inter,"Noto Sans Devanagari","Noto Sans Telugu",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121211; --surface:#1a1a19; --surface-2:#232321; --line:#2e2e2b;
+  --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#9a998f; --brand:#3987e5; --brand-ink:#86b6ef; --brand-soft:#16273d;
+  --critical-soft:#3a1d1d; --good-ink:#5fd35f;}}
+:root[data-theme="dark"]{--bg:#121211; --surface:#1a1a19; --surface-2:#232321; --line:#2e2e2b;
+  --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#9a998f; --brand:#3987e5; --brand-ink:#86b6ef; --brand-soft:#16273d;
+  --critical-soft:#3a1d1d; --good-ink:#5fd35f;}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45}
+button{font:inherit;cursor:pointer}
+header{display:flex;align-items:center;gap:16px;padding:14px 28px;background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo .mark{width:30px;height:30px;border-radius:9px;background:var(--brand);display:grid;place-items:center;color:#fff}
+.sub{color:var(--ink-3);font-size:13px}
+nav{display:flex;gap:4px;margin-left:24px}
+nav button{border:0;background:transparent;padding:8px 14px;border-radius:9px;color:var(--ink-2);font-weight:600;white-space:nowrap}
+.badge,.logo{white-space:nowrap}
+@media (max-width:1560px){header .sub{display:none}}
+nav button.on{background:var(--brand-soft);color:var(--brand-ink)}
+.spacer{flex:1}
+.badge{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.02em;display:inline-flex;gap:6px;align-items:center}
+.badge.live{background:#e5f6e5;color:#006300} .badge.mock{background:var(--critical);color:#fff}
+.badge.syn{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+.dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+main{max-width:1320px;margin:0 auto;padding:24px 28px 60px} #detail,#coach{scroll-margin-top:96px}
+.mockbar{background:var(--critical);color:#fff;padding:10px 28px;font-weight:600;display:none}
+h1{font-size:26px;letter-spacing:-.02em;margin:0 0 4px} h2{font-size:17px;margin:0 0 14px} .muted{color:var(--ink-3)}
+.grid{display:grid;gap:18px}
+.kpis{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.kpi .v{font-size:34px;font-weight:800;letter-spacing:-.03em} .kpi .l{color:var(--ink-2);font-size:13px;font-weight:600}
+.kpi .s{color:var(--ink-3);font-size:12px;margin-top:2px}
+.two{grid-template-columns:1.1fr 1fr}
+.bars{display:flex;flex-direction:column;gap:12px}
+.bar{display:grid;grid-template-columns:150px 1fr 60px;align-items:center;gap:12px;position:relative}
+.bar .name{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .name small{display:block;color:var(--ink-3);font-weight:500;font-size:12px}
+.track{height:22px;background:var(--surface-2);border-radius:4px;position:relative}
+.fill{height:100%;background:var(--brand);border-radius:0 4px 4px 0;min-width:2px;transition:width .6s}
+.bar .val{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.bar:hover .fill{filter:brightness(1.1)}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--surface);font-size:12px;padding:6px 9px;border-radius:7px;display:none;z-index:50;max-width:280px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;color:var(--ink-3);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr.click{cursor:pointer} tr.click:hover td{background:var(--surface-2)}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--surface-2);color:var(--ink-2);margin:1px 3px 1px 0;white-space:nowrap}
+.chip.crit{background:var(--critical-soft);color:var(--critical)} .chip.major{background:#fdf3df;color:#8a5a00}
+.score{font-weight:800;font-variant-numeric:tabular-nums}
+.ok{color:var(--good-ink);font-weight:700} .bad{color:var(--critical);font-weight:700}
+.btn{border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:10px;font-weight:600;color:var(--ink)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:disabled{opacity:.6}
+.btn.small{padding:5px 10px;font-size:13px}
+/* call view */
+.callhead{display:flex;align-items:flex-start;gap:20px;margin-bottom:18px}
+.bigscore{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:800;border:6px solid var(--good);flex:none}
+.bigscore.fail{border-color:var(--critical)}
+.cview{grid-template-columns:340px 1fr}
+.check{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.check:last-child{border:0}
+.ic{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;flex:none}
+.ic.p{background:var(--good)} .ic.f{background:var(--critical)}
+.check .t{font-weight:600;font-size:14px} .check .r{font-size:12px;color:var(--ink-3)}
+.turns{display:flex;flex-direction:column;gap:8px;max-height:520px;overflow:auto;padding-right:6px}
+.turn{display:grid;grid-template-columns:62px 92px 1fr;gap:10px;padding:9px 12px;border-radius:10px;border:1px solid transparent;cursor:pointer}
+.turn:hover{background:var(--surface-2)}
+.turn.flag{background:var(--critical-soft);border-color:color-mix(in srgb,var(--critical) 35%,transparent)}
+.turn.playing{outline:2px solid var(--brand)}
+.ts{font-variant-numeric:tabular-nums;color:var(--ink-3);font-size:13px;padding-top:2px}
+.role{font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;height:fit-content;text-align:center}
+.role.agent{background:var(--brand-soft);color:var(--brand-ink)} .role.borrower{background:var(--surface-2);color:var(--ink-2)}
+.txt{font-size:15px}
+.finding{border:1px solid var(--line);border-left:4px solid var(--critical);border-radius:10px;padding:12px 14px;margin-bottom:12px;background:var(--surface)}
+.finding.major{border-left-color:var(--warn)}
+.finding .h{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.finding .cat{font-weight:700}
+.quote{margin:8px 0;padding:8px 12px;background:var(--surface-2);border-radius:8px;font-size:15px}
+mark{background:color-mix(in srgb,var(--critical) 25%,transparent);color:inherit;border-radius:3px;padding:0 2px}
+.say{margin-top:8px;padding:10px 12px;border-radius:8px;background:color-mix(in srgb,var(--good) 10%,var(--surface));border:1px solid color-mix(in srgb,var(--good) 30%,transparent)}
+.say b{color:var(--good-ink);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+audio{width:100%;margin:6px 0 10px}
+.meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--ink-2);font-size:13px}
+.steps{display:flex;gap:10px;margin:16px 0}
+.step{flex:1;padding:12px;border-radius:10px;background:var(--surface-2);color:var(--ink-3);font-weight:600;font-size:13px;display:flex;gap:8px;align-items:center}
+.step.on{background:var(--brand-soft);color:var(--brand-ink)} .step.done{background:#e5f6e5;color:#006300}
+.spin{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:s 0.8s linear infinite;display:none}
+.step.on .spin{display:inline-block}
+@keyframes s{to{transform:rotate(360deg)}}
+select,input{font:inherit;padding:8px 10px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.form{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:12px;align-items:end}
+label{font-size:12px;font-weight:600;color:var(--ink-3);display:flex;flex-direction:column;gap:5px}
+.hidden{display:none!important}
+.foot{color:var(--ink-3);font-size:12px;margin-top:28px;text-align:center}
+@media (max-width:900px){.kpis,.two,.cview,.form{grid-template-columns:1fr}.bar{grid-template-columns:110px 1fr 50px} header{flex-wrap:wrap} nav{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="tip" id="tip"></div>
+<header>
+  <div class="logo"><div class="mark">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M4 10v4M8 6v12M12 9v6M16 4v16M20 10v4"/></svg>
+  </div>Vaani Audit</div>
+  <div class="sub">Collection-call compliance for Hindi, Telugu &amp; code-mixed calls · on Gnani Prisma + Timbre</div>
+  <nav>
+    <button data-tab="team" class="on">Team dashboard</button>
+    <button data-tab="calls">Calls</button>
+    <button data-tab="live">Audit a call</button>
+  </nav>
+  <div class="spacer"></div>
+  <span class="badge syn" title="All calls, people and the lender are synthetic">SYNTHETIC DATA</span>
+  <span class="badge" id="mode"><span class="dot"></span>…</span>
+</header>
+<div class="mockbar" id="mockbar">MOCK MODE: no GNANI_API_KEY. Transcripts are the scripts, coaching audio is beeps. Nothing here is a Gnani result.</div>
+<main>
+  <!-- TEAM -->
+  <section id="team">
+    <h1>Collections QA · this month</h1>
+    <p class="muted" style="margin:0 0 18px">Every call audited against the RBI fair-practices checklist. Fictional lender "Navdhan Finance".</p>
+    <div class="grid kpis" id="kpis"></div>
+    <div class="grid two" style="margin-top:18px">
+      <div class="card"><h2>Compliance rate by agent <span class="muted" style="font-weight:500;font-size:13px">· % of calls with zero violations</span></h2><div class="bars" id="agentbars"></div></div>
+      <div class="card"><h2>Top violation types <span class="muted" style="font-weight:500;font-size:13px">· calls affected</span></h2><div class="bars" id="violbars"></div></div>
+    </div>
+    <div class="card" style="margin-top:18px"><h2>Agents</h2>
+      <table><thead><tr><th>Agent</th><th>Team</th><th>Calls</th><th>Compliant</th><th>Avg score</th><th>Critical</th><th>Focus area</th><th></th></tr></thead><tbody id="agentrows"></tbody></table>
+    </div>
+    <div class="card hidden" id="coach" style="margin-top:18px"></div>
+  </section>
+
+  <!-- CALLS -->
+  <section id="calls" class="hidden">
+    <h1>Audited calls</h1>
+    <p class="muted" style="margin:0 0 18px">Click a call to see the scorecard, timestamped evidence and coaching.</p>
+    <div class="card"><table><thead><tr><th>Call</th><th>Agent</th><th>Lang</th><th>Time (IST)</th><th>Score</th><th>Violations</th></tr></thead><tbody id="callrows"></tbody></table></div>
+  </section>
+
+  <!-- LIVE -->
+  <section id="live" class="hidden">
+    <h1>Audit a call</h1>
+    <p class="muted" style="margin:0 0 18px">Pick a recorded (synthetic) call or upload a WAV. Vaani Audit sends it to Gnani Prisma Batch for diarized transcription, then checks it.</p>
+    <div class="card">
+      <div class="form">
+        <label>Recording<select id="sample"></select></label>
+        <label>Agent<select id="agent"></select></label>
+        <label>Language<select id="lang"><option>hi-IN</option><option>te-IN</option><option>hi-en</option><option>te-en</option></select></label>
+        <label>Call started (IST)<input id="ctime" type="datetime-local"></label>
+        <button class="btn primary" id="run">Run audit</button>
+      </div>
+      <div style="margin-top:12px"><label style="flex-direction:row;align-items:center;gap:8px">or upload WAV <input type="file" id="upl" accept=".wav,audio/wav"></label></div>
+      <audio id="srcaudio" controls class="hidden"></audio>
+      <div class="steps hidden" id="steps">
+        <div class="step" data-s="0"><span class="spin"></span>1 · Upload call</div>
+        <div class="step" data-s="1"><span class="spin"></span>2 · Prisma v3.0: diarize + transcribe</div>
+        <div class="step" data-s="2"><span class="spin"></span>3 · RBI checklist</div>
+        <div class="step" data-s="3"><span class="spin"></span>4 · Scorecard + coaching</div>
+      </div>
+      <div class="muted" id="elapsed"></div>
+    </div>
+  </section>
+
+  <!-- CALL DETAIL (shared) -->
+  <section id="detail" class="hidden" style="margin-top:18px"></section>
+  <div class="foot">Vaani Audit · synthetic demo data only · speech by Gnani Prisma (STT) and Timbre (TTS) · not legal advice</div>
+</main>
+<script>
+const $=s=>document.querySelector(s), esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CAT={THREAT:"Threat / intimidation",ABUSE:"Abusive language",SHAMING:"Public shaming",THIRD_PARTY:"Disclosed to third party",NO_DISCLOSURE:"No identity / lender / purpose",NO_GRIEVANCE:"No grievance channel",CALL_HOURS:"Outside 8 AM–7 PM"};
+const fmt=t=>{t=Math.max(0,t||0);return Math.floor(t/60)+":"+String(Math.floor(t%60)).padStart(2,"0")};
+const pct=x=>x==null?"–":Math.round(x*100)+"%";
+let MODE="mock", AGENTS={};
+async function j(u,o){const r=await fetch(u,o);if(!r.ok)throw new Error(await r.text());return r.json()}
+function tab(t){document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.tab===t));
+  ["team","calls","live"].forEach(s=>$("#"+s).classList.toggle("hidden",s!==t));$("#detail").classList.add("hidden");
+  if(t==="team")loadTeam(); if(t==="calls")loadCalls(); if(t==="live")loadLive(); window.scrollTo(0,0)}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>tab(b.dataset.tab));
+const tip=$("#tip");
+function hover(el,html){el.onmousemove=e=>{tip.innerHTML=html;tip.style.display="block";tip.style.left=(e.clientX+14)+"px";tip.style.top=(e.clientY+14)+"px"};el.onmouseleave=()=>tip.style.display="none"}
+function bars(el,rows){el.innerHTML="";const max=Math.max(1,...rows.map(r=>r.max??r.v));
+  rows.forEach(r=>{const d=document.createElement("div");d.className="bar";
+    d.innerHTML=`<div class="name">${esc(r.name)}${r.sub?`<small>${esc(r.sub)}</small>`:""}</div><div class="track"><div class="fill" style="width:0"></div></div><div class="val">${esc(r.label)}</div>`;
+    el.appendChild(d);requestAnimationFrame(()=>d.querySelector(".fill").style.width=(100*r.v/(r.max??max))+"%");hover(d,r.tip)})}
+
+async function status(){const s=await j("/api/status");MODE=s.mode;const m=$("#mode");
+  m.className="badge "+(MODE==="live"?"live":"mock");m.innerHTML=`<span class="dot"></span>${MODE==="live"?"LIVE · Gnani API":"MOCK MODE"}`;
+  $("#mockbar").style.display=MODE==="live"?"none":"block"}
+
+async function loadTeam(){const d=await j("/api/dashboard");
+  $("#kpis").innerHTML=[["Calls audited",d.calls,`${d.audio_minutes} min of audio, 100% coverage`],
+    ["Compliance rate",pct(d.compliance_rate),`${d.compliant} of ${d.calls} calls with zero violations`],
+    ["Calls with critical violations",d.critical_calls,"threats, abuse, shaming, third-party disclosure"],
+    ["Agents",d.agents.length,"Hindi, Telugu and code-mixed teams"]]
+   .map(([l,v,s])=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`).join("");
+  bars($("#agentbars"),d.agents.slice().sort((a,b)=>a.compliance_rate-b.compliance_rate).map(a=>({name:a.name,sub:a.agent_id+" · "+a.team,v:a.compliance_rate,max:1,label:pct(a.compliance_rate),
+    tip:`<b>${esc(a.name)}</b><br>${a.compliant} / ${a.calls} calls compliant<br>avg score ${a.avg_score}`})));
+  bars($("#violbars"),d.violations.map(v=>({name:CAT[v.category]||v.title,sub:v.severity,v:v.calls,label:v.calls,tip:`<b>${esc(v.title)}</b><br>${v.calls} of ${d.calls} calls`})));
+  $("#agentrows").innerHTML=d.agents.map(a=>`<tr><td><b>${esc(a.name)}</b> <span class="muted">${a.agent_id}</span></td><td>${esc(a.team)}</td><td>${a.calls}</td>
+   <td>${pct(a.compliance_rate)}</td><td class="score">${a.avg_score}</td><td>${a.critical?`<span class="bad">${a.critical}</span>`:"0"}</td>
+   <td>${a.top.map(([c,n])=>`<span class="chip">${esc(CAT[c]||c)} ×${n}</span>`).join("")}</td>
+   <td><button class="btn small" data-coach="${a.agent_id}">Coaching card</button></td></tr>`).join("");
+  document.querySelectorAll("[data-coach]").forEach(b=>b.onclick=()=>coach(b.dataset.coach))}
+
+async function speak(btn,category,agent_id,language){btn.disabled=true;const old=btn.textContent;btn.textContent="Timbre…";
+  try{const r=await fetch("/api/coach/speak",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({category,agent_id,language})});
+    const a=new Audio(URL.createObjectURL(await r.blob()));btn.textContent="▶ playing";a.onended=()=>{btn.textContent=old;btn.disabled=false};a.play()}
+  catch(e){btn.textContent="error";btn.disabled=false}}
+
+async function coach(id){const c=await j(`/api/agents/${id}/coaching`);const el=$("#coach");el.classList.remove("hidden");
+  el.innerHTML=`<h2>Coaching card · ${esc(c.name)} <span class="muted">${c.agent_id}</span></h2>
+   <p class="muted" style="margin-top:-6px">${c.compliant_calls} of ${c.calls} calls compliant (${pct(c.compliance_rate)}). Top focus areas, with a real example and the compliant way to say it:</p>
+   ${c.focus.length?c.focus.map(f=>`<div class="finding"><div class="h"><span class="cat">${esc(CAT[f.category])}</span><span class="chip">${f.count} finding(s)</span>
+     <a href="#" data-open="${f.example.call_id}" data-t="${f.example.start}" class="muted">call ${esc(f.example.call_id)} at ${fmt(f.example.start)}</a></div>
+     <div class="quote">“${esc(f.example.quote)}”</div><div class="muted">${esc(f.tip)}</div>
+     <div class="say"><b>Say this instead</b><div style="margin-top:4px">${esc(f.rephrase)}</div>
+     <button class="btn small" style="margin-top:8px" data-speak="${f.category}" data-lang="${f.language}">▶ Hear it (Gnani Timbre)</button></div></div>`).join(""):"<p>No violations. Nothing to coach.</p>"}`;
+  el.querySelectorAll("[data-speak]").forEach(b=>b.onclick=()=>speak(b,b.dataset.speak,id,b.dataset.lang));
+  el.querySelectorAll("[data-open]").forEach(a=>a.onclick=e=>{e.preventDefault();openCall(a.dataset.open,+a.dataset.t)});
+  el.scrollIntoView({behavior:"smooth"})}
+
+async function loadCalls(){const cs=await j("/api/calls");
+  $("#callrows").innerHTML=cs.slice().reverse().map(c=>`<tr class="click" data-id="${c.call_id}"><td><b>${esc(c.call_id)}</b></td><td>${esc(c.agent_name)}</td><td>${c.language}</td>
+   <td>${esc((c.call_time||"").slice(0,16).replace("T"," "))}</td><td class="score ${c.compliant?"ok":"bad"}">${c.score}</td>
+   <td>${c.violations.length?c.violations.map(v=>`<span class="chip ${["THREAT","ABUSE","SHAMING","THIRD_PARTY"].includes(v)?"crit":"major"}">${esc(CAT[v])}</span>`).join(""):'<span class="ok">✓ compliant</span>'}</td></tr>`).join("");
+  document.querySelectorAll("#callrows tr").forEach(r=>r.onclick=()=>openCall(r.dataset.id))}
+
+function highlight(q,m){const t=esc(q);if(!m)return t;const parts=String(m).split(" … ");let out=t;
+  // the rule matched a normalised stem: widen the mark to whole words so no vowel sign is cut off
+  const stop=/[\s,.!?;:।"“”'’()]/;
+  parts.forEach(p=>{const e=esc(p.trim());if(e.length>1){let i=out.toLowerCase().indexOf(e.toLowerCase());if(i<0)return;
+    let k=i+e.length;while(i>0&&!stop.test(out[i-1])&&out[i-1]!==">")i--;while(k<out.length&&!stop.test(out[k])&&out[k]!=="<")k++;
+    out=out.slice(0,i)+"<mark>"+out.slice(i,k)+"</mark>"+out.slice(k)}});return out}
+
+async function openCall(id,seek){const a=await j("/api/calls/"+id);renderCall(a,seek)}
+function renderCall(a,seek){const el=$("#detail");el.classList.remove("hidden");const sc=a.scorecard;
+  const flagged=new Set(a.findings.filter(f=>["THREAT","ABUSE","SHAMING","THIRD_PARTY"].includes(f.category)).map(f=>f.start));
+  el.innerHTML=`<div class="card">
+   <div class="callhead"><div class="bigscore ${sc.compliant?"":"fail"}">${sc.score}</div>
+    <div style="flex:1"><h1>${sc.compliant?"Compliant call":`${a.findings.length} violation${a.findings.length>1?"s":""} found`}</h1>
+     <div class="meta"><span>Call <b>${esc(a.call_id)}</b></span><span>Agent <b>${esc(a.agent_name)}</b> (${a.agent_id})</span><span>${a.language}</span>
+     <span>Started ${esc((a.call_time||"unknown").slice(11,16))} IST</span><span>${fmt(a.stt.duration_s)} long</span></div>
+     <div class="meta" style="margin-top:4px"><span>STT: <b>${esc(a.stt.model)}</b>${a.mock?' <span class="badge mock">MOCK</span>':""}</span>
+      ${a.stt.job_wall_s?`<span>Prisma Batch job ${a.stt.job_wall_s}s</span>`:""}${a.audit_wall_s?`<span>end-to-end ${a.audit_wall_s}s</span>`:""}
+      <span>keywords: ${a.stt.keywords_accepted?"✓ accepted by Prisma":"–"}</span><span>speakers: ${esc((a.roles&&a.roles.method)||"")}</span></div></div></div>
+   <audio id="player" controls preload="auto" src="/api/calls/${esc(a.call_id)}/audio"></audio>
+   <div class="grid cview">
+    <div><h2>RBI checklist</h2>${sc.checks.map(c=>`<div class="check"><div class="ic ${c.passed?"p":"f"}">${c.passed?"✓":"✕"}</div><div><div class="t">${esc(c.title)}</div><div class="r">${esc(c.rule)}</div></div></div>`).join("")}</div>
+    <div><h2>Diarized transcript <span class="muted" style="font-weight:500;font-size:13px">· Gnani Prisma · click a line to play</span></h2>
+     <div class="turns">${a.segments.map(s=>`<div class="turn ${flagged.has(s.start)?"flag":""}" data-t="${s.start}" data-e="${s.end}"><div class="ts">${fmt(s.start)}</div><div class="role ${s.role}">${s.role==="agent"?"Agent":"Borrower side"}</div><div class="txt">${esc(s.text)}</div></div>`).join("")}</div></div>
+   </div></div>
+   ${a.findings.length?`<div class="card" style="margin-top:18px"><h2>Findings · evidence · coaching</h2>${a.findings.map(f=>`<div class="finding ${f.severity}">
+     <div class="h"><span class="cat">${esc(CAT[f.category]||f.title)}</span><span class="chip ${f.severity==="critical"?"crit":"major"}">${f.severity}</span>
+     ${f.category!=="CALL_HOURS"?`<button class="btn small" data-seek="${f.start}">▶ ${fmt(f.start)}</button>`:""}<span class="muted">${esc(f.note)}</span>${f.source==="llm"?'<span class="chip">LLM-suggested, quote-verified</span>':""}</div>
+     <div class="quote">“${highlight(f.quote,f.matched)}”</div>
+     <div class="say"><b>Say this instead</b> <span class="muted">· ${esc(f.tip)}</span><div style="margin-top:4px">${esc(f.rephrase)}</div>
+     <button class="btn small" style="margin-top:8px" data-speak="${f.category}">▶ Hear it (Gnani Timbre)</button></div></div>`).join("")}</div>`:""}`;
+  const p=$("#player");
+  el.querySelectorAll(".turn").forEach(t=>t.onclick=()=>{p.currentTime=+t.dataset.t;p.play()});
+  el.querySelectorAll("[data-seek]").forEach(b=>b.onclick=()=>{p.currentTime=+b.dataset.seek;p.play();window.scrollTo({top:el.offsetTop,behavior:"smooth"})});
+  el.querySelectorAll("[data-speak]").forEach(b=>b.onclick=()=>speak(b,b.dataset.speak,a.agent_id,a.language));
+  p.ontimeupdate=()=>el.querySelectorAll(".turn").forEach(t=>t.classList.toggle("playing",!p.paused&&p.currentTime>=+t.dataset.t&&p.currentTime<+t.dataset.e));
+  if(seek!=null){p.addEventListener("loadedmetadata",()=>{p.currentTime=seek},{once:true})}
+  if($("#live").classList.contains("hidden")){$("#team").classList.add("hidden");$("#calls").classList.add("hidden")}
+  el.scrollIntoView({behavior:"smooth"})}
+
+let SAMPLES=[];
+async function loadLive(){if(!SAMPLES.length){SAMPLES=await j("/api/samples");
+  const r=await j("/api/dashboard");AGENTS=Object.fromEntries(r.agents.map(a=>[a.agent_id,a.name]));
+  $("#sample").innerHTML=SAMPLES.map(s=>`<option value="${s.id}">${s.id} · ${esc(s.summary).slice(0,70)}</option>`).join("");
+  $("#agent").innerHTML=["AG-101","AG-102","AG-103","AG-104","AG-105"].map(a=>`<option value="${a}">${a} ${esc(AGENTS[a]||"")}</option>`).join("");
+  $("#sample").onchange=pick;pick()}}
+function pick(){const s=SAMPLES.find(x=>x.id===$("#sample").value);if(!s)return;$("#agent").value=s.agent_id;$("#lang").value=s.language;$("#ctime").value=s.call_time.slice(0,16);
+  const au=$("#srcaudio");au.src=`/api/calls/${s.id}/audio`;au.classList.remove("hidden")}
+$("#run").onclick=async()=>{const fd=new FormData();const f=$("#upl").files[0];
+  if(f)fd.append("file",f);else fd.append("sample_id",$("#sample").value);
+  fd.append("agent_id",$("#agent").value);fd.append("language",$("#lang").value);
+  if($("#ctime").value)fd.append("call_time",$("#ctime").value+":00+05:30");
+  const steps=[...document.querySelectorAll(".step")];$("#steps").classList.remove("hidden");$("#detail").classList.add("hidden");
+  const set=i=>steps.forEach((s,k)=>{s.classList.toggle("done",k<i);s.classList.toggle("on",k===i)});
+  set(0);$("#run").disabled=true;const t0=performance.now();const tick=setInterval(()=>$("#elapsed").textContent=`${((performance.now()-t0)/1000).toFixed(1)} s`,100);
+  setTimeout(()=>set(1),500);
+  try{const a=await j("/api/audit",{method:"POST",body:fd});set(2);await new Promise(r=>setTimeout(r,350));set(3);await new Promise(r=>setTimeout(r,350));set(4);
+    clearInterval(tick);$("#elapsed").textContent=`Done in ${((performance.now()-t0)/1000).toFixed(1)} s · Prisma Batch job ${a.stt.job_wall_s??"–"} s`;renderCall(a)}
+  catch(e){clearInterval(tick);$("#elapsed").textContent="Error: "+e.message}
+  $("#run").disabled=false};
+status().then(()=>tab(location.hash.slice(1)||"team"));
+</script>
+</body>
+</html>

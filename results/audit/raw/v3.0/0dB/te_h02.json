@@ -1,0 +1,98 @@
+{
+ "name": "te_h02",
+ "segments": [
+  {
+   "start": 0.044,
+   "end": 5.78,
+   "text": "హలో లక్ష్మి గారా, డెవలప్మెంట్ ఫైనాన్స్ నుంచి మీ పాడి లోన్ వాయిదా వేసింది.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 5.78,
+   "end": 11.296,
+   "text": "ఇంత పొద్దున్నే ఫోన్ ఎందుకు? పిల్లల్ని బడికి పంపిస్తాను.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 11.296,
+   "end": 17.664,
+   "text": "వద్దులే కాకపోతే మీరు ఫోన్ ఎత్తరు కదా రెండు నెలలుగా మూడు వేల ఐదు వందలు కట్టలేదు",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 17.664,
+   "end": 21.44,
+   "text": "డబ్బులు ఇంకా రాలేదండి, వచ్చే వారం కడతాను.",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 21.44,
+   "end": 26.69,
+   "text": "ప్రతిసారి ఇదే అబద్ధం. మీలాంటి మోసగాళ్లకి లోన్ ఇవ్వడమే మా తప్పు.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 26.69,
+   "end": 28.928,
+   "text": "మర్యాదగా మాట్లాడండి",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 28.928,
+   "end": 36.32,
+   "text": "మర్యాద కావాలంటే డబ్బులు కట్టండి, లేకపోతే మీ ఊరి వాట్సాప్ గ్రూప్ లో మీ ఫోటో పెట్టి బాకీదారు అని రాస్తా.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 36.32,
+   "end": 39.79,
+   "text": "వచ్చే నెల చేయకండి. వచ్చే సోమవారం కడతాను",
+   "speaker_id": 2,
+   "language": "te-IN",
+   "role": null
+  },
+  {
+   "start": 39.79,
+   "end": 43.751,
+   "text": "సోమవారం అంటే సోమవారమే ఫోన్ పెట్టేస్తున్నా.",
+   "speaker_id": 1,
+   "language": "te-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "te-IN",
+ "duration_s": 43.75,
+ "job_id": "01a1c158-667a-7451-9fee-390a6151c4f4",
+ "mock": false,
+ "job_wall_s": 35.7,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

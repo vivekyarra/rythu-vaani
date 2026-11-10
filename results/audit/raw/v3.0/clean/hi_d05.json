@@ -1,0 +1,82 @@
+{
+ "name": "hi_d05",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.36,
+   "text": "धन Finance से अमित बोल रहा हूँ। क्या मैं विजय जी से बात कर रहा हूँ?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 6.36,
+   "end": 8.13,
+   "text": "हाँ, बोलिए।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 8.13,
+   "end": 14.54,
+   "text": "विजय जी, आपके home loan की इस महीने की EMI बाकी है, उसी के बारे में call किया है।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 14.54,
+   "end": 18.624,
+   "text": "आप लोग बार-बार phone करके परेशान करते हो।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 18.624,
+   "end": 28.09,
+   "text": "मैं समझता हूँ, परेशानी के लिए माफ़ी चाहता हूँ, लगातार देरी होने पर agreement के अनुसार credit bureau को report किया जा सकता है। बस यही बताना था",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 28.09,
+   "end": 31.31,
+   "text": "ठीक है, मैं गुरुवार तक भर दूँगा।",
+   "speaker_id": 2,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 31.31,
+   "end": 39.36,
+   "text": "बहुत धन्यवाद। अगर आपको कोई शिकायत हो तो आप हमारी शिकायत helpline या नजदीकी branch से संपर्क कर सकते हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 40.3,
+ "job_id": "01a1c148-f5f4-7b17-b693-8fd40707b04d",
+ "mock": false,
+ "job_wall_s": 18.62,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "name": "hien_h02",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 3.75,
+   "text": "हैलो विकास पेमेंट कब कर रहे हो",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 3.75,
+   "end": 6.34,
+   "text": "कौन बोल रहा है इतनी रात को कॉल",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 6.34,
+   "end": 12.21,
+   "text": "रिकवरी डिपार्टमेंट से तुम्हारा एलेवेन थाउज़न्ड का लोन पेंडिंग है समझ नहीं आता क्या",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 12.21,
+   "end": 16.48,
+   "text": "भाई मैं ऑलरेडी बोल चुका हूँ नेक्स्ट मंथ पे करूँगा",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 16.48,
+   "end": 22.368,
+   "text": "नेक्स्ट मंथ नेक्स्ट मंथ तुम पूरे फ्रॉड आदमी हो दिमाग है भी या नहीं",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 22.368,
+   "end": 24.288,
+   "text": "लैंगुएज ठीक रखो",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 24.288,
+   "end": 30.89,
+   "text": "लैंग्वेज छोड़ो काल तक पैसा नहीं आया तो हमारे बॉयज तुम्हारे घर आएंगे फिर देखना क्या होता है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 30.89,
+   "end": 33.248,
+   "text": "आप धमकी दे रहे हो",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 33.248,
+   "end": 37.607,
+   "text": "जो समझना है समझो कल शाम तक ट्रांसफर करो",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 37.61,
+ "job_id": "01a1c146-f97b-7f73-b04c-4d4c760aa250",
+ "mock": false,
+ "job_wall_s": 7.81,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

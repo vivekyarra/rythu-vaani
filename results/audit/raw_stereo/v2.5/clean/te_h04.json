@@ -1,0 +1,98 @@
+{
+ "name": "te_h04",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 9.824,
+   "text": "నమస్కారం శ్రీనివాస్ గారేనా నేను సురేష్ నవధన్ ఫైనాన్స్ నుంచి మీ ద్విచక్ర వాహన లోన్ వాయిదా గురించి మాట్లాడుతున్నాను",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 9.324,
+   "end": 13.568,
+   "text": "అవునండి ఈ నెల కొంచెం ఇబ్బందిగా ఉంది",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 12.972,
+   "end": 20.32,
+   "text": "అర్థమైందండి ఈ నెల వాయిదా నాలుగు వేల ఐదు వందల రూపాయలు గడువు దాటి పది రోజులైంది",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 19.532,
+   "end": 23.84,
+   "text": "జీతం వచ్చాక ఇరవైయో తేదీకి కడతాను",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 23.116,
+   "end": 33.152,
+   "text": "సరేనండి కానీ మళ్లీ ఆలస్యమైతే మీ స్కూల్ ప్రిన్సిపాల్ గారికి మర్యాదగా ఒక లేఖ పంపి మీ బాకీ విషయం తెలియజేయాల్సి వస్తుంది",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 32.78,
+   "end": 36.256,
+   "text": "అది నా ఉద్యోగానికి ఇబ్బంది అవుతుంది కదండీ",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 35.788,
+   "end": 45.536,
+   "text": "అందుకే సమయానికి కట్టమని కోరుతున్నాను ఫిర్యాదు ఉంటే మా ఫిర్యాదుల అధికారికి ఈమెయిల్ చేయవచ్చు వివరాలు లోన్ ఒప్పందంలో ఉన్నాయి",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 44.812,
+   "end": 49.024,
+   "text": "సరే ఇరవయ్యో తేదీకి తప్పకుండా కడతాను",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 48.3,
+   "end": 51.936,
+   "text": "ధన్యవాదాలు శ్రీనివాస్ గారు శుభదినం",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "te-IN",
+ "duration_s": 51.97,
+ "job_id": "01a1c14e-746b-73ed-8525-d4c1e98742e6",
+ "mock": false,
+ "job_wall_s": 61.99,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "te-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

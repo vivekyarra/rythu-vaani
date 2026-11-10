@@ -1,0 +1,90 @@
+{
+ "name": "hi_d03",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 3.91,
+   "text": "हाँ सुनीता जी आपकी इ एम आई अभी तक क्यों नहीं आई",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 3.91,
+   "end": 7.104,
+   "text": "जी आप कौन बोल रहे हैं",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 7.104,
+   "end": 10.59,
+   "text": "वो छोड़िए पहले बताइए पैसे कब देंगे",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 10.59,
+   "end": 13.792,
+   "text": "पहले बताइए आप कहाँ से बोल रहे हैं",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 13.792,
+   "end": 17.69,
+   "text": "आप जैसे बेशर्म लोग लोन लेते हैं और फिर भाग जाते हैं",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 17.69,
+   "end": 20.096,
+   "text": "आप तमीज़ से बात कीजिए",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 20.096,
+   "end": 27.456,
+   "text": "शुक्रवार तक ₹4,000 जमा कर दीजिए कोई शिकायत है तो आप हमारी हेल्पलैन पर कॉल कर सकते हैं",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 27.456,
+   "end": 28.554,
+   "text": "ठीक है",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 28.55,
+ "job_id": "01a1c146-612b-78dc-9cad-7d336c9a0c3c",
+ "mock": false,
+ "job_wall_s": 22.19,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

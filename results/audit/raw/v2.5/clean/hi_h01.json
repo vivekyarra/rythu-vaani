@@ -1,0 +1,106 @@
+{
+ "name": "hi_h01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.22,
+   "text": "नमस्ते क्या मैं सुनील जी से बात कर रहा हूँ मैं अमित बोल रहा हूँ नवधन फाइनेंस से",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 6.22,
+   "end": 10.83,
+   "text": "हाँ मैं सुनील ही बोल रहा हूँ, बताइए क्या बात है",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 10.83,
+   "end": 19.776,
+   "text": "सुनील जी, आपके ट्रैक्टर लोन की इस महीने की किस्त ₹6,200 अभी बकाया है उसी बारे में फ़ोन किया",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.884,
+   "end": 26.08,
+   "text": "हर हफ्ते आप लोग फ़ोन करते हो, फसल अभी बिकी नहीं है, मैं पैसे कहाँ से लाऊँ",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 26.08,
+   "end": 34.4,
+   "text": "मैं आपकी परेशानी समझता हूँ, बस जानकारी के लिए बता दूँ, लोन एग्रीमेंट के अनुसार देरी पर लेट पेमेंट चार्ज लगेगा।",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 34.4,
+   "end": 36.576,
+   "text": "कितना चार्ज लगेगा",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 36.576,
+   "end": 45.6,
+   "text": "एग्रीमेंट में लिखी दर से लगातार देरी होने पर खाता क्रेडिट ब्यूरो को रिपोर्ट हो सकता है जिससे आगे लोन मिलने में दिक्कत होगी",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 45.6,
+   "end": 50.82,
+   "text": "ठीक है, अगले सोमवार तक मंडी से पैसा आ जाएगा, तब जमा कर दूँगा।",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 50.82,
+   "end": 59.2,
+   "text": "धन्यवाद सुनील जी, कोई शिकायत हो तो लोन एग्रीमेंट में छपे हेल्पलाइन नंबर पर या नज़दीकी शाखा के शिकायत अधिकारी से बात कर सकते हैं।",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 59.2,
+   "end": 61.696,
+   "text": "ठीक है नमस्ते",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 62.13,
+ "job_id": "01a1c145-217e-7857-a348-924e96e0bbe1",
+ "mock": false,
+ "job_wall_s": 16.01,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "name": "hi_d02",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.176,
+   "text": "Hello, मैं Navdhanya Finance से अमित बोल रहा हूँ। आपके gold loan की किस्त के बारे में।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 5.964,
+   "end": 8.928,
+   "text": "इतनी रात को फोन क्यों कर रहे हो?",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 8.524,
+   "end": 14.912,
+   "text": "3 महीने से पैसा नहीं दिया है। कल तक पैसे नहीं दिए, तो पुलिस लेकर आपके घर आएंगे।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 14.444,
+   "end": 17.344,
+   "text": "आप ऐसी धमकी नहीं दे सकते।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 16.716,
+   "end": 21.504,
+   "text": "और आपके मोहल्ले में सबको बता देंगे कि आप कर्ज नहीं चुकाते।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  },
+  {
+   "start": 20.94,
+   "end": 23.744,
+   "text": "मैं अगले हफ्ते पैसे दे दूंगा।",
+   "speaker_id": "ch1",
+   "language": "hi-IN",
+   "role": "borrower"
+  },
+  {
+   "start": 23.404,
+   "end": 27.104,
+   "text": "अगले हफ्ते नहीं, कल ही चाहिए, फोन रखो।",
+   "speaker_id": "ch0",
+   "language": "hi-IN",
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 27.58,
+ "job_id": "01a1c152-c74a-79b3-95c6-4b6743caffaa",
+ "mock": false,
+ "job_wall_s": 45.79,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

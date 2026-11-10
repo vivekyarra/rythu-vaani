@@ -1,0 +1,114 @@
+{
+ "name": "hi_h01",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.816,
+   "text": "नमस्ते क्या मैं सुनील जी से बात कर रहा हूँ मैं अमित बोल रहा हूँ नवधन फनैन्स से",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 6.412,
+   "end": 11.616,
+   "text": "हाँ मैं सुनील ही बोल रहा हूँ, बताइए क्या बात है",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 10.828,
+   "end": 19.776,
+   "text": "सुनील आपके ट्रैक्टर लोन की इस महीने की किस्त ₹6,200 अभी बकाया है उसी बारे में",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 20.364,
+   "end": 26.528,
+   "text": "हर हफ्ते आप लोग फ़ोन करते हो, फसल अभी बिकी नहीं है, मैं पैसे कहाँ से लाऊं",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 26.028,
+   "end": 34.08,
+   "text": "मैं आपकी परेशानी समझता हूँ बस जानकारी के लिए बताता हूँ लोन अग्रीमेंट के अनुसार देरी पर लेट पेमेंट चार्ज",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 34.892,
+   "end": 36.608,
+   "text": "चार्ज लगेगा",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 36.364,
+   "end": 45.376,
+   "text": "एग्रीमेंट में लिखी दर से लगातार देरी होने पर खाता क्रेडिट ब्यूरो को रिपोर्ट हो सकता है जिससे आगे लोन मिलने में दिक्कत",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 46.444,
+   "end": 51.136,
+   "text": "अगले सोमवार तक मंडी से पैसा आ जाएगा तब जमा कर दूंगा",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 50.636,
+   "end": 52.224,
+   "text": "धन्यवाद",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 52.224,
+   "end": 59.648,
+   "text": "कोई शिकायत हो तो लोन अग्रीमेंट में छपे हेल्पलैन नंबर पर या नजदीकी शाखा के शिकायत अधिकारी से बात कर सकते हैं",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 59.82,
+   "end": 61.696,
+   "text": "नमस्ते",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 62.13,
+ "job_id": "01a1c151-8f53-7a9a-b8f7-fb5188bf4e1f",
+ "mock": false,
+ "job_wall_s": 61.33,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

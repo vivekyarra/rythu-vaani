@@ -1,0 +1,90 @@
+{
+ "name": "he_d02",
+ "segments": [
+  {
+   "start": 0.108,
+   "end": 5.81,
+   "text": "गुड मॉर्निंग मैं नभान फनैन्स से रोहित बोल रहा हूँ क्या मैं प्रिया जी से बात कर रही हूँ",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 5.81,
+   "end": 7.904,
+   "text": "हाँ बोलिए",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 7.904,
+   "end": 15.328,
+   "text": "भैया जी आपके टू व्हीलर लोन की इ एम आई की दुए डेट निकल गई इसी के रिमाइंडर के लिए कॉल किया",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 15.328,
+   "end": 19.52,
+   "text": "अरे मैं भूल गई थी आज ही ऑनलाइन पे कर देती हूँ",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 19.52,
+   "end": 24.896,
+   "text": "थैंक यू अगर पेमेंट में कोई प्रॉब्लम हो तो हम रीस्ट्रक्चरिंग ऑप्शन भी डिस्कॅस कर सकते है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 24.896,
+   "end": 27.04,
+   "text": "शुक्रिया",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 27.04,
+   "end": 33.92,
+   "text": "और कोई कंप्लेंट हो तो आप हमारे ग्रीवेंस ऑफिसर को ईमेल कर सकते हैं डीटेल्स आपके लोन अग्रीमेंट",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 33.996,
+   "end": 36.056,
+   "text": "ओके थैंक यू",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 36.06,
+ "job_id": "01a1c148-9b9a-7106-988f-e3ccb005bc72",
+ "mock": false,
+ "job_wall_s": 10.91,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

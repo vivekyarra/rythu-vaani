@@ -1,0 +1,122 @@
+{
+ "name": "hi_d01",
+ "segments": [
+  {
+   "start": 0.012,
+   "end": 6.272,
+   "text": "नमस्ते मैं नवभवन फनैन्स से अमित बोल रहा हूँ क्या मेरी बात राकेश जी से हो रही है",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 5.772,
+   "end": 8.736,
+   "text": "हाँ मैं राकेश बोल रहा हूँ",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 8.14,
+   "end": 13.216,
+   "text": "राकेश जी मैं आपके पर्सनल लोन की इ एम आई के बारे में कॉल कर रहा हूँ",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 13.216,
+   "end": 16.192,
+   "text": "₹5,000 की किस्त 10 दिन जमा की",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 16.652,
+   "end": 21.344,
+   "text": "इस महीने तनख्वाह देर से मैं अगले सोमवार तक भर दूंगा",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 20.78,
+   "end": 25.792,
+   "text": "ठीक है कोई बात नहीं मैं सोमवार की तारीख नोट कर लेता हूँ",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 25.792,
+   "end": 29.6,
+   "text": "देरी होने पर लोन एग्रीमेंट के हिसाब से लेट की जाएगी",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 30.348,
+   "end": 31.84,
+   "text": "समझ गया",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 31.468,
+   "end": 37.76,
+   "text": "अगर आपको कोई शिकायत हो तो आप हमारे शिकायत अधिकारी से हेल्पलाइन पर बात कर सकते हैं",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 37.76,
+   "end": 40.384,
+   "text": "नंबर आपके लोन अग्रीमेंट में",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  },
+  {
+   "start": 40.076,
+   "end": 42.368,
+   "text": "ठीक है धन्यवाद",
+   "speaker_id": "ch1",
+   "language": null,
+   "role": "borrower"
+  },
+  {
+   "start": 41.836,
+   "end": 45.248,
+   "text": "धन्यवाद राकेश जी आपका दिन शुभ हो",
+   "speaker_id": "ch0",
+   "language": null,
+   "role": "agent"
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 45.31,
+ "job_id": "01a1c151-8f53-7a9a-b8f7-fb5188bf4e1f",
+ "mock": false,
+ "job_wall_s": 61.33,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

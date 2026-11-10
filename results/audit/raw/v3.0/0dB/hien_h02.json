@@ -1,0 +1,66 @@
+{
+ "name": "hien_h02",
+ "segments": [
+  {
+   "start": 0.076,
+   "end": 16.448,
+   "text": "Hello विकास payment कब कर रहे हैं? कौन बोल रहा है? इतनी रात को call recovery department से? तुम्हारा 11,000 का लोन पेंडिंग है समझ नहीं आता क्या भाई मैं ऑलरेडी बोल चुका हूँ next month पे करूँगा।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 16.448,
+   "end": 22.336,
+   "text": "Next month, next month। तुम पूरे fraud आदमी हो, दिमाग है भी या नहीं?",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 22.336,
+   "end": 24.064,
+   "text": "Language",
+   "speaker_id": 1,
+   "language": "en-IN",
+   "role": null
+  },
+  {
+   "start": 24.064,
+   "end": 33.216,
+   "text": "language छोड़ो। कल तक पैसा नहीं आया, तो हमारे boys तुम्हारे घर आएंगे। फिर देखना क्या होता है। दे रहे हैं।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  },
+  {
+   "start": 33.216,
+   "end": 37.607,
+   "text": "जो समझना है समझो, कल शाम तक transfer करो।",
+   "speaker_id": 1,
+   "language": "hi-IN",
+   "role": null
+  }
+ ],
+ "model": "prisma-v3.0",
+ "language_code": "hi-IN",
+ "duration_s": 37.61,
+ "job_id": "01a1c158-4d2e-7cfc-9767-a071e157b2fa",
+ "mock": false,
+ "job_wall_s": 14.31,
+ "config_echo": {
+  "model": "prisma-v3.0",
+  "mode": "transcribe",
+  "language_code": "hi-IN,en-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}

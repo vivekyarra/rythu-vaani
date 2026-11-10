@@ -1,0 +1,122 @@
+{
+ "name": "hi_d01",
+ "segments": [
+  {
+   "start": 0.268,
+   "end": 5.53,
+   "text": "नमस्ते मैं मध्यम फनैन्स से अमित बोल रहा हूँ क्या मेरी बात राकेश जी से हो रही है",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 5.53,
+   "end": 8.2,
+   "text": "हाँ मैं राकेश बोल रहा हूँ",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 8.2,
+   "end": 13.248,
+   "text": "राकेश जी मैं आपके पर्सनल लोन की इ एम आई के बारे में कॉल कर",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 13.248,
+   "end": 16.128,
+   "text": "₹5,000 की किस्त 10 दिन के बाद",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 16.128,
+   "end": 21.184,
+   "text": "हाँ इस महीने तनख्वाह लेट है मैं अगले सोमवार तक घर दूंगा",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 21.184,
+   "end": 25.696,
+   "text": "ठीक है कोई बात नहीं मैं सोमवार की तारीख नोट कर लेता हूँ",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 25.696,
+   "end": 29.472,
+   "text": "देरी होने पर लोन एग्रीमेंट के हिसाब से लेट फीस",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 29.472,
+   "end": 31.872,
+   "text": "ठीक है समझ गया",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 31.872,
+   "end": 37.728,
+   "text": "अगर आपको कोई शिकायत हो तो आप हमारे शिकायत अधिकारी से हेल्पलाइन पर बात कर सकते हैं",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 37.728,
+   "end": 40.224,
+   "text": "नंबर आपके लोन अग्रीमेंट",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 40.224,
+   "end": 41.94,
+   "text": "ठीक है धन्यवाद",
+   "speaker_id": 2,
+   "language": null,
+   "role": null
+  },
+  {
+   "start": 41.94,
+   "end": 45.315,
+   "text": "धन्यवाद राकेश जी आपका दिन शुभ हो",
+   "speaker_id": 1,
+   "language": null,
+   "role": null
+  }
+ ],
+ "model": "prisma-v2.5",
+ "language_code": "hi-IN",
+ "duration_s": 45.31,
+ "job_id": "01a1c148-1ab7-7393-8dc5-28ea42178c20",
+ "mock": false,
+ "job_wall_s": 17.53,
+ "config_echo": {
+  "model": "prisma-v2.5",
+  "mode": "transcribe",
+  "language_code": "hi-IN",
+  "with_diarization": true,
+  "num_speakers": 2,
+  "is_multi_channel": false,
+  "with_denoise": false,
+  "bias_list": null,
+  "bias_score": null,
+  "format": null,
+  "keywords": null,
+  "topic": null,
+  "speaker_names": null
+ }
+}
