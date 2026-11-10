@@ -224,7 +224,7 @@ if __name__ == "__main__":
                   "limits": "Limits: synthetic calls only (contest rule) · 12 held-out calls is a small test set ·\n"
                             "rules miss novel phrasings (see per-category table) · not legal advice.",
                   "credit": "Built solo by Yarra Vivek · Vignan's Lara Institute of Technology & Science",
-                  "url": "github.com/vivekyarra/rythu-vaani · vaani_audit/"},
+                  "url": "github.com/vivekyarra/vaani-audit"},
     }
 
     # ------------------------------------------------ main 16:9 cut

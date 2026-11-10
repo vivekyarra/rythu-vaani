@@ -49,4 +49,4 @@ the village agriculture staff who take their calls. No app, literacy or smartpho
 lives only in a gitignored `.env`. There are 114 automated tests, which run without a key in a clearly
 labelled MOCK mode.
 
-Code: https://github.com/vivekyarra/rythu-vaani
+Code: https://github.com/vivekyarra/vaani-audit

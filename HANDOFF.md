@@ -58,7 +58,7 @@ Follow the shot list in `SUBMISSION.md`. Don't film MOCK mode, and don't edit tr
 
 ```bash
 git log --oneline                                # one local commit is already made
-# create a public repo yourself on GitHub (e.g. vivekyarra/rythu-vaani), then:
+# create a public repo yourself on GitHub (e.g. vivekyarra/vaani-audit), then:
 git remote add origin https://github.com/vivekyarra/<repo>.git
 git push -u origin main
 ```

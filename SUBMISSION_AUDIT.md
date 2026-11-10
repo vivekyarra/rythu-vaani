@@ -1,6 +1,6 @@
 # Vaani Audit: ready-to-paste submission answers
 
-Everything is on `main` of https://github.com/vivekyarra/rythu-vaani
+Everything is on `main` of https://github.com/vivekyarra/vaani-audit
 
 
 ## Form fields
@@ -10,11 +10,11 @@ Everything is on `main` of https://github.com/vivekyarra/rythu-vaani
 **Institution:** Vignan's Lara Institute of Technology & Science
 
 **Project URL:**
-https://github.com/vivekyarra/rythu-vaani/tree/main/vaani_audit
-(1-page pitch: https://github.com/vivekyarra/rythu-vaani/blob/main/AUDIT_PITCH.md)
+https://github.com/vivekyarra/vaani-audit
+(1-page pitch: https://github.com/vivekyarra/vaani-audit/blob/main/AUDIT_PITCH.md)
 
 **Demo video (2:56, 1080p):**
-https://github.com/vivekyarra/rythu-vaani/blob/main/video/out/vaani_audit_demo_16x9.mp4
+https://github.com/vivekyarra/vaani-audit/blob/main/video/out/vaani_audit_demo_16x9.mp4
 *(If the form needs a streaming link, upload this same file to YouTube as "Unlisted" or to Google Drive
 ("Anyone with the link"), and paste that link instead.)*
 

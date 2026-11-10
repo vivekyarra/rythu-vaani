@@ -1,4 +1,4 @@
-# Rythu Vaani + Vaani Audit: Indian-language voice AI on Gnani Prisma and Timbre
+# Vaani Audit: every collection call audited, in Indian languages, on Gnani Prisma and Timbre
 
 ## ⭐ Main entry: Vaani Audit, a collection-call compliance auditor
 
