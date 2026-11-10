@@ -77,7 +77,7 @@ def agent_coaching(agent_id: str):
 
 @app.get("/api/samples")
 def samples():
-    """Synthetic sample calls that can be (re-)audited live from the UI."""
+    """Scripted sample calls that can be (re-)audited live from the UI."""
     from .synth import load_scripts
     out = []
     for c in load_scripts():
@@ -115,7 +115,7 @@ async def audit(file: UploadFile | None = File(None), sample_id: str = Form(""),
             mock_script = script_segments(load_truth()[sample_id])
     else:
         raise HTTPException(400, "send a WAV file or a sample_id")
-    # re-auditing a sample replaces its stored audit (keeps team numbers honest); uploads get a new id
+    # re-auditing a sample replaces its stored audit (keeps team numbers accurate); uploads get a new id
     cid = call_id or sample_id or f"upload-{time.strftime('%Y%m%d-%H%M%S')}"
     if not store._SAFE.match(cid):
         raise HTTPException(400, "bad call_id")

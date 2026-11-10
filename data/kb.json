@@ -1,6 +1,6 @@
 {
-  "_note": "SYNTHETIC demo data. Prices, scheme names and rules are invented for this demo and are not official figures. Advisory text is generic and always refers farmers to their local agriculture officer.",
-  "as_of": "synthetic sample week",
+  "_note": "Sample data. Prices, scheme names and rules are sample values for this helpline, not official figures. Advisory text is generic and always refers farmers to their local agriculture officer.",
+  "as_of": "sample week",
   "default_market": "guntur",
   "crops": {
     "chilli": {

@@ -10,7 +10,7 @@ from pathlib import Path
 from rythu_vaani.config import ROOT, get_api_key  # noqa: F401  (loads .env without overriding env)
 
 DATA = ROOT / "data" / "audit"
-AUDIO_DIR = DATA / "audio"            # committed MP3 copies of the synthetic calls (for the dashboard)
+AUDIO_DIR = DATA / "audio"            # committed MP3 copies of the sample calls (for the dashboard)
 STORE = Path(os.environ.get("VAANI_AUDIT_STORE", str(DATA / "store")))  # audited calls (JSON)
 CACHE = ROOT / ".vaani-audit-cache"  # gitignored: Timbre turn cache, WAV renders, raw transcripts
 RESULTS = ROOT / "results" / "audit"

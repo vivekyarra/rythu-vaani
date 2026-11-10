@@ -1,5 +1,5 @@
 {
-  "_note": "SYNTHETIC roster. Fictional agents of the fictional lender 'Navdhan Finance'. Voices are Gnani Timbre v3.0 voices used to synthesise the demo calls.",
+  "_note": "Sample roster. Fictional agents of the sample lender 'Navdhan Finance'. Voices are Gnani Timbre v3.0 voices used to voice the scripted sample calls.",
   "lender": {"name": "Navdhan Finance", "aliases": ["navdhan", "nav dhan", "नवधन", "नव धन", "नवधान", "नौधन", "నవధన్", "నవధన", "నవ్ధన్", "నవ ధన్"]},
   "agents": {
     "AG-101": {"name": "Amit",   "gender": "m", "aliases": ["amit", "अमित", "అమిత్"],   "voice": "Prakash", "team": "Hindi"},

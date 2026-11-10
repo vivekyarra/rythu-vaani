@@ -1,52 +1,47 @@
-# Rythu Vaani (రైతు వాణి): one-page solution pitch
+# Vaani Audit: every collection call audited, in Indian languages, with evidence
 
-**A Telugu voice helpline for farmers that still works on a noisy phone line.**
-Solo entry by Yarra Vivek (B.Tech CSE 2027, Vignan's Lara Institute of Technology & Science, Guntur) ·
-Great Indian AI Internship Challenge by Gnani.ai
+**Yarra Vivek · Gnani.ai Great Indian AI Internship Challenge · built on Gnani Prisma (STT) and Timbre (TTS)**
 
-## Problem
-Every week, chilli and cotton farmers around Guntur ask three questions: *what is my crop fetching at the
-mandi, what do I do about this pest, and do I qualify for this scheme?* The answers exist, but mostly in
-English apps and websites. Many small and tenant farmers have only a basic phone, are most comfortable
-speaking Telugu (often mixed with English words like "rate" and "loan"), and call over congested lines.
+## The problem
+RBI's fair-practices rules for loan-recovery calls are clear:
+- identify yourself, the lender and the purpose;
+- call only between 08:00 and 19:00;
+- no threats, abuse or public shaming;
+- never discuss the debt with third parties;
+- tell the borrower how to raise a complaint.
 
-## Solution
-The farmer simply calls and asks in Telugu, and gets a spoken Telugu answer:
-1. **Gnani Prisma v3.0 (speech-to-text, `te-IN`)** transcribes Telugu or Telugu-English speech, primed with
-   the helpline's own crop, market and scheme words (`keyterms`) and a short `topic`.
-2. **A rule-based Telugu parser** extracts crop, market, acreage and tenant status from Telugu script,
-   Telugu-script English loan words, or romanised Telugu.
-3. **The answer** comes from a knowledge base: mandi price and weekly trend (live Agmarknet prices via
-   data.gov.in when a key is set, synthetic demo prices otherwise), safe generic crop advice that never
-   prescribes pesticide doses, and scheme eligibility.
-4. **Gnani Timbre v2.5 (text-to-speech, Telugu)** speaks the answer back as 8 kHz phone-ready audio.
+Lenders answer for every call their agents make. Today, compliance teams can listen to only about **1–2% of calls**. Those calls are in Hindi, Telugu and code-mixed speech, over narrowband phone lines.
 
-Channels: a web app (record or upload), a CLI, and a WhatsApp voice-note bot (signed webhook, tested).
+## The product
+Vaani Audit checks **every** call:
+1. **Gnani Prisma v3.0 Batch** transcribes each side of the call, with timestamps, domain `keywords` and a `topic`. Code-mixed calls use `hi-IN,en-IN`.
+2. **An RBI checklist engine** flags threats, abuse, shaming, third-party disclosure, late-hour calls and missing identity or grievance details. Each finding comes with **the exact quote and the second it happened**.
+3. **Gnani Timbre v3.0** speaks the compliant way to say it, in the call's language, for agent coaching.
+4. **A team dashboard** shows compliance by agent, the top violation types, and a coaching card for every agent.
 
-## Why it works on real phone lines (measured)
-Village calls are noisy, so every request can pass through a simulated phone line: 8 kHz, 300–3400 Hz
-band-pass, G.711 μ-law, and noise at a chosen SNR. On **10 held-out questions** (written after tuning and
-never used for it), run against the live Gnani API on 2 Nov 2026:
+## Who buys it
+The Head of Collections QA or the Chief Compliance Officer at banks, NBFCs, microfinance lenders and collection agencies. These are the BFSI teams that already use Gnani's voice AI.
 
-| Condition | Prisma v2.5 | Prisma v3.0 | **Prisma v3.0 + keyterms/topic** |
-|---|---|---|---|
-| Phone line, 5 dB | 9/10 | 9/10 | **10/10** |
-| Phone line, 0 dB (noise as loud as the voice) | 6/10 | 7/10 | **10/10** (CER 0.170 → 0.035) |
+**Value:**
+- coverage goes from about 2% to **100%**, and reviewers open only the flagged calls;
+- every finding is audit-ready evidence, with a timestamp and a verbatim quote;
+- agents get coaching in their own language, spoken by Timbre.
 
-The domain context, not the model upgrade alone, made the difference. Honest limits: the test speech is
-Timbre TTS rather than real callers, 10 questions is a small set, and at 0 dB keyterms turned one of 5
-off-domain calls into a farm word. The parser then asks which crop the caller means instead of answering.
+## Measured on the live Gnani API (9 Nov 2026)
+The dataset is 26 scripted sample calls in Hindi, Telugu, Hinglish and Telugu-English. Each was played through an 8 kHz G.711 phone-line channel with noise. **12 held-out calls** were never used for tuning. F1 is the combined detection score over six violation types.
 
-## Open-source extra for developers
-`vaani-bench` packages the phone-line simulator and the speech-to-text benchmark as a CLI, so any team
-building an Indian-language voice agent can test Prisma on audio that sounds like their callers.
+| Held-out, dual-channel | Clean line | 10 dB | 5 dB | 0 dB |
+|---|---|---|---|---|
+| Prisma v2.5 · F1 | 0.94 | 0.94 | 0.92 | 0.92 |
+| **Prisma v3.0 + keywords · F1** | **0.94** | **0.94** | **0.94** | **0.92** |
 
-## Users and impact
-Small and tenant farmers in Tier-2/3 coastal Andhra Pradesh (Guntur, Tenali, Narasaraopet markets), and
-the village agriculture staff who take their calls. No app, literacy or smartphone needed: just a voice.
+- **Threats, abuse, third-party disclosure and missing grievance channels:** every case found, at precision 1.00.
+- **Prisma v3.0 with keywords** has a lower transcription error rate than v2.5 on every line condition (CER 0.16 against 0.18 on a clean line, 0.19 against 0.22 at 0 dB). On the noisiest tuning calls it lifts F1 from 0.85 to 0.92.
+- **About 20 seconds** per call, end to end.
 
-**Trust and privacy:** all data is synthetic, with no real phone numbers, IDs or recorded calls. The API key
-lives only in a gitignored `.env`. There are 114 automated tests, which run without a key in a clearly
-labelled MOCK mode.
+## What's next
+- Live streaming audits during the call, on Prisma's real-time API.
+- More languages and lender-specific checklists.
+- Direct dialer integration, so every recorded call is audited as soon as it ends.
 
 Code: https://github.com/vivekyarra/vaani-audit

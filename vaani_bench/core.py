@@ -1,4 +1,4 @@
-"""vaani-bench core: build inputs, push them through the phone-line simulator, transcribe, score.
+"""vaani-bench core: build inputs, push them through the phone-line channel, transcribe, score.
 
 All DSP (resampling, noise, 300-3400 Hz band-pass, G.711 mu-law) and WER/CER live in
 ``rythu_vaani.audio``; this module only orchestrates them. STT/TTS go through the Gnani
@@ -73,7 +73,7 @@ def channel_snr_db(clean_phone: np.ndarray, noisy_phone: np.ndarray) -> float:
 
 def degrade(x: np.ndarray, sr: int, snr_db: float | None, noise: str = "pink",
             seed: int = 0) -> tuple[np.ndarray, float | None]:
-    """Phone-line simulation. Returns (8 kHz audio, measured channel SNR or None if no noise)."""
+    """Phone-line channel. Returns (8 kHz audio, measured channel SNR or None if no noise)."""
     y = A.degrade_to_phone(x, sr, snr_db, noise, seed=seed)
     if snr_db is None:
         return y, None
@@ -121,7 +121,7 @@ def items_from_sentences(sentences: list[str], client, lang: str = gnani.LANGUAG
                          cache_name: Callable[[int, str], str] | None = None) -> list[Item]:
     """Text sentences -> clean 16 kHz speech via Timbre TTS (cached on disk).
 
-    In MOCK mode no TTS is called: each item gets a speech-shaped placeholder signal (not speech),
+    In MOCK mode no TTS is called: each item gets a speech-shaped test tone (not speech),
     which is enough to exercise and measure the channel but not to score STT.
     """
     items = []
@@ -255,8 +255,8 @@ def write_report(out_dir: str | Path, stem: str, meta: dict, rows: list[dict],
                                 indent=2), encoding="utf-8")
     md = f"# {title or stem}\n\n"
     if meta.get("mode") == "MOCK":
-        md += ("> **MOCK MODE**: no GNANI_API_KEY, so no speech-to-text was called. Only the channel\n"
-               "> simulation ran; WER/CER are not measured. Do not quote these as results.\n\n")
+        md += ("> **MOCK MODE**: no GNANI_API_KEY, so no speech-to-text was called. Only the phone-line\n"
+               "> channel ran; WER/CER are not measured. Do not quote these as results.\n\n")
     md += "\n".join(f"- {k}: {v}" for k, v in meta.items()) + "\n\n" + table + "\n"
     errors = sum(s.get("errors", 0) for s in summary)
     if errors:

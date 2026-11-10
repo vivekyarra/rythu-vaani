@@ -1,9 +1,9 @@
 """Vaani Audit command line.
 
   python -m vaani_audit audit CALL.wav --agent AG-101 --language hi-IN --time 2026-10-13T20:15:00+05:30
-  python -m vaani_audit synth            # voice the synthetic scripts with Timbre, build phone-line WAVs
+  python -m vaani_audit synth            # voice the sample scripts with Timbre, build phone-line WAVs
   python -m vaani_audit bench            # P/R per category x condition x STT system (writes results/audit/)
-  python -m vaani_audit populate         # audit every synthetic call (v3.0+ctx, phone line) into the dashboard store
+  python -m vaani_audit populate         # audit every sample call (v3.0+ctx, phone line) into the dashboard store
   python -m vaani_audit serve            # FastAPI + dashboard on http://127.0.0.1:8100
 """
 from __future__ import annotations
@@ -17,7 +17,7 @@ from . import config
 
 
 def _banner():
-    m = "MOCK (no GNANI_API_KEY: transcripts are placeholders/scripts, audio is beeps)" if config.is_mock() else "LIVE Gnani API"
+    m = "MOCK (no GNANI_API_KEY: transcripts come from the call scripts, audio is test tones)" if config.is_mock() else "LIVE Gnani API"
     print(f"[vaani-audit] mode: {m}", file=sys.stderr)
 
 

@@ -1,4 +1,4 @@
-"""Measure violation detection on the synthetic calls: precision / recall per checklist category,
+"""Measure violation detection on the scripted sample calls: precision / recall per checklist category,
 per phone-line condition, per STT system. Held-out calls are reported separately and were never
 used to write or tune the rules.
 

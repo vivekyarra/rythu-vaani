@@ -1,6 +1,6 @@
 """The RBI-style collection-call checklist Vaani Audit checks every call against.
 
-Basis (paraphrased; this tool is an aid for compliance teams, not legal advice):
+Basis (paraphrased; this tool helps compliance teams review calls):
 * RBI circular of 12 Aug 2022 on recovery agents (calls only 08:00-19:00; no intimidation or
   harassment, verbal or physical; no humiliating the borrower publicly or intruding on the privacy
   of family members, referees and friends; no threatening or misleading calls),

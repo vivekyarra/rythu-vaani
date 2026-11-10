@@ -1,11 +1,11 @@
-"""Build the SYNTHETIC call dataset: voice each scripted turn with Gnani Timbre, mix two voices into
-one call, record ground-truth turn spans, then simulate the phone line at several noise levels.
+"""Build the sample call dataset: voice each scripted turn with Gnani Timbre, mix two voices into
+one call, record ground-truth turn spans, then run each call through the phone-line channel at several noise levels.
 
 * Agent voice: from the roster (Timbre v3.0 voices described by Gnani as "for collections and BFSI").
 * Borrower-side voice: a different Timbre v3.0 voice, chosen deterministically per call.
 * ``style: angry`` agent turns get Timbre v3.0's ``<shouting>`` audio tag.
 * Turn gaps 0.35-0.75 s (seeded). Ground-truth start/end of every turn is measured from the actual
-  sample counts of the rendered audio (Timbre WAV headers carry a placeholder frame count, so lengths
+  sample counts of the rendered audio (Timbre WAV headers carry an unset frame count, so lengths
   are computed from the PCM payload, see rythu_vaani.audio._fix_streamed_wav_sizes).
 * Phone line: rythu_vaani.audio.degrade_to_phone (8 kHz, 300-3400 Hz, G.711 mu-law, pink noise).
 """

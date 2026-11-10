@@ -5,7 +5,7 @@
   vaani-bench run --audio-dir recordings/ --transcripts refs.json --model v3 --keyterms terms.txt
 
 Without GNANI_API_KEY (environment variable or ./.env) ``run`` works in MOCK mode: the phone-line
-simulation runs and is measured, but no STT is called and no WER/CER is reported.
+channel runs and is measured, but no STT is called and no WER/CER is reported.
 """
 from __future__ import annotations
 
@@ -83,7 +83,7 @@ def cmd_run(a) -> int:
 
     client = _get_client()
     if client.mock:
-        print("=" * 72 + "\n MOCK MODE: no GNANI_API_KEY. No STT/TTS is called. The phone-line simulation\n"
+        print("=" * 72 + "\n MOCK MODE: no GNANI_API_KEY. No STT/TTS is called. The phone-line channel\n"
               " runs and its SNR is measured, but WER/CER are NOT measured (n/a).\n" + "=" * 72)
 
     if a.sentences:
@@ -91,7 +91,7 @@ def cmd_run(a) -> int:
         sentences = sentences[: a.limit] if a.limit else sentences
         items = core.items_from_sentences(sentences, client, lang=a.lang, voice=a.voice, cache_dir=a.cache_dir)
         source = f"{a.sentences} (text, synthesised with {gnani.TTS_MODEL} voice {a.voice})" if not client.mock \
-            else f"{a.sentences} (MOCK: placeholder non-speech signals, no TTS)"
+            else f"{a.sentences} (MOCK: test-tone non-speech signals, no TTS)"
     else:
         items = core.items_from_audio_dir(a.audio_dir, a.transcripts)
         items = items[: a.limit] if a.limit else items
@@ -132,7 +132,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--version", action="version", version=f"vaani-bench {__version__}")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    d = sub.add_parser("degrade", help="simulate a noisy 8 kHz phone line on one WAV (no API needed)")
+    d = sub.add_parser("degrade", help="run one WAV through a noisy 8 kHz phone-line model (no API needed)")
     d.add_argument("input", help="input WAV (any sample rate, mono or stereo)")
     d.add_argument("output", help="output WAV (8 kHz, 16-bit mono)")
     d.add_argument("--snr", type=float, default=None, help="noise SNR in dB (omit for no added noise)")

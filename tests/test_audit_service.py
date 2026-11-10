@@ -1,4 +1,4 @@
-"""Vaani Audit: Prisma Batch client (fake HTTP), MOCK pipeline, FastAPI service. No network."""
+"""Vaani Audit: Prisma Batch client (stub HTTP), MOCK pipeline, FastAPI service. No network."""
 import json
 
 import httpx

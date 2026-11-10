@@ -1,6 +1,6 @@
-"""Audio utilities: WAV I/O, telephone-channel simulation and WER/CER scoring.
+"""Audio utilities: WAV I/O, the phone-line channel model and WER/CER scoring.
 
-Telephone simulation (``degrade_to_phone``):
+Phone-line channel (``degrade_to_phone``):
   1. resample to 8 kHz (narrowband telephony rate),
   2. add noise at a target SNR (measured against the 8 kHz speech signal),
   3. band-pass 300-3400 Hz (classic PSTN voice band),
@@ -24,7 +24,7 @@ NOISE_KINDS = ("white", "pink", "hum")
 # ---------- WAV I/O ----------
 
 def _fix_streamed_wav_sizes(data: bytes) -> bytes:
-    """Timbre streams WAV with placeholder sizes (0xFFFFFFFF); rewrite them from the real length."""
+    """Timbre streams WAV with unset sizes (0xFFFFFFFF); rewrite them from the real length."""
     if len(data) < 44 or data[:4] != b"RIFF" or data[8:12] != b"WAVE":
         return data
     buf = bytearray(data)
@@ -67,7 +67,7 @@ def duration_s(data: bytes) -> float:
     return len(x) / sr
 
 
-# ---------- channel simulation ----------
+# ---------- phone-line channel ----------
 
 def resample(x: np.ndarray, sr_in: int, sr_out: int) -> np.ndarray:
     if sr_in == sr_out:
@@ -120,7 +120,7 @@ def mulaw_roundtrip(x: np.ndarray, mu: int = 255) -> np.ndarray:
 
 def degrade_to_phone(x: np.ndarray, sr: int, snr_db: float | None, noise: str = "pink",
                      seed: int = 0) -> np.ndarray:
-    """Simulate a noisy narrowband phone call. Returns 8 kHz audio. ``snr_db=None`` adds no noise."""
+    """Pass audio through a noisy narrowband phone-line model. Returns 8 kHz audio. ``snr_db=None`` adds no noise."""
     y = resample(x, sr, PHONE_SR)
     if snr_db is not None:
         y = add_noise(y, snr_db, noise, PHONE_SR, np.random.default_rng(seed))
@@ -132,7 +132,7 @@ def degrade_to_phone(x: np.ndarray, sr: int, snr_db: float | None, noise: str = 
 
 
 def placeholder_signal(seconds: float = 2.0, sr: int = 16000, seed: int = 0) -> np.ndarray:
-    """Speech-shaped placeholder (syllable-rate AM tones) for MOCK runs. Not speech."""
+    """Speech-shaped test tone (syllable-rate AM tones) for offline (MOCK) runs. Not speech."""
     rng = np.random.default_rng(seed)
     t = np.arange(int(seconds * sr)) / sr
     f0 = 140 + 30 * np.sin(2 * np.pi * 0.7 * t)

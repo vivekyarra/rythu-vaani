@@ -5,5 +5,5 @@ from pathlib import Path
 # Force MOCK mode for the whole test run, even if a real key sits in .env:
 # load_dotenv(override=False) leaves an already-set (empty) variable alone.
 os.environ["GNANI_API_KEY"] = ""
-os.environ["DATA_GOV_IN_API_KEY"] = ""  # synthetic prices only: tests never call data.gov.in
+os.environ["DATA_GOV_IN_API_KEY"] = ""  # sample prices only: tests never call data.gov.in
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))

@@ -24,7 +24,7 @@ def main(argv: list[str] | None = None) -> int:
     src.add_argument("--text", help="typed question (skips STT)")
     src.add_argument("--audio", type=Path, help="caller audio file (<= 30 s)")
     src.add_argument("--say", help="synthesise this question with Timbre, then run it through STT like a caller")
-    p.add_argument("--phone", action="store_true", help="simulate an 8 kHz phone line")
+    p.add_argument("--phone", action="store_true", help="run the audio through a noisy 8 kHz phone-line model")
     p.add_argument("--snr", type=float, default=None, help="noise SNR in dB for --phone")
     p.add_argument("--mock-transcript", help="MOCK mode only: transcript to pretend STT returned")
     p.add_argument("--out", type=Path, default=Path("reply.wav"), help="where to save the spoken reply")

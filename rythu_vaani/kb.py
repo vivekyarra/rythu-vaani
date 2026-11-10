@@ -1,4 +1,4 @@
-"""Answers from the synthetic knowledge base (data/kb.json), in Telugu plus an English gloss."""
+"""Answers from the sample knowledge base (data/kb.json), in Telugu plus an English gloss."""
 from __future__ import annotations
 
 import json
@@ -175,5 +175,5 @@ class KnowledgeBase:
 
 @lru_cache(maxsize=1)
 def default_kb() -> KnowledgeBase:
-    """Live Agmarknet prices when DATA_GOV_IN_API_KEY is set, synthetic demo prices otherwise."""
+    """Live Agmarknet prices when DATA_GOV_IN_API_KEY is set, sample prices from the knowledge base otherwise."""
     return KnowledgeBase.load(live_prices=LivePrices.from_env())

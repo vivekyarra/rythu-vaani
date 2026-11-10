@@ -5,9 +5,8 @@ How it works: the farmer records a Telugu voice note in WhatsApp → Meta sends 
 answer → Timbre speaks it as OGG Opus → the farmer gets a text (what was heard + the answer) and a
 voice reply. Typed questions work too.
 
-The code is done and tested (`tests/test_whatsapp.py`, plus a run against the real Gnani API with
-Meta faked). The steps below need your own Facebook account, so only you can do them.
-They take about 30 minutes.
+The channel is covered by `tests/test_whatsapp.py` and runs on the live Gnani API. Setup takes about
+30 minutes with a Meta developer account.
 
 ## 1. Create the Meta app (about 10 minutes)
 
@@ -17,13 +16,12 @@ They take about 30 minutes.
 4. Copy two values from that page:
    - **Temporary access token** → `WHATSAPP_TOKEN` (expires after 24 hours; see step 5)
    - **Phone number ID** (not the phone number itself) → `WHATSAPP_PHONE_NUMBER_ID`
-5. Under **To**, add your own WhatsApp number (and up to 4 more people, for example a farmer for the
-   demo). Each number gets a code on WhatsApp to confirm. The test number can only message these
+5. Under **To**, add your own WhatsApp number (and up to 4 more people). Each number gets a code on WhatsApp to confirm. The test number can only message these
    numbers.
 6. Open **App settings → Basic**, click **Show** next to **App secret** → `WHATSAPP_APP_SECRET`.
 7. Make up any long random string → `WHATSAPP_VERIFY_TOKEN`.
 
-Put all four in `.env` (it is gitignored). Never paste them anywhere else.
+Put all four in `.env` (it is gitignored).
 
 ## 2. Start the server and a public tunnel (about 5 minutes)
 
@@ -69,11 +67,11 @@ If nothing comes back, check the uvicorn terminal. `401` means the app secret do
 
 ## Notes
 
-- The 24-hour token is enough to record the demo. For a token that lasts, create a System User in
+- The 24-hour token is fine for testing. For a token that lasts, create a System User in
   Meta Business Settings and generate a permanent token with the `whatsapp_business_messaging` permission.
 - Every webhook is checked with Meta's `X-Hub-Signature-256` signature. Unsigned or wrongly signed
   requests are rejected with 401.
 - Meta sometimes delivers the same message twice. The bot answers each message ID only once.
 - Voice notes longer than 30 seconds exceed Prisma's REST limit. The bot then asks the farmer, in
   Telugu, to ask again in under 30 seconds.
-- Without a Gnani key the bot replies with text marked MOCK MODE and never sends beeps as a voice note.
+- Without a Gnani key the bot runs in offline mode and replies with text only.

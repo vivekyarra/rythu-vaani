@@ -1,6 +1,6 @@
-# Synthetic call script format (Vaani Audit)
+# Sample call script format (Vaani Audit)
 
-Every call in `dev_calls.json` / `heldout_calls.json` is **synthetic**: fictional lender, fictional
+Every call in `dev_calls.json` / `heldout_calls.json` is a **scripted sample call**: sample lender, fictional
 people, no real phone numbers, account numbers or IDs. Lender name is always the fictional
 **"Navdhan Finance"**.
 
@@ -37,7 +37,7 @@ Span categories (label the turn where it happens; an agent turn):
 
 | category | meaning |
 |---|---|
-| `THREAT` | threat or intimidation: police, jail, arrest, seizing property, "we will come to your house/office", physical harm, fake legal threats |
+| `THREAT` | threat or intimidation: police, jail, arrest, seizing property, "we will come to your house/office", physical harm, false legal threats |
 | `ABUSE` | abusive, insulting or demeaning language at the borrower ("shameless", "fraud", "liar", curses) |
 | `SHAMING` | threat to publicly shame: telling neighbours, relatives, employer, society, WhatsApp groups, putting up notices |
 | `THIRD_PARTY` | the agent discloses the loan/debt/amount/overdue status to someone who is NOT the borrower (spouse, sibling, colleague who answered the phone) |
@@ -52,5 +52,5 @@ Call-level categories (no turn):
 
 A compliant call has an empty `labels` list. A call may carry several labels.
 
-Agents (synthetic): AG-101 Amit (hi), AG-102 Rohit (hi/hi-en), AG-103 Kiran (te/te-en),
+Agents (sample roster): AG-101 Amit (hi), AG-102 Rohit (hi/hi-en), AG-103 Kiran (te/te-en),
 AG-104 Suresh (te), AG-105 Neha (hi-en, female).

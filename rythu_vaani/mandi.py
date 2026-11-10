@@ -11,7 +11,7 @@ report several varieties of one crop (for chilli: Teja, 334, Byadgi, ...); the q
 median modal price and the overall min-max range across them.
 
 The key is read only from DATA_GOV_IN_API_KEY (.env). Without it, or if the API fails, the
-knowledge base falls back to its synthetic demo prices.
+knowledge base uses its sample prices.
 """
 from __future__ import annotations
 

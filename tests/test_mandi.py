@@ -70,4 +70,4 @@ def test_kb_reply_uses_live_price_then_falls_back():
     assert "15,500" in r.te and "అగ్‌మార్క్‌నెట్" in r.te and "02-11-2026" in r.te
     assert "Agmarknet" in r.en and "12,000" in r.en and "18,500" in r.en
     fallback = kb.answer(Intent("mandi_price", {"crop": "paddy", "market": "guntur"}))
-    assert "అగ్‌మార్క్‌నెట్" not in fallback.te and "రూపాయలు" in fallback.te  # synthetic demo price
+    assert "అగ్‌మార్క్‌నెట్" not in fallback.te and "రూపాయలు" in fallback.te  # sample price from the knowledge base

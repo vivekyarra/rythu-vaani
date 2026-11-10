@@ -58,12 +58,12 @@ def handle_text(text: str, client, kb: KnowledgeBase | None = None, *, stt_model
 
 def prepare_audio(data: bytes, filename: str, phone_line: bool = False, snr_db: float | None = None,
                   noise: str = "pink") -> tuple[bytes, str]:
-    """Validate the upload and optionally pass it through the simulated phone channel."""
+    """Validate the upload and optionally pass it through the phone-line channel."""
     if not data:
         raise PipelineError("empty audio")
     if not filename.lower().endswith(".wav"):
         if phone_line:
-            raise PipelineError("phone-line simulation needs a WAV upload")
+            raise PipelineError("the phone-line channel needs a WAV upload")
         return data, filename
     try:
         x, sr = A.read_wav(data)

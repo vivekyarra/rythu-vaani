@@ -14,7 +14,7 @@ shows the field as ``keywords``. Sending ``keyterms`` leaves ``keywords: null``;
 ``keywords`` (or ``bias_list``) fills it. We therefore send ``keywords`` and record the echoed
 config with every transcript so a run can prove what context the server actually accepted.
 
-``MockPrismaBatch`` never calls the network. It returns the *script* of a synthetic call when one is
+``MockPrismaBatch`` never calls the network. It returns the *script* of a sample call when one is
 supplied (so the auditor can be exercised offline) and every result carries ``mock=True``.
 """
 from __future__ import annotations
@@ -220,8 +220,8 @@ class PrismaBatch:
 class MockPrismaBatch:
     """Offline stand-in. Does NOT listen to the audio.
 
-    If ``scripts`` maps a file name to ``(segments, duration)`` (the ground-truth script of a synthetic
-    call), that script is returned verbatim as the "transcript". Otherwise a single placeholder segment.
+    If ``scripts`` maps a file name to ``(segments, duration)`` (the ground-truth script of a sample
+    call), that script is returned verbatim as the "transcript". Otherwise a single stand-in segment.
     """
 
     mock = True

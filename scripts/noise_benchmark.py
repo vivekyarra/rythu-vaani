@@ -1,6 +1,6 @@
-"""Noise-robustness benchmark: Timbre TTS -> simulated noisy 8 kHz phone line -> Prisma STT.
+"""Noise-robustness benchmark: Timbre TTS -> noisy 8 kHz phone-line channel -> Prisma STT.
 
-For each synthetic caller sentence:
+For each scripted sample caller sentence:
   1. synthesise clean 16 kHz Telugu speech with Timbre v2.5 (cached in bench_cache/),
   2. degrade it: 8 kHz, added noise at each SNR, 300-3400 Hz band-pass, G.711 mu-law,
   3. transcribe with Prisma v2.5 (te-IN, format=verbatim),
@@ -10,7 +10,7 @@ This is the Rythu Vaani-specific front end (farmer-helpline sentence sets, inten
 KB keyterms) over the generic engine in ``vaani_bench`` (see ``python -m vaani_bench --help``).
 
 Real mode (GNANI_API_KEY set) writes results/benchmark_<timestamp>.{json,md}.
-MOCK mode runs the same degradation on placeholder (non-speech) fixtures, prints the
+MOCK (offline) mode runs the same degradation on test-tone (non-speech) fixtures, prints the
 measured channel SNR only, and writes nothing: there is no WER without a real STT.
 
   python scripts/noise_benchmark.py                 # SNRs 20 10 5 0, pink noise
@@ -60,7 +60,7 @@ def run(args) -> int:
     set_name = Path(args.sentences).stem
 
     if client.mock:
-        print("=" * 70 + "\n MOCK MODE: no GNANI_API_KEY. Placeholder (non-speech) fixtures, no STT.\n"
+        print("=" * 70 + "\n MOCK MODE: no GNANI_API_KEY. Test-tone (non-speech) fixtures, no STT.\n"
               " Only the measured channel SNR is shown. No WER is reported or saved.\n" + "=" * 70)
 
     prefix = "clean" if set_name == "benchmark_sentences" else f"{set_name}_clean"
