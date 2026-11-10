@@ -10,70 +10,74 @@
  "stt": {
   "model": "prisma-v3.0",
   "language_code": "te-IN",
-  "job_id": "01a1c154-5e86-711a-86fa-10bf120b8888",
-  "job_wall_s": 29.41,
+  "job_id": "01a1c50c-069d-7908-adaf-8706f50c3814",
+  "job_wall_s": 10.2,
   "duration_s": 27.45,
   "keywords_accepted": true,
   "topic_accepted": true
  },
  "roles": {
-  "method": "dual-channel (channel 0 = agent, channel 1 = customer)",
-  "agent_speaker": "ch0"
+  "method": "Prisma diarization + role heuristic (mono)",
+  "agent_speaker": 1,
+  "scores": {
+   "1": 9.0,
+   "2": 0.0
+  }
  },
  "segments": [
   {
    "start": 0.0,
    "end": 6.688,
    "text": "హలో, నేను నవధన్ ఫైనాన్స్ నుండి సురేష్, మీ ట్రాక్టర్ లోన్ బకాయి గురించి ఫోన్ చేశాను.",
-   "speaker_id": "ch0",
+   "speaker_id": 1,
    "language": "te-IN",
    "role": "agent"
   },
   {
-   "start": 6.22,
-   "end": 10.56,
+   "start": 6.688,
+   "end": 9.84,
    "text": "చెప్పండి, ఈ నెల పంట డబ్బులు ఇంకా రాలేదు.",
-   "speaker_id": "ch1",
+   "speaker_id": 2,
    "language": "te-IN",
    "role": "borrower"
   },
   {
-   "start": 9.804,
-   "end": 15.072,
+   "start": 9.84,
+   "end": 14.38,
    "text": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
-   "speaker_id": "ch0",
+   "speaker_id": 1,
    "language": "te-IN",
    "role": "agent"
   },
   {
-   "start": 14.444,
+   "start": 14.38,
    "end": 16.8,
    "text": "అలా మాట్లాడకండి.",
-   "speaker_id": "ch1",
+   "speaker_id": 2,
    "language": "te-IN",
    "role": "borrower"
   },
   {
-   "start": 16.332,
-   "end": 22.976,
+   "start": 16.8,
+   "end": 22.4,
    "text": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
-   "speaker_id": "ch0",
+   "speaker_id": 1,
    "language": "te-IN",
    "role": "agent"
   },
   {
-   "start": 22.316,
+   "start": 22.4,
    "end": 25.024,
    "text": "వచ్చే వారం కడతాను.",
-   "speaker_id": "ch1",
+   "speaker_id": 2,
    "language": "te-IN",
    "role": "borrower"
   },
   {
-   "start": 24.62,
+   "start": 25.024,
    "end": 27.445,
-   "text": "లేదు, రేపే కట్టాలి.",
-   "speaker_id": "ch0",
+   "text": "ఏపే కట్టాలి?",
+   "speaker_id": 1,
    "language": "te-IN",
    "role": "agent"
   }
@@ -81,8 +85,8 @@
  "findings": [
   {
    "category": "ABUSE",
-   "start": 9.804,
-   "end": 15.072,
+   "start": 9.84,
+   "end": 14.38,
    "quote": "ప్రతిసారి ఇదే సాకు చెప్తారు. మీరు పెద్ద అబద్ధాలకోరు.",
    "matched": "అబద్ధాలకోరు",
    "note": "",
@@ -94,8 +98,8 @@
   },
   {
    "category": "THREAT",
-   "start": 16.332,
-   "end": 22.976,
+   "start": 16.8,
+   "end": 22.4,
    "quote": "రేపటికి డబ్బు కట్టకపోతే, మా మనుషులు వచ్చి ట్రాక్టర్ లాక్కెళ్తారు. పోలీస్ కేసు కూడా పెడతాం.",
    "matched": "మనుషులు వచ్చి",
    "note": "",
@@ -107,9 +111,9 @@
   },
   {
    "category": "NO_GRIEVANCE",
-   "start": 24.62,
+   "start": 25.024,
    "end": 27.445,
-   "quote": "లేదు, రేపే కట్టాలి.",
+   "quote": "ఏపే కట్టాలి?",
    "matched": "",
    "note": "no grievance/complaint channel offered by the agent",
    "source": "rule",
@@ -182,5 +186,5 @@
   ],
   "critical": 2
  },
- "audit_wall_s": 29.43
+ "audit_wall_s": 18.12
 }
